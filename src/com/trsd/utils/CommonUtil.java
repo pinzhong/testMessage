@@ -843,4 +843,68 @@ public class CommonUtil {
 		}
 		return "";
 	}
+	
+	/**
+	 * JSON格式，针对Easyui前台的返回值
+	 * 
+	 * @param result
+	 * @param resMsg
+	 * @param objs
+	 * @return
+	 */
+	public static Map<String, Object> getResult(int result, String resMsg, Object objs) {
+		if (objs == null)
+			objs = "[]";
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("errCode", result);
+		map.put("resMsg", resMsg);
+		map.put("objs", objs);
+		return map;
+	}
+
+	public static Map<String, Object> getResult(int result, String resMsg) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("errCode", result);
+		map.put("resMsg", resMsg);
+		return map;
+	}
+
+	/**
+	 * JSON格式，针对EasyUI
+	 * 
+	 * @param result
+	 * @param resMsg
+	 * @param total
+	 * @param objs
+	 * @return
+	 */
+	public static Map<String, Object> getListResult(int result, String resMsg, int total, Object objs) {
+		if (objs == null)
+			objs = "[]";
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("errCode", result);
+		map.put("resMsg", resMsg);
+		map.put("total", total);
+		map.put("rows", objs);
+		return map;
+	}
+
+	/**
+	 * JSON格式，针对EasyUI Combobox
+	 * 
+	 * @param result
+	 * @param resMsg
+	 * @param total
+	 * @param objs
+	 * @return
+	 */
+	public static Object getResult(Object objs) {
+		if (objs == null) {
+			objs = "[]";
+		}
+		if (objs instanceof List) {
+			return ((List) objs).toArray();
+		}
+		return "[]";
+	}
 }
