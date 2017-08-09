@@ -57,10 +57,14 @@ public class CommonUtil {
 		if (objs == null)
 			objs = "[]";
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("results", result);
+		map.put("errCode", result);
 		map.put("resMsg", resMsg);
 		map.put("objs", objs);
 		return map;
+	}
+
+	public static Map<String, Object> getResult(int result, String resMsg) {
+		return getResult(result, resMsg, null);
 	}
 
 	/**
@@ -76,7 +80,7 @@ public class CommonUtil {
 		if (objs == null)
 			objs = "[]";
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("results", result);
+		map.put("errCode", result);
 		map.put("resMsg", resMsg);
 		map.put("total", total);
 		map.put("rows", objs);
@@ -756,26 +760,24 @@ public class CommonUtil {
 	 *            级别，级别越高二维码可放内容越多
 	 * @return 图片流
 	 *//*
-		 * public static BufferedImage QrEncode(String code, int width, int
-		 * height, int version) { int t = 0, l = 0, w = width, h = height, v =
-		 * version; BufferedImage bi = null; if (code != null) { Qrcode qrcode =
-		 * new Qrcode(); qrcode.setQrcodeErrorCorrect('M');
-		 * qrcode.setQrcodeEncodeMode('B'); qrcode.setQrcodeVersion(v);
+		 * public static BufferedImage QrEncode(String code, int width, int height, int
+		 * version) { int t = 0, l = 0, w = width, h = height, v = version;
+		 * BufferedImage bi = null; if (code != null) { Qrcode qrcode = new Qrcode();
+		 * qrcode.setQrcodeErrorCorrect('M'); qrcode.setQrcodeEncodeMode('B');
+		 * qrcode.setQrcodeVersion(v);
 		 * 
-		 * bi = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB); // 创建图片
-		 * Graphics2D g = bi.createGraphics(); // 设置背景色
-		 * g.setBackground(Color.WHITE); // 设置显示颜色 g.setColor(Color.BLACK);
-		 * g.clearRect(t, l, w, h);
+		 * bi = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB); // 创建图片 Graphics2D
+		 * g = bi.createGraphics(); // 设置背景色 g.setBackground(Color.WHITE); // 设置显示颜色
+		 * g.setColor(Color.BLACK); g.clearRect(t, l, w, h);
 		 * 
 		 * String testString = code; byte[] d = null; try { d =
-		 * testString.getBytes("UTF-8"); } catch (UnsupportedEncodingException
-		 * e) { e.printStackTrace(); }
+		 * testString.getBytes("UTF-8"); } catch (UnsupportedEncodingException e) {
+		 * e.printStackTrace(); }
 		 * 
 		 * // 字符串长度判断 version*20个字符内 if (d.length > 0 && d.length < v * 20) {
-		 * boolean[][] b = qrcode.calQrcode(d); for (int i = 0; i < b.length;
-		 * i++) { for (int j = 0; j < b.length; j++) { if (b[j][i]) {
-		 * g.fillRect(j * 3 + 5, i * 3 + 5, 3, 3); } } } } g.dispose();
-		 * bi.flush(); } return bi; }
+		 * boolean[][] b = qrcode.calQrcode(d); for (int i = 0; i < b.length; i++) { for
+		 * (int j = 0; j < b.length; j++) { if (b[j][i]) { g.fillRect(j * 3 + 5, i * 3 +
+		 * 5, 3, 3); } } } } g.dispose(); bi.flush(); } return bi; }
 		 */
 
 	/**
