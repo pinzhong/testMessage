@@ -10,8 +10,6 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
-import java.security.MessageDigest;
-import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,10 +22,7 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
+import org.apache.commons.lang3.StringUtils;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
@@ -37,163 +32,39 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 public class CommonUtil {
-	// kgen初始化时，keysize
-	private static int kgenLength = 128;
-	// 加密解密KEY
-	public static final String EncryptKey = "SomeBody0505二货666#666";
 	// 生成防伪标签的数量
 	public static int GeneFWCnt = 1;
 	private static SimpleDateFormat sdfymd = new SimpleDateFormat("yyyy-MM-dd");
 
 	/**
-	 * JSON格式，针对Easyui前台的返回值
-	 * 
-	 * @param result
-	 * @param resMsg
-	 * @param objs
+	 * 生成掩盖后的手机号码
+	 * @param phone
 	 * @return
 	 */
-	public static Map<String, Object> getResult(int result, String resMsg, Object objs) {
-		if (objs == null)
-			objs = "[]";
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("errCode", result);
-		map.put("resMsg", resMsg);
-		map.put("objs", objs);
-		return map;
+	public static String maskPhone(String phone) {
+		return phone.replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2"); 
 	}
-
-	public static Map<String, Object> getResult(int result, String resMsg) {
-		return getResult(result, resMsg, null);
-	}
-
+	
 	/**
-	 * JSON格式，针对EasyUI
-	 * 
-	 * @param result
-	 * @param resMsg
-	 * @param total
-	 * @param objs
+	 * 生成掩盖后的身份证号
+	 * @param idCard
 	 * @return
 	 */
-	public static Map<String, Object> getListResult(int result, String resMsg, int total, Object objs) {
-		if (objs == null)
-			objs = "[]";
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("errCode", result);
-		map.put("resMsg", resMsg);
-		map.put("total", total);
-		map.put("rows", objs);
-		return map;
+	public static String maskIdCard(String idCard) {
+		return idCard.replaceAll("(\\d{4})\\d{10}(\\d{4})","$1****$2");
 	}
-
+	
 	/**
-	 * JSON格式，针对EasyUI Combobox
-	 * 
-	 * @param result
-	 * @param resMsg
-	 * @param total
-	 * @param objs
+	 * 生成掩盖后的姓名
+	 * @param userName
 	 * @return
 	 */
-	public static Object getResult(Object objs) {
-		if (objs == null) {
-			objs = "[]";
-		}
-		if (objs instanceof List) {
-			return ((List) objs).toArray();
-		}
-		return "[]";
-	}
-
-	/**
-	 * 加密
-	 */
-	private static byte[] encrypt(String content) throws Exception {
-		KeyGenerator kgen = KeyGenerator.getInstance("AES");
-		SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
-		secureRandom.setSeed(EncryptKey.getBytes("UTF-8"));
-		kgen.init(kgenLength, secureRandom);
-		SecretKey secretKey = kgen.generateKey();
-		byte[] enCodeFormat = secretKey.getEncoded();
-		SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
-		Cipher cipher = Cipher.getInstance("AES");// 创建密码器
-		byte[] byteContent = content.getBytes("UTF-8");
-		cipher.init(Cipher.ENCRYPT_MODE, key);// 初始化
-		byte[] result = cipher.doFinal(byteContent);
-		return result; // 加密
-
-	}
-
-	/**
-	 * 解密
-	 * 
-	 * @throws Exception
-	 */
-	private static byte[] decrypt(byte[] content) throws Exception {
-		KeyGenerator kgen = KeyGenerator.getInstance("AES");
-		SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
-		secureRandom.setSeed(EncryptKey.getBytes("UTF-8"));
-		kgen.init(kgenLength, secureRandom);
-		SecretKey secretKey = kgen.generateKey();
-		byte[] enCodeFormat = secretKey.getEncoded();
-		SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
-		Cipher cipher = Cipher.getInstance("AES");// 创建密码器
-		cipher.init(Cipher.DECRYPT_MODE, key);// 初始化
-		byte[] result = cipher.doFinal(content);
-		return result; // 加密
-
-	}
-
-	/**
-	 * Base64加密
-	 * 
-	 * @param content
-	 *            传入内容
-	 * @return 返回加密后的内容
-	 * @throws Exception
-	 */
-	public static String aesEncrypt(String content) throws Exception {
-		byte[] encryptResult = encrypt(content);
-		return Base64.encode(encryptResult);
-	}
-
-	/**
-	 * Base64解密
-	 * 
-	 * @param content
-	 *            传入内容
-	 * @return 解密后的内容
-	 * @throws Exception
-	 * @throws Exception
-	 */
-	public static String aesDecrypt(String content) throws Exception {
-		byte[] decryptResult = decrypt(Base64.decode(content));
-		return new String(decryptResult, "UTF-8");
-	}
-
-	/**
-	 * SHA1加密
-	 * 
-	 * @param decript
-	 * @return
-	 * @throws Exception
-	 */
-	public static String SHA1(String decript) throws Exception {
-		MessageDigest digest = MessageDigest.getInstance("SHA-1");
-		digest.update(decript.getBytes());
-		byte messageDigest[] = digest.digest();
-		// Create Hex String
-		StringBuffer hexString = new StringBuffer();
-		// 字节数组转换为 十六进制 数
-		for (int i = 0; i < messageDigest.length; i++) {
-			String shaHex = Integer.toHexString(messageDigest[i] & 0xFF);
-			if (shaHex.length() < 2) {
-				hexString.append(0);
-			}
-			hexString.append(shaHex);
-		}
-		return hexString.toString();
+	public static String maskName(String userName) {
+		if (StringUtils.isBlank(userName)) {
+            return "";
+        }
+        String name = StringUtils.left(userName, 1);
+        return StringUtils.rightPad(name, StringUtils.length(userName), "*");
 	}
 
 	/**
@@ -862,7 +733,7 @@ public class CommonUtil {
 			if (token.length() == 64) {
 				token = token.replaceAll(" ", "+");
 				try {
-					aesDecrypt(token);
+					AESCipher.aesEncryptString(token);
 					result = true;
 				} catch (Exception e) {
 
