@@ -8,8 +8,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,33 +41,36 @@ public class CommonUtil {
 
 	/**
 	 * 生成掩盖后的手机号码
+	 * 
 	 * @param phone
 	 * @return
 	 */
 	public static String maskPhone(String phone) {
-		return phone.replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2"); 
+		return phone.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
 	}
-	
+
 	/**
 	 * 生成掩盖后的身份证号
+	 * 
 	 * @param idCard
 	 * @return
 	 */
 	public static String maskIdCard(String idCard) {
-		return idCard.replaceAll("(\\d{4})\\d{10}(\\d{4})","$1****$2");
+		return idCard.replaceAll("(\\d{4})\\d{10}(\\d{4})", "$1****$2");
 	}
-	
+
 	/**
 	 * 生成掩盖后的姓名
+	 * 
 	 * @param userName
 	 * @return
 	 */
 	public static String maskName(String userName) {
 		if (StringUtils.isBlank(userName)) {
-            return "";
-        }
-        String name = StringUtils.left(userName, 1);
-        return StringUtils.rightPad(name, StringUtils.length(userName), "*");
+			return "";
+		}
+		String name = StringUtils.left(userName, 1);
+		return StringUtils.rightPad(name, StringUtils.length(userName), "*");
 	}
 
 	/**
@@ -843,7 +849,7 @@ public class CommonUtil {
 		}
 		return "";
 	}
-	
+
 	/**
 	 * JSON格式，针对Easyui前台的返回值
 	 * 
@@ -906,5 +912,26 @@ public class CommonUtil {
 			return ((List) objs).toArray();
 		}
 		return "[]";
+	}
+
+	/**
+	 * 对字符串md5加密
+	 *
+	 * @param str
+	 * @return
+	 */
+	public static String getMD5(String str) {
+		// 生成一个MD5加密计算摘要
+		MessageDigest md;
+		try {
+			md = MessageDigest.getInstance("MD5");
+			// 计算md5函数
+			md.update(str.getBytes());
+			// digest()最后确定返回md5 hash值，返回值为8为字符串。因为md5 hash值是16位的hex值，实际上就是8位的字符
+			// BigInteger函数则将8位的字符串转换成16位hex值，用字符串来表示；得到字符串形式的hash值
+			return new BigInteger(1, md.digest()).toString(16);
+		} catch (NoSuchAlgorithmException e) {
+			return null;
+		}
 	}
 }
