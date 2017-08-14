@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>trsd-tools</artifactId>
-	<name>trsd-tools</name>
+	<artifactId>xyd-tools</artifactId>
+	<name>xyd-tools</name>
 	<url>http://maven.apache.org</url>
 	
 	<groupId>trsd</groupId>
@@ -49,7 +49,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>trsd-tools</finalName>
+		<finalName>xyd-tools</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
