@@ -934,4 +934,17 @@ public class CommonUtil {
 			return null;
 		}
 	}
+	
+	/**
+	 * 判断对象是否为空，不为空返回true
+	 * @param obj
+	 * @return
+	 */
+	public static boolean validObjectEmpty(Object obj){
+		if(obj != null && !"".equals(obj)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
