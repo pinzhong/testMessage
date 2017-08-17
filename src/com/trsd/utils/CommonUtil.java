@@ -358,6 +358,23 @@ public class CommonUtil {
 		SimpleDateFormat sdf = new SimpleDateFormat(partter);
 		return sdf.format(date);
 	}
+	
+	/**
+	 * 将传入的日期转换为格式要求的日期
+	 * @param date
+	 * @param partter
+	 * @return
+	 * @throws ParseException
+	 */
+	public static Date getFormatDate(Date date, String partter) throws ParseException{
+		if (partter == null || partter.trim().equals(""))
+			partter = "yyyy-MM-dd";
+		
+		SimpleDateFormat sdf = new SimpleDateFormat(partter);
+		String s = sdf.format(new Date());
+		date =  sdf.parse(s);
+		return date;
+	}
 
 	/**
 	 * 获取当前区域码的上级编码
