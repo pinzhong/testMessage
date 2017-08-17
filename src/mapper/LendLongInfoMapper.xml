@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trsd.mapper.LendLongInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendLongInfo" >
+    <id column="lend_long_id" property="lendLongId" jdbcType="BIGINT" />
+    <result column="loan_long_id" property="loanLongId" jdbcType="BIGINT" />
+    <result column="lend_long_scheme_id" property="lendLongSchemeId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="lend_money" property="lendMoney" jdbcType="DECIMAL" />
+    <result column="repayment_principal" property="repaymentPrincipal" jdbcType="DECIMAL" />
+    <result column="repayment_interest" property="repaymentInterest" jdbcType="DECIMAL" />
+    <result column="repayment_penalty" property="repaymentPenalty" jdbcType="DECIMAL" />
+    <result column="payback_principal" property="paybackPrincipal" jdbcType="DECIMAL" />
+    <result column="paybackt_interest" property="paybacktInterest" jdbcType="DECIMAL" />
+    <result column="payback_penalty" property="paybackPenalty" jdbcType="DECIMAL" />
+    <result column="lend_user_type" property="lendUserType" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="periods" property="periods" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="version" property="version" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    lend_long_id, loan_long_id, lend_long_scheme_id, user_id, lend_money, repayment_principal, 
+    repayment_interest, repayment_penalty, payback_principal, paybackt_interest, payback_penalty, 
+    lend_user_type, status, periods, create_time, update_time, version
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_lend_long
+    where lend_long_id = #{lendLongId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_lend_long
+    where lend_long_id = #{lendLongId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.LendLongInfo" >
+    insert into t_lend_long (lend_long_id, loan_long_id, lend_long_scheme_id, 
+      user_id, lend_money, repayment_principal, 
+      repayment_interest, repayment_penalty, payback_principal, 
+      paybackt_interest, payback_penalty, lend_user_type, 
+      status, periods, create_time, 
+      update_time, version)
+    values (#{lendLongId,jdbcType=BIGINT}, #{loanLongId,jdbcType=BIGINT}, #{lendLongSchemeId,jdbcType=BIGINT}, 
+      #{userId,jdbcType=BIGINT}, #{lendMoney,jdbcType=DECIMAL}, #{repaymentPrincipal,jdbcType=DECIMAL}, 
+      #{repaymentInterest,jdbcType=DECIMAL}, #{repaymentPenalty,jdbcType=DECIMAL}, #{paybackPrincipal,jdbcType=DECIMAL}, 
+      #{paybacktInterest,jdbcType=DECIMAL}, #{paybackPenalty,jdbcType=DECIMAL}, #{lendUserType,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{periods,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.LendLongInfo" >
+    insert into t_lend_long
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="lendLongId != null" >
+        lend_long_id,
+      </if>
+      <if test="loanLongId != null" >
+        loan_long_id,
+      </if>
+      <if test="lendLongSchemeId != null" >
+        lend_long_scheme_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="lendMoney != null" >
+        lend_money,
+      </if>
+      <if test="repaymentPrincipal != null" >
+        repayment_principal,
+      </if>
+      <if test="repaymentInterest != null" >
+        repayment_interest,
+      </if>
+      <if test="repaymentPenalty != null" >
+        repayment_penalty,
+      </if>
+      <if test="paybackPrincipal != null" >
+        payback_principal,
+      </if>
+      <if test="paybacktInterest != null" >
+        paybackt_interest,
+      </if>
+      <if test="paybackPenalty != null" >
+        payback_penalty,
+      </if>
+      <if test="lendUserType != null" >
+        lend_user_type,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="periods != null" >
+        periods,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="lendLongId != null" >
+        #{lendLongId,jdbcType=BIGINT},
+      </if>
+      <if test="loanLongId != null" >
+        #{loanLongId,jdbcType=BIGINT},
+      </if>
+      <if test="lendLongSchemeId != null" >
+        #{lendLongSchemeId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="lendMoney != null" >
+        #{lendMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPrincipal != null" >
+        #{repaymentPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentInterest != null" >
+        #{repaymentInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPenalty != null" >
+        #{repaymentPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPrincipal != null" >
+        #{paybackPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="paybacktInterest != null" >
+        #{paybacktInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPenalty != null" >
+        #{paybackPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="lendUserType != null" >
+        #{lendUserType,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="periods != null" >
+        #{periods,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.LendLongInfo" >
+    update t_lend_long
+    <set >
+      <if test="loanLongId != null" >
+        loan_long_id = #{loanLongId,jdbcType=BIGINT},
+      </if>
+      <if test="lendLongSchemeId != null" >
+        lend_long_scheme_id = #{lendLongSchemeId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="lendMoney != null" >
+        lend_money = #{lendMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPrincipal != null" >
+        repayment_principal = #{repaymentPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentInterest != null" >
+        repayment_interest = #{repaymentInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPenalty != null" >
+        repayment_penalty = #{repaymentPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPrincipal != null" >
+        payback_principal = #{paybackPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="paybacktInterest != null" >
+        paybackt_interest = #{paybacktInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPenalty != null" >
+        payback_penalty = #{paybackPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="lendUserType != null" >
+        lend_user_type = #{lendUserType,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="periods != null" >
+        periods = #{periods,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=BIGINT},
+      </if>
+    </set>
+    where lend_long_id = #{lendLongId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.LendLongInfo" >
+    update t_lend_long
+    set loan_long_id = #{loanLongId,jdbcType=BIGINT},
+      lend_long_scheme_id = #{lendLongSchemeId,jdbcType=BIGINT},
+      user_id = #{userId,jdbcType=BIGINT},
+      lend_money = #{lendMoney,jdbcType=DECIMAL},
+      repayment_principal = #{repaymentPrincipal,jdbcType=DECIMAL},
+      repayment_interest = #{repaymentInterest,jdbcType=DECIMAL},
+      repayment_penalty = #{repaymentPenalty,jdbcType=DECIMAL},
+      payback_principal = #{paybackPrincipal,jdbcType=DECIMAL},
+      paybackt_interest = #{paybacktInterest,jdbcType=DECIMAL},
+      payback_penalty = #{paybackPenalty,jdbcType=DECIMAL},
+      lend_user_type = #{lendUserType,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      periods = #{periods,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT}
+    where lend_long_id = #{lendLongId,jdbcType=BIGINT}
+  </update>
+</mapper>

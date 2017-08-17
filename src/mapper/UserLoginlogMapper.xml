@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trsd.mapper.UserLoginlogMapper" >
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserLoginlog" >
+    <id column="user_login_id" property="userLoginId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="login_time" property="loginTime" jdbcType="TIMESTAMP" />
+    <result column="login_ip" property="loginIp" jdbcType="VARCHAR" />
+    <result column="login_location" property="loginLocation" jdbcType="VARCHAR" />
+    <result column="login_udid" property="loginUdid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_login_id, user_id, login_time, login_ip, login_location, login_udid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_loginlog
+    where user_login_id = #{userLoginId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_user_loginlog
+    where user_login_id = #{userLoginId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.UserLoginlog" >
+    insert into t_user_loginlog (user_login_id, user_id, login_time, 
+      login_ip, login_location, login_udid
+      )
+    values (#{userLoginId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{loginTime,jdbcType=TIMESTAMP}, 
+      #{loginIp,jdbcType=VARCHAR}, #{loginLocation,jdbcType=VARCHAR}, #{loginUdid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.UserLoginlog" >
+    insert into t_user_loginlog
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userLoginId != null" >
+        user_login_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="loginTime != null" >
+        login_time,
+      </if>
+      <if test="loginIp != null" >
+        login_ip,
+      </if>
+      <if test="loginLocation != null" >
+        login_location,
+      </if>
+      <if test="loginUdid != null" >
+        login_udid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userLoginId != null" >
+        #{userLoginId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="loginTime != null" >
+        #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginIp != null" >
+        #{loginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="loginLocation != null" >
+        #{loginLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUdid != null" >
+        #{loginUdid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.UserLoginlog" >
+    update t_user_loginlog
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="loginTime != null" >
+        login_time = #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginIp != null" >
+        login_ip = #{loginIp,jdbcType=VARCHAR},
+      </if>
+      <if test="loginLocation != null" >
+        login_location = #{loginLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUdid != null" >
+        login_udid = #{loginUdid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_login_id = #{userLoginId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.UserLoginlog" >
+    update t_user_loginlog
+    set user_id = #{userId,jdbcType=BIGINT},
+      login_time = #{loginTime,jdbcType=TIMESTAMP},
+      login_ip = #{loginIp,jdbcType=VARCHAR},
+      login_location = #{loginLocation,jdbcType=VARCHAR},
+      login_udid = #{loginUdid,jdbcType=VARCHAR}
+    where user_login_id = #{userLoginId,jdbcType=BIGINT}
+  </update>
+</mapper>

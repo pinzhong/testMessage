@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trsd.mapper.LoanLongInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LoanLongInfo" >
+    <!--          -->
+    <id column="loan_long_id" property="loanLongId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="apply_money" property="applyMoney" jdbcType="DECIMAL" />
+    <result column="borrowed_money" property="borrowedMoney" jdbcType="DECIMAL" />
+    <result column="loan_money" property="loanMoney" jdbcType="DECIMAL" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="limit_time" property="limitTime" jdbcType="TIMESTAMP" />
+    <result column="periods" property="periods" jdbcType="INTEGER" />
+    <result column="rate" property="rate" jdbcType="DECIMAL" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="version" property="version" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--          -->
+    loan_long_id, user_id, apply_money, borrowed_money, loan_money, status, limit_time, 
+    periods, rate, create_time, update_time, version
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    <!--          -->
+    select 
+    <include refid="Base_Column_List" />
+    from t_loan_long
+    where loan_long_id = #{loanLongId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <!--          -->
+    delete from t_loan_long
+    where loan_long_id = #{loanLongId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.LoanLongInfo" >
+    <!--          -->
+    insert into t_loan_long (loan_long_id, user_id, apply_money, 
+      borrowed_money, loan_money, status, 
+      limit_time, periods, rate, 
+      create_time, update_time, version
+      )
+    values (#{loanLongId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{applyMoney,jdbcType=DECIMAL}, 
+      #{borrowedMoney,jdbcType=DECIMAL}, #{loanMoney,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, 
+      #{limitTime,jdbcType=TIMESTAMP}, #{periods,jdbcType=INTEGER}, #{rate,jdbcType=DECIMAL}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.LoanLongInfo" >
+    <!--          -->
+    insert into t_loan_long
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="loanLongId != null" >
+        loan_long_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="applyMoney != null" >
+        apply_money,
+      </if>
+      <if test="borrowedMoney != null" >
+        borrowed_money,
+      </if>
+      <if test="loanMoney != null" >
+        loan_money,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="limitTime != null" >
+        limit_time,
+      </if>
+      <if test="periods != null" >
+        periods,
+      </if>
+      <if test="rate != null" >
+        rate,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="loanLongId != null" >
+        #{loanLongId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="applyMoney != null" >
+        #{applyMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="borrowedMoney != null" >
+        #{borrowedMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="loanMoney != null" >
+        #{loanMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="limitTime != null" >
+        #{limitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="periods != null" >
+        #{periods,jdbcType=INTEGER},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.LoanLongInfo" >
+    <!--          -->
+    update t_loan_long
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="applyMoney != null" >
+        apply_money = #{applyMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="borrowedMoney != null" >
+        borrowed_money = #{borrowedMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="loanMoney != null" >
+        loan_money = #{loanMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="limitTime != null" >
+        limit_time = #{limitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="periods != null" >
+        periods = #{periods,jdbcType=INTEGER},
+      </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=BIGINT},
+      </if>
+    </set>
+    where loan_long_id = #{loanLongId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.LoanLongInfo" >
+    <!--          -->
+    update t_loan_long
+    set user_id = #{userId,jdbcType=BIGINT},
+      apply_money = #{applyMoney,jdbcType=DECIMAL},
+      borrowed_money = #{borrowedMoney,jdbcType=DECIMAL},
+      loan_money = #{loanMoney,jdbcType=DECIMAL},
+      status = #{status,jdbcType=INTEGER},
+      limit_time = #{limitTime,jdbcType=TIMESTAMP},
+      periods = #{periods,jdbcType=INTEGER},
+      rate = #{rate,jdbcType=DECIMAL},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT}
+    where loan_long_id = #{loanLongId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserFlagInfoMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserFlagInfo">
+    <id column="user_flag_id" jdbcType="BIGINT" property="userFlagId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="flag_type" jdbcType="INTEGER" property="flagType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="flag_reason" jdbcType="VARCHAR" property="flagReason" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_flag_id, user_id, flag_type, create_time, status, flag_reason
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_flag
+    where user_flag_id = #{userFlagId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_user_flag
+    where user_flag_id = #{userFlagId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.UserFlagInfo">
+    insert into t_user_flag (user_flag_id, user_id, flag_type, 
+      create_time, status, flag_reason
+      )
+    values (#{userFlagId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{flagType,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{flagReason,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.UserFlagInfo">
+    insert into t_user_flag
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userFlagId != null">
+        user_flag_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="flagType != null">
+        flag_type,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="flagReason != null">
+        flag_reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userFlagId != null">
+        #{userFlagId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="flagType != null">
+        #{flagType,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="flagReason != null">
+        #{flagReason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.UserFlagInfo">
+    update t_user_flag
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="flagType != null">
+        flag_type = #{flagType,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="flagReason != null">
+        flag_reason = #{flagReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_flag_id = #{userFlagId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.UserFlagInfo">
+    update t_user_flag
+    set user_id = #{userId,jdbcType=BIGINT},
+      flag_type = #{flagType,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
+      flag_reason = #{flagReason,jdbcType=VARCHAR}
+    where user_flag_id = #{userFlagId,jdbcType=BIGINT}
+  </update>
+</mapper>

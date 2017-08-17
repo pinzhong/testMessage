@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserAccountDetailInfoMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserAccountDetailInfo">
+    <id column="user_account_detail_id" jdbcType="BIGINT" property="userAccountDetailId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="account" jdbcType="DECIMAL" property="account" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="event_id" jdbcType="BIGINT" property="eventId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="surplus_account" jdbcType="DECIMAL" property="surplusAccount" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_account_detail_id, user_id, account, type, event_id, create_time, surplus_account
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_account_detail
+    where user_account_detail_id = #{userAccountDetailId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_user_account_detail
+    where user_account_detail_id = #{userAccountDetailId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.UserAccountDetailInfo">
+    insert into t_user_account_detail (user_account_detail_id, user_id, account, 
+      type, event_id, create_time, 
+      surplus_account)
+    values (#{userAccountDetailId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{account,jdbcType=DECIMAL}, 
+      #{type,jdbcType=INTEGER}, #{eventId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{surplusAccount,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.UserAccountDetailInfo">
+    insert into t_user_account_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userAccountDetailId != null">
+        user_account_detail_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="account != null">
+        account,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="eventId != null">
+        event_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="surplusAccount != null">
+        surplus_account,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userAccountDetailId != null">
+        #{userAccountDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="eventId != null">
+        #{eventId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="surplusAccount != null">
+        #{surplusAccount,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.UserAccountDetailInfo">
+    update t_user_account_detail
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="account != null">
+        account = #{account,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="eventId != null">
+        event_id = #{eventId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="surplusAccount != null">
+        surplus_account = #{surplusAccount,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where user_account_detail_id = #{userAccountDetailId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.UserAccountDetailInfo">
+    update t_user_account_detail
+    set user_id = #{userId,jdbcType=BIGINT},
+      account = #{account,jdbcType=DECIMAL},
+      type = #{type,jdbcType=INTEGER},
+      event_id = #{eventId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      surplus_account = #{surplusAccount,jdbcType=DECIMAL}
+    where user_account_detail_id = #{userAccountDetailId,jdbcType=BIGINT}
+  </update>
+  
+</mapper>
