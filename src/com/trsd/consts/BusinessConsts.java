@@ -51,4 +51,12 @@ public class BusinessConsts {
 	public static final int INVITE_TYPE_PAYBACK_ONE = 3 ; //一级还款收益
 	public static final int INVITE_TYPE_PAYBACK_TWO = 4 ; //二级还款收益
 	
+	/**
+	 * redis存储数据分类
+	 */
+	public static final String REDIS_USER_KEY = "user_key" ; //用户登录信息，key为token，值为信息
+	public static final String REDIS_USER_TOKEN = "user_token" ; //用户登录令牌，key 为 登录名，值为 token
+	public static final String REDIS_DYNAMIC_LOGIN_KEY = "dyn:code:login" ; //动态登录验证码
+	public static final String REDIS_DYNAMIC_REGISTER_KEY = "dyn:code:register" ; //动态注册验证码
+	
 }
