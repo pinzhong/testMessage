@@ -1,10 +1,16 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class FreeTicketInfo {
-    /** 编号  free_ticket_id **/
+public class FreeTicketInfo implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 编号  free_ticket_id **/
     private Long freeTicketId;
 
     /** 使用金额  freet_amount **/

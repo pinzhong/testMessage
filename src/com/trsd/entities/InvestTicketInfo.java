@@ -1,10 +1,16 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class InvestTicketInfo {
-    /** 编号  invest_ticket_id **/
+public class InvestTicketInfo implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 编号  invest_ticket_id **/
     private Long investTicketId;
 
     /** 使用金额  invest_amount **/

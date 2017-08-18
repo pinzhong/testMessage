@@ -1,10 +1,16 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class UserInviteInfo {
-    /** 主键ID  user_invite_id **/
+public class UserInviteInfo implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 主键ID  user_invite_id **/
     private Long userInviteId;
 
     /** 主键ID  user_id **/

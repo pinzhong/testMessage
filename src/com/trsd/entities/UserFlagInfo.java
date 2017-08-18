@@ -1,9 +1,15 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserFlagInfo {
-    /** 编号  user_flag_id **/
+public class UserFlagInfo implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 编号  user_flag_id **/
     private Long userFlagId;
 
     /** 主键ID  user_id **/

@@ -1,10 +1,16 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class LoanLongInfo {
-    /** 主键id  loan_long_id **/
+public class LoanLongInfo implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 主键id  loan_long_id **/
     private Long loanLongId;
 
     /** 主键ID  user_id **/

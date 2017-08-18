@@ -1,9 +1,15 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserLoginlog {
+public class UserLoginlog implements Serializable{
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * 主键ID
      */
     private Long userLoginId;

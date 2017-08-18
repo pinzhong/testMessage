@@ -1,9 +1,15 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserBankcard {
+public class UserBankcard implements Serializable{
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * 主键id
      */
     private Long userBankcardId;
