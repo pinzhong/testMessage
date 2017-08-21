@@ -43,6 +43,24 @@ public class LoanLongInfo {
     /** 借款用途  memo **/
     private String memo;
 
+    /** 待还本金  repayment_principal **/
+    private BigDecimal repaymentPrincipal;
+
+    /** 待还利息  repayment_interest **/
+    private BigDecimal repaymentInterest;
+
+    /** 待还违约金  repayment_penalty **/
+    private BigDecimal repaymentPenalty;
+
+    /** 已还本金  payback_principal **/
+    private BigDecimal paybackPrincipal;
+
+    /** 已还利息  payback_interest **/
+    private BigDecimal paybackInterest;
+
+    /** 已还违约金  payback_penalty **/
+    private BigDecimal paybackPenalty;
+
     /**   主键id  loan_long_id   **/
     public Long getLoanLongId() {
         return loanLongId;
@@ -171,5 +189,65 @@ public class LoanLongInfo {
     /**   借款用途  memo   **/
     public void setMemo(String memo) {
         this.memo = memo == null ? null : memo.trim();
+    }
+
+    /**   待还本金  repayment_principal   **/
+    public BigDecimal getRepaymentPrincipal() {
+        return repaymentPrincipal;
+    }
+
+    /**   待还本金  repayment_principal   **/
+    public void setRepaymentPrincipal(BigDecimal repaymentPrincipal) {
+        this.repaymentPrincipal = repaymentPrincipal;
+    }
+
+    /**   待还利息  repayment_interest   **/
+    public BigDecimal getRepaymentInterest() {
+        return repaymentInterest;
+    }
+
+    /**   待还利息  repayment_interest   **/
+    public void setRepaymentInterest(BigDecimal repaymentInterest) {
+        this.repaymentInterest = repaymentInterest;
+    }
+
+    /**   待还违约金  repayment_penalty   **/
+    public BigDecimal getRepaymentPenalty() {
+        return repaymentPenalty;
+    }
+
+    /**   待还违约金  repayment_penalty   **/
+    public void setRepaymentPenalty(BigDecimal repaymentPenalty) {
+        this.repaymentPenalty = repaymentPenalty;
+    }
+
+    /**   已还本金  payback_principal   **/
+    public BigDecimal getPaybackPrincipal() {
+        return paybackPrincipal;
+    }
+
+    /**   已还本金  payback_principal   **/
+    public void setPaybackPrincipal(BigDecimal paybackPrincipal) {
+        this.paybackPrincipal = paybackPrincipal;
+    }
+
+    /**   已还利息  payback_interest   **/
+    public BigDecimal getPaybackInterest() {
+        return paybackInterest;
+    }
+
+    /**   已还利息  payback_interest   **/
+    public void setPaybackInterest(BigDecimal paybackInterest) {
+        this.paybackInterest = paybackInterest;
+    }
+
+    /**   已还违约金  payback_penalty   **/
+    public BigDecimal getPaybackPenalty() {
+        return paybackPenalty;
+    }
+
+    /**   已还违约金  payback_penalty   **/
+    public void setPaybackPenalty(BigDecimal paybackPenalty) {
+        this.paybackPenalty = paybackPenalty;
     }
 }

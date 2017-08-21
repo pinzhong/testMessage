@@ -16,11 +16,18 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="version" property="version" jdbcType="BIGINT" />
     <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="repayment_principal" property="repaymentPrincipal" jdbcType="DECIMAL" />
+    <result column="repayment_interest" property="repaymentInterest" jdbcType="DECIMAL" />
+    <result column="repayment_penalty" property="repaymentPenalty" jdbcType="DECIMAL" />
+    <result column="payback_principal" property="paybackPrincipal" jdbcType="DECIMAL" />
+    <result column="payback_interest" property="paybackInterest" jdbcType="DECIMAL" />
+    <result column="payback_penalty" property="paybackPenalty" jdbcType="DECIMAL" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--          -->
     loan_long_id, user_id, apply_money, borrowed_money, loan_money, status, limit_time, 
-    periods, rate, create_time, update_time, version, memo
+    periods, rate, create_time, update_time, version, memo, repayment_principal, repayment_interest, 
+    repayment_penalty, payback_principal, payback_interest, payback_penalty
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     <!--          -->
@@ -40,12 +47,16 @@
       borrowed_money, loan_money, status, 
       limit_time, periods, rate, 
       create_time, update_time, version, 
-      memo)
+      memo, repayment_principal, repayment_interest, 
+      repayment_penalty, payback_principal, payback_interest, 
+      payback_penalty)
     values (#{loanLongId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{applyMoney,jdbcType=DECIMAL}, 
       #{borrowedMoney,jdbcType=DECIMAL}, #{loanMoney,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, 
       #{limitTime,jdbcType=TIMESTAMP}, #{periods,jdbcType=INTEGER}, #{rate,jdbcType=DECIMAL}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
-      #{memo,jdbcType=VARCHAR})
+      #{memo,jdbcType=VARCHAR}, #{repaymentPrincipal,jdbcType=DECIMAL}, #{repaymentInterest,jdbcType=DECIMAL}, 
+      #{repaymentPenalty,jdbcType=DECIMAL}, #{paybackPrincipal,jdbcType=DECIMAL}, #{paybackInterest,jdbcType=DECIMAL}, 
+      #{paybackPenalty,jdbcType=DECIMAL})
   </insert>
   <insert id="insertSelective" parameterType="com.trsd.entities.LoanLongInfo" >
     <!--          -->
@@ -90,6 +101,24 @@
       <if test="memo != null" >
         memo,
       </if>
+      <if test="repaymentPrincipal != null" >
+        repayment_principal,
+      </if>
+      <if test="repaymentInterest != null" >
+        repayment_interest,
+      </if>
+      <if test="repaymentPenalty != null" >
+        repayment_penalty,
+      </if>
+      <if test="paybackPrincipal != null" >
+        payback_principal,
+      </if>
+      <if test="paybackInterest != null" >
+        payback_interest,
+      </if>
+      <if test="paybackPenalty != null" >
+        payback_penalty,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="loanLongId != null" >
@@ -130,6 +159,24 @@
       </if>
       <if test="memo != null" >
         #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentPrincipal != null" >
+        #{repaymentPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentInterest != null" >
+        #{repaymentInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPenalty != null" >
+        #{repaymentPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPrincipal != null" >
+        #{paybackPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackInterest != null" >
+        #{paybackInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPenalty != null" >
+        #{paybackPenalty,jdbcType=DECIMAL},
       </if>
     </trim>
   </insert>
@@ -173,6 +220,24 @@
       <if test="memo != null" >
         memo = #{memo,jdbcType=VARCHAR},
       </if>
+      <if test="repaymentPrincipal != null" >
+        repayment_principal = #{repaymentPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentInterest != null" >
+        repayment_interest = #{repaymentInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="repaymentPenalty != null" >
+        repayment_penalty = #{repaymentPenalty,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPrincipal != null" >
+        payback_principal = #{paybackPrincipal,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackInterest != null" >
+        payback_interest = #{paybackInterest,jdbcType=DECIMAL},
+      </if>
+      <if test="paybackPenalty != null" >
+        payback_penalty = #{paybackPenalty,jdbcType=DECIMAL},
+      </if>
     </set>
     where loan_long_id = #{loanLongId,jdbcType=BIGINT}
   </update>
@@ -190,7 +255,13 @@
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       version = #{version,jdbcType=BIGINT},
-      memo = #{memo,jdbcType=VARCHAR}
+      memo = #{memo,jdbcType=VARCHAR},
+      repayment_principal = #{repaymentPrincipal,jdbcType=DECIMAL},
+      repayment_interest = #{repaymentInterest,jdbcType=DECIMAL},
+      repayment_penalty = #{repaymentPenalty,jdbcType=DECIMAL},
+      payback_principal = #{paybackPrincipal,jdbcType=DECIMAL},
+      payback_interest = #{paybackInterest,jdbcType=DECIMAL},
+      payback_penalty = #{paybackPenalty,jdbcType=DECIMAL}
     where loan_long_id = #{loanLongId,jdbcType=BIGINT}
   </update>
 </mapper>

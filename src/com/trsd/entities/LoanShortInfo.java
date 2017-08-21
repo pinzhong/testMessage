@@ -43,6 +43,27 @@ public class LoanShortInfo {
     /** 借款利率  rate **/
     private BigDecimal rate;
 
+    /** 借款天数  loan_days **/
+    private Integer loanDays;
+
+    /** 待还本金  repayment_principal **/
+    private BigDecimal repaymentPrincipal;
+
+    /** 待还利息  repayment_interest **/
+    private BigDecimal repaymentInterest;
+
+    /** 待还违约金  repayment_penalty **/
+    private BigDecimal repaymentPenalty;
+
+    /** 待还本金  payback_principal **/
+    private BigDecimal paybackPrincipal;
+
+    /** 待还利息  payback_interest **/
+    private BigDecimal paybackInterest;
+
+    /** 待还违约金  payback_penalty **/
+    private BigDecimal paybackPenalty;
+
     /**   主键id  loan_short_id   **/
     public Long getLoanShortId() {
         return loanShortId;
@@ -171,5 +192,75 @@ public class LoanShortInfo {
     /**   借款利率  rate   **/
     public void setRate(BigDecimal rate) {
         this.rate = rate;
+    }
+
+    /**   借款天数  loan_days   **/
+    public Integer getLoanDays() {
+        return loanDays;
+    }
+
+    /**   借款天数  loan_days   **/
+    public void setLoanDays(Integer loanDays) {
+        this.loanDays = loanDays;
+    }
+
+    /**   待还本金  repayment_principal   **/
+    public BigDecimal getRepaymentPrincipal() {
+        return repaymentPrincipal;
+    }
+
+    /**   待还本金  repayment_principal   **/
+    public void setRepaymentPrincipal(BigDecimal repaymentPrincipal) {
+        this.repaymentPrincipal = repaymentPrincipal;
+    }
+
+    /**   待还利息  repayment_interest   **/
+    public BigDecimal getRepaymentInterest() {
+        return repaymentInterest;
+    }
+
+    /**   待还利息  repayment_interest   **/
+    public void setRepaymentInterest(BigDecimal repaymentInterest) {
+        this.repaymentInterest = repaymentInterest;
+    }
+
+    /**   待还违约金  repayment_penalty   **/
+    public BigDecimal getRepaymentPenalty() {
+        return repaymentPenalty;
+    }
+
+    /**   待还违约金  repayment_penalty   **/
+    public void setRepaymentPenalty(BigDecimal repaymentPenalty) {
+        this.repaymentPenalty = repaymentPenalty;
+    }
+
+    /**   待还本金  payback_principal   **/
+    public BigDecimal getPaybackPrincipal() {
+        return paybackPrincipal;
+    }
+
+    /**   待还本金  payback_principal   **/
+    public void setPaybackPrincipal(BigDecimal paybackPrincipal) {
+        this.paybackPrincipal = paybackPrincipal;
+    }
+
+    /**   待还利息  payback_interest   **/
+    public BigDecimal getPaybackInterest() {
+        return paybackInterest;
+    }
+
+    /**   待还利息  payback_interest   **/
+    public void setPaybackInterest(BigDecimal paybackInterest) {
+        this.paybackInterest = paybackInterest;
+    }
+
+    /**   待还违约金  payback_penalty   **/
+    public BigDecimal getPaybackPenalty() {
+        return paybackPenalty;
+    }
+
+    /**   待还违约金  payback_penalty   **/
+    public void setPaybackPenalty(BigDecimal paybackPenalty) {
+        this.paybackPenalty = paybackPenalty;
     }
 }
