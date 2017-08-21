@@ -4,141 +4,141 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class LoanShortInfo {
-    /** Ö÷¼üid  loan_short_id **/
+    /** ä¸»é”®id  loan_short_id **/
     private Long loanShortId;
 
-    /** ÓÃ»§±àºÅ  user_id **/
+    /** ç”¨æˆ·ç¼–å·  user_id **/
     private Long userId;
 
-    /** ÉêÇë½è¿î½ğ¶î  apply_money **/
+    /** ç”³è¯·å€Ÿæ¬¾é‡‘é¢  apply_money **/
     private BigDecimal applyMoney;
 
-    /** ÒÑ½èµ½½ğ¶î  borrowed_money **/
+    /** å·²å€Ÿåˆ°é‡‘é¢  borrowed_money **/
     private BigDecimal borrowedMoney;
 
-    /** ´ı½è½ğ¶î  loan_money **/
+    /** å¾…å€Ÿé‡‘é¢  loan_money **/
     private BigDecimal loanMoney;
 
-    /** ×´Ì¬(0£º´ı»¹£»1£ºÒÑ»¹£»3£ºÓâÆÚ£»£©  status **/
+    /** çŠ¶æ€(0ï¼šå¾…è¿˜ï¼›1ï¼šå·²è¿˜ï¼›3ï¼šé€¾æœŸï¼›ï¼‰  status **/
     private Integer status;
 
-    /** ÏŞÖÆÓĞĞ§Ê±¼ä  limit_time **/
+    /** é™åˆ¶æœ‰æ•ˆæ—¶é—´  limit_time **/
     private Date limitTime;
 
-    /** »¹¿îÊ±¼ä  payback_time **/
+    /** è¿˜æ¬¾æ—¶é—´  payback_time **/
     private Date paybackTime;
 
-    /** ĞÂ½¨Ê±¼ä  create_time **/
+    /** æ–°å»ºæ—¶é—´  create_time **/
     private Date createTime;
 
-    /** ¸üĞÂÊ±¼ä  update_time **/
+    /** æ›´æ–°æ—¶é—´  update_time **/
     private Date updateTime;
 
     /**   version **/
     private Long version;
 
-    /** ½è¿îÓÃÍ¾  memo **/
+    /** å€Ÿæ¬¾ç”¨é€”  memo **/
     private String memo;
 
-    /** ½è¿îÀûÂÊ  rate **/
+    /** å€Ÿæ¬¾åˆ©ç‡  rate **/
     private BigDecimal rate;
 
-    /**   Ö÷¼üid  loan_short_id   **/
+    /**   ä¸»é”®id  loan_short_id   **/
     public Long getLoanShortId() {
         return loanShortId;
     }
 
-    /**   Ö÷¼üid  loan_short_id   **/
+    /**   ä¸»é”®id  loan_short_id   **/
     public void setLoanShortId(Long loanShortId) {
         this.loanShortId = loanShortId;
     }
 
-    /**   ÓÃ»§±àºÅ  user_id   **/
+    /**   ç”¨æˆ·ç¼–å·  user_id   **/
     public Long getUserId() {
         return userId;
     }
 
-    /**   ÓÃ»§±àºÅ  user_id   **/
+    /**   ç”¨æˆ·ç¼–å·  user_id   **/
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    /**   ÉêÇë½è¿î½ğ¶î  apply_money   **/
+    /**   ç”³è¯·å€Ÿæ¬¾é‡‘é¢  apply_money   **/
     public BigDecimal getApplyMoney() {
         return applyMoney;
     }
 
-    /**   ÉêÇë½è¿î½ğ¶î  apply_money   **/
+    /**   ç”³è¯·å€Ÿæ¬¾é‡‘é¢  apply_money   **/
     public void setApplyMoney(BigDecimal applyMoney) {
         this.applyMoney = applyMoney;
     }
 
-    /**   ÒÑ½èµ½½ğ¶î  borrowed_money   **/
+    /**   å·²å€Ÿåˆ°é‡‘é¢  borrowed_money   **/
     public BigDecimal getBorrowedMoney() {
         return borrowedMoney;
     }
 
-    /**   ÒÑ½èµ½½ğ¶î  borrowed_money   **/
+    /**   å·²å€Ÿåˆ°é‡‘é¢  borrowed_money   **/
     public void setBorrowedMoney(BigDecimal borrowedMoney) {
         this.borrowedMoney = borrowedMoney;
     }
 
-    /**   ´ı½è½ğ¶î  loan_money   **/
+    /**   å¾…å€Ÿé‡‘é¢  loan_money   **/
     public BigDecimal getLoanMoney() {
         return loanMoney;
     }
 
-    /**   ´ı½è½ğ¶î  loan_money   **/
+    /**   å¾…å€Ÿé‡‘é¢  loan_money   **/
     public void setLoanMoney(BigDecimal loanMoney) {
         this.loanMoney = loanMoney;
     }
 
-    /**   ×´Ì¬(0£º´ı»¹£»1£ºÒÑ»¹£»3£ºÓâÆÚ£»£©  status   **/
+    /**   çŠ¶æ€(0ï¼šå¾…è¿˜ï¼›1ï¼šå·²è¿˜ï¼›3ï¼šé€¾æœŸï¼›ï¼‰  status   **/
     public Integer getStatus() {
         return status;
     }
 
-    /**   ×´Ì¬(0£º´ı»¹£»1£ºÒÑ»¹£»3£ºÓâÆÚ£»£©  status   **/
+    /**   çŠ¶æ€(0ï¼šå¾…è¿˜ï¼›1ï¼šå·²è¿˜ï¼›3ï¼šé€¾æœŸï¼›ï¼‰  status   **/
     public void setStatus(Integer status) {
         this.status = status;
     }
 
-    /**   ÏŞÖÆÓĞĞ§Ê±¼ä  limit_time   **/
+    /**   é™åˆ¶æœ‰æ•ˆæ—¶é—´  limit_time   **/
     public Date getLimitTime() {
         return limitTime;
     }
 
-    /**   ÏŞÖÆÓĞĞ§Ê±¼ä  limit_time   **/
+    /**   é™åˆ¶æœ‰æ•ˆæ—¶é—´  limit_time   **/
     public void setLimitTime(Date limitTime) {
         this.limitTime = limitTime;
     }
 
-    /**   »¹¿îÊ±¼ä  payback_time   **/
+    /**   è¿˜æ¬¾æ—¶é—´  payback_time   **/
     public Date getPaybackTime() {
         return paybackTime;
     }
 
-    /**   »¹¿îÊ±¼ä  payback_time   **/
+    /**   è¿˜æ¬¾æ—¶é—´  payback_time   **/
     public void setPaybackTime(Date paybackTime) {
         this.paybackTime = paybackTime;
     }
 
-    /**   ĞÂ½¨Ê±¼ä  create_time   **/
+    /**   æ–°å»ºæ—¶é—´  create_time   **/
     public Date getCreateTime() {
         return createTime;
     }
 
-    /**   ĞÂ½¨Ê±¼ä  create_time   **/
+    /**   æ–°å»ºæ—¶é—´  create_time   **/
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    /**   ¸üĞÂÊ±¼ä  update_time   **/
+    /**   æ›´æ–°æ—¶é—´  update_time   **/
     public Date getUpdateTime() {
         return updateTime;
     }
 
-    /**   ¸üĞÂÊ±¼ä  update_time   **/
+    /**   æ›´æ–°æ—¶é—´  update_time   **/
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
@@ -153,22 +153,22 @@ public class LoanShortInfo {
         this.version = version;
     }
 
-    /**   ½è¿îÓÃÍ¾  memo   **/
+    /**   å€Ÿæ¬¾ç”¨é€”  memo   **/
     public String getMemo() {
         return memo;
     }
 
-    /**   ½è¿îÓÃÍ¾  memo   **/
+    /**   å€Ÿæ¬¾ç”¨é€”  memo   **/
     public void setMemo(String memo) {
         this.memo = memo == null ? null : memo.trim();
     }
 
-    /**   ½è¿îÀûÂÊ  rate   **/
+    /**   å€Ÿæ¬¾åˆ©ç‡  rate   **/
     public BigDecimal getRate() {
         return rate;
     }
 
-    /**   ½è¿îÀûÂÊ  rate   **/
+    /**   å€Ÿæ¬¾åˆ©ç‡  rate   **/
     public void setRate(BigDecimal rate) {
         this.rate = rate;
     }
