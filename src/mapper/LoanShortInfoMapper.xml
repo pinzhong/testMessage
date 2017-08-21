@@ -15,11 +15,12 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="version" property="version" jdbcType="BIGINT" />
     <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="rate" property="rate" jdbcType="DECIMAL" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--          -->
     loan_short_id, user_id, apply_money, borrowed_money, loan_money, status, limit_time, 
-    payback_time, create_time, update_time, version, memo
+    payback_time, create_time, update_time, version, memo, rate
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     <!--          -->
@@ -38,13 +39,13 @@
     insert into t_loan_short (loan_short_id, user_id, apply_money, 
       borrowed_money, loan_money, status, 
       limit_time, payback_time, create_time, 
-      update_time, version, memo
-      )
+      update_time, version, memo, 
+      rate)
     values (#{loanShortId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{applyMoney,jdbcType=DECIMAL}, 
       #{borrowedMoney,jdbcType=DECIMAL}, #{loanMoney,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, 
       #{limitTime,jdbcType=TIMESTAMP}, #{paybackTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, #{memo,jdbcType=VARCHAR}
-      )
+      #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, #{memo,jdbcType=VARCHAR}, 
+      #{rate,jdbcType=DECIMAL})
   </insert>
   <insert id="insertSelective" parameterType="com.trsd.entities.LoanShortInfo" >
     <!--          -->
@@ -86,6 +87,9 @@
       <if test="memo != null" >
         memo,
       </if>
+      <if test="rate != null" >
+        rate,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="loanShortId != null" >
@@ -123,6 +127,9 @@
       </if>
       <if test="memo != null" >
         #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=DECIMAL},
       </if>
     </trim>
   </insert>
@@ -163,6 +170,9 @@
       <if test="memo != null" >
         memo = #{memo,jdbcType=VARCHAR},
       </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=DECIMAL},
+      </if>
     </set>
     where loan_short_id = #{loanShortId,jdbcType=BIGINT}
   </update>
@@ -179,7 +189,8 @@
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       version = #{version,jdbcType=BIGINT},
-      memo = #{memo,jdbcType=VARCHAR}
+      memo = #{memo,jdbcType=VARCHAR},
+      rate = #{rate,jdbcType=DECIMAL}
     where loan_short_id = #{loanShortId,jdbcType=BIGINT}
   </update>
 </mapper>
