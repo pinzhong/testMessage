@@ -1,67 +1,67 @@
 package com.trsd.entities;
 
 public class CreditTypeInfo {
-    /** ±àºÅ  type_id **/
+    /** ç¼–å·  type_id **/
     private Integer typeId;
 
-    /** Ãû³Æ  type_name **/
+    /** åç§°  type_name **/
     private String typeName;
 
-    /** ÊÇ·ñ±ØĞë  ismust **/
+    /** æ˜¯å¦å¿…é¡»  ismust **/
     private Boolean ismust;
 
-    /** ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status **/
+    /** æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status **/
     private Boolean status;
 
-    /** ËµÃ÷  remark **/
+    /** è¯´æ˜  remark **/
     private String remark;
 
-    /**   ±àºÅ  type_id   **/
+    /**   ç¼–å·  type_id   **/
     public Integer getTypeId() {
         return typeId;
     }
 
-    /**   ±àºÅ  type_id   **/
+    /**   ç¼–å·  type_id   **/
     public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
-    /**   Ãû³Æ  type_name   **/
+    /**   åç§°  type_name   **/
     public String getTypeName() {
         return typeName;
     }
 
-    /**   Ãû³Æ  type_name   **/
+    /**   åç§°  type_name   **/
     public void setTypeName(String typeName) {
         this.typeName = typeName == null ? null : typeName.trim();
     }
 
-    /**   ÊÇ·ñ±ØĞë  ismust   **/
+    /**   æ˜¯å¦å¿…é¡»  ismust   **/
     public Boolean getIsmust() {
         return ismust;
     }
 
-    /**   ÊÇ·ñ±ØĞë  ismust   **/
+    /**   æ˜¯å¦å¿…é¡»  ismust   **/
     public void setIsmust(Boolean ismust) {
         this.ismust = ismust;
     }
 
-    /**   ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status   **/
+    /**   æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status   **/
     public Boolean getStatus() {
         return status;
     }
 
-    /**   ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status   **/
+    /**   æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status   **/
     public void setStatus(Boolean status) {
         this.status = status;
     }
 
-    /**   ËµÃ÷  remark   **/
+    /**   è¯´æ˜  remark   **/
     public String getRemark() {
         return remark;
     }
 
-    /**   ËµÃ÷  remark   **/
+    /**   è¯´æ˜  remark   **/
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }

@@ -3,145 +3,145 @@ package com.trsd.entities;
 import java.util.Date;
 
 public class CreditMobiletopInfo {
-    /** ±àºÅ  recordid **/
+    /** ç¼–å·  recordid **/
     private String recordid;
 
-    /** ÈÏÖ¤±àºÅ  authid **/
+    /** è®¤è¯ç¼–å·  authid **/
     private String authid;
 
-    /** ÓÃ»§±àºÅ  userId **/
+    /** ç”¨æˆ·ç¼–å·  userId **/
     private Long userid;
 
-    /** ÓÃ»§µç»°ºÅÂë  phone **/
+    /** ç”¨æˆ·ç”µè¯å·ç   phone **/
     private String phone;
 
-    /** ÈÏÖ¤Ê±¼ä  createtime **/
+    /** è®¤è¯æ—¶é—´  createtime **/
     private Date createtime;
 
-    /** Í¨»°ºÅÂë  callnumber **/
+    /** é€šè¯å·ç   callnumber **/
     private String callnumber;
 
-    /** Í¨»°´ÎÊı  calltime **/
+    /** é€šè¯æ¬¡æ•°  calltime **/
     private Byte calltime;
 
-    /** ¹éÊôµØ  location **/
+    /** å½’å±åœ°  location **/
     private String location;
 
-    /** Í¨»°Ê±³¤£¨·ÖÖÓ£©  callmin **/
+    /** é€šè¯æ—¶é•¿ï¼ˆåˆ†é’Ÿï¼‰  callmin **/
     private Byte callmin;
 
-    /** ×îÔçÁªÏµÊ±¼ä  firstcalltime **/
+    /** æœ€æ—©è”ç³»æ—¶é—´  firstcalltime **/
     private Date firstcalltime;
 
-    /** ×îÍíÁªÏµÊ±¼ä  lastcalltime **/
+    /** æœ€æ™šè”ç³»æ—¶é—´  lastcalltime **/
     private Date lastcalltime;
 
-    /**   ±àºÅ  recordid   **/
+    /**   ç¼–å·  recordid   **/
     public String getRecordid() {
         return recordid;
     }
 
-    /**   ±àºÅ  recordid   **/
+    /**   ç¼–å·  recordid   **/
     public void setRecordid(String recordid) {
         this.recordid = recordid == null ? null : recordid.trim();
     }
 
-    /**   ÈÏÖ¤±àºÅ  authid   **/
+    /**   è®¤è¯ç¼–å·  authid   **/
     public String getAuthid() {
         return authid;
     }
 
-    /**   ÈÏÖ¤±àºÅ  authid   **/
+    /**   è®¤è¯ç¼–å·  authid   **/
     public void setAuthid(String authid) {
         this.authid = authid == null ? null : authid.trim();
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public Long getUserid() {
         return userid;
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public void setUserid(Long userid) {
         this.userid = userid;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public String getPhone() {
         return phone;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public Date getCreatetime() {
         return createtime;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }
 
-    /**   Í¨»°ºÅÂë  callnumber   **/
+    /**   é€šè¯å·ç   callnumber   **/
     public String getCallnumber() {
         return callnumber;
     }
 
-    /**   Í¨»°ºÅÂë  callnumber   **/
+    /**   é€šè¯å·ç   callnumber   **/
     public void setCallnumber(String callnumber) {
         this.callnumber = callnumber == null ? null : callnumber.trim();
     }
 
-    /**   Í¨»°´ÎÊı  calltime   **/
+    /**   é€šè¯æ¬¡æ•°  calltime   **/
     public Byte getCalltime() {
         return calltime;
     }
 
-    /**   Í¨»°´ÎÊı  calltime   **/
+    /**   é€šè¯æ¬¡æ•°  calltime   **/
     public void setCalltime(Byte calltime) {
         this.calltime = calltime;
     }
 
-    /**   ¹éÊôµØ  location   **/
+    /**   å½’å±åœ°  location   **/
     public String getLocation() {
         return location;
     }
 
-    /**   ¹éÊôµØ  location   **/
+    /**   å½’å±åœ°  location   **/
     public void setLocation(String location) {
         this.location = location == null ? null : location.trim();
     }
 
-    /**   Í¨»°Ê±³¤£¨·ÖÖÓ£©  callmin   **/
+    /**   é€šè¯æ—¶é•¿ï¼ˆåˆ†é’Ÿï¼‰  callmin   **/
     public Byte getCallmin() {
         return callmin;
     }
 
-    /**   Í¨»°Ê±³¤£¨·ÖÖÓ£©  callmin   **/
+    /**   é€šè¯æ—¶é•¿ï¼ˆåˆ†é’Ÿï¼‰  callmin   **/
     public void setCallmin(Byte callmin) {
         this.callmin = callmin;
     }
 
-    /**   ×îÔçÁªÏµÊ±¼ä  firstcalltime   **/
+    /**   æœ€æ—©è”ç³»æ—¶é—´  firstcalltime   **/
     public Date getFirstcalltime() {
         return firstcalltime;
     }
 
-    /**   ×îÔçÁªÏµÊ±¼ä  firstcalltime   **/
+    /**   æœ€æ—©è”ç³»æ—¶é—´  firstcalltime   **/
     public void setFirstcalltime(Date firstcalltime) {
         this.firstcalltime = firstcalltime;
     }
 
-    /**   ×îÍíÁªÏµÊ±¼ä  lastcalltime   **/
+    /**   æœ€æ™šè”ç³»æ—¶é—´  lastcalltime   **/
     public Date getLastcalltime() {
         return lastcalltime;
     }
 
-    /**   ×îÍíÁªÏµÊ±¼ä  lastcalltime   **/
+    /**   æœ€æ™šè”ç³»æ—¶é—´  lastcalltime   **/
     public void setLastcalltime(Date lastcalltime) {
         this.lastcalltime = lastcalltime;
     }

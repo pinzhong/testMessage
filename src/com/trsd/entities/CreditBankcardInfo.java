@@ -4,197 +4,197 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class CreditBankcardInfo {
-    /** ±àºÅ  authid **/
+    /** ç¼–å·  authid **/
     private Long authid;
 
-    /** ÓÃ»§±àºÅ  userId **/
+    /** ç”¨æˆ·ç¼–å·  userId **/
     private Long userid;
 
-    /** ÈÏÖ¤Ê±¼ä  createtime **/
+    /** è®¤è¯æ—¶é—´  createtime **/
     private Date createtime;
 
-    /** ÊÇ·ñÍ¨¹ı  ispass **/
+    /** æ˜¯å¦é€šè¿‡  ispass **/
     private Byte ispass;
 
-    /** ÒøĞĞ¿¨ºÅ  bankcard **/
+    /** é“¶è¡Œå¡å·  bankcard **/
     private BigDecimal bankcard;
 
-    /** Éí·İÖ¤ĞÕÃû  realname **/
+    /** èº«ä»½è¯å§“å  realname **/
     private String realname;
 
-    /** Éí·İÖ¤ºÅÂë  vip_score **/
+    /** èº«ä»½è¯å·ç   vip_score **/
     private String vipScore;
 
-    /** ÒøĞĞÃû³Æ  bankname **/
+    /** é“¶è¡Œåç§°  bankname **/
     private String bankname;
 
-    /** ÒøĞĞ¿¨Àà±ğ  cardtype **/
+    /** é“¶è¡Œå¡ç±»åˆ«  cardtype **/
     private String cardtype;
 
-    /** Í¨µÀ  channel **/
+    /** é€šé“  channel **/
     private String channel;
 
-    /** Í¨µÀtoken  token **/
+    /** é€šé“token  token **/
     private String token;
 
-    /** ½áÊøÊ±¼ä  finishtime **/
+    /** ç»“æŸæ—¶é—´  finishtime **/
     private Date finishtime;
 
-    /** ·ÑÓÃ  cost **/
+    /** è´¹ç”¨  cost **/
     private BigDecimal cost;
 
-    /** »ı·Ö  score **/
+    /** ç§¯åˆ†  score **/
     private BigDecimal score;
 
-    /** ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status **/
+    /** çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status **/
     private Byte status;
 
-    /**   ±àºÅ  authid   **/
+    /**   ç¼–å·  authid   **/
     public Long getAuthid() {
         return authid;
     }
 
-    /**   ±àºÅ  authid   **/
+    /**   ç¼–å·  authid   **/
     public void setAuthid(Long authid) {
         this.authid = authid;
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public Long getUserid() {
         return userid;
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public void setUserid(Long userid) {
         this.userid = userid;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public Date getCreatetime() {
         return createtime;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }
 
-    /**   ÊÇ·ñÍ¨¹ı  ispass   **/
+    /**   æ˜¯å¦é€šè¿‡  ispass   **/
     public Byte getIspass() {
         return ispass;
     }
 
-    /**   ÊÇ·ñÍ¨¹ı  ispass   **/
+    /**   æ˜¯å¦é€šè¿‡  ispass   **/
     public void setIspass(Byte ispass) {
         this.ispass = ispass;
     }
 
-    /**   ÒøĞĞ¿¨ºÅ  bankcard   **/
+    /**   é“¶è¡Œå¡å·  bankcard   **/
     public BigDecimal getBankcard() {
         return bankcard;
     }
 
-    /**   ÒøĞĞ¿¨ºÅ  bankcard   **/
+    /**   é“¶è¡Œå¡å·  bankcard   **/
     public void setBankcard(BigDecimal bankcard) {
         this.bankcard = bankcard;
     }
 
-    /**   Éí·İÖ¤ĞÕÃû  realname   **/
+    /**   èº«ä»½è¯å§“å  realname   **/
     public String getRealname() {
         return realname;
     }
 
-    /**   Éí·İÖ¤ĞÕÃû  realname   **/
+    /**   èº«ä»½è¯å§“å  realname   **/
     public void setRealname(String realname) {
         this.realname = realname == null ? null : realname.trim();
     }
 
-    /**   Éí·İÖ¤ºÅÂë  vip_score   **/
+    /**   èº«ä»½è¯å·ç   vip_score   **/
     public String getVipScore() {
         return vipScore;
     }
 
-    /**   Éí·İÖ¤ºÅÂë  vip_score   **/
+    /**   èº«ä»½è¯å·ç   vip_score   **/
     public void setVipScore(String vipScore) {
         this.vipScore = vipScore == null ? null : vipScore.trim();
     }
 
-    /**   ÒøĞĞÃû³Æ  bankname   **/
+    /**   é“¶è¡Œåç§°  bankname   **/
     public String getBankname() {
         return bankname;
     }
 
-    /**   ÒøĞĞÃû³Æ  bankname   **/
+    /**   é“¶è¡Œåç§°  bankname   **/
     public void setBankname(String bankname) {
         this.bankname = bankname == null ? null : bankname.trim();
     }
 
-    /**   ÒøĞĞ¿¨Àà±ğ  cardtype   **/
+    /**   é“¶è¡Œå¡ç±»åˆ«  cardtype   **/
     public String getCardtype() {
         return cardtype;
     }
 
-    /**   ÒøĞĞ¿¨Àà±ğ  cardtype   **/
+    /**   é“¶è¡Œå¡ç±»åˆ«  cardtype   **/
     public void setCardtype(String cardtype) {
         this.cardtype = cardtype == null ? null : cardtype.trim();
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public String getChannel() {
         return channel;
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public void setChannel(String channel) {
         this.channel = channel == null ? null : channel.trim();
     }
 
-    /**   Í¨µÀtoken  token   **/
+    /**   é€šé“token  token   **/
     public String getToken() {
         return token;
     }
 
-    /**   Í¨µÀtoken  token   **/
+    /**   é€šé“token  token   **/
     public void setToken(String token) {
         this.token = token == null ? null : token.trim();
     }
 
-    /**   ½áÊøÊ±¼ä  finishtime   **/
+    /**   ç»“æŸæ—¶é—´  finishtime   **/
     public Date getFinishtime() {
         return finishtime;
     }
 
-    /**   ½áÊøÊ±¼ä  finishtime   **/
+    /**   ç»“æŸæ—¶é—´  finishtime   **/
     public void setFinishtime(Date finishtime) {
         this.finishtime = finishtime;
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public BigDecimal getCost() {
         return cost;
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
 
-    /**   »ı·Ö  score   **/
+    /**   ç§¯åˆ†  score   **/
     public BigDecimal getScore() {
         return score;
     }
 
-    /**   »ı·Ö  score   **/
+    /**   ç§¯åˆ†  score   **/
     public void setScore(BigDecimal score) {
         this.score = score;
     }
 
-    /**   ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status   **/
     public Byte getStatus() {
         return status;
     }
 
-    /**   ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status   **/
     public void setStatus(Byte status) {
         this.status = status;
     }
