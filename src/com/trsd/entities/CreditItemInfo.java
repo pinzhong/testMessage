@@ -3,79 +3,79 @@ package com.trsd.entities;
 import java.math.BigDecimal;
 
 public class CreditItemInfo {
-    /** ±àºÅ  item_id **/
+    /** ç¼–å·  item_id **/
     private Integer itemId;
 
-    /** ÀàĞÍ  type_id **/
+    /** ç±»å‹  type_id **/
     private Integer typeId;
 
-    /** Ãû³Æ  item_name **/
+    /** åç§°  item_name **/
     private String itemName;
 
-    /** Í¨µÀ  channel **/
+    /** é€šé“  channel **/
     private String channel;
 
-    /** ·ÑÓÃ  cost **/
+    /** è´¹ç”¨  cost **/
     private BigDecimal cost;
 
     /**   score **/
     private Integer score;
 
-    /** ÊÇ·ñÔÊĞíÖØ¸´  isrepeat **/
+    /** æ˜¯å¦å…è®¸é‡å¤  isrepeat **/
     private Boolean isrepeat;
 
-    /** ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status **/
+    /** æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status **/
     private Boolean status;
 
-    /** ËµÃ÷  remark **/
+    /** è¯´æ˜  remark **/
     private String remark;
 
-    /**   ±àºÅ  item_id   **/
+    /**   ç¼–å·  item_id   **/
     public Integer getItemId() {
         return itemId;
     }
 
-    /**   ±àºÅ  item_id   **/
+    /**   ç¼–å·  item_id   **/
     public void setItemId(Integer itemId) {
         this.itemId = itemId;
     }
 
-    /**   ÀàĞÍ  type_id   **/
+    /**   ç±»å‹  type_id   **/
     public Integer getTypeId() {
         return typeId;
     }
 
-    /**   ÀàĞÍ  type_id   **/
+    /**   ç±»å‹  type_id   **/
     public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
-    /**   Ãû³Æ  item_name   **/
+    /**   åç§°  item_name   **/
     public String getItemName() {
         return itemName;
     }
 
-    /**   Ãû³Æ  item_name   **/
+    /**   åç§°  item_name   **/
     public void setItemName(String itemName) {
         this.itemName = itemName == null ? null : itemName.trim();
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public String getChannel() {
         return channel;
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public void setChannel(String channel) {
         this.channel = channel == null ? null : channel.trim();
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public BigDecimal getCost() {
         return cost;
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
@@ -90,32 +90,32 @@ public class CreditItemInfo {
         this.score = score;
     }
 
-    /**   ÊÇ·ñÔÊĞíÖØ¸´  isrepeat   **/
+    /**   æ˜¯å¦å…è®¸é‡å¤  isrepeat   **/
     public Boolean getIsrepeat() {
         return isrepeat;
     }
 
-    /**   ÊÇ·ñÔÊĞíÖØ¸´  isrepeat   **/
+    /**   æ˜¯å¦å…è®¸é‡å¤  isrepeat   **/
     public void setIsrepeat(Boolean isrepeat) {
         this.isrepeat = isrepeat;
     }
 
-    /**   ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status   **/
+    /**   æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status   **/
     public Boolean getStatus() {
         return status;
     }
 
-    /**   ÊÇ·ñÆôÓÃ£¨0£ºÍ£ÓÃ£»1£ºÆôÓÃ£©  status   **/
+    /**   æ˜¯å¦å¯ç”¨ï¼ˆ0ï¼šåœç”¨ï¼›1ï¼šå¯ç”¨ï¼‰  status   **/
     public void setStatus(Boolean status) {
         this.status = status;
     }
 
-    /**   ËµÃ÷  remark   **/
+    /**   è¯´æ˜  remark   **/
     public String getRemark() {
         return remark;
     }
 
-    /**   ËµÃ÷  remark   **/
+    /**   è¯´æ˜  remark   **/
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }

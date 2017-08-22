@@ -3,80 +3,80 @@ package com.trsd.entities;
 import java.util.Date;
 
 public class CreditUserfinishInfo {
-    /** ±àºÅ  rec_id **/
+    /** ç¼–å·  rec_id **/
     private Integer recId;
 
-    /** ÓÃ»§±àºÅ  user_id **/
+    /** ç”¨æˆ·ç¼–å·  user_id **/
     private Long userId;
 
-    /** ÈÏÖ¤ÀàĞÍ  credit_type **/
+    /** è®¤è¯ç±»å‹  credit_type **/
     private String creditType;
 
-    /** Êı¾İÌá¹©ÉÌ  provider **/
+    /** æ•°æ®æä¾›å•†  provider **/
     private String provider;
 
-    /** ÈÏÖ¤Ê±¼ä  finishtime **/
+    /** è®¤è¯æ—¶é—´  finishtime **/
     private Date finishtime;
 
-    /** ×´Ì¬£¨0£ºÊ§Ğ§£»2£ºÓĞĞ§£©  status **/
+    /** çŠ¶æ€ï¼ˆ0ï¼šå¤±æ•ˆï¼›2ï¼šæœ‰æ•ˆï¼‰  status **/
     private Byte status;
 
-    /**   ±àºÅ  rec_id   **/
+    /**   ç¼–å·  rec_id   **/
     public Integer getRecId() {
         return recId;
     }
 
-    /**   ±àºÅ  rec_id   **/
+    /**   ç¼–å·  rec_id   **/
     public void setRecId(Integer recId) {
         this.recId = recId;
     }
 
-    /**   ÓÃ»§±àºÅ  user_id   **/
+    /**   ç”¨æˆ·ç¼–å·  user_id   **/
     public Long getUserId() {
         return userId;
     }
 
-    /**   ÓÃ»§±àºÅ  user_id   **/
+    /**   ç”¨æˆ·ç¼–å·  user_id   **/
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    /**   ÈÏÖ¤ÀàĞÍ  credit_type   **/
+    /**   è®¤è¯ç±»å‹  credit_type   **/
     public String getCreditType() {
         return creditType;
     }
 
-    /**   ÈÏÖ¤ÀàĞÍ  credit_type   **/
+    /**   è®¤è¯ç±»å‹  credit_type   **/
     public void setCreditType(String creditType) {
         this.creditType = creditType == null ? null : creditType.trim();
     }
 
-    /**   Êı¾İÌá¹©ÉÌ  provider   **/
+    /**   æ•°æ®æä¾›å•†  provider   **/
     public String getProvider() {
         return provider;
     }
 
-    /**   Êı¾İÌá¹©ÉÌ  provider   **/
+    /**   æ•°æ®æä¾›å•†  provider   **/
     public void setProvider(String provider) {
         this.provider = provider == null ? null : provider.trim();
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  finishtime   **/
+    /**   è®¤è¯æ—¶é—´  finishtime   **/
     public Date getFinishtime() {
         return finishtime;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  finishtime   **/
+    /**   è®¤è¯æ—¶é—´  finishtime   **/
     public void setFinishtime(Date finishtime) {
         this.finishtime = finishtime;
     }
 
-    /**   ×´Ì¬£¨0£ºÊ§Ğ§£»2£ºÓĞĞ§£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ0ï¼šå¤±æ•ˆï¼›2ï¼šæœ‰æ•ˆï¼‰  status   **/
     public Byte getStatus() {
         return status;
     }
 
-    /**   ×´Ì¬£¨0£ºÊ§Ğ§£»2£ºÓĞĞ§£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ0ï¼šå¤±æ•ˆï¼›2ï¼šæœ‰æ•ˆï¼‰  status   **/
     public void setStatus(Byte status) {
         this.status = status;
     }

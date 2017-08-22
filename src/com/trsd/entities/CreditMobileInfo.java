@@ -4,249 +4,249 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class CreditMobileInfo {
-    /** ±àºÅ  authid **/
+    /** ç¼–å·  authid **/
     private String authid;
 
-    /** ÓÃ»§±àºÅ  userId **/
+    /** ç”¨æˆ·ç¼–å·  userId **/
     private Long userid;
 
-    /** ÓÃ»§µç»°ºÅÂë  phone **/
+    /** ç”¨æˆ·ç”µè¯å·ç   phone **/
     private String phone;
 
-    /** ÈÏÖ¤Ê±¼ä  createtime **/
+    /** è®¤è¯æ—¶é—´  createtime **/
     private Date createtime;
 
-    /** ¾©¶«µÇÂ¼Ãû  ispass **/
+    /** äº¬ä¸œç™»å½•å  ispass **/
     private Byte ispass;
 
-    /** µ±Ç°Óà¶î  blance **/
+    /** å½“å‰ä½™é¢  blance **/
     private BigDecimal blance;
 
-    /** »áÔ±»ı·Ö  vip_score **/
+    /** ä¼šå‘˜ç§¯åˆ†  vip_score **/
     private String vipScore;
 
-    /** ÔËÓªÉÌ  isp **/
+    /** è¿è¥å•†  isp **/
     private String isp;
 
-    /** ÈëÍøÊ±¼ä  jointime **/
+    /** å…¥ç½‘æ—¶é—´  jointime **/
     private Date jointime;
 
-    /** ÍøÁä  netage **/
+    /** ç½‘é¾„  netage **/
     private String netage;
 
-    /** ºÅÂë¹éÊôµØ  location **/
+    /** å·ç å½’å±åœ°  location **/
     private String location;
 
-    /** µØÖ·  address **/
+    /** åœ°å€  address **/
     private String address;
 
-    /** ÓÃ»§µÈ¼¶  vip_level **/
+    /** ç”¨æˆ·ç­‰çº§  vip_level **/
     private String vipLevel;
 
-    /** Í¨µÀ  channel **/
+    /** é€šé“  channel **/
     private String channel;
 
-    /** Í¨µÀtoken  token **/
+    /** é€šé“token  token **/
     private String token;
 
-    /** ½áÊøÊ±¼ä  finishtime **/
+    /** ç»“æŸæ—¶é—´  finishtime **/
     private Date finishtime;
 
-    /** ·ÑÓÃ  cost **/
+    /** è´¹ç”¨  cost **/
     private BigDecimal cost;
 
-    /** »ı·Ö  score **/
+    /** ç§¯åˆ†  score **/
     private BigDecimal score;
 
-    /** ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status **/
+    /** çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status **/
     private Byte status;
 
-    /**   ±àºÅ  authid   **/
+    /**   ç¼–å·  authid   **/
     public String getAuthid() {
         return authid;
     }
 
-    /**   ±àºÅ  authid   **/
+    /**   ç¼–å·  authid   **/
     public void setAuthid(String authid) {
         this.authid = authid == null ? null : authid.trim();
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public Long getUserid() {
         return userid;
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public void setUserid(Long userid) {
         this.userid = userid;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public String getPhone() {
         return phone;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public Date getCreatetime() {
         return createtime;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }
 
-    /**   ¾©¶«µÇÂ¼Ãû  ispass   **/
+    /**   äº¬ä¸œç™»å½•å  ispass   **/
     public Byte getIspass() {
         return ispass;
     }
 
-    /**   ¾©¶«µÇÂ¼Ãû  ispass   **/
+    /**   äº¬ä¸œç™»å½•å  ispass   **/
     public void setIspass(Byte ispass) {
         this.ispass = ispass;
     }
 
-    /**   µ±Ç°Óà¶î  blance   **/
+    /**   å½“å‰ä½™é¢  blance   **/
     public BigDecimal getBlance() {
         return blance;
     }
 
-    /**   µ±Ç°Óà¶î  blance   **/
+    /**   å½“å‰ä½™é¢  blance   **/
     public void setBlance(BigDecimal blance) {
         this.blance = blance;
     }
 
-    /**   »áÔ±»ı·Ö  vip_score   **/
+    /**   ä¼šå‘˜ç§¯åˆ†  vip_score   **/
     public String getVipScore() {
         return vipScore;
     }
 
-    /**   »áÔ±»ı·Ö  vip_score   **/
+    /**   ä¼šå‘˜ç§¯åˆ†  vip_score   **/
     public void setVipScore(String vipScore) {
         this.vipScore = vipScore == null ? null : vipScore.trim();
     }
 
-    /**   ÔËÓªÉÌ  isp   **/
+    /**   è¿è¥å•†  isp   **/
     public String getIsp() {
         return isp;
     }
 
-    /**   ÔËÓªÉÌ  isp   **/
+    /**   è¿è¥å•†  isp   **/
     public void setIsp(String isp) {
         this.isp = isp == null ? null : isp.trim();
     }
 
-    /**   ÈëÍøÊ±¼ä  jointime   **/
+    /**   å…¥ç½‘æ—¶é—´  jointime   **/
     public Date getJointime() {
         return jointime;
     }
 
-    /**   ÈëÍøÊ±¼ä  jointime   **/
+    /**   å…¥ç½‘æ—¶é—´  jointime   **/
     public void setJointime(Date jointime) {
         this.jointime = jointime;
     }
 
-    /**   ÍøÁä  netage   **/
+    /**   ç½‘é¾„  netage   **/
     public String getNetage() {
         return netage;
     }
 
-    /**   ÍøÁä  netage   **/
+    /**   ç½‘é¾„  netage   **/
     public void setNetage(String netage) {
         this.netage = netage == null ? null : netage.trim();
     }
 
-    /**   ºÅÂë¹éÊôµØ  location   **/
+    /**   å·ç å½’å±åœ°  location   **/
     public String getLocation() {
         return location;
     }
 
-    /**   ºÅÂë¹éÊôµØ  location   **/
+    /**   å·ç å½’å±åœ°  location   **/
     public void setLocation(String location) {
         this.location = location == null ? null : location.trim();
     }
 
-    /**   µØÖ·  address   **/
+    /**   åœ°å€  address   **/
     public String getAddress() {
         return address;
     }
 
-    /**   µØÖ·  address   **/
+    /**   åœ°å€  address   **/
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
     }
 
-    /**   ÓÃ»§µÈ¼¶  vip_level   **/
+    /**   ç”¨æˆ·ç­‰çº§  vip_level   **/
     public String getVipLevel() {
         return vipLevel;
     }
 
-    /**   ÓÃ»§µÈ¼¶  vip_level   **/
+    /**   ç”¨æˆ·ç­‰çº§  vip_level   **/
     public void setVipLevel(String vipLevel) {
         this.vipLevel = vipLevel == null ? null : vipLevel.trim();
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public String getChannel() {
         return channel;
     }
 
-    /**   Í¨µÀ  channel   **/
+    /**   é€šé“  channel   **/
     public void setChannel(String channel) {
         this.channel = channel == null ? null : channel.trim();
     }
 
-    /**   Í¨µÀtoken  token   **/
+    /**   é€šé“token  token   **/
     public String getToken() {
         return token;
     }
 
-    /**   Í¨µÀtoken  token   **/
+    /**   é€šé“token  token   **/
     public void setToken(String token) {
         this.token = token == null ? null : token.trim();
     }
 
-    /**   ½áÊøÊ±¼ä  finishtime   **/
+    /**   ç»“æŸæ—¶é—´  finishtime   **/
     public Date getFinishtime() {
         return finishtime;
     }
 
-    /**   ½áÊøÊ±¼ä  finishtime   **/
+    /**   ç»“æŸæ—¶é—´  finishtime   **/
     public void setFinishtime(Date finishtime) {
         this.finishtime = finishtime;
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public BigDecimal getCost() {
         return cost;
     }
 
-    /**   ·ÑÓÃ  cost   **/
+    /**   è´¹ç”¨  cost   **/
     public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
 
-    /**   »ı·Ö  score   **/
+    /**   ç§¯åˆ†  score   **/
     public BigDecimal getScore() {
         return score;
     }
 
-    /**   »ı·Ö  score   **/
+    /**   ç§¯åˆ†  score   **/
     public void setScore(BigDecimal score) {
         this.score = score;
     }
 
-    /**   ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status   **/
     public Byte getStatus() {
         return status;
     }
 
-    /**   ×´Ì¬£¨-1£ºÊ§°Ü£»0£º½øĞĞÖĞ£»1£º³É¹¦£©  status   **/
+    /**   çŠ¶æ€ï¼ˆ-1ï¼šå¤±è´¥ï¼›0ï¼šè¿›è¡Œä¸­ï¼›1ï¼šæˆåŠŸï¼‰  status   **/
     public void setStatus(Byte status) {
         this.status = status;
     }

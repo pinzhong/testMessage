@@ -3,145 +3,145 @@ package com.trsd.entities;
 import java.util.Date;
 
 public class CreditMobilerecordInfo {
-    /** ±àºÅ  recordid **/
+    /** ç¼–å·  recordid **/
     private String recordid;
 
-    /** ÈÏÖ¤±àºÅ  authid **/
+    /** è®¤è¯ç¼–å·  authid **/
     private String authid;
 
-    /** ÓÃ»§±àºÅ  userId **/
+    /** ç”¨æˆ·ç¼–å·  userId **/
     private Long userid;
 
-    /** ÓÃ»§µç»°ºÅÂë  phone **/
+    /** ç”¨æˆ·ç”µè¯å·ç   phone **/
     private String phone;
 
-    /** ÈÏÖ¤Ê±¼ä  createtime **/
+    /** è®¤è¯æ—¶é—´  createtime **/
     private Date createtime;
 
-    /** ¾©¶«µÇÂ¼Ãû  ispass **/
+    /** äº¬ä¸œç™»å½•å  ispass **/
     private Byte ispass;
 
-    /** Í¨»°Ê±¼ä  calltime **/
+    /** é€šè¯æ—¶é—´  calltime **/
     private Date calltime;
 
-    /** Í¨»°Ê±³¤£¨Ãë£©  callsecond **/
+    /** é€šè¯æ—¶é•¿ï¼ˆç§’ï¼‰  callsecond **/
     private Integer callsecond;
 
-    /** Í¨»°µØµã  address **/
+    /** é€šè¯åœ°ç‚¹  address **/
     private String address;
 
-    /** Í¨»°ÀàĞÍ  calltype **/
+    /** é€šè¯ç±»å‹  calltype **/
     private String calltype;
 
-    /** Í¨»°ºÅÂë  callnumber **/
+    /** é€šè¯å·ç   callnumber **/
     private String callnumber;
 
-    /**   ±àºÅ  recordid   **/
+    /**   ç¼–å·  recordid   **/
     public String getRecordid() {
         return recordid;
     }
 
-    /**   ±àºÅ  recordid   **/
+    /**   ç¼–å·  recordid   **/
     public void setRecordid(String recordid) {
         this.recordid = recordid == null ? null : recordid.trim();
     }
 
-    /**   ÈÏÖ¤±àºÅ  authid   **/
+    /**   è®¤è¯ç¼–å·  authid   **/
     public String getAuthid() {
         return authid;
     }
 
-    /**   ÈÏÖ¤±àºÅ  authid   **/
+    /**   è®¤è¯ç¼–å·  authid   **/
     public void setAuthid(String authid) {
         this.authid = authid == null ? null : authid.trim();
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public Long getUserid() {
         return userid;
     }
 
-    /**   ÓÃ»§±àºÅ  userId   **/
+    /**   ç”¨æˆ·ç¼–å·  userId   **/
     public void setUserid(Long userid) {
         this.userid = userid;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public String getPhone() {
         return phone;
     }
 
-    /**   ÓÃ»§µç»°ºÅÂë  phone   **/
+    /**   ç”¨æˆ·ç”µè¯å·ç   phone   **/
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public Date getCreatetime() {
         return createtime;
     }
 
-    /**   ÈÏÖ¤Ê±¼ä  createtime   **/
+    /**   è®¤è¯æ—¶é—´  createtime   **/
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }
 
-    /**   ¾©¶«µÇÂ¼Ãû  ispass   **/
+    /**   äº¬ä¸œç™»å½•å  ispass   **/
     public Byte getIspass() {
         return ispass;
     }
 
-    /**   ¾©¶«µÇÂ¼Ãû  ispass   **/
+    /**   äº¬ä¸œç™»å½•å  ispass   **/
     public void setIspass(Byte ispass) {
         this.ispass = ispass;
     }
 
-    /**   Í¨»°Ê±¼ä  calltime   **/
+    /**   é€šè¯æ—¶é—´  calltime   **/
     public Date getCalltime() {
         return calltime;
     }
 
-    /**   Í¨»°Ê±¼ä  calltime   **/
+    /**   é€šè¯æ—¶é—´  calltime   **/
     public void setCalltime(Date calltime) {
         this.calltime = calltime;
     }
 
-    /**   Í¨»°Ê±³¤£¨Ãë£©  callsecond   **/
+    /**   é€šè¯æ—¶é•¿ï¼ˆç§’ï¼‰  callsecond   **/
     public Integer getCallsecond() {
         return callsecond;
     }
 
-    /**   Í¨»°Ê±³¤£¨Ãë£©  callsecond   **/
+    /**   é€šè¯æ—¶é•¿ï¼ˆç§’ï¼‰  callsecond   **/
     public void setCallsecond(Integer callsecond) {
         this.callsecond = callsecond;
     }
 
-    /**   Í¨»°µØµã  address   **/
+    /**   é€šè¯åœ°ç‚¹  address   **/
     public String getAddress() {
         return address;
     }
 
-    /**   Í¨»°µØµã  address   **/
+    /**   é€šè¯åœ°ç‚¹  address   **/
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
     }
 
-    /**   Í¨»°ÀàĞÍ  calltype   **/
+    /**   é€šè¯ç±»å‹  calltype   **/
     public String getCalltype() {
         return calltype;
     }
 
-    /**   Í¨»°ÀàĞÍ  calltype   **/
+    /**   é€šè¯ç±»å‹  calltype   **/
     public void setCalltype(String calltype) {
         this.calltype = calltype == null ? null : calltype.trim();
     }
 
-    /**   Í¨»°ºÅÂë  callnumber   **/
+    /**   é€šè¯å·ç   callnumber   **/
     public String getCallnumber() {
         return callnumber;
     }
 
-    /**   Í¨»°ºÅÂë  callnumber   **/
+    /**   é€šè¯å·ç   callnumber   **/
     public void setCallnumber(String callnumber) {
         this.callnumber = callnumber == null ? null : callnumber.trim();
     }
