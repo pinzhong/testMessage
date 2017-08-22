@@ -7,13 +7,12 @@
     <result column="userId" property="userid" jdbcType="BIGINT" />
     <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
     <result column="ispass" property="ispass" jdbcType="TINYINT" />
-    <result column="bankcard" property="bankcard" jdbcType="DECIMAL" />
-    <result column="realname" property="realname" jdbcType="VARCHAR" />
-    <result column="vip_score" property="vipScore" jdbcType="VARCHAR" />
+    <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="certificate_no" property="certificateNo" jdbcType="VARCHAR" />
     <result column="bankname" property="bankname" jdbcType="VARCHAR" />
     <result column="cardtype" property="cardtype" jdbcType="VARCHAR" />
-    <result column="channel" property="channel" jdbcType="VARCHAR" />
-    <result column="token" property="token" jdbcType="VARCHAR" />
+    <result column="provider" property="provider" jdbcType="VARCHAR" />
     <result column="finishtime" property="finishtime" jdbcType="TIMESTAMP" />
     <result column="cost" property="cost" jdbcType="DECIMAL" />
     <result column="score" property="score" jdbcType="DECIMAL" />
@@ -21,8 +20,8 @@
   </resultMap>
   <sql id="Base_Column_List" >
     <!--          -->
-    authid, userId, createtime, ispass, bankcard, realname, vip_score, bankname, cardtype, 
-    channel, token, finishtime, cost, score, status
+    authid, userId, createtime, ispass, bankcard, real_name, certificate_no, bankname, 
+    cardtype, provider, finishtime, cost, score, status
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     <!--          -->
@@ -39,17 +38,15 @@
   <insert id="insert" parameterType="com.trsd.entities.CreditBankcardInfo" >
     <!--          -->
     insert into t_credit_bankcard (authid, userId, createtime, 
-      ispass, bankcard, realname, 
-      vip_score, bankname, cardtype, 
-      channel, token, finishtime, 
-      cost, score, status
-      )
+      ispass, bankcard, real_name, 
+      certificate_no, bankname, cardtype, 
+      provider, finishtime, cost, 
+      score, status)
     values (#{authid,jdbcType=BIGINT}, #{userid,jdbcType=BIGINT}, #{createtime,jdbcType=TIMESTAMP}, 
-      #{ispass,jdbcType=TINYINT}, #{bankcard,jdbcType=DECIMAL}, #{realname,jdbcType=VARCHAR}, 
-      #{vipScore,jdbcType=VARCHAR}, #{bankname,jdbcType=VARCHAR}, #{cardtype,jdbcType=VARCHAR}, 
-      #{channel,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, #{finishtime,jdbcType=TIMESTAMP}, 
-      #{cost,jdbcType=DECIMAL}, #{score,jdbcType=DECIMAL}, #{status,jdbcType=TINYINT}
-      )
+      #{ispass,jdbcType=TINYINT}, #{bankcard,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, 
+      #{certificateNo,jdbcType=VARCHAR}, #{bankname,jdbcType=VARCHAR}, #{cardtype,jdbcType=VARCHAR}, 
+      #{provider,jdbcType=VARCHAR}, #{finishtime,jdbcType=TIMESTAMP}, #{cost,jdbcType=DECIMAL}, 
+      #{score,jdbcType=DECIMAL}, #{status,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.trsd.entities.CreditBankcardInfo" >
     <!--          -->
@@ -70,11 +67,11 @@
       <if test="bankcard != null" >
         bankcard,
       </if>
-      <if test="realname != null" >
-        realname,
+      <if test="realName != null" >
+        real_name,
       </if>
-      <if test="vipScore != null" >
-        vip_score,
+      <if test="certificateNo != null" >
+        certificate_no,
       </if>
       <if test="bankname != null" >
         bankname,
@@ -82,11 +79,8 @@
       <if test="cardtype != null" >
         cardtype,
       </if>
-      <if test="channel != null" >
-        channel,
-      </if>
-      <if test="token != null" >
-        token,
+      <if test="provider != null" >
+        provider,
       </if>
       <if test="finishtime != null" >
         finishtime,
@@ -115,13 +109,13 @@
         #{ispass,jdbcType=TINYINT},
       </if>
       <if test="bankcard != null" >
-        #{bankcard,jdbcType=DECIMAL},
+        #{bankcard,jdbcType=VARCHAR},
       </if>
-      <if test="realname != null" >
-        #{realname,jdbcType=VARCHAR},
+      <if test="realName != null" >
+        #{realName,jdbcType=VARCHAR},
       </if>
-      <if test="vipScore != null" >
-        #{vipScore,jdbcType=VARCHAR},
+      <if test="certificateNo != null" >
+        #{certificateNo,jdbcType=VARCHAR},
       </if>
       <if test="bankname != null" >
         #{bankname,jdbcType=VARCHAR},
@@ -129,11 +123,8 @@
       <if test="cardtype != null" >
         #{cardtype,jdbcType=VARCHAR},
       </if>
-      <if test="channel != null" >
-        #{channel,jdbcType=VARCHAR},
-      </if>
-      <if test="token != null" >
-        #{token,jdbcType=VARCHAR},
+      <if test="provider != null" >
+        #{provider,jdbcType=VARCHAR},
       </if>
       <if test="finishtime != null" >
         #{finishtime,jdbcType=TIMESTAMP},
@@ -163,13 +154,13 @@
         ispass = #{ispass,jdbcType=TINYINT},
       </if>
       <if test="bankcard != null" >
-        bankcard = #{bankcard,jdbcType=DECIMAL},
+        bankcard = #{bankcard,jdbcType=VARCHAR},
       </if>
-      <if test="realname != null" >
-        realname = #{realname,jdbcType=VARCHAR},
+      <if test="realName != null" >
+        real_name = #{realName,jdbcType=VARCHAR},
       </if>
-      <if test="vipScore != null" >
-        vip_score = #{vipScore,jdbcType=VARCHAR},
+      <if test="certificateNo != null" >
+        certificate_no = #{certificateNo,jdbcType=VARCHAR},
       </if>
       <if test="bankname != null" >
         bankname = #{bankname,jdbcType=VARCHAR},
@@ -177,11 +168,8 @@
       <if test="cardtype != null" >
         cardtype = #{cardtype,jdbcType=VARCHAR},
       </if>
-      <if test="channel != null" >
-        channel = #{channel,jdbcType=VARCHAR},
-      </if>
-      <if test="token != null" >
-        token = #{token,jdbcType=VARCHAR},
+      <if test="provider != null" >
+        provider = #{provider,jdbcType=VARCHAR},
       </if>
       <if test="finishtime != null" >
         finishtime = #{finishtime,jdbcType=TIMESTAMP},
@@ -204,13 +192,12 @@
     set userId = #{userid,jdbcType=BIGINT},
       createtime = #{createtime,jdbcType=TIMESTAMP},
       ispass = #{ispass,jdbcType=TINYINT},
-      bankcard = #{bankcard,jdbcType=DECIMAL},
-      realname = #{realname,jdbcType=VARCHAR},
-      vip_score = #{vipScore,jdbcType=VARCHAR},
+      bankcard = #{bankcard,jdbcType=VARCHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      certificate_no = #{certificateNo,jdbcType=VARCHAR},
       bankname = #{bankname,jdbcType=VARCHAR},
       cardtype = #{cardtype,jdbcType=VARCHAR},
-      channel = #{channel,jdbcType=VARCHAR},
-      token = #{token,jdbcType=VARCHAR},
+      provider = #{provider,jdbcType=VARCHAR},
       finishtime = #{finishtime,jdbcType=TIMESTAMP},
       cost = #{cost,jdbcType=DECIMAL},
       score = #{score,jdbcType=DECIMAL},
