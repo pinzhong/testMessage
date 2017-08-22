@@ -23,6 +23,8 @@ public enum CodeType {
 				return LOGIN;
 			case 2:
 				return REGISTER;
+			case 3:
+				return PAYPWD;
 			default:
 				return null;
 		}
