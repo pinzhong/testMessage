@@ -13,6 +13,9 @@ public class FreezeThawInfo {
     /** 冻结解冻金额  account **/
     private BigDecimal account;
 
+    /**   type **/
+    private Integer type;
+
     /** 状态，0为冻结，1为解冻  status **/
     private Integer status;
 
@@ -59,6 +62,16 @@ public class FreezeThawInfo {
     /**   冻结解冻金额  account   **/
     public void setAccount(BigDecimal account) {
         this.account = account;
+    }
+
+    /**     type   **/
+    public Integer getType() {
+        return type;
+    }
+
+    /**     type   **/
+    public void setType(Integer type) {
+        this.type = type;
     }
 
     /**   状态，0为冻结，1为解冻  status   **/

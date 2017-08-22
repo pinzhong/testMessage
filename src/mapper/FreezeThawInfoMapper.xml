@@ -6,6 +6,7 @@
     <id column="freeze_thaw_id" property="freezeThawId" jdbcType="BIGINT" />
     <result column="user_id" property="userId" jdbcType="BIGINT" />
     <result column="account" property="account" jdbcType="DECIMAL" />
+    <result column="type" property="type" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="freeze_time" property="freezeTime" jdbcType="TIMESTAMP" />
     <result column="thaw_time" property="thawTime" jdbcType="TIMESTAMP" />
@@ -15,8 +16,8 @@
   </resultMap>
   <sql id="Base_Column_List" >
     <!--          -->
-    freeze_thaw_id, user_id, account, status, freeze_time, thaw_time, create_time, update_time, 
-    version
+    freeze_thaw_id, user_id, account, type, status, freeze_time, thaw_time, create_time, 
+    update_time, version
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     <!--          -->
@@ -33,13 +34,13 @@
   <insert id="insert" parameterType="com.trsd.entities.FreezeThawInfo" >
     <!--          -->
     insert into t_freeze_thaw (freeze_thaw_id, user_id, account, 
-      status, freeze_time, thaw_time, 
-      create_time, update_time, version
-      )
+      type, status, freeze_time, 
+      thaw_time, create_time, update_time, 
+      version)
     values (#{freezeThawId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{account,jdbcType=DECIMAL}, 
-      #{status,jdbcType=INTEGER}, #{freezeTime,jdbcType=TIMESTAMP}, #{thawTime,jdbcType=TIMESTAMP}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}
-      )
+      #{type,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{freezeTime,jdbcType=TIMESTAMP}, 
+      #{thawTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{version,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.trsd.entities.FreezeThawInfo" >
     <!--          -->
@@ -53,6 +54,9 @@
       </if>
       <if test="account != null" >
         account,
+      </if>
+      <if test="type != null" >
+        type,
       </if>
       <if test="status != null" >
         status,
@@ -82,6 +86,9 @@
       </if>
       <if test="account != null" >
         #{account,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
       </if>
       <if test="status != null" >
         #{status,jdbcType=INTEGER},
@@ -113,6 +120,9 @@
       <if test="account != null" >
         account = #{account,jdbcType=DECIMAL},
       </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
       <if test="status != null" >
         status = #{status,jdbcType=INTEGER},
       </if>
@@ -139,6 +149,7 @@
     update t_freeze_thaw
     set user_id = #{userId,jdbcType=BIGINT},
       account = #{account,jdbcType=DECIMAL},
+      type = #{type,jdbcType=INTEGER},
       status = #{status,jdbcType=INTEGER},
       freeze_time = #{freezeTime,jdbcType=TIMESTAMP},
       thaw_time = #{thawTime,jdbcType=TIMESTAMP},
