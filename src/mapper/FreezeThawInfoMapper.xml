@@ -32,7 +32,7 @@
     delete from t_freeze_thaw
     where freeze_thaw_id = #{freezeThawId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.trsd.entities.FreezeThawInfo" keyProperty="id">
+  <insert id="insert" parameterType="com.trsd.entities.FreezeThawInfo" keyProperty="freezeThawId">
     <!--          -->
     insert into t_freeze_thaw (freeze_thaw_id, user_id, account, 
       type, status, freeze_time, 
