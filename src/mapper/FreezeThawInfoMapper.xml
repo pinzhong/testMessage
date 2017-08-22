@@ -13,11 +13,12 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="version" property="version" jdbcType="BIGINT" />
+    <result column="flag" property="flag" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--          -->
     freeze_thaw_id, user_id, account, type, status, freeze_time, thaw_time, create_time, 
-    update_time, version
+    update_time, version, flag
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     <!--          -->
@@ -31,16 +32,16 @@
     delete from t_freeze_thaw
     where freeze_thaw_id = #{freezeThawId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.trsd.entities.FreezeThawInfo" >
+  <insert id="insert" parameterType="com.trsd.entities.FreezeThawInfo" keyProperty="id">
     <!--          -->
     insert into t_freeze_thaw (freeze_thaw_id, user_id, account, 
       type, status, freeze_time, 
       thaw_time, create_time, update_time, 
-      version)
+      version, flag)
     values (#{freezeThawId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{account,jdbcType=DECIMAL}, 
       #{type,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{freezeTime,jdbcType=TIMESTAMP}, 
       #{thawTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{version,jdbcType=BIGINT})
+      #{version,jdbcType=BIGINT}, #{flag,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.trsd.entities.FreezeThawInfo" >
     <!--          -->
@@ -76,6 +77,9 @@
       <if test="version != null" >
         version,
       </if>
+      <if test="flag != null" >
+        flag,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="freezeThawId != null" >
@@ -107,6 +111,9 @@
       </if>
       <if test="version != null" >
         #{version,jdbcType=BIGINT},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -141,6 +148,9 @@
       <if test="version != null" >
         version = #{version,jdbcType=BIGINT},
       </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=INTEGER},
+      </if>
     </set>
     where freeze_thaw_id = #{freezeThawId,jdbcType=BIGINT}
   </update>
@@ -155,7 +165,8 @@
       thaw_time = #{thawTime,jdbcType=TIMESTAMP},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      version = #{version,jdbcType=BIGINT}
+      version = #{version,jdbcType=BIGINT},
+      flag = #{flag,jdbcType=INTEGER}
     where freeze_thaw_id = #{freezeThawId,jdbcType=BIGINT}
   </update>
 </mapper>

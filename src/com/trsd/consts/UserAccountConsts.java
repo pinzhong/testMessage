@@ -36,6 +36,12 @@ public class UserAccountConsts {
 	public static final int USER_ACCOUNT_TYPE_PAYBACK_LONG_PENALTY = 406;//收取长贷违约金
 	
 	/**
+	 * 冻结解冻账户变动类型
+	 */
+	public static final int USER_ACCOUNT_TYPE_FREEZE = 501;//资金冻结
+	public static final int USER_ACCOUNT_TYPE_THAW = 502;//资金解冻
+	
+	/**
 	 * 平台账户变动类型
 	 */
 	public static final int XYD_ACCOUNT_TYPE_INVEST = 1001;//收取投资收益
