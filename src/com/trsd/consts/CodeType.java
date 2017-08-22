@@ -8,7 +8,8 @@ package com.trsd.consts;
  */
 public enum CodeType {
 	LOGIN(1), // 登录验证码
-	REGISTER(2);// 注册验证码
+	REGISTER(2),// 注册验证码
+	PAYPWD(3);//修改支付密码
 
 	private int value = 0;
 
