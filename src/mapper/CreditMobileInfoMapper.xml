@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trsd.mapper.CreditMobileInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditMobileInfo" >
+    <!--          -->
+    <id column="authid" property="authid" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="BIGINT" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="ispass" property="ispass" jdbcType="TINYINT" />
+    <result column="blance" property="blance" jdbcType="DECIMAL" />
+    <result column="vip_score" property="vipScore" jdbcType="CHAR" />
+    <result column="isp" property="isp" jdbcType="VARCHAR" />
+    <result column="jointime" property="jointime" jdbcType="TIMESTAMP" />
+    <result column="netage" property="netage" jdbcType="VARCHAR" />
+    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="vip_level" property="vipLevel" jdbcType="VARCHAR" />
+    <result column="channel" property="channel" jdbcType="VARCHAR" />
+    <result column="token" property="token" jdbcType="VARCHAR" />
+    <result column="finishtime" property="finishtime" jdbcType="TIMESTAMP" />
+    <result column="cost" property="cost" jdbcType="DECIMAL" />
+    <result column="score" property="score" jdbcType="DECIMAL" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--          -->
+    authid, userId, phone, createtime, ispass, blance, vip_score, isp, jointime, netage, 
+    location, address, vip_level, channel, token, finishtime, cost, score, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!--          -->
+    select 
+    <include refid="Base_Column_List" />
+    from t_credit_mobile
+    where authid = #{authid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    <!--          -->
+    delete from t_credit_mobile
+    where authid = #{authid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.CreditMobileInfo" >
+    <!--          -->
+    insert into t_credit_mobile (authid, userId, phone, 
+      createtime, ispass, blance, 
+      vip_score, isp, jointime, 
+      netage, location, address, 
+      vip_level, channel, token, 
+      finishtime, cost, score, 
+      status)
+    values (#{authid,jdbcType=VARCHAR}, #{userid,jdbcType=BIGINT}, #{phone,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{ispass,jdbcType=TINYINT}, #{blance,jdbcType=DECIMAL}, 
+      #{vipScore,jdbcType=CHAR}, #{isp,jdbcType=VARCHAR}, #{jointime,jdbcType=TIMESTAMP}, 
+      #{netage,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{vipLevel,jdbcType=VARCHAR}, #{channel,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, 
+      #{finishtime,jdbcType=TIMESTAMP}, #{cost,jdbcType=DECIMAL}, #{score,jdbcType=DECIMAL}, 
+      #{status,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.CreditMobileInfo" >
+    <!--          -->
+    insert into t_credit_mobile
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="authid != null" >
+        authid,
+      </if>
+      <if test="userid != null" >
+        userId,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="ispass != null" >
+        ispass,
+      </if>
+      <if test="blance != null" >
+        blance,
+      </if>
+      <if test="vipScore != null" >
+        vip_score,
+      </if>
+      <if test="isp != null" >
+        isp,
+      </if>
+      <if test="jointime != null" >
+        jointime,
+      </if>
+      <if test="netage != null" >
+        netage,
+      </if>
+      <if test="location != null" >
+        location,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="vipLevel != null" >
+        vip_level,
+      </if>
+      <if test="channel != null" >
+        channel,
+      </if>
+      <if test="token != null" >
+        token,
+      </if>
+      <if test="finishtime != null" >
+        finishtime,
+      </if>
+      <if test="cost != null" >
+        cost,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="authid != null" >
+        #{authid,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ispass != null" >
+        #{ispass,jdbcType=TINYINT},
+      </if>
+      <if test="blance != null" >
+        #{blance,jdbcType=DECIMAL},
+      </if>
+      <if test="vipScore != null" >
+        #{vipScore,jdbcType=CHAR},
+      </if>
+      <if test="isp != null" >
+        #{isp,jdbcType=VARCHAR},
+      </if>
+      <if test="jointime != null" >
+        #{jointime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="netage != null" >
+        #{netage,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null" >
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="vipLevel != null" >
+        #{vipLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="channel != null" >
+        #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="finishtime != null" >
+        #{finishtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cost != null" >
+        #{cost,jdbcType=DECIMAL},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.CreditMobileInfo" >
+    <!--          -->
+    update t_credit_mobile
+    <set >
+      <if test="userid != null" >
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ispass != null" >
+        ispass = #{ispass,jdbcType=TINYINT},
+      </if>
+      <if test="blance != null" >
+        blance = #{blance,jdbcType=DECIMAL},
+      </if>
+      <if test="vipScore != null" >
+        vip_score = #{vipScore,jdbcType=CHAR},
+      </if>
+      <if test="isp != null" >
+        isp = #{isp,jdbcType=VARCHAR},
+      </if>
+      <if test="jointime != null" >
+        jointime = #{jointime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="netage != null" >
+        netage = #{netage,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null" >
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="vipLevel != null" >
+        vip_level = #{vipLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="channel != null" >
+        channel = #{channel,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null" >
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="finishtime != null" >
+        finishtime = #{finishtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cost != null" >
+        cost = #{cost,jdbcType=DECIMAL},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where authid = #{authid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.CreditMobileInfo" >
+    <!--          -->
+    update t_credit_mobile
+    set userId = #{userid,jdbcType=BIGINT},
+      phone = #{phone,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      ispass = #{ispass,jdbcType=TINYINT},
+      blance = #{blance,jdbcType=DECIMAL},
+      vip_score = #{vipScore,jdbcType=CHAR},
+      isp = #{isp,jdbcType=VARCHAR},
+      jointime = #{jointime,jdbcType=TIMESTAMP},
+      netage = #{netage,jdbcType=VARCHAR},
+      location = #{location,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      vip_level = #{vipLevel,jdbcType=VARCHAR},
+      channel = #{channel,jdbcType=VARCHAR},
+      token = #{token,jdbcType=VARCHAR},
+      finishtime = #{finishtime,jdbcType=TIMESTAMP},
+      cost = #{cost,jdbcType=DECIMAL},
+      score = #{score,jdbcType=DECIMAL},
+      status = #{status,jdbcType=TINYINT}
+    where authid = #{authid,jdbcType=VARCHAR}
+  </update>
+</mapper>
