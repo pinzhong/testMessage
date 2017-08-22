@@ -34,6 +34,9 @@ public class FreezeThawInfo {
     /** version  version **/
     private Long version;
 
+    /** 扣费标识  flag **/
+    private Integer flag;
+
     /**   冻结解冻编号  freeze_thaw_id   **/
     public Long getFreezeThawId() {
         return freezeThawId;
@@ -132,5 +135,15 @@ public class FreezeThawInfo {
     /**   version  version   **/
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    /**   扣费标识  flag   **/
+    public Integer getFlag() {
+        return flag;
+    }
+
+    /**   扣费标识  flag   **/
+    public void setFlag(Integer flag) {
+        this.flag = flag;
     }
 }
