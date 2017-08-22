@@ -411,4 +411,14 @@ public class UserInfo implements Serializable {
 	public void setAvailableScore(Integer availableScore) {
 		this.availableScore = availableScore;
 	}
+
+	@Override
+	public String toString() {
+		return "UserInfo [userId=" + userId + ", phone=" + phone + ", nickname=" + nickname + ", realName=" + realName + ", certificateNo=" + certificateNo + ", loginPassword=" + loginPassword + ", tradePassword="
+				+ tradePassword + ", qq=" + qq + ", weixin=" + weixin + ", fansCount=" + fansCount + ", creditScore=" + creditScore + ", userLevel=" + userLevel + ", financierLevel=" + financierLevel + ", status="
+				+ status + ", headpic=" + headpic + ", inviteCode=" + inviteCode + ", inviterId=" + inviterId + ", qqOpenId=" + qqOpenId + ", weixinUnionid=" + weixinUnionid + ", weixinInfo=" + weixinInfo
+				+ ", encryptstr=" + encryptstr + ", encryptstr1=" + encryptstr1 + ", encryptstr2=" + encryptstr2 + ", lastLoginTime=" + lastLoginTime + ", lastLoginIp=" + lastLoginIp + ", lastLoginLocation="
+				+ lastLoginLocation + ", lastLoginUdid=" + lastLoginUdid + ", createTime=" + createTime + ", updateTime=" + updateTime + ", version=" + version + ", availableScore=" + availableScore + "]";
+	}
+
 }
