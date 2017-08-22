@@ -7,6 +7,9 @@ public class ResultConsts {
 	
 	public static final String MSG_SUCCESS = "操作成功";
 	public static final String MSG_FAIL = "操作失败";
+	public static final String MSG_SYS_FAIL = "发生未知的系统错误，请与管理员联系。";
+	public static final String MSG_AUTH_FAIL = "你未登录，无权进行此步操作。";
+	public static final String MSG_TCODE_FAIL = "验证码不正确，无权进行此步操作。";
 	public static final String MSG_UNQUALIFIED_LOAN = "您暂无借款资格";
 	public static final String MSG_UNQUALIFIED_LEND = "您暂无投资资格";
 	public static final String MSG_BALANCE_NOT_ENOUGH = "余额不足，不能投资";
