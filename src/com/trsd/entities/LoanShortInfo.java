@@ -25,8 +25,8 @@ public class LoanShortInfo {
     /** 限制有效时间  limit_time **/
     private Date limitTime;
 
-    /** 还款时间  payback_time **/
-    private Date paybackTime;
+    /** 还款时间  repayback_time **/
+    private Date repaybackTime;
 
     /** 新建时间  create_time **/
     private Date createTime;
@@ -134,14 +134,14 @@ public class LoanShortInfo {
         this.limitTime = limitTime;
     }
 
-    /**   还款时间  payback_time   **/
-    public Date getPaybackTime() {
-        return paybackTime;
+    /**   还款时间  repayback_time   **/
+    public Date getRepaybackTime() {
+        return repaybackTime;
     }
 
-    /**   还款时间  payback_time   **/
-    public void setPaybackTime(Date paybackTime) {
-        this.paybackTime = paybackTime;
+    /**   还款时间  repayback_time   **/
+    public void setRepaybackTime(Date repaybackTime) {
+        this.repaybackTime = repaybackTime;
     }
 
     /**   新建时间  create_time   **/

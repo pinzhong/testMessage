@@ -306,6 +306,26 @@ public class CommonUtil {
 		}
 		return result;
 	}
+	
+	/**
+	 * 判断两个日期的间隔
+	 * 
+	 * @param d1
+	 * @param d2
+	 * @return
+	 * @throws ParseException 
+	 */
+	public static Long dateDifferentDays(Date d1, Date d2) throws ParseException {
+		
+		Calendar c1 = Calendar.getInstance();
+		Calendar c2 = Calendar.getInstance();
+		c1.setTime(getFormatDate(d1, "yyyy-MM-dd"));
+		c2.setTime(getFormatDate(d2, "yyyy-MM-dd"));
+		Long result = 0L;
+		long diff = c1.getTimeInMillis() - c2.getTimeInMillis();
+		result = diff / (24 * 60 * 60 * 1000);
+		return result;
+	}
 
 	/**
 	 * 获取传入日期延后或提前天数的日期

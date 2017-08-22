@@ -10,7 +10,7 @@
     <result column="loan_money" property="loanMoney" jdbcType="DECIMAL" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="limit_time" property="limitTime" jdbcType="TIMESTAMP" />
-    <result column="payback_time" property="paybackTime" jdbcType="TIMESTAMP" />
+    <result column="repayback_time" property="repaybackTime" jdbcType="TIMESTAMP" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="version" property="version" jdbcType="BIGINT" />
@@ -27,7 +27,7 @@
   <sql id="Base_Column_List" >
     <!--          -->
     loan_short_id, user_id, apply_money, borrowed_money, loan_money, status, limit_time, 
-    payback_time, create_time, update_time, version, memo, rate, loan_days, repayment_principal, 
+    repayback_time, create_time, update_time, version, memo, rate, loan_days, repayment_principal, 
     repayment_interest, repayment_penalty, payback_principal, payback_interest, payback_penalty
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -46,14 +46,14 @@
     <!--          -->
     insert into t_loan_short (loan_short_id, user_id, apply_money, 
       borrowed_money, loan_money, status, 
-      limit_time, payback_time, create_time, 
+      limit_time, repayback_time, create_time, 
       update_time, version, memo, 
       rate, loan_days, repayment_principal, 
       repayment_interest, repayment_penalty, payback_principal, 
       payback_interest, payback_penalty)
     values (#{loanShortId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{applyMoney,jdbcType=DECIMAL}, 
       #{borrowedMoney,jdbcType=DECIMAL}, #{loanMoney,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, 
-      #{limitTime,jdbcType=TIMESTAMP}, #{paybackTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{limitTime,jdbcType=TIMESTAMP}, #{repaybackTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, #{memo,jdbcType=VARCHAR}, 
       #{rate,jdbcType=DECIMAL}, #{loanDays,jdbcType=INTEGER}, #{repaymentPrincipal,jdbcType=DECIMAL}, 
       #{repaymentInterest,jdbcType=DECIMAL}, #{repaymentPenalty,jdbcType=DECIMAL}, #{paybackPrincipal,jdbcType=DECIMAL}, 
@@ -84,8 +84,8 @@
       <if test="limitTime != null" >
         limit_time,
       </if>
-      <if test="paybackTime != null" >
-        payback_time,
+      <if test="repaybackTime != null" >
+        repayback_time,
       </if>
       <if test="createTime != null" >
         create_time,
@@ -146,8 +146,8 @@
       <if test="limitTime != null" >
         #{limitTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="paybackTime != null" >
-        #{paybackTime,jdbcType=TIMESTAMP},
+      <if test="repaybackTime != null" >
+        #{repaybackTime,jdbcType=TIMESTAMP},
       </if>
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
@@ -209,8 +209,8 @@
       <if test="limitTime != null" >
         limit_time = #{limitTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="paybackTime != null" >
-        payback_time = #{paybackTime,jdbcType=TIMESTAMP},
+      <if test="repaybackTime != null" >
+        repayback_time = #{repaybackTime,jdbcType=TIMESTAMP},
       </if>
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -260,7 +260,7 @@
       loan_money = #{loanMoney,jdbcType=DECIMAL},
       status = #{status,jdbcType=INTEGER},
       limit_time = #{limitTime,jdbcType=TIMESTAMP},
-      payback_time = #{paybackTime,jdbcType=TIMESTAMP},
+      repayback_time = #{repaybackTime,jdbcType=TIMESTAMP},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       version = #{version,jdbcType=BIGINT},
