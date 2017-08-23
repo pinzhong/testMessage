@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -38,6 +39,7 @@ public class CommonUtil {
 	// 生成防伪标签的数量
 	public static int GeneFWCnt = 1;
 	private static SimpleDateFormat sdfymd = new SimpleDateFormat("yyyy-MM-dd");
+	private static Random random = new Random();
 
 	/**
 	 * 生成掩盖后的手机号码
@@ -801,5 +803,14 @@ public class CommonUtil {
 		}else{
 			return false;
 		}
+	}
+	
+	/**
+	 * 生成1000－9999的4位随机数来进行登录
+	 * 
+	 * @return
+	 */
+	public static int getRandom() {
+		return random.nextInt(8999) + 1000;
 	}
 }
