@@ -55,7 +55,7 @@
     delete from t_user
     where user_id = #{userId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.trsd.entities.UserInfo" >
+  <insert id="insert" parameterType="com.trsd.entities.UserInfo"  useGeneratedKeys="true" keyProperty="userId">
     <!--          -->
     insert into t_user (user_id, phone, nickname, 
       real_name, certificate_no, login_password, 
@@ -80,7 +80,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
       #{availableScore,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.trsd.entities.UserInfo" >
+  <insert id="insertSelective" parameterType="com.trsd.entities.UserInfo"  useGeneratedKeys="true" keyProperty="userId">
     <!--          -->
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides="," >

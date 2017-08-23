@@ -219,25 +219,6 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 待添加
-	 * 
-	 * @param type
-	 * @return
-	 */
-	public static Object getRandom(int type) {
-		Object obj = null;
-		switch (type) {
-			case 1:
-				break;
-			case 2:
-				break;
-			default:
-				break;
-		}
-		return obj;
-	}
-
-	/**
 	 * 获取当前日期延后或提前天数的日期
 	 * 
 	 * @param amount
@@ -397,69 +378,6 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 获取当前区域码的上级编码
-	 * 
-	 * @param 需格式化的标准区域码
-	 * @return 格式化完成的标准区域码
-	 */
-	public static Long formatAreaToSuperior(Long acode) {
-		if (acode != null) {
-			String tempCode = String.valueOf(acode).trim();
-			char[] list = tempCode.toCharArray();
-			String match = "";
-			int counter = 0;
-			for (int i = list.length - 1; i >= 0; i--) {
-				++counter;
-				match += list[i];
-				if (0 == counter % 2) {
-					if (!match.equals("00")) {
-						if (i > 1) {
-							list[i] = '0';
-							list[i + 1] = '0';
-							break;
-						}
-					} else {
-						match = "";
-					}
-				}
-			}
-			return Long.valueOf(String.valueOf(list));
-		} else
-			return null;
-	}
-
-	/**
-	 * 获取当前区域码去除0之后的码值
-	 * 
-	 * @param 需格式化的标准区域码
-	 * @return 格式化完成的标准区域码
-	 */
-	public static Long formatAreaCode(Long _areacode) {
-		String areacode = "";
-		if (_areacode != null) {
-			areacode = _areacode.toString();
-			String tempCode = String.valueOf(areacode).trim();
-			char[] list = tempCode.toCharArray();
-			String match = "";
-			int endIndex = 0;
-			int counter = 0;
-			for (int i = 0; i < list.length; i++) {
-				++counter;
-				match += list[i];
-				if (counter % 2 == 0) {
-					if (match.equals("00")) {
-						endIndex = i;
-						break;
-					} else
-						match = "";
-				}
-			}
-			return Long.parseLong(areacode.substring(0, endIndex - 1));
-		} else
-			return null;
-	}
-
-	/**
 	 * 是否是数字
 	 * 
 	 * @param str
@@ -609,33 +527,6 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 返回下属地区like__配对
-	 * 
-	 * @param input
-	 *            String.
-	 * @return
-	 */
-	public static String toLike_(String use) {
-		char[] strings = new char[use.length()];
-		for (int i = 0; i < use.length(); i++) {
-			strings[i] = use.charAt(i);
-		}
-		for (int i = 0; i < use.length(); i++) {
-			if (i % 2 == 0) {
-				if (use.charAt(i) == '0' && use.charAt(i + 1) == '0') {
-					strings[i] = '_';
-					strings[i + 1] = '_';
-				}
-			}
-		}
-		String string = "";
-		for (int i = 0; i < use.length(); i++) {
-			string += strings[i];
-		}
-		return string;
-	}
-
-	/**
 	 * 判断对象是否为空
 	 * 
 	 * @param obj
@@ -660,39 +551,6 @@ public class CommonUtil {
 		else
 			return "";
 	}
-
-	/**
-	 * 生成二维码图片
-	 * 
-	 * @param code
-	 *            二维码内容
-	 * @param width
-	 *            图片宽度
-	 * @param height
-	 *            图片高度
-	 * @param version
-	 *            级别，级别越高二维码可放内容越多
-	 * @return 图片流
-	 *//*
-		 * public static BufferedImage QrEncode(String code, int width, int height, int
-		 * version) { int t = 0, l = 0, w = width, h = height, v = version;
-		 * BufferedImage bi = null; if (code != null) { Qrcode qrcode = new Qrcode();
-		 * qrcode.setQrcodeErrorCorrect('M'); qrcode.setQrcodeEncodeMode('B');
-		 * qrcode.setQrcodeVersion(v);
-		 * 
-		 * bi = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB); // 创建图片 Graphics2D
-		 * g = bi.createGraphics(); // 设置背景色 g.setBackground(Color.WHITE); // 设置显示颜色
-		 * g.setColor(Color.BLACK); g.clearRect(t, l, w, h);
-		 * 
-		 * String testString = code; byte[] d = null; try { d =
-		 * testString.getBytes("UTF-8"); } catch (UnsupportedEncodingException e) {
-		 * e.printStackTrace(); }
-		 * 
-		 * // 字符串长度判断 version*20个字符内 if (d.length > 0 && d.length < v * 20) {
-		 * boolean[][] b = qrcode.calQrcode(d); for (int i = 0; i < b.length; i++) { for
-		 * (int j = 0; j < b.length; j++) { if (b[j][i]) { g.fillRect(j * 3 + 5, i * 3 +
-		 * 5, 3, 3); } } } } g.dispose(); bi.flush(); } return bi; }
-		 */
 
 	/**
 	 * 过滤emoji图标
@@ -843,48 +701,6 @@ public class CommonUtil {
 		if (date == null)
 			return null;
 		return sdfymd.format(date);
-	}
-
-	public static String analyseTableName(String linecode) {
-		if (linecode == null)
-			return "";
-		linecode = linecode.trim();
-		if (linecode.length() < 6) {
-			return "000000_100000";
-		}
-		linecode = linecode.substring(linecode.length() - 6);
-		int lc = Integer.parseInt(linecode);
-		if (lc > 0 && lc <= 100000) {
-			return "000000_100000";
-		}
-		if (lc > 100000 && lc <= 200000) {
-			return "100000_200000";
-		}
-		if (lc > 200000 && lc <= 300000) {
-			return "200000_300000";
-		}
-		if (lc > 300000 && lc <= 400000) {
-			return "300000_400000";
-		}
-		if (lc > 400000 && lc <= 500000) {
-			return "400000_500000";
-		}
-		if (lc > 500000 && lc <= 600000) {
-			return "500000_600000";
-		}
-		if (lc > 600000 && lc <= 700000) {
-			return "600000_700000";
-		}
-		if (lc > 700000 && lc <= 800000) {
-			return "700000_800000";
-		}
-		if (lc > 800000 && lc <= 900000) {
-			return "800000_900000";
-		}
-		if (lc > 900000) {
-			return "900000_999999";
-		}
-		return "";
 	}
 
 	/**
