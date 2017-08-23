@@ -25,7 +25,7 @@
     delete from t_user_invite
     where user_invite_id = #{userInviteId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.trsd.entities.UserInviteInfo" >
+  <insert id="insert" parameterType="com.trsd.entities.UserInviteInfo" keyProperty="userInviteId" >
     insert into t_user_invite (user_invite_id, user_id, invite_user_id, 
       loan_profit, interest_profit, level, 
       create_time, version)

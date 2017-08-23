@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trsd.mapper.UserLevelInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserLevelInfo" >
+    <!--          -->
+    <id column="level" property="level" jdbcType="INTEGER" />
+    <result column="short_rate" property="shortRate" jdbcType="DECIMAL" />
+    <result column="long_rate" property="longRate" jdbcType="DECIMAL" />
+    <result column="loan_rate" property="loanRate" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--          -->
+    level, short_rate, long_rate, loan_rate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <!--          -->
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_level
+    where level = #{level,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <!--          -->
+    delete from t_user_level
+    where level = #{level,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.trsd.entities.UserLevelInfo" >
+    <!--          -->
+    insert into t_user_level (level, short_rate, long_rate, 
+      loan_rate)
+    values (#{level,jdbcType=INTEGER}, #{shortRate,jdbcType=DECIMAL}, #{longRate,jdbcType=DECIMAL}, 
+      #{loanRate,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.trsd.entities.UserLevelInfo" >
+    <!--          -->
+    insert into t_user_level
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="level != null" >
+        level,
+      </if>
+      <if test="shortRate != null" >
+        short_rate,
+      </if>
+      <if test="longRate != null" >
+        long_rate,
+      </if>
+      <if test="loanRate != null" >
+        loan_rate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="level != null" >
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="shortRate != null" >
+        #{shortRate,jdbcType=DECIMAL},
+      </if>
+      <if test="longRate != null" >
+        #{longRate,jdbcType=DECIMAL},
+      </if>
+      <if test="loanRate != null" >
+        #{loanRate,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.trsd.entities.UserLevelInfo" >
+    <!--          -->
+    update t_user_level
+    <set >
+      <if test="shortRate != null" >
+        short_rate = #{shortRate,jdbcType=DECIMAL},
+      </if>
+      <if test="longRate != null" >
+        long_rate = #{longRate,jdbcType=DECIMAL},
+      </if>
+      <if test="loanRate != null" >
+        loan_rate = #{loanRate,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where level = #{level,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.trsd.entities.UserLevelInfo" >
+    <!--          -->
+    update t_user_level
+    set short_rate = #{shortRate,jdbcType=DECIMAL},
+      long_rate = #{longRate,jdbcType=DECIMAL},
+      loan_rate = #{loanRate,jdbcType=DECIMAL}
+    where level = #{level,jdbcType=INTEGER}
+  </update>
+</mapper>

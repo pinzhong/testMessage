@@ -35,7 +35,7 @@
     delete from t_lend_long
     where lend_long_id = #{lendLongId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.trsd.entities.LendLongInfo" >
+  <insert id="insert" parameterType="com.trsd.entities.LendLongInfo" keyProperty="lendLongId">
     insert into t_lend_long (lend_long_id, loan_long_id, lend_long_scheme_id, 
       user_id, lend_money, repayment_principal, 
       repayment_interest, repayment_penalty, payback_principal, 
