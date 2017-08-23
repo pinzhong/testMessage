@@ -737,7 +737,7 @@ public class CommonUtil {
 	 * @param objs
 	 * @return
 	 */
-	public static Map<String, Object> getListResult(int result, String resMsg, int total, Object objs) {
+	public static Map<String, Object> getResult(int result, String resMsg, int total, Object objs) {
 		if (objs == null)
 			objs = "[]";
 		Map<String, Object> map = new HashMap<String, Object>();
