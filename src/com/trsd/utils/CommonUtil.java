@@ -303,7 +303,9 @@ public class CommonUtil {
 		c1.setTime(getFormatDate(d1, "yyyy-MM-dd"));
 		c2.setTime(getFormatDate(d2, "yyyy-MM-dd"));
 		Long result = 0L;
-		long diff = c1.getTimeInMillis() - c2.getTimeInMillis();
+		long diff = c2.getTimeInMillis() - c1.getTimeInMillis();
+		long aa = c2.getTimeInMillis();
+		long bb =  c1.getTimeInMillis();
 		result = diff / (24 * 60 * 60 * 1000);
 		return result;
 	}
@@ -372,7 +374,7 @@ public class CommonUtil {
 			partter = "yyyy-MM-dd";
 		
 		SimpleDateFormat sdf = new SimpleDateFormat(partter);
-		String s = sdf.format(new Date());
+		String s = sdf.format(date);
 		date =  sdf.parse(s);
 		return date;
 	}
