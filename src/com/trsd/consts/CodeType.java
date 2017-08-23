@@ -9,7 +9,8 @@ package com.trsd.consts;
 public enum CodeType {
 	LOGIN(1), // 登录验证码
 	REGISTER(2),// 注册验证码
-	PAYPWD(3);//修改支付密码
+	PAYPWD(3),//修改支付密码
+	PHONE(4);//修改注册手机号
 
 	private int value = 0;
 
@@ -25,6 +26,8 @@ public enum CodeType {
 				return REGISTER;
 			case 3:
 				return PAYPWD;
+			case 4:
+				return PHONE;
 			default:
 				return null;
 		}
