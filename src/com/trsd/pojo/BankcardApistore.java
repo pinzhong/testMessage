@@ -1,4 +1,4 @@
-package com.trsd.entities.creditbean;
+package com.trsd.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
