@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.FreezeThawMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.FreezeThaw">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="freeze_thaw_id" jdbcType="BIGINT" property="freezeThawId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="account" jdbcType="DECIMAL" property="account" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="freeze_time" jdbcType="TIMESTAMP" property="freezeTime" />
+    <result column="thaw_time" jdbcType="TIMESTAMP" property="thawTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="flag" jdbcType="INTEGER" property="flag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    freeze_thaw_id, user_id, account, type, status, freeze_time, thaw_time, create_time, 
+    update_time, version, flag
+  </sql>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.FreeTicketMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.FreeTicket">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="free_ticket_id" jdbcType="BIGINT" property="freeTicketId" />
+    <result column="freet_amount" jdbcType="DECIMAL" property="freetAmount" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="free_time" jdbcType="TIMESTAMP" property="freeTime" />
+    <result column="pay_back_id" jdbcType="BIGINT" property="payBackId" />
+    <result column="free_type" jdbcType="INTEGER" property="freeType" />
+    <result column="limit_time" jdbcType="TIMESTAMP" property="limitTime" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    free_ticket_id, freet_amount, status, free_time, pay_back_id, free_type, limit_time, 
+    user_id, create_time, version
+  </sql>
+</mapper>

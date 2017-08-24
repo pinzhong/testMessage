@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LendLongMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendLong">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="lend_long_id" jdbcType="BIGINT" property="lendLongId" />
+    <result column="loan_long_id" jdbcType="BIGINT" property="loanLongId" />
+    <result column="lend_long_scheme_id" jdbcType="BIGINT" property="lendLongSchemeId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="lend_money" jdbcType="DECIMAL" property="lendMoney" />
+    <result column="repayment_principal" jdbcType="DECIMAL" property="repaymentPrincipal" />
+    <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
+    <result column="repayment_penalty" jdbcType="DECIMAL" property="repaymentPenalty" />
+    <result column="payback_principal" jdbcType="DECIMAL" property="paybackPrincipal" />
+    <result column="paybackt_interest" jdbcType="DECIMAL" property="paybacktInterest" />
+    <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
+    <result column="lend_user_type" jdbcType="INTEGER" property="lendUserType" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="periods" jdbcType="INTEGER" property="periods" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    lend_long_id, loan_long_id, lend_long_scheme_id, user_id, lend_money, repayment_principal, 
+    repayment_interest, repayment_penalty, payback_principal, paybackt_interest, payback_penalty, 
+    lend_user_type, status, periods, create_time, update_time, version
+  </sql>
+</mapper>

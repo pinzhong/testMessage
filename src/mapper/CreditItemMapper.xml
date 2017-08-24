@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditItemMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="item_id" jdbcType="INTEGER" property="itemId" />
+    <result column="type_id" jdbcType="INTEGER" property="typeId" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="channel" jdbcType="VARCHAR" property="channel" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="isrepeat" jdbcType="BIT" property="isrepeat" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    item_id, type_id, item_name, channel, cost, score, isrepeat, status, remark
+  </sql>
+</mapper>

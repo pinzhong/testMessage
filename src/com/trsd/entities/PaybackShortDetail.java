@@ -1,89 +1,142 @@
 package com.trsd.entities;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import javax.persistence.*;
 
-public class PaybackShortDetail implements Serializable{
+@Table(name = "t_payback_short_detail")
+public class PaybackShortDetail {
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/** 编号  payback_short_detail_id **/
+     * 编号
+     */
+    @Id
+    @Column(name = "payback_short_detail_id")
     private Long paybackShortDetailId;
 
-    /** 短贷投资编号  lend_short_id **/
+    /**
+     * 短贷投资编号
+     */
+    @Column(name = "lend_short_id")
     private Long lendShortId;
 
-    /** 还款金额  payback_money **/
+    /**
+     * 还款金额
+     */
+    @Column(name = "payback_money")
     private BigDecimal paybackMoney;
 
-    /** 还款状态（提前还款，正常还款，逾期还款）  status **/
+    /**
+     * 还款状态（提前还款，正常还款，逾期还款）
+     */
     private Integer status;
 
-    /** 还款类型（本金，利息，违约金）  type **/
+    /**
+     * 还款类型（本金，利息，违约金）
+     */
     private Integer type;
 
-    /**   createtime **/
     private Date createtime;
 
-    /**   编号  payback_short_detail_id   **/
+    /**
+     * 获取编号
+     *
+     * @return payback_short_detail_id - 编号
+     */
     public Long getPaybackShortDetailId() {
         return paybackShortDetailId;
     }
 
-    /**   编号  payback_short_detail_id   **/
+    /**
+     * 设置编号
+     *
+     * @param paybackShortDetailId 编号
+     */
     public void setPaybackShortDetailId(Long paybackShortDetailId) {
         this.paybackShortDetailId = paybackShortDetailId;
     }
 
-    /**   短贷投资编号  lend_short_id   **/
+    /**
+     * 获取短贷投资编号
+     *
+     * @return lend_short_id - 短贷投资编号
+     */
     public Long getLendShortId() {
         return lendShortId;
     }
 
-    /**   短贷投资编号  lend_short_id   **/
+    /**
+     * 设置短贷投资编号
+     *
+     * @param lendShortId 短贷投资编号
+     */
     public void setLendShortId(Long lendShortId) {
         this.lendShortId = lendShortId;
     }
 
-    /**   还款金额  payback_money   **/
+    /**
+     * 获取还款金额
+     *
+     * @return payback_money - 还款金额
+     */
     public BigDecimal getPaybackMoney() {
         return paybackMoney;
     }
 
-    /**   还款金额  payback_money   **/
+    /**
+     * 设置还款金额
+     *
+     * @param paybackMoney 还款金额
+     */
     public void setPaybackMoney(BigDecimal paybackMoney) {
         this.paybackMoney = paybackMoney;
     }
 
-    /**   还款状态（提前还款，正常还款，逾期还款）  status   **/
+    /**
+     * 获取还款状态（提前还款，正常还款，逾期还款）
+     *
+     * @return status - 还款状态（提前还款，正常还款，逾期还款）
+     */
     public Integer getStatus() {
         return status;
     }
 
-    /**   还款状态（提前还款，正常还款，逾期还款）  status   **/
+    /**
+     * 设置还款状态（提前还款，正常还款，逾期还款）
+     *
+     * @param status 还款状态（提前还款，正常还款，逾期还款）
+     */
     public void setStatus(Integer status) {
         this.status = status;
     }
 
-    /**   还款类型（本金，利息，违约金）  type   **/
+    /**
+     * 获取还款类型（本金，利息，违约金）
+     *
+     * @return type - 还款类型（本金，利息，违约金）
+     */
     public Integer getType() {
         return type;
     }
 
-    /**   还款类型（本金，利息，违约金）  type   **/
+    /**
+     * 设置还款类型（本金，利息，违约金）
+     *
+     * @param type 还款类型（本金，利息，违约金）
+     */
     public void setType(Integer type) {
         this.type = type;
     }
 
-    /**     createtime   **/
+    /**
+     * @return createtime
+     */
     public Date getCreatetime() {
         return createtime;
     }
 
-    /**     createtime   **/
+    /**
+     * @param createtime
+     */
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
     }

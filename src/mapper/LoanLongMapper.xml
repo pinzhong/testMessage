@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LoanLongMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LoanLong">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="loan_long_id" jdbcType="BIGINT" property="loanLongId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="apply_money" jdbcType="DECIMAL" property="applyMoney" />
+    <result column="borrowed_money" jdbcType="DECIMAL" property="borrowedMoney" />
+    <result column="loan_money" jdbcType="DECIMAL" property="loanMoney" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="limit_time" jdbcType="TIMESTAMP" property="limitTime" />
+    <result column="periods" jdbcType="INTEGER" property="periods" />
+    <result column="rate" jdbcType="DECIMAL" property="rate" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="repayment_principal" jdbcType="DECIMAL" property="repaymentPrincipal" />
+    <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
+    <result column="repayment_penalty" jdbcType="DECIMAL" property="repaymentPenalty" />
+    <result column="payback_principal" jdbcType="DECIMAL" property="paybackPrincipal" />
+    <result column="payback_interest" jdbcType="DECIMAL" property="paybackInterest" />
+    <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    loan_long_id, user_id, apply_money, borrowed_money, loan_money, status, limit_time, 
+    periods, rate, create_time, update_time, version, memo, repayment_principal, repayment_interest, 
+    repayment_penalty, payback_principal, payback_interest, payback_penalty
+  </sql>
+</mapper>

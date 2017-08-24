@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditBankcardMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditBankcard">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="authid" jdbcType="BIGINT" property="authid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="ispass" jdbcType="TINYINT" property="ispass" />
+    <result column="bankcard" jdbcType="VARCHAR" property="bankcard" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="bankname" jdbcType="VARCHAR" property="bankname" />
+    <result column="cardtype" jdbcType="VARCHAR" property="cardtype" />
+    <result column="provider" jdbcType="VARCHAR" property="provider" />
+    <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    authid, userId, createtime, ispass, bankcard, real_name, certificate_no, bankname, 
+    cardtype, provider, finishtime, cost, score, status
+  </sql>
+</mapper>
