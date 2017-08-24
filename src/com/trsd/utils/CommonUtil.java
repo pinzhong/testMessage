@@ -813,4 +813,22 @@ public class CommonUtil {
 	public static int getRandom() {
 		return random.nextInt(8999) + 1000;
 	}
+	
+	/**
+	 * 根据身份证号获取年龄
+	 * @param idCard
+	 * @return
+	 */
+	public static int getAgeByIdCard(String idCard) {
+		 int iAge = 0;
+	     try{
+	    	 Calendar cal = Calendar.getInstance();
+		     String year = idCard.substring(6, 10);
+		     int iCurrYear = cal.get(Calendar.YEAR);
+		     iAge = iCurrYear - Integer.valueOf(year);
+	     }catch(Exception e){
+	    	 
+	     }
+	     return iAge;
+	 }
 }
