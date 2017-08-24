@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LendShortMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendShort">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="lend_short_id" jdbcType="BIGINT" property="lendShortId" />
+    <result column="loan_short_id" jdbcType="BIGINT" property="loanShortId" />
+    <result column="lend_short_scheme_id" jdbcType="BIGINT" property="lendShortSchemeId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="lend_money" jdbcType="DECIMAL" property="lendMoney" />
+    <result column="repayment_principal" jdbcType="DECIMAL" property="repaymentPrincipal" />
+    <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
+    <result column="repayment_penalty" jdbcType="DECIMAL" property="repaymentPenalty" />
+    <result column="repayment_time" jdbcType="TIMESTAMP" property="repaymentTime" />
+    <result column="payback_principal" jdbcType="DECIMAL" property="paybackPrincipal" />
+    <result column="payback_interest" jdbcType="DECIMAL" property="paybackInterest" />
+    <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
+    <result column="payback_time" jdbcType="TIMESTAMP" property="paybackTime" />
+    <result column="lend_user_type" jdbcType="INTEGER" property="lendUserType" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    lend_short_id, loan_short_id, lend_short_scheme_id, user_id, lend_money, repayment_principal, 
+    repayment_interest, repayment_penalty, repayment_time, payback_principal, payback_interest, 
+    payback_penalty, payback_time, lend_user_type, status, create_time, update_time, 
+    version
+  </sql>
+</mapper>
