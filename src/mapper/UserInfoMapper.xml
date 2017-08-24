@@ -36,6 +36,9 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
     <result column="available_score" jdbcType="INTEGER" property="availableScore" />
+    <result column="follow_count" jdbcType="INTEGER" property="followCount" />
+    <result column="invite_count" jdbcType="INTEGER" property="inviteCount" />
+    <result column="type" jdbcType="INTEGER" property="type" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -45,6 +48,6 @@
     qq, weixin, fans_count, credit_score, user_level, financier_level, status, headpic, 
     invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, encryptstr1, 
     encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
-    create_time, update_time, version, available_score
+    create_time, update_time, version, available_score, follow_count, invite_count, type
   </sql>
 </mapper>

@@ -165,6 +165,20 @@ public class UserInfo {
     private Integer availableScore;
 
     /**
+     * 关注数
+     */
+    @Column(name = "follow_count")
+    private Integer followCount;
+
+    @Column(name = "invite_count")
+    private Integer inviteCount;
+
+    /**
+     * 用户类型，企业用户或个人用户
+     */
+    private Integer type;
+
+    /**
      * 获取主键ID
      *
      * @return user_id - 主键ID
@@ -696,5 +710,55 @@ public class UserInfo {
      */
     public void setAvailableScore(Integer availableScore) {
         this.availableScore = availableScore;
+    }
+
+    /**
+     * 获取关注数
+     *
+     * @return follow_count - 关注数
+     */
+    public Integer getFollowCount() {
+        return followCount;
+    }
+
+    /**
+     * 设置关注数
+     *
+     * @param followCount 关注数
+     */
+    public void setFollowCount(Integer followCount) {
+        this.followCount = followCount;
+    }
+
+    /**
+     * @return invite_count
+     */
+    public Integer getInviteCount() {
+        return inviteCount;
+    }
+
+    /**
+     * @param inviteCount
+     */
+    public void setInviteCount(Integer inviteCount) {
+        this.inviteCount = inviteCount;
+    }
+
+    /**
+     * 获取用户类型，企业用户或个人用户
+     *
+     * @return type - 用户类型，企业用户或个人用户
+     */
+    public Integer getType() {
+        return type;
+    }
+
+    /**
+     * 设置用户类型，企业用户或个人用户
+     *
+     * @param type 用户类型，企业用户或个人用户
+     */
+    public void setType(Integer type) {
+        this.type = type;
     }
 }
