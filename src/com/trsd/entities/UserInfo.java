@@ -1,424 +1,700 @@
 package com.trsd.entities;
 
-import java.io.Serializable;
 import java.util.Date;
-
-public class UserInfo implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/** 主键ID user_id **/
-	private Long userId;
-
-	/** 电话号码 phone **/
-	private String phone;
-
-	/** 用户昵称 nickname **/
-	private String nickname;
-
-	/** 用户姓名 real_name **/
-	private String realName;
-
-	/** 身份证号 certificate_no **/
-	private String certificateNo;
-
-	/** 登录密码 login_password **/
-	private String loginPassword;
-
-	/** 交易密码 trade_password **/
-	private String tradePassword;
-
-	/** QQ号 qq **/
-	private String qq;
-
-	/** 微信号 weixin **/
-	private String weixin;
-
-	/** 粉丝数 fans_count **/
-	private Integer fansCount;
-
-	/** 当前额度 credit_score **/
-	private Integer creditScore;
-
-	/** 借款用户等级 user_level **/
-	private Integer userLevel;
-
-	/** 金主等级 financier_level **/
-	private Integer financierLevel;
-
-	/** 用户状态 status **/
-	private Integer status;
-
-	/** 头像 headpic **/
-	private String headpic;
-
-	/** 邀请码 invite_code **/
-	private String inviteCode;
-
-	/** inviter_id **/
-	private Long inviterId;
-
-	/** qq登录openid qq_open_id **/
-	private String qqOpenId;
-
-	/** 微信登录openid weixin_unionid **/
-	private String weixinUnionid;
-
-	/** weixin_info **/
-	private String weixinInfo;
-
-	/** 加密串 encryptstr **/
-	private String encryptstr;
-
-	/** encryptstr1 **/
-	private String encryptstr1;
-
-	/** encryptstr2 **/
-	private String encryptstr2;
-
-	/** 最后登录时间 last_login_time **/
-	private Date lastLoginTime;
-
-	/** 最后登录ip last_login_ip **/
-	private String lastLoginIp;
-
-	/** 最后登录地点 last_login_location **/
-	private String lastLoginLocation;
-
-	/** 最后登录设备号 last_login_udid **/
-	private String lastLoginUdid;
-
-	/** create_time **/
-	private Date createTime;
-
-	/** update_time **/
-	private Date updateTime;
-
-	/** 版本号 version **/
-	private Long version;
-
-	/** 当前可用额度 available_score **/
-	private Integer availableScore;
-
-	/** 主键ID user_id **/
-	public Long getUserId() {
-		return userId;
-	}
-
-	/** 主键ID user_id **/
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	/** 电话号码 phone **/
-	public String getPhone() {
-		return phone;
-	}
-
-	/** 电话号码 phone **/
-	public void setPhone(String phone) {
-		this.phone = phone == null ? null : phone.trim();
-	}
-
-	/** 用户昵称 nickname **/
-	public String getNickname() {
-		return nickname;
-	}
-
-	/** 用户昵称 nickname **/
-	public void setNickname(String nickname) {
-		this.nickname = nickname == null ? null : nickname.trim();
-	}
-
-	/** 用户姓名 real_name **/
-	public String getRealName() {
-		return realName;
-	}
-
-	/** 用户姓名 real_name **/
-	public void setRealName(String realName) {
-		this.realName = realName == null ? null : realName.trim();
-	}
-
-	/** 身份证号 certificate_no **/
-	public String getCertificateNo() {
-		return certificateNo;
-	}
-
-	/** 身份证号 certificate_no **/
-	public void setCertificateNo(String certificateNo) {
-		this.certificateNo = certificateNo == null ? null : certificateNo.trim();
-	}
-
-	/** 登录密码 login_password **/
-	public String getLoginPassword() {
-		return loginPassword;
-	}
-
-	/** 登录密码 login_password **/
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword == null ? null : loginPassword.trim();
-	}
-
-	/** 交易密码 trade_password **/
-	public String getTradePassword() {
-		return tradePassword;
-	}
-
-	/** 交易密码 trade_password **/
-	public void setTradePassword(String tradePassword) {
-		this.tradePassword = tradePassword == null ? null : tradePassword.trim();
-	}
-
-	/** QQ号 qq **/
-	public String getQq() {
-		return qq;
-	}
-
-	/** QQ号 qq **/
-	public void setQq(String qq) {
-		this.qq = qq == null ? null : qq.trim();
-	}
-
-	/** 微信号 weixin **/
-	public String getWeixin() {
-		return weixin;
-	}
-
-	/** 微信号 weixin **/
-	public void setWeixin(String weixin) {
-		this.weixin = weixin == null ? null : weixin.trim();
-	}
-
-	/** 粉丝数 fans_count **/
-	public Integer getFansCount() {
-		return fansCount;
-	}
-
-	/** 粉丝数 fans_count **/
-	public void setFansCount(Integer fansCount) {
-		this.fansCount = fansCount;
-	}
-
-	/** 当前额度 credit_score **/
-	public Integer getCreditScore() {
-		return creditScore;
-	}
-
-	/** 当前额度 credit_score **/
-	public void setCreditScore(Integer creditScore) {
-		this.creditScore = creditScore;
-	}
-
-	/** 借款用户等级 user_level **/
-	public Integer getUserLevel() {
-		return userLevel;
-	}
-
-	/** 借款用户等级 user_level **/
-	public void setUserLevel(Integer userLevel) {
-		this.userLevel = userLevel;
-	}
-
-	/** 金主等级 financier_level **/
-	public Integer getFinancierLevel() {
-		return financierLevel;
-	}
-
-	/** 金主等级 financier_level **/
-	public void setFinancierLevel(Integer financierLevel) {
-		this.financierLevel = financierLevel;
-	}
-
-	/** 用户状态 status **/
-	public Integer getStatus() {
-		return status;
-	}
-
-	/** 用户状态 status **/
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	/** 头像 headpic **/
-	public String getHeadpic() {
-		return headpic;
-	}
-
-	/** 头像 headpic **/
-	public void setHeadpic(String headpic) {
-		this.headpic = headpic == null ? null : headpic.trim();
-	}
-
-	/** 邀请码 invite_code **/
-	public String getInviteCode() {
-		return inviteCode;
-	}
-
-	/** 邀请码 invite_code **/
-	public void setInviteCode(String inviteCode) {
-		this.inviteCode = inviteCode == null ? null : inviteCode.trim();
-	}
-
-	/** inviter_id **/
-	public Long getInviterId() {
-		return inviterId;
-	}
-
-	/** inviter_id **/
-	public void setInviterId(Long inviterId) {
-		this.inviterId = inviterId;
-	}
-
-	/** qq登录openid qq_open_id **/
-	public String getQqOpenId() {
-		return qqOpenId;
-	}
-
-	/** qq登录openid qq_open_id **/
-	public void setQqOpenId(String qqOpenId) {
-		this.qqOpenId = qqOpenId == null ? null : qqOpenId.trim();
-	}
-
-	/** 微信登录openid weixin_unionid **/
-	public String getWeixinUnionid() {
-		return weixinUnionid;
-	}
-
-	/** 微信登录openid weixin_unionid **/
-	public void setWeixinUnionid(String weixinUnionid) {
-		this.weixinUnionid = weixinUnionid == null ? null : weixinUnionid.trim();
-	}
-
-	/** weixin_info **/
-	public String getWeixinInfo() {
-		return weixinInfo;
-	}
-
-	/** weixin_info **/
-	public void setWeixinInfo(String weixinInfo) {
-		this.weixinInfo = weixinInfo == null ? null : weixinInfo.trim();
-	}
-
-	/** 加密串 encryptstr **/
-	public String getEncryptstr() {
-		return encryptstr;
-	}
-
-	/** 加密串 encryptstr **/
-	public void setEncryptstr(String encryptstr) {
-		this.encryptstr = encryptstr == null ? null : encryptstr.trim();
-	}
-
-	/** encryptstr1 **/
-	public String getEncryptstr1() {
-		return encryptstr1;
-	}
-
-	/** encryptstr1 **/
-	public void setEncryptstr1(String encryptstr1) {
-		this.encryptstr1 = encryptstr1 == null ? null : encryptstr1.trim();
-	}
-
-	/** encryptstr2 **/
-	public String getEncryptstr2() {
-		return encryptstr2;
-	}
-
-	/** encryptstr2 **/
-	public void setEncryptstr2(String encryptstr2) {
-		this.encryptstr2 = encryptstr2 == null ? null : encryptstr2.trim();
-	}
-
-	/** 最后登录时间 last_login_time **/
-	public Date getLastLoginTime() {
-		return lastLoginTime;
-	}
-
-	/** 最后登录时间 last_login_time **/
-	public void setLastLoginTime(Date lastLoginTime) {
-		this.lastLoginTime = lastLoginTime;
-	}
-
-	/** 最后登录ip last_login_ip **/
-	public String getLastLoginIp() {
-		return lastLoginIp;
-	}
-
-	/** 最后登录ip last_login_ip **/
-	public void setLastLoginIp(String lastLoginIp) {
-		this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
-	}
-
-	/** 最后登录地点 last_login_location **/
-	public String getLastLoginLocation() {
-		return lastLoginLocation;
-	}
-
-	/** 最后登录地点 last_login_location **/
-	public void setLastLoginLocation(String lastLoginLocation) {
-		this.lastLoginLocation = lastLoginLocation == null ? null : lastLoginLocation.trim();
-	}
-
-	/** 最后登录设备号 last_login_udid **/
-	public String getLastLoginUdid() {
-		return lastLoginUdid;
-	}
-
-	/** 最后登录设备号 last_login_udid **/
-	public void setLastLoginUdid(String lastLoginUdid) {
-		this.lastLoginUdid = lastLoginUdid == null ? null : lastLoginUdid.trim();
-	}
-
-	/** create_time **/
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	/** create_time **/
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	/** update_time **/
-	public Date getUpdateTime() {
-		return updateTime;
-	}
-
-	/** update_time **/
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	/** 版本号 version **/
-	public Long getVersion() {
-		return version;
-	}
-
-	/** 版本号 version **/
-	public void setVersion(Long version) {
-		this.version = version;
-	}
-
-	/** 当前可用额度 available_score **/
-	public Integer getAvailableScore() {
-		return availableScore;
-	}
-
-	/** 当前可用额度 available_score **/
-	public void setAvailableScore(Integer availableScore) {
-		this.availableScore = availableScore;
-	}
-
-	@Override
-	public String toString() {
-		return "UserInfo [userId=" + userId + ", phone=" + phone + ", nickname=" + nickname + ", realName=" + realName + ", certificateNo=" + certificateNo + ", loginPassword=" + loginPassword + ", tradePassword="
-				+ tradePassword + ", qq=" + qq + ", weixin=" + weixin + ", fansCount=" + fansCount + ", creditScore=" + creditScore + ", userLevel=" + userLevel + ", financierLevel=" + financierLevel + ", status="
-				+ status + ", headpic=" + headpic + ", inviteCode=" + inviteCode + ", inviterId=" + inviterId + ", qqOpenId=" + qqOpenId + ", weixinUnionid=" + weixinUnionid + ", weixinInfo=" + weixinInfo
-				+ ", encryptstr=" + encryptstr + ", encryptstr1=" + encryptstr1 + ", encryptstr2=" + encryptstr2 + ", lastLoginTime=" + lastLoginTime + ", lastLoginIp=" + lastLoginIp + ", lastLoginLocation="
-				+ lastLoginLocation + ", lastLoginUdid=" + lastLoginUdid + ", createTime=" + createTime + ", updateTime=" + updateTime + ", version=" + version + ", availableScore=" + availableScore + "]";
-	}
-
+import javax.persistence.*;
+
+@Table(name = "t_user")
+public class UserInfo {
+    /**
+     * 主键ID
+     */
+    @Id
+    @Column(name = "user_id")
+    private Long userId;
+
+    /**
+     * 电话号码
+     */
+    private String phone;
+
+    /**
+     * 用户昵称
+     */
+    private String nickname;
+
+    /**
+     * 用户姓名
+     */
+    @Column(name = "real_name")
+    private String realName;
+
+    /**
+     * 身份证号
+     */
+    @Column(name = "certificate_no")
+    private String certificateNo;
+
+    /**
+     * 登录密码
+     */
+    @Column(name = "login_password")
+    private String loginPassword;
+
+    /**
+     * 交易密码
+     */
+    @Column(name = "trade_password")
+    private String tradePassword;
+
+    /**
+     * QQ号
+     */
+    private String qq;
+
+    /**
+     * 微信号
+     */
+    private String weixin;
+
+    /**
+     * 粉丝数
+     */
+    @Column(name = "fans_count")
+    private Integer fansCount;
+
+    /**
+     * 当前额度
+     */
+    @Column(name = "credit_score")
+    private Integer creditScore;
+
+    /**
+     * 借款用户等级
+     */
+    @Column(name = "user_level")
+    private Integer userLevel;
+
+    /**
+     * 金主等级
+     */
+    @Column(name = "financier_level")
+    private Integer financierLevel;
+
+    /**
+     * 用户状态
+     */
+    private Integer status;
+
+    /**
+     * 头像
+     */
+    private String headpic;
+
+    /**
+     * 邀请码
+     */
+    @Column(name = "invite_code")
+    private String inviteCode;
+
+    @Column(name = "inviter_id")
+    private Long inviterId;
+
+    /**
+     * qq登录openid
+     */
+    @Column(name = "qq_open_id")
+    private String qqOpenId;
+
+    /**
+     * 微信登录openid
+     */
+    @Column(name = "weixin_unionid")
+    private String weixinUnionid;
+
+    @Column(name = "weixin_info")
+    private String weixinInfo;
+
+    /**
+     * 加密串
+     */
+    private String encryptstr;
+
+    private String encryptstr1;
+
+    private String encryptstr2;
+
+    /**
+     * 最后登录时间
+     */
+    @Column(name = "last_login_time")
+    private Date lastLoginTime;
+
+    /**
+     * 最后登录ip
+     */
+    @Column(name = "last_login_ip")
+    private String lastLoginIp;
+
+    /**
+     * 最后登录地点
+     */
+    @Column(name = "last_login_location")
+    private String lastLoginLocation;
+
+    /**
+     * 最后登录设备号
+     */
+    @Column(name = "last_login_udid")
+    private String lastLoginUdid;
+
+    @Column(name = "create_time")
+    private Date createTime;
+
+    @Column(name = "update_time")
+    private Date updateTime;
+
+    /**
+     * 版本号
+     */
+    private Long version;
+
+    /**
+     * 当前可用额度
+     */
+    @Column(name = "available_score")
+    private Integer availableScore;
+
+    /**
+     * 获取主键ID
+     *
+     * @return user_id - 主键ID
+     */
+    public Long getUserId() {
+        return userId;
+    }
+
+    /**
+     * 设置主键ID
+     *
+     * @param userId 主键ID
+     */
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * 获取电话号码
+     *
+     * @return phone - 电话号码
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * 设置电话号码
+     *
+     * @param phone 电话号码
+     */
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
+
+    /**
+     * 获取用户昵称
+     *
+     * @return nickname - 用户昵称
+     */
+    public String getNickname() {
+        return nickname;
+    }
+
+    /**
+     * 设置用户昵称
+     *
+     * @param nickname 用户昵称
+     */
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
+    }
+
+    /**
+     * 获取用户姓名
+     *
+     * @return real_name - 用户姓名
+     */
+    public String getRealName() {
+        return realName;
+    }
+
+    /**
+     * 设置用户姓名
+     *
+     * @param realName 用户姓名
+     */
+    public void setRealName(String realName) {
+        this.realName = realName == null ? null : realName.trim();
+    }
+
+    /**
+     * 获取身份证号
+     *
+     * @return certificate_no - 身份证号
+     */
+    public String getCertificateNo() {
+        return certificateNo;
+    }
+
+    /**
+     * 设置身份证号
+     *
+     * @param certificateNo 身份证号
+     */
+    public void setCertificateNo(String certificateNo) {
+        this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * 获取登录密码
+     *
+     * @return login_password - 登录密码
+     */
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    /**
+     * 设置登录密码
+     *
+     * @param loginPassword 登录密码
+     */
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword == null ? null : loginPassword.trim();
+    }
+
+    /**
+     * 获取交易密码
+     *
+     * @return trade_password - 交易密码
+     */
+    public String getTradePassword() {
+        return tradePassword;
+    }
+
+    /**
+     * 设置交易密码
+     *
+     * @param tradePassword 交易密码
+     */
+    public void setTradePassword(String tradePassword) {
+        this.tradePassword = tradePassword == null ? null : tradePassword.trim();
+    }
+
+    /**
+     * 获取QQ号
+     *
+     * @return qq - QQ号
+     */
+    public String getQq() {
+        return qq;
+    }
+
+    /**
+     * 设置QQ号
+     *
+     * @param qq QQ号
+     */
+    public void setQq(String qq) {
+        this.qq = qq == null ? null : qq.trim();
+    }
+
+    /**
+     * 获取微信号
+     *
+     * @return weixin - 微信号
+     */
+    public String getWeixin() {
+        return weixin;
+    }
+
+    /**
+     * 设置微信号
+     *
+     * @param weixin 微信号
+     */
+    public void setWeixin(String weixin) {
+        this.weixin = weixin == null ? null : weixin.trim();
+    }
+
+    /**
+     * 获取粉丝数
+     *
+     * @return fans_count - 粉丝数
+     */
+    public Integer getFansCount() {
+        return fansCount;
+    }
+
+    /**
+     * 设置粉丝数
+     *
+     * @param fansCount 粉丝数
+     */
+    public void setFansCount(Integer fansCount) {
+        this.fansCount = fansCount;
+    }
+
+    /**
+     * 获取当前额度
+     *
+     * @return credit_score - 当前额度
+     */
+    public Integer getCreditScore() {
+        return creditScore;
+    }
+
+    /**
+     * 设置当前额度
+     *
+     * @param creditScore 当前额度
+     */
+    public void setCreditScore(Integer creditScore) {
+        this.creditScore = creditScore;
+    }
+
+    /**
+     * 获取借款用户等级
+     *
+     * @return user_level - 借款用户等级
+     */
+    public Integer getUserLevel() {
+        return userLevel;
+    }
+
+    /**
+     * 设置借款用户等级
+     *
+     * @param userLevel 借款用户等级
+     */
+    public void setUserLevel(Integer userLevel) {
+        this.userLevel = userLevel;
+    }
+
+    /**
+     * 获取金主等级
+     *
+     * @return financier_level - 金主等级
+     */
+    public Integer getFinancierLevel() {
+        return financierLevel;
+    }
+
+    /**
+     * 设置金主等级
+     *
+     * @param financierLevel 金主等级
+     */
+    public void setFinancierLevel(Integer financierLevel) {
+        this.financierLevel = financierLevel;
+    }
+
+    /**
+     * 获取用户状态
+     *
+     * @return status - 用户状态
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * 设置用户状态
+     *
+     * @param status 用户状态
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    /**
+     * 获取头像
+     *
+     * @return headpic - 头像
+     */
+    public String getHeadpic() {
+        return headpic;
+    }
+
+    /**
+     * 设置头像
+     *
+     * @param headpic 头像
+     */
+    public void setHeadpic(String headpic) {
+        this.headpic = headpic == null ? null : headpic.trim();
+    }
+
+    /**
+     * 获取邀请码
+     *
+     * @return invite_code - 邀请码
+     */
+    public String getInviteCode() {
+        return inviteCode;
+    }
+
+    /**
+     * 设置邀请码
+     *
+     * @param inviteCode 邀请码
+     */
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode == null ? null : inviteCode.trim();
+    }
+
+    /**
+     * @return inviter_id
+     */
+    public Long getInviterId() {
+        return inviterId;
+    }
+
+    /**
+     * @param inviterId
+     */
+    public void setInviterId(Long inviterId) {
+        this.inviterId = inviterId;
+    }
+
+    /**
+     * 获取qq登录openid
+     *
+     * @return qq_open_id - qq登录openid
+     */
+    public String getQqOpenId() {
+        return qqOpenId;
+    }
+
+    /**
+     * 设置qq登录openid
+     *
+     * @param qqOpenId qq登录openid
+     */
+    public void setQqOpenId(String qqOpenId) {
+        this.qqOpenId = qqOpenId == null ? null : qqOpenId.trim();
+    }
+
+    /**
+     * 获取微信登录openid
+     *
+     * @return weixin_unionid - 微信登录openid
+     */
+    public String getWeixinUnionid() {
+        return weixinUnionid;
+    }
+
+    /**
+     * 设置微信登录openid
+     *
+     * @param weixinUnionid 微信登录openid
+     */
+    public void setWeixinUnionid(String weixinUnionid) {
+        this.weixinUnionid = weixinUnionid == null ? null : weixinUnionid.trim();
+    }
+
+    /**
+     * @return weixin_info
+     */
+    public String getWeixinInfo() {
+        return weixinInfo;
+    }
+
+    /**
+     * @param weixinInfo
+     */
+    public void setWeixinInfo(String weixinInfo) {
+        this.weixinInfo = weixinInfo == null ? null : weixinInfo.trim();
+    }
+
+    /**
+     * 获取加密串
+     *
+     * @return encryptstr - 加密串
+     */
+    public String getEncryptstr() {
+        return encryptstr;
+    }
+
+    /**
+     * 设置加密串
+     *
+     * @param encryptstr 加密串
+     */
+    public void setEncryptstr(String encryptstr) {
+        this.encryptstr = encryptstr == null ? null : encryptstr.trim();
+    }
+
+    /**
+     * @return encryptstr1
+     */
+    public String getEncryptstr1() {
+        return encryptstr1;
+    }
+
+    /**
+     * @param encryptstr1
+     */
+    public void setEncryptstr1(String encryptstr1) {
+        this.encryptstr1 = encryptstr1 == null ? null : encryptstr1.trim();
+    }
+
+    /**
+     * @return encryptstr2
+     */
+    public String getEncryptstr2() {
+        return encryptstr2;
+    }
+
+    /**
+     * @param encryptstr2
+     */
+    public void setEncryptstr2(String encryptstr2) {
+        this.encryptstr2 = encryptstr2 == null ? null : encryptstr2.trim();
+    }
+
+    /**
+     * 获取最后登录时间
+     *
+     * @return last_login_time - 最后登录时间
+     */
+    public Date getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    /**
+     * 设置最后登录时间
+     *
+     * @param lastLoginTime 最后登录时间
+     */
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+    }
+
+    /**
+     * 获取最后登录ip
+     *
+     * @return last_login_ip - 最后登录ip
+     */
+    public String getLastLoginIp() {
+        return lastLoginIp;
+    }
+
+    /**
+     * 设置最后登录ip
+     *
+     * @param lastLoginIp 最后登录ip
+     */
+    public void setLastLoginIp(String lastLoginIp) {
+        this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
+    }
+
+    /**
+     * 获取最后登录地点
+     *
+     * @return last_login_location - 最后登录地点
+     */
+    public String getLastLoginLocation() {
+        return lastLoginLocation;
+    }
+
+    /**
+     * 设置最后登录地点
+     *
+     * @param lastLoginLocation 最后登录地点
+     */
+    public void setLastLoginLocation(String lastLoginLocation) {
+        this.lastLoginLocation = lastLoginLocation == null ? null : lastLoginLocation.trim();
+    }
+
+    /**
+     * 获取最后登录设备号
+     *
+     * @return last_login_udid - 最后登录设备号
+     */
+    public String getLastLoginUdid() {
+        return lastLoginUdid;
+    }
+
+    /**
+     * 设置最后登录设备号
+     *
+     * @param lastLoginUdid 最后登录设备号
+     */
+    public void setLastLoginUdid(String lastLoginUdid) {
+        this.lastLoginUdid = lastLoginUdid == null ? null : lastLoginUdid.trim();
+    }
+
+    /**
+     * @return create_time
+     */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * @param createTime
+     */
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * @return update_time
+     */
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * @param updateTime
+     */
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * 获取版本号
+     *
+     * @return version - 版本号
+     */
+    public Long getVersion() {
+        return version;
+    }
+
+    /**
+     * 设置版本号
+     *
+     * @param version 版本号
+     */
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    /**
+     * 获取当前可用额度
+     *
+     * @return available_score - 当前可用额度
+     */
+    public Integer getAvailableScore() {
+        return availableScore;
+    }
+
+    /**
+     * 设置当前可用额度
+     *
+     * @param availableScore 当前可用额度
+     */
+    public void setAvailableScore(Integer availableScore) {
+        this.availableScore = availableScore;
+    }
 }

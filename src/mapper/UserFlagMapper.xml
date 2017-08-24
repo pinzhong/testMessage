@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserFlagMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserFlag">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_flag_id" jdbcType="BIGINT" property="userFlagId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="flag_type" jdbcType="INTEGER" property="flagType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="flag_reason" jdbcType="VARCHAR" property="flagReason" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_flag_id, user_id, flag_type, create_time, status, flag_reason
+  </sql>
+</mapper>

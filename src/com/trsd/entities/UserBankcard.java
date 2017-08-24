@@ -1,22 +1,21 @@
 package com.trsd.entities;
 
-import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.*;
 
-public class UserBankcard implements Serializable{
+@Table(name = "t_user_bankcard")
+public class UserBankcard {
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * 主键id
      */
+    @Id
+    @Column(name = "user_bankcard_id")
     private Long userBankcardId;
 
     /**
      * 主键ID
      */
+    @Column(name = "user_id")
     private Long userId;
 
     /**
@@ -37,38 +36,45 @@ public class UserBankcard implements Serializable{
     /**
      * 银行名称
      */
+    @Column(name = "bank_name")
     private String bankName;
 
     /**
      * 支行名称
      */
+    @Column(name = "branch_name")
     private String branchName;
 
     /**
      * 银行卡号
      */
+    @Column(name = "card_no")
     private String cardNo;
 
     /**
      * 创建时间
      */
+    @Column(name = "create_time")
     private Date createTime;
 
     /**
      * 修改时间
      */
+    @Column(name = "update_time")
     private Date updateTime;
 
     /**
-     * 主键id
-     * @return user_bankcard_id 主键id
+     * 获取主键id
+     *
+     * @return user_bankcard_id - 主键id
      */
     public Long getUserBankcardId() {
         return userBankcardId;
     }
 
     /**
-     * 主键id
+     * 设置主键id
+     *
      * @param userBankcardId 主键id
      */
     public void setUserBankcardId(Long userBankcardId) {
@@ -76,15 +82,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 主键ID
-     * @return user_id 主键ID
+     * 获取主键ID
+     *
+     * @return user_id - 主键ID
      */
     public Long getUserId() {
         return userId;
     }
 
     /**
-     * 主键ID
+     * 设置主键ID
+     *
      * @param userId 主键ID
      */
     public void setUserId(Long userId) {
@@ -92,15 +100,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 开户省份
-     * @return province 开户省份
+     * 获取开户省份
+     *
+     * @return province - 开户省份
      */
     public String getProvince() {
         return province;
     }
 
     /**
-     * 开户省份
+     * 设置开户省份
+     *
      * @param province 开户省份
      */
     public void setProvince(String province) {
@@ -108,15 +118,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 开户城市
-     * @return city 开户城市
+     * 获取开户城市
+     *
+     * @return city - 开户城市
      */
     public String getCity() {
         return city;
     }
 
     /**
-     * 开户城市
+     * 设置开户城市
+     *
      * @param city 开户城市
      */
     public void setCity(String city) {
@@ -124,15 +136,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 开户地区
-     * @return area 开户地区
+     * 获取开户地区
+     *
+     * @return area - 开户地区
      */
     public String getArea() {
         return area;
     }
 
     /**
-     * 开户地区
+     * 设置开户地区
+     *
      * @param area 开户地区
      */
     public void setArea(String area) {
@@ -140,15 +154,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 银行名称
-     * @return bank_name 银行名称
+     * 获取银行名称
+     *
+     * @return bank_name - 银行名称
      */
     public String getBankName() {
         return bankName;
     }
 
     /**
-     * 银行名称
+     * 设置银行名称
+     *
      * @param bankName 银行名称
      */
     public void setBankName(String bankName) {
@@ -156,15 +172,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 支行名称
-     * @return branch_name 支行名称
+     * 获取支行名称
+     *
+     * @return branch_name - 支行名称
      */
     public String getBranchName() {
         return branchName;
     }
 
     /**
-     * 支行名称
+     * 设置支行名称
+     *
      * @param branchName 支行名称
      */
     public void setBranchName(String branchName) {
@@ -172,15 +190,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 银行卡号
-     * @return card_no 银行卡号
+     * 获取银行卡号
+     *
+     * @return card_no - 银行卡号
      */
     public String getCardNo() {
         return cardNo;
     }
 
     /**
-     * 银行卡号
+     * 设置银行卡号
+     *
      * @param cardNo 银行卡号
      */
     public void setCardNo(String cardNo) {
@@ -188,15 +208,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 创建时间
-     * @return create_time 创建时间
+     * 获取创建时间
+     *
+     * @return create_time - 创建时间
      */
     public Date getCreateTime() {
         return createTime;
     }
 
     /**
-     * 创建时间
+     * 设置创建时间
+     *
      * @param createTime 创建时间
      */
     public void setCreateTime(Date createTime) {
@@ -204,15 +226,17 @@ public class UserBankcard implements Serializable{
     }
 
     /**
-     * 修改时间
-     * @return update_time 修改时间
+     * 获取修改时间
+     *
+     * @return update_time - 修改时间
      */
     public Date getUpdateTime() {
         return updateTime;
     }
 
     /**
-     * 修改时间
+     * 设置修改时间
+     *
      * @param updateTime 修改时间
      */
     public void setUpdateTime(Date updateTime) {

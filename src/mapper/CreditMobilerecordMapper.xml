@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditMobilerecordMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditMobilerecord">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="recordid" jdbcType="VARCHAR" property="recordid" />
+    <result column="authid" jdbcType="VARCHAR" property="authid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="ispass" jdbcType="TINYINT" property="ispass" />
+    <result column="calltime" jdbcType="TIMESTAMP" property="calltime" />
+    <result column="callsecond" jdbcType="INTEGER" property="callsecond" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="calltype" jdbcType="VARCHAR" property="calltype" />
+    <result column="callnumber" jdbcType="VARCHAR" property="callnumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    recordid, authid, userId, phone, createtime, ispass, calltime, callsecond, address, 
+    calltype, callnumber
+  </sql>
+</mapper>

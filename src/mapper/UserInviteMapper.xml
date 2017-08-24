@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserInviteMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserInvite">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_invite_id" jdbcType="BIGINT" property="userInviteId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="invite_user_id" jdbcType="BIGINT" property="inviteUserId" />
+    <result column="loan_profit" jdbcType="DECIMAL" property="loanProfit" />
+    <result column="interest_profit" jdbcType="DECIMAL" property="interestProfit" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_invite_id, user_id, invite_user_id, loan_profit, interest_profit, level, create_time, 
+    version
+  </sql>
+</mapper>

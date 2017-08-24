@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.InvestTicketMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.InvestTicket">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="invest_ticket_id" jdbcType="BIGINT" property="investTicketId" />
+    <result column="invest_amount" jdbcType="DECIMAL" property="investAmount" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="invest_time" jdbcType="TIMESTAMP" property="investTime" />
+    <result column="lend_id" jdbcType="BIGINT" property="lendId" />
+    <result column="invest_type" jdbcType="INTEGER" property="investType" />
+    <result column="limit_time" jdbcType="TIMESTAMP" property="limitTime" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    invest_ticket_id, invest_amount, status, invest_time, lend_id, invest_type, limit_time, 
+    user_id, create_time, version
+  </sql>
+</mapper>
