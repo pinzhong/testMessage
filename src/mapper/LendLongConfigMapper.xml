@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LendLongConfigMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendLongConfig">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="lend_long_config_id" jdbcType="BIGINT" property="lendLongConfigId" />
+    <result column="lend_long_scheme_id" jdbcType="BIGINT" property="lendLongSchemeId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="handle" jdbcType="VARCHAR" property="handle" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    lend_long_config_id, lend_long_scheme_id, type, value, create_time, handle
+  </sql>
+</mapper>
