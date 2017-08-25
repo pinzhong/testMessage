@@ -11,6 +11,7 @@ public class FreezeThaw {
      */
     @Id
     @Column(name = "freeze_thaw_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long freezeThawId;
 
     /**

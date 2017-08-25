@@ -11,6 +11,7 @@ public class UserInvite {
      */
     @Id
     @Column(name = "user_invite_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userInviteId;
 
     /**
