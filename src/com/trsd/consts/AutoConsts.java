@@ -8,7 +8,7 @@ package com.trsd.consts;
 public class AutoConsts {
 	
 	/**
-	 * 用户借款申请复核的自动投资配置参数类型
+	 * 自动投资配置参数类型
 	 */
 
 	public static final int AUTO_LOAN_CONFIG_TYPE_ZHIMA = 1 ; //是否关注借款人
@@ -26,6 +26,18 @@ public class AutoConsts {
 	public static final int AUTO_LOAN_CONFIG_TYPE_PERIOD	= 13; // 分期数
 	public static final int AUTO_LOAN_CONFIG_TYPE_AGE	= 14; // 年龄
 	public static final int AUTO_LOAN_CONFIG_TYPE_BREAK_DAYS = 15; // 最长逾期天数
-			
-
+	
+	/**
+	 * 投资计划类型
+	 */
+	public static final int AUTO_LEND_SCHEME_TYPE_PERSONAL = 1;//个人投资计划
+	public static final int AUTO_LEND_SCHEME_TYPE_MASTER = 2;//企业投资计划
+	
+	/**
+	 * 投资计划状态
+	 */
+	public static final int AUTO_LEND_SCHEME_STATUS_START = 1;//使用中	
+	public static final int AUTO_LEND_SCHEME_STATUS_PAUSE = 0;//暂停使用
+	public static final int AUTO_LEND_SCHEME_STATUS_STOP = -1;//停用
+	
 }
