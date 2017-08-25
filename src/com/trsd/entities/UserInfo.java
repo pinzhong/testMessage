@@ -170,8 +170,17 @@ public class UserInfo {
     @Column(name = "follow_count")
     private Integer followCount;
 
-    @Column(name = "invite_count")
-    private Integer inviteCount;
+    /**
+     * 一级邀请码绑定人数
+     */
+    @Column(name = "invite_one_count")
+    private Integer inviteOneCount;
+
+    /**
+     * 二级邀请码绑定人数
+     */
+    @Column(name = "invite_two_count")
+    private Integer inviteTwoCount;
 
     /**
      * 用户类型，企业用户或个人用户
@@ -731,17 +740,39 @@ public class UserInfo {
     }
 
     /**
-     * @return invite_count
+     * 获取一级邀请码绑定人数
+     *
+     * @return invite_one_count - 一级邀请码绑定人数
      */
-    public Integer getInviteCount() {
-        return inviteCount;
+    public Integer getInviteOneCount() {
+        return inviteOneCount;
     }
 
     /**
-     * @param inviteCount
+     * 设置一级邀请码绑定人数
+     *
+     * @param inviteOneCount 一级邀请码绑定人数
      */
-    public void setInviteCount(Integer inviteCount) {
-        this.inviteCount = inviteCount;
+    public void setInviteOneCount(Integer inviteOneCount) {
+        this.inviteOneCount = inviteOneCount;
+    }
+
+    /**
+     * 获取二级邀请码绑定人数
+     *
+     * @return invite_two_count - 二级邀请码绑定人数
+     */
+    public Integer getInviteTwoCount() {
+        return inviteTwoCount;
+    }
+
+    /**
+     * 设置二级邀请码绑定人数
+     *
+     * @param inviteTwoCount 二级邀请码绑定人数
+     */
+    public void setInviteTwoCount(Integer inviteTwoCount) {
+        this.inviteTwoCount = inviteTwoCount;
     }
 
     /**

@@ -10,6 +10,7 @@ public class LendShortScheme {
      */
     @Id
     @Column(name = "lend_short_scheme_id")
+    @GeneratedValue(generator = "JDBC")
     private Long lendShortSchemeId;
 
     /**
