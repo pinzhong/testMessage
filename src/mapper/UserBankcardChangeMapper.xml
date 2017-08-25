@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.trsd.mapper.UserBankcardMapper">
-  <resultMap id="BaseResultMap" type="com.trsd.entities.UserBankcard">
+<mapper namespace="com.trsd.mapper.UserBankcardChangeMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserBankcardChange">
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="user_bankcard_id" jdbcType="BIGINT" property="userBankcardId" />
+    <id column="change_id" jdbcType="BIGINT" property="changeId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="original_province" jdbcType="VARCHAR" property="originalProvince" />
+    <result column="original_city" jdbcType="VARCHAR" property="originalCity" />
+    <result column="original_area" jdbcType="VARCHAR" property="originalArea" />
+    <result column="originalbank_name" jdbcType="VARCHAR" property="originalbankName" />
+    <result column="original_branch_name" jdbcType="VARCHAR" property="originalBranchName" />
+    <result column="original_card_no" jdbcType="VARCHAR" property="originalCardNo" />
     <result column="province" jdbcType="VARCHAR" property="province" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="area" jdbcType="VARCHAR" property="area" />
     <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
     <result column="branch_name" jdbcType="VARCHAR" property="branchName" />
     <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
-    <result column="change_num" jdbcType="INTEGER" property="changeNum" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="change_time" jdbcType="TIMESTAMP" property="changeTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -85,10 +90,11 @@
     <!--
       WARNING - @mbg.generated
     -->
-    user_bankcard_id, user_id, province, city, area, bank_name, branch_name, card_no, 
-    change_num, create_time, update_time
+    change_id, user_id, original_province, original_city, original_area, originalbank_name, 
+    original_branch_name, original_card_no, province, city, area, bank_name, branch_name, 
+    card_no, change_time, update_time
   </sql>
-  <select id="selectByExample" parameterType="com.trsd.entities.UserBankcardExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.trsd.entities.UserBankcardChangeExample" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated
     -->
@@ -97,7 +103,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from t_user_bankcard
+    from t_user_bankcardchange
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -105,20 +111,20 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.trsd.entities.UserBankcardExample">
+  <delete id="deleteByExample" parameterType="com.trsd.entities.UserBankcardChangeExample">
     <!--
       WARNING - @mbg.generated
     -->
-    delete from t_user_bankcard
+    delete from t_user_bankcardchange
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <select id="countByExample" parameterType="com.trsd.entities.UserBankcardExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.trsd.entities.UserBankcardChangeExample" resultType="java.lang.Long">
     <!--
       WARNING - @mbg.generated
     -->
-    select count(*) from t_user_bankcard
+    select count(*) from t_user_bankcardchange
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -127,13 +133,31 @@
     <!--
       WARNING - @mbg.generated
     -->
-    update t_user_bankcard
+    update t_user_bankcardchange
     <set>
-      <if test="record.userBankcardId != null">
-        user_bankcard_id = #{record.userBankcardId,jdbcType=BIGINT},
+      <if test="record.changeId != null">
+        change_id = #{record.changeId,jdbcType=BIGINT},
       </if>
       <if test="record.userId != null">
         user_id = #{record.userId,jdbcType=BIGINT},
+      </if>
+      <if test="record.originalProvince != null">
+        original_province = #{record.originalProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalCity != null">
+        original_city = #{record.originalCity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalArea != null">
+        original_area = #{record.originalArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalbankName != null">
+        originalbank_name = #{record.originalbankName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalBranchName != null">
+        original_branch_name = #{record.originalBranchName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalCardNo != null">
+        original_card_no = #{record.originalCardNo,jdbcType=VARCHAR},
       </if>
       <if test="record.province != null">
         province = #{record.province,jdbcType=VARCHAR},
@@ -153,11 +177,8 @@
       <if test="record.cardNo != null">
         card_no = #{record.cardNo,jdbcType=VARCHAR},
       </if>
-      <if test="record.changeNum != null">
-        change_num = #{record.changeNum,jdbcType=INTEGER},
-      </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      <if test="record.changeTime != null">
+        change_time = #{record.changeTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.updateTime != null">
         update_time = #{record.updateTime,jdbcType=TIMESTAMP},
@@ -171,17 +192,22 @@
     <!--
       WARNING - @mbg.generated
     -->
-    update t_user_bankcard
-    set user_bankcard_id = #{record.userBankcardId,jdbcType=BIGINT},
+    update t_user_bankcardchange
+    set change_id = #{record.changeId,jdbcType=BIGINT},
       user_id = #{record.userId,jdbcType=BIGINT},
+      original_province = #{record.originalProvince,jdbcType=VARCHAR},
+      original_city = #{record.originalCity,jdbcType=VARCHAR},
+      original_area = #{record.originalArea,jdbcType=VARCHAR},
+      originalbank_name = #{record.originalbankName,jdbcType=VARCHAR},
+      original_branch_name = #{record.originalBranchName,jdbcType=VARCHAR},
+      original_card_no = #{record.originalCardNo,jdbcType=VARCHAR},
       province = #{record.province,jdbcType=VARCHAR},
       city = #{record.city,jdbcType=VARCHAR},
       area = #{record.area,jdbcType=VARCHAR},
       bank_name = #{record.bankName,jdbcType=VARCHAR},
       branch_name = #{record.branchName,jdbcType=VARCHAR},
       card_no = #{record.cardNo,jdbcType=VARCHAR},
-      change_num = #{record.changeNum,jdbcType=INTEGER},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      change_time = #{record.changeTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />

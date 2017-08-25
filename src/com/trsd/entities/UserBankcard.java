@@ -10,6 +10,7 @@ public class UserBankcard {
      */
     @Id
     @Column(name = "user_bankcard_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userBankcardId;
 
     /**
@@ -50,6 +51,12 @@ public class UserBankcard {
      */
     @Column(name = "card_no")
     private String cardNo;
+
+    /**
+     * 更改次数
+     */
+    @Column(name = "change_num")
+    private Integer changeNum;
 
     /**
      * 创建时间
@@ -205,6 +212,24 @@ public class UserBankcard {
      */
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo == null ? null : cardNo.trim();
+    }
+
+    /**
+     * 获取更改次数
+     *
+     * @return change_num - 更改次数
+     */
+    public Integer getChangeNum() {
+        return changeNum;
+    }
+
+    /**
+     * 设置更改次数
+     *
+     * @param changeNum 更改次数
+     */
+    public void setChangeNum(Integer changeNum) {
+        this.changeNum = changeNum;
     }
 
     /**
