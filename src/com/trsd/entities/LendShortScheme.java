@@ -38,6 +38,12 @@ public class LendShortScheme {
     private Date createTime;
 
     /**
+     * 必要条件个数
+     */
+    @Column(name = "necessary_count")
+    private Integer necessaryCount;
+
+    /**
      * 获取编号
      *
      * @return lend_short_scheme_id - 编号
@@ -139,5 +145,23 @@ public class LendShortScheme {
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    /**
+     * 获取必要条件个数
+     *
+     * @return necessary_count - 必要条件个数
+     */
+    public Integer getNecessaryCount() {
+        return necessaryCount;
+    }
+
+    /**
+     * 设置必要条件个数
+     *
+     * @param necessaryCount 必要条件个数
+     */
+    public void setNecessaryCount(Integer necessaryCount) {
+        this.necessaryCount = necessaryCount;
     }
 }

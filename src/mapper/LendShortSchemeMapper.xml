@@ -11,11 +11,12 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="scheme_order" jdbcType="INTEGER" property="schemeOrder" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="necessary_count" jdbcType="INTEGER" property="necessaryCount" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    lend_short_scheme_id, user_id, type, status, scheme_order, create_time
+    lend_short_scheme_id, user_id, type, status, scheme_order, create_time, necessary_count
   </sql>
 </mapper>
