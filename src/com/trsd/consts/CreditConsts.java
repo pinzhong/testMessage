@@ -6,16 +6,37 @@ package com.trsd.consts;
  *
  */
 public class CreditConsts {
-	public static final int CREDIT_TYPE_BANKCARD = 1;//银行卡三要素认证
-	public static final int CREDIT_TYPE_REALNAME = 2;//身份认证
-	public static final int CREDIT_TYPE_MOBILE = 3;//运营商认证
-	public static final int CREDIT_TYPE_CENTRALBANK = 4;//央行征信
-	public static final int CREDIT_TYPE_TAOBAO = 5;//淘宝
-	public static final int CREDIT_TYPE_JINDONG = 6;//京东	
+	/**
+	 * 高级认证项目（银行卡三要素认证）
+	 */
+	public static final int CREDIT_TYPE_BANKCARD = 1;
+	/**
+	 * 高级认证项目（身份认证）
+	 */	
+	public static final int CREDIT_TYPE_REALNAME = 2;
+	/**
+	 * 高级认证项目（运营商认证）
+	 */	
+	public static final int CREDIT_TYPE_MOBILE = 3;
+	/**
+	 * 高级认证项目（央行征信）
+	 */	
+	public static final int CREDIT_TYPE_CENTRALBANK = 4;
+	/**
+	 * 高级认证项目（淘宝）
+	 */	
+	public static final int CREDIT_TYPE_TAOBAO = 5;
+	/**
+	 * 高级认证项目（京东）
+	 */	
+	public static final int CREDIT_TYPE_JINDONG = 6;
 	
 	/**
-	 * 高级认证服务商
+	 * 高级认证服务商（寻程）
 	 */
-	public static final String CREDIT_PROVIDER_APISTORE = "apistore"; //寻程
-	public static final String CREDIT_PROVIDER_LIMU = "limu"; 		  //立木
+	public static final String CREDIT_PROVIDER_APISTORE = "apistore";
+	/**
+	 * 高级认证服务商（立木）
+	 */
+	public static final String CREDIT_PROVIDER_LIMU = "limu"; 		 
 }
