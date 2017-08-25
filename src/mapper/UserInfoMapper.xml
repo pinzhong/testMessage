@@ -40,6 +40,7 @@
     <result column="invite_one_count" jdbcType="INTEGER" property="inviteOneCount" />
     <result column="invite_two_count" jdbcType="INTEGER" property="inviteTwoCount" />
     <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="inviter_code" jdbcType="VARCHAR" property="inviterCode" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -50,6 +51,6 @@
     invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, encryptstr1, 
     encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
     create_time, update_time, version, available_score, follow_count, invite_one_count, 
-    invite_two_count, type
+    invite_two_count, type, inviter_code
   </sql>
 </mapper>

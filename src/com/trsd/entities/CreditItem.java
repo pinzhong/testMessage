@@ -27,7 +27,7 @@ public class CreditItem {
     /**
      * 通道
      */
-    private String channel;
+    private String provider;
 
     /**
      * 费用
@@ -108,19 +108,19 @@ public class CreditItem {
     /**
      * 获取通道
      *
-     * @return channel - 通道
+     * @return provider - 通道
      */
-    public String getChannel() {
-        return channel;
+    public String getProvider() {
+        return provider;
     }
 
     /**
      * 设置通道
      *
-     * @param channel 通道
+     * @param provider 通道
      */
-    public void setChannel(String channel) {
-        this.channel = channel == null ? null : channel.trim();
+    public void setProvider(String provider) {
+        this.provider = provider == null ? null : provider.trim();
     }
 
     /**

@@ -8,7 +8,7 @@
     <id column="item_id" jdbcType="INTEGER" property="itemId" />
     <result column="type_id" jdbcType="INTEGER" property="typeId" />
     <result column="item_name" jdbcType="VARCHAR" property="itemName" />
-    <result column="channel" jdbcType="VARCHAR" property="channel" />
+    <result column="provider" jdbcType="VARCHAR" property="provider" />
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="INTEGER" property="score" />
     <result column="isrepeat" jdbcType="BIT" property="isrepeat" />
@@ -19,6 +19,6 @@
     <!--
       WARNING - @mbg.generated
     -->
-    item_id, type_id, item_name, channel, cost, score, isrepeat, status, remark
+    item_id, type_id, item_name, provider, cost, score, isrepeat, status, remark
   </sql>
 </mapper>

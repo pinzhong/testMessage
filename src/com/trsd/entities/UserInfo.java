@@ -188,6 +188,12 @@ public class UserInfo {
     private Integer type;
 
     /**
+     * 绑定的邀请码
+     */
+    @Column(name = "inviter_code")
+    private String inviterCode;
+
+    /**
      * 获取主键ID
      *
      * @return user_id - 主键ID
@@ -791,5 +797,23 @@ public class UserInfo {
      */
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    /**
+     * 获取绑定的邀请码
+     *
+     * @return inviter_code - 绑定的邀请码
+     */
+    public String getInviterCode() {
+        return inviterCode;
+    }
+
+    /**
+     * 设置绑定的邀请码
+     *
+     * @param inviterCode 绑定的邀请码
+     */
+    public void setInviterCode(String inviterCode) {
+        this.inviterCode = inviterCode == null ? null : inviterCode.trim();
     }
 }
