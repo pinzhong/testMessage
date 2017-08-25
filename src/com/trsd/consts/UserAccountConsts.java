@@ -47,4 +47,14 @@ public class UserAccountConsts {
 	public static final int XYD_ACCOUNT_TYPE_INVEST = 1001;//收取投资收益
 	public static final int XYD_ACCOUNT_TYPE_PAYBACK = 1002;//收取还款收益
 	
+	/**
+	 * 高级认证扣费项目类型
+	 */
+	public static final int USER_ACCOUNT_CREDIT_TYPE_BANKCARD = 601;//银行卡三要素认证
+	public static final int USER_ACCOUNT_CREDIT_TYPE_REALNAME = 602;//身份认证
+	public static final int USER_ACCOUNT_CREDIT_TYPE_MOBILE = 603;//运营商认证
+	public static final int USER_ACCOUNT_CREDIT_TYPE_CENTRALBANK = 604;//央行征信
+	public static final int USER_ACCOUNT_CREDIT_TYPE_TAOBAO = 605;//淘宝
+	public static final int USER_ACCOUNT_CREDIT_TYPE_JINDONG = 606;//京东
+	
 }
