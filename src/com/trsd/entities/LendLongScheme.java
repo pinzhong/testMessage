@@ -10,6 +10,7 @@ public class LendLongScheme {
      */
     @Id
     @Column(name = "lend_long_scheme_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lendLongSchemeId;
 
     /**
@@ -36,6 +37,12 @@ public class LendLongScheme {
 
     @Column(name = "create_time")
     private Date createTime;
+
+    /**
+     * 必要条件个数
+     */
+    @Column(name = "necessary_count")
+    private Integer necessaryCount;
 
     /**
      * 获取编号
@@ -139,5 +146,23 @@ public class LendLongScheme {
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    /**
+     * 获取必要条件个数
+     *
+     * @return necessary_count - 必要条件个数
+     */
+    public Integer getNecessaryCount() {
+        return necessaryCount;
+    }
+
+    /**
+     * 设置必要条件个数
+     *
+     * @param necessaryCount 必要条件个数
+     */
+    public void setNecessaryCount(Integer necessaryCount) {
+        this.necessaryCount = necessaryCount;
     }
 }

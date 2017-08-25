@@ -32,10 +32,6 @@ public class LoanLongConfig {
     @Column(name = "create_time")
     private Date createTime;
 
-    private String handle;
-
-    private Integer flag;
-
     /**
      * 获取长贷参数编号
      *
@@ -120,33 +116,5 @@ public class LoanLongConfig {
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    /**
-     * @return handle
-     */
-    public String getHandle() {
-        return handle;
-    }
-
-    /**
-     * @param handle
-     */
-    public void setHandle(String handle) {
-        this.handle = handle == null ? null : handle.trim();
-    }
-
-    /**
-     * @return flag
-     */
-    public Integer getFlag() {
-        return flag;
-    }
-
-    /**
-     * @param flag
-     */
-    public void setFlag(Integer flag) {
-        this.flag = flag;
     }
 }

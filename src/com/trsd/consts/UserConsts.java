@@ -26,4 +26,10 @@ public class UserConsts {
 	public static final String REDIS_DYNAMIC_REGISTER_KEY = "dyn:code:register" ; //动态注册验证码
 	public static final String REDIS_DYNAMIC_PHONE_CHANGE_KEY = "dyn:code:phone:change" ; //动态注册验证码
 	
+	/**
+	 * 用户类型
+	 */
+	public static final int USER_TYPE_PERSONAL = 1 ; //个人用户
+	public static final int USER_TYPE_MASTER= 2 ; //企业用户
+	
 }

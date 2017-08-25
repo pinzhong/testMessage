@@ -10,6 +10,7 @@ public class LendLongConfig {
      */
     @Id
     @Column(name = "lend_long_config_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lendLongConfigId;
 
     /**
@@ -35,6 +36,8 @@ public class LendLongConfig {
      * 相关操作，大于等于等
      */
     private String handle;
+
+    private Integer flag;
 
     /**
      * 获取编号
@@ -138,5 +141,19 @@ public class LendLongConfig {
      */
     public void setHandle(String handle) {
         this.handle = handle == null ? null : handle.trim();
+    }
+
+    /**
+     * @return flag
+     */
+    public Integer getFlag() {
+        return flag;
+    }
+
+    /**
+     * @param flag
+     */
+    public void setFlag(Integer flag) {
+        this.flag = flag;
     }
 }
