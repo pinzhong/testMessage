@@ -40,4 +40,10 @@ public class AutoConsts {
 	public static final int AUTO_LEND_SCHEME_STATUS_PAUSE = 0;//暂停使用
 	public static final int AUTO_LEND_SCHEME_STATUS_STOP = -1;//停用
 	
+	/**
+	 * 投资条件类型
+	 */
+	public static final int AUTO_LEND_CONFIG_FLAG_NECESSARY = 1;//必须条件	
+	public static final int AUTO_LEND_CONFIG_FLAG_UNNECESSARY = 0;//非必须条件
+	
 }
