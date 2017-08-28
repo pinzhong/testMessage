@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.AppConstantMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.AppConstant">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="constant_id" jdbcType="BIGINT" property="constantId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="value" jdbcType="INTEGER" property="value" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    constant_id, type, value, memo, create_time
+  </sql>
+</mapper>
