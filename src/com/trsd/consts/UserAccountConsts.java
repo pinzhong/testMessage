@@ -46,6 +46,7 @@ public class UserAccountConsts {
 	 */
 	public static final int XYD_ACCOUNT_TYPE_INVEST = 1001;//收取投资收益
 	public static final int XYD_ACCOUNT_TYPE_PAYBACK = 1002;//收取还款收益
+	public static final int XYD_ACCOUNT_TYPE_PENALTY = 1003;//收取违约金
 	
 	/**
 	 * 高级认证扣费项目类型

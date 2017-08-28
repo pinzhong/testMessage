@@ -3,15 +3,15 @@ package com.trsd.entities;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "t_lend_long_scheme")
-public class LendLongScheme {
+@Table(name = "t_lend_scheme")
+public class LendScheme {
     /**
      * 编号
      */
     @Id
-    @Column(name = "lend_long_scheme_id")
+    @Column(name = "lend_scheme_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long lendLongSchemeId;
+    private Long lendSchemeId;
 
     /**
      * 用户编号
@@ -25,7 +25,7 @@ public class LendLongScheme {
     private Integer type;
 
     /**
-     * 状态
+     * 状态（在用，失效）
      */
     private Integer status;
 
@@ -45,21 +45,27 @@ public class LendLongScheme {
     private Integer necessaryCount;
 
     /**
+     * 投资类型（长贷，短贷）
+     */
+    @Column(name = "lend_type")
+    private Integer lendType;
+
+    /**
      * 获取编号
      *
-     * @return lend_long_scheme_id - 编号
+     * @return lend_scheme_id - 编号
      */
-    public Long getLendLongSchemeId() {
-        return lendLongSchemeId;
+    public Long getLendSchemeId() {
+        return lendSchemeId;
     }
 
     /**
      * 设置编号
      *
-     * @param lendLongSchemeId 编号
+     * @param lendSchemeId 编号
      */
-    public void setLendLongSchemeId(Long lendLongSchemeId) {
-        this.lendLongSchemeId = lendLongSchemeId;
+    public void setLendSchemeId(Long lendSchemeId) {
+        this.lendSchemeId = lendSchemeId;
     }
 
     /**
@@ -99,18 +105,18 @@ public class LendLongScheme {
     }
 
     /**
-     * 获取状态
+     * 获取状态（在用，失效）
      *
-     * @return status - 状态
+     * @return status - 状态（在用，失效）
      */
     public Integer getStatus() {
         return status;
     }
 
     /**
-     * 设置状态
+     * 设置状态（在用，失效）
      *
-     * @param status 状态
+     * @param status 状态（在用，失效）
      */
     public void setStatus(Integer status) {
         this.status = status;
@@ -164,5 +170,23 @@ public class LendLongScheme {
      */
     public void setNecessaryCount(Integer necessaryCount) {
         this.necessaryCount = necessaryCount;
+    }
+
+    /**
+     * 获取投资类型（长贷，短贷）
+     *
+     * @return lend_type - 投资类型（长贷，短贷）
+     */
+    public Integer getLendType() {
+        return lendType;
+    }
+
+    /**
+     * 设置投资类型（长贷，短贷）
+     *
+     * @param lendType 投资类型（长贷，短贷）
+     */
+    public void setLendType(Integer lendType) {
+        this.lendType = lendType;
     }
 }
