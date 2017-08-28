@@ -11,6 +11,7 @@ public class LoanConfig {
      */
     @Id
     @Column(name = "loan_config_id")
+    @GeneratedValue(generator = "JDBC")
     private Long loanConfigId;
 
     /**

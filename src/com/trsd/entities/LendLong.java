@@ -11,6 +11,7 @@ public class LendLong {
      */
     @Id
     @Column(name = "lend_long_id")
+    @GeneratedValue(generator = "JDBC")
     private Long lendLongId;
 
     /**

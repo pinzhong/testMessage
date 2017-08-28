@@ -11,6 +11,7 @@ public class InvestTicket {
      */
     @Id
     @Column(name = "invest_ticket_id")
+    @GeneratedValue(generator = "JDBC")
     private Long investTicketId;
 
     /**
