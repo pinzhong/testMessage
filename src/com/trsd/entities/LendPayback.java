@@ -11,6 +11,7 @@ public class LendPayback {
      */
     @Id
     @Column(name = "payback_long_id")
+    @GeneratedValue(generator = "JDBC")
     private Long paybackLongId;
 
     /**

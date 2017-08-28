@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.trsd.mapper.LendLongSchemeMapper">
-  <resultMap id="BaseResultMap" type="com.trsd.entities.LendLongScheme">
+<mapper namespace="com.trsd.mapper.LendSchemeMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendScheme">
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="lend_long_scheme_id" jdbcType="BIGINT" property="lendLongSchemeId" />
+    <id column="lend_scheme_id" jdbcType="BIGINT" property="lendSchemeId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="scheme_order" jdbcType="INTEGER" property="schemeOrder" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="necessary_count" jdbcType="INTEGER" property="necessaryCount" />
+    <result column="lend_type" jdbcType="INTEGER" property="lendType" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    lend_long_scheme_id, user_id, type, status, scheme_order, create_time
+    lend_scheme_id, user_id, type, status, scheme_order, create_time, necessary_count, 
+    lend_type
   </sql>
 </mapper>

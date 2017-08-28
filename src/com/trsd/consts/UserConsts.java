@@ -31,6 +31,6 @@ public class UserConsts {
 	 * 用户类型
 	 */
 	public static final int USER_TYPE_PERSONAL = 1 ; //个人用户
-	public static final int USER_TYPE_MASTER= 2 ; //企业用户
+	public static final int USER_TYPE_MASTER = 2 ; //企业用户
 	
 }

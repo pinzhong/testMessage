@@ -3,21 +3,21 @@ package com.trsd.entities;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "t_lend_long_config")
-public class LendLongConfig {
+@Table(name = "t_lend_config")
+public class LendConfig {
     /**
      * 编号
      */
     @Id
-    @Column(name = "lend_long_config_id")
+    @Column(name = "lend_config_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long lendLongConfigId;
+    private Long lendConfigId;
 
     /**
-     * 长贷借款计划编号
+     * 投资计划编号
      */
-    @Column(name = "lend_long_scheme_id")
-    private Long lendLongSchemeId;
+    @Column(name = "lend_scheme_id")
+    private Long lendSchemeId;
 
     /**
      * 参数类型
@@ -33,46 +33,49 @@ public class LendLongConfig {
     private Date createTime;
 
     /**
-     * 相关操作，大于等于等
+     * 大于等于，小于等于等操作
      */
     private String handle;
 
+    /**
+     * 必须条件还是非必须条件
+     */
     private Integer flag;
 
     /**
      * 获取编号
      *
-     * @return lend_long_config_id - 编号
+     * @return lend_config_id - 编号
      */
-    public Long getLendLongConfigId() {
-        return lendLongConfigId;
+    public Long getLendConfigId() {
+        return lendConfigId;
     }
 
     /**
      * 设置编号
      *
-     * @param lendLongConfigId 编号
+     * @param lendConfigId 编号
      */
-    public void setLendLongConfigId(Long lendLongConfigId) {
-        this.lendLongConfigId = lendLongConfigId;
+    public void setLendConfigId(Long lendConfigId) {
+        this.lendConfigId = lendConfigId;
     }
 
     /**
-     * 获取长贷借款计划编号
+     * 获取投资计划编号
      *
-     * @return lend_long_scheme_id - 长贷借款计划编号
+     * @return lend_scheme_id - 投资计划编号
      */
-    public Long getLendLongSchemeId() {
-        return lendLongSchemeId;
+    public Long getLendSchemeId() {
+        return lendSchemeId;
     }
 
     /**
-     * 设置长贷借款计划编号
+     * 设置投资计划编号
      *
-     * @param lendLongSchemeId 长贷借款计划编号
+     * @param lendSchemeId 投资计划编号
      */
-    public void setLendLongSchemeId(Long lendLongSchemeId) {
-        this.lendLongSchemeId = lendLongSchemeId;
+    public void setLendSchemeId(Long lendSchemeId) {
+        this.lendSchemeId = lendSchemeId;
     }
 
     /**
@@ -126,32 +129,36 @@ public class LendLongConfig {
     }
 
     /**
-     * 获取相关操作，大于等于等
+     * 获取大于等于，小于等于等操作
      *
-     * @return handle - 相关操作，大于等于等
+     * @return handle - 大于等于，小于等于等操作
      */
     public String getHandle() {
         return handle;
     }
 
     /**
-     * 设置相关操作，大于等于等
+     * 设置大于等于，小于等于等操作
      *
-     * @param handle 相关操作，大于等于等
+     * @param handle 大于等于，小于等于等操作
      */
     public void setHandle(String handle) {
         this.handle = handle == null ? null : handle.trim();
     }
 
     /**
-     * @return flag
+     * 获取必须条件还是非必须条件
+     *
+     * @return flag - 必须条件还是非必须条件
      */
     public Integer getFlag() {
         return flag;
     }
 
     /**
-     * @param flag
+     * 设置必须条件还是非必须条件
+     *
+     * @param flag 必须条件还是非必须条件
      */
     public void setFlag(Integer flag) {
         this.flag = flag;

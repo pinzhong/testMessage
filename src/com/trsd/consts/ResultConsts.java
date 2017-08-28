@@ -21,6 +21,7 @@ public class ResultConsts {
 	public static final String MSG_BUSINESS_UNQUALIFIED_LOAN = "您暂无借款资格";
 	public static final String MSG_BUSINESS_UNQUALIFIED_LEND = "您暂无投资资格";
 	public static final String MSG_BUSINESS_BALANCE_NOT_ENOUGH = "余额不足，不能投资";
+	public static final String MSG_BUSINESS_PAYBACK_NOT_ENOUGH = "余额不足，不能还款";
 	public static final String MSG_BUSINESS_REAL_NAME_NOT_PASS = "您的实名未通过，不能进行当前操作";
 	public static final String MSG_BUSINESS_AVALIABLE_SCORE_NOT_ENOUGH = "您的可用身价不足，不能进行当前操作";
 	public static final String MSG_BUSINESS_LOAN_SUCCESS = "恭喜您，您的借款申请已提交成功";
