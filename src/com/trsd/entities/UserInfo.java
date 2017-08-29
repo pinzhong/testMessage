@@ -1,11 +1,17 @@
 package com.trsd.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class UserInfo {
+public class UserInfo implements Serializable{
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * 主键ID
      */
     @Id
