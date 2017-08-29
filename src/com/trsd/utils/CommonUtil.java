@@ -28,6 +28,8 @@ import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.alibaba.fastjson.JSONObject;
+
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
@@ -206,15 +208,15 @@ public class CommonUtil {
 	public static String getSqlLike(int type, String str) {
 		if (str != null && !str.equals("")) {
 			switch (type) {
-				case 1:
-					str = "%" + str + "%";
-					break;
-				case 2:
-					str = "%" + str;
-					break;
-				case 3:
-					str = str + "%";
-					break;
+			case 1:
+				str = "%" + str + "%";
+				break;
+			case 2:
+				str = "%" + str;
+				break;
+			case 3:
+				str = str + "%";
+				break;
 			}
 		}
 		return str;
@@ -272,34 +274,34 @@ public class CommonUtil {
 		Long result = 0L;
 		long diff = c1.getTimeInMillis() - c2.getTimeInMillis();
 		switch (type) {
-			case 1:
-				result = diff / (24 * 60 * 60 * 1000);
-				break;
-			case 2:
-				result = diff / (60 * 60 * 1000);
-				break;
-			case 3:
-				result = diff / (60 * 1000);
-				break;
-			case 4:
-				result = diff / 1000;
-				break;
-			default:
-				break;
+		case 1:
+			result = diff / (24 * 60 * 60 * 1000);
+			break;
+		case 2:
+			result = diff / (60 * 60 * 1000);
+			break;
+		case 3:
+			result = diff / (60 * 1000);
+			break;
+		case 4:
+			result = diff / 1000;
+			break;
+		default:
+			break;
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 判断两个日期的间隔
 	 * 
 	 * @param d1
 	 * @param d2
 	 * @return
-	 * @throws ParseException 
+	 * @throws ParseException
 	 */
 	public static Long dateDifferentDays(Date d1, Date d2) throws ParseException {
-		
+
 		Calendar c1 = Calendar.getInstance();
 		Calendar c2 = Calendar.getInstance();
 		c1.setTime(getFormatDate(d1, "yyyy-MM-dd"));
@@ -307,7 +309,7 @@ public class CommonUtil {
 		Long result = 0L;
 		long diff = c2.getTimeInMillis() - c1.getTimeInMillis();
 		long aa = c2.getTimeInMillis();
-		long bb =  c1.getTimeInMillis();
+		long bb = c1.getTimeInMillis();
 		result = diff / (24 * 60 * 60 * 1000);
 		return result;
 	}
@@ -363,21 +365,22 @@ public class CommonUtil {
 		SimpleDateFormat sdf = new SimpleDateFormat(partter);
 		return sdf.format(date);
 	}
-	
+
 	/**
 	 * 将传入的日期转换为格式要求的日期
+	 * 
 	 * @param date
 	 * @param partter
 	 * @return
 	 * @throws ParseException
 	 */
-	public static Date getFormatDate(Date date, String partter) throws ParseException{
+	public static Date getFormatDate(Date date, String partter) throws ParseException {
 		if (partter == null || partter.trim().equals(""))
 			partter = "yyyy-MM-dd";
-		
+
 		SimpleDateFormat sdf = new SimpleDateFormat(partter);
 		String s = sdf.format(date);
-		date =  sdf.parse(s);
+		date = sdf.parse(s);
 		return date;
 	}
 
@@ -791,20 +794,21 @@ public class CommonUtil {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * 判断对象是否为空，不为空返回true
+	 * 
 	 * @param obj
 	 * @return
 	 */
-	public static boolean validObjectEmpty(Object obj){
-		if(obj != null && !"".equals(obj)){
+	public static boolean validObjectEmpty(Object obj) {
+		if (obj != null && !"".equals(obj)) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * 生成1000－9999的4位随机数来进行登录
 	 * 
@@ -813,22 +817,43 @@ public class CommonUtil {
 	public static int getRandom() {
 		return random.nextInt(8999) + 1000;
 	}
-	
+
 	/**
 	 * 根据身份证号获取年龄
+	 * 
 	 * @param idCard
 	 * @return
 	 */
 	public static int getAgeByIdCard(String idCard) {
-		 int iAge = 0;
-	     try{
-	    	 Calendar cal = Calendar.getInstance();
-		     String year = idCard.substring(6, 10);
-		     int iCurrYear = cal.get(Calendar.YEAR);
-		     iAge = iCurrYear - Integer.valueOf(year);
-	     }catch(Exception e){
-	    	 
-	     }
-	     return iAge;
-	 }
+		int iAge = 0;
+		try {
+			Calendar cal = Calendar.getInstance();
+			String year = idCard.substring(6, 10);
+			int iCurrYear = cal.get(Calendar.YEAR);
+			iAge = iCurrYear - Integer.valueOf(year);
+		} catch (Exception e) {
+
+		}
+		return iAge;
+	}
+
+	/**
+	 * 解析请求url参数为JSONObject
+	 * @param qstr
+	 * @return
+	 */
+	public static JSONObject parseQueryString(String qstr) {
+		String res = "{\"";
+		for (int i = 0; i < qstr.length(); i++) {
+			if (qstr.charAt(i) == '=') {
+				res += "\"" + ":" + "\"";
+			} else if (qstr.charAt(i) == '&') {
+				res += "\"" + "," + "\"";
+			} else {
+				res += qstr.charAt(i);
+			}
+		}
+		res += "\"" + "}";
+		return JSONObject.parseObject(res);
+	}
 }
