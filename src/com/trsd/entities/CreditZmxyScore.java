@@ -10,6 +10,7 @@ public class CreditZmxyScore {
      * 编号
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long authid;
 
     /**
