@@ -30,6 +30,18 @@ public class UserLevel {
     private BigDecimal loanRate;
 
     /**
+     * 短贷自动投资比例
+     */
+    @Column(name = "auto_short_proportion")
+    private BigDecimal autoShortProportion;
+
+    /**
+     * 长贷自动投资比例
+     */
+    @Column(name = "auto_long_proportion")
+    private BigDecimal autoLongProportion;
+
+    /**
      * 获取等级
      *
      * @return level - 等级
@@ -99,5 +111,41 @@ public class UserLevel {
      */
     public void setLoanRate(BigDecimal loanRate) {
         this.loanRate = loanRate;
+    }
+
+    /**
+     * 获取短贷自动投资比例
+     *
+     * @return auto_short_proportion - 短贷自动投资比例
+     */
+    public BigDecimal getAutoShortProportion() {
+        return autoShortProportion;
+    }
+
+    /**
+     * 设置短贷自动投资比例
+     *
+     * @param autoShortProportion 短贷自动投资比例
+     */
+    public void setAutoShortProportion(BigDecimal autoShortProportion) {
+        this.autoShortProportion = autoShortProportion;
+    }
+
+    /**
+     * 获取长贷自动投资比例
+     *
+     * @return auto_long_proportion - 长贷自动投资比例
+     */
+    public BigDecimal getAutoLongProportion() {
+        return autoLongProportion;
+    }
+
+    /**
+     * 设置长贷自动投资比例
+     *
+     * @param autoLongProportion 长贷自动投资比例
+     */
+    public void setAutoLongProportion(BigDecimal autoLongProportion) {
+        this.autoLongProportion = autoLongProportion;
     }
 }

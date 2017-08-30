@@ -9,11 +9,13 @@
     <result column="short_rate" jdbcType="DECIMAL" property="shortRate" />
     <result column="long_rate" jdbcType="DECIMAL" property="longRate" />
     <result column="loan_rate" jdbcType="DECIMAL" property="loanRate" />
+    <result column="auto_short_proportion" jdbcType="DECIMAL" property="autoShortProportion" />
+    <result column="auto_long_proportion" jdbcType="DECIMAL" property="autoLongProportion" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    level, short_rate, long_rate, loan_rate
+    level, short_rate, long_rate, loan_rate, auto_short_proportion, auto_long_proportion
   </sql>
 </mapper>
