@@ -19,4 +19,10 @@
     <result column="user_level" jdbcType="INTEGER" property="userLevel" />
     <result column="credit" jdbcType="VARCHAR" property="credit" />
   </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    loan_id, user_id, apply_money, loan_money, create_time, memo, rate, loan_days, type, real_name, fans_count, user_level, credit
+  </sql>  
 </mapper>
