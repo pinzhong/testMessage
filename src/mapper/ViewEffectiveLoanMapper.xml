@@ -12,7 +12,16 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="memo" jdbcType="VARCHAR" property="memo" />
     <result column="rate" jdbcType="DECIMAL" property="rate" />
-    <result column="time" jdbcType="INTEGER" property="time" />
+    <result column="loan_days" jdbcType="INTEGER" property="loanDays" />
     <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="fans_count" jdbcType="INTEGER" property="fansCount" />
+    <result column="user_level" jdbcType="INTEGER" property="userLevel" />
   </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    loan_id, user_id, apply_money, loan_money, create_time, memo, rate, loan_days, type, real_name, fans_count, user_level
+  </sql>
 </mapper>
