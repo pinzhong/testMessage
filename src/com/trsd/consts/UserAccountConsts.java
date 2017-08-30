@@ -34,6 +34,12 @@ public class UserAccountConsts {
 	public static final int USER_ACCOUNT_TYPE_PAYBACK_LONG_PRINPICAL = 404;//收取长贷本金
 	public static final int USER_ACCOUNT_TYPE_PAYBACK_LONG_INTEREST = 405;//收取长贷利息
 	public static final int USER_ACCOUNT_TYPE_PAYBACK_LONG_PENALTY = 406;//收取长贷违约金
+	public static final int USER_ACCOUNT_TYPE_RETURN_SHORT_PRINPICAL = 407;//归还短贷本金
+	public static final int USER_ACCOUNT_TYPE_RETURN_SHORT_INTEREST = 408;//归还短贷利息
+	public static final int USER_ACCOUNT_TYPE_RETURN_SHORT_PENALTY = 409;//归还短贷违约金
+	public static final int USER_ACCOUNT_TYPE_RETURN_LONG_PRINPICAL = 410;//归还长贷本金
+	public static final int USER_ACCOUNT_TYPE_RETURN_LONG_INTEREST = 411;//归还长贷利息
+	public static final int USER_ACCOUNT_TYPE_RETURN_LONG_PENALTY = 412;//归还长贷违约金
 	
 	/**
 	 * 冻结解冻账户变动类型

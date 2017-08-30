@@ -65,8 +65,8 @@ public class LendLong {
     /**
      * 已还利息
      */
-    @Column(name = "paybackt_interest")
-    private BigDecimal paybacktInterest;
+    @Column(name = "payback_interest")
+    private BigDecimal paybackInterest;
 
     /**
      * 已还违约金
@@ -269,19 +269,19 @@ public class LendLong {
     /**
      * 获取已还利息
      *
-     * @return paybackt_interest - 已还利息
+     * @return payback_interest - 已还利息
      */
-    public BigDecimal getPaybacktInterest() {
-        return paybacktInterest;
+    public BigDecimal getPaybackInterest() {
+        return paybackInterest;
     }
 
     /**
      * 设置已还利息
      *
-     * @param paybacktInterest 已还利息
+     * @param paybackInterest 已还利息
      */
-    public void setPaybacktInterest(BigDecimal paybacktInterest) {
-        this.paybacktInterest = paybacktInterest;
+    public void setPaybackInterest(BigDecimal paybackInterest) {
+        this.paybackInterest = paybackInterest;
     }
 
     /**

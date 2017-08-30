@@ -14,7 +14,7 @@
     <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
     <result column="repayment_penalty" jdbcType="DECIMAL" property="repaymentPenalty" />
     <result column="payback_principal" jdbcType="DECIMAL" property="paybackPrincipal" />
-    <result column="paybackt_interest" jdbcType="DECIMAL" property="paybacktInterest" />
+    <result column="payback_interest" jdbcType="DECIMAL" property="paybackInterest" />
     <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
     <result column="lend_user_type" jdbcType="INTEGER" property="lendUserType" />
     <result column="status" jdbcType="INTEGER" property="status" />
@@ -28,7 +28,7 @@
       WARNING - @mbg.generated
     -->
     lend_long_id, loan_long_id, lend_long_scheme_id, user_id, lend_money, repayment_principal, 
-    repayment_interest, repayment_penalty, payback_principal, paybackt_interest, payback_penalty, 
+    repayment_interest, repayment_penalty, payback_principal, payback_interest, payback_penalty, 
     lend_user_type, status, periods, create_time, update_time, version
   </sql>
 </mapper>
