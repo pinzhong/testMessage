@@ -13,12 +13,14 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="necessary_count" jdbcType="INTEGER" property="necessaryCount" />
     <result column="lend_type" jdbcType="INTEGER" property="lendType" />
+    <result column="day_limit_account" jdbcType="DECIMAL" property="dayLimitAccount" />
+    <result column="single_limit_account" jdbcType="DECIMAL" property="singleLimitAccount" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     lend_scheme_id, user_id, type, status, scheme_order, create_time, necessary_count, 
-    lend_type
+    lend_type, day_limit_account, single_limit_account
   </sql>
 </mapper>

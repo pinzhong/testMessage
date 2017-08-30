@@ -1,5 +1,6 @@
 package com.trsd.entities;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
@@ -49,6 +50,18 @@ public class LendScheme {
      */
     @Column(name = "lend_type")
     private Integer lendType;
+
+    /**
+     * 当日投资限额
+     */
+    @Column(name = "day_limit_account")
+    private BigDecimal dayLimitAccount;
+
+    /**
+     * 单笔投资限额
+     */
+    @Column(name = "single_limit_account")
+    private BigDecimal singleLimitAccount;
 
     /**
      * 获取编号
@@ -188,5 +201,41 @@ public class LendScheme {
      */
     public void setLendType(Integer lendType) {
         this.lendType = lendType;
+    }
+
+    /**
+     * 获取当日投资限额
+     *
+     * @return day_limit_account - 当日投资限额
+     */
+    public BigDecimal getDayLimitAccount() {
+        return dayLimitAccount;
+    }
+
+    /**
+     * 设置当日投资限额
+     *
+     * @param dayLimitAccount 当日投资限额
+     */
+    public void setDayLimitAccount(BigDecimal dayLimitAccount) {
+        this.dayLimitAccount = dayLimitAccount;
+    }
+
+    /**
+     * 获取单笔投资限额
+     *
+     * @return single_limit_account - 单笔投资限额
+     */
+    public BigDecimal getSingleLimitAccount() {
+        return singleLimitAccount;
+    }
+
+    /**
+     * 设置单笔投资限额
+     *
+     * @param singleLimitAccount 单笔投资限额
+     */
+    public void setSingleLimitAccount(BigDecimal singleLimitAccount) {
+        this.singleLimitAccount = singleLimitAccount;
     }
 }
