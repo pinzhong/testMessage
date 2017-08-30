@@ -64,6 +64,12 @@ public class LendScheme {
     private BigDecimal singleLimitAccount;
 
     /**
+     * 今日已投资金额
+     */
+    @Column(name = "today_lend_money")
+    private BigDecimal todayLendMoney;
+
+    /**
      * 获取编号
      *
      * @return lend_scheme_id - 编号
@@ -237,5 +243,23 @@ public class LendScheme {
      */
     public void setSingleLimitAccount(BigDecimal singleLimitAccount) {
         this.singleLimitAccount = singleLimitAccount;
+    }
+
+    /**
+     * 获取今日已投资金额
+     *
+     * @return today_lend_money - 今日已投资金额
+     */
+    public BigDecimal getTodayLendMoney() {
+        return todayLendMoney;
+    }
+
+    /**
+     * 设置今日已投资金额
+     *
+     * @param todayLendMoney 今日已投资金额
+     */
+    public void setTodayLendMoney(BigDecimal todayLendMoney) {
+        this.todayLendMoney = todayLendMoney;
     }
 }
