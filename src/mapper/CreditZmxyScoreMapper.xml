@@ -10,6 +10,7 @@
     <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
     <result column="real_name" jdbcType="TINYINT" property="realName" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="transaction_id" jdbcType="VARCHAR" property="transactionId" />
     <result column="openid" jdbcType="VARCHAR" property="openid" />
     <result column="zmxy_score" jdbcType="INTEGER" property="zmxyScore" />
     <result column="last_authtime" jdbcType="TIMESTAMP" property="lastAuthtime" />
@@ -23,7 +24,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    authid, user_id, authtime, real_name, certificate_no, openid, zmxy_score, last_authtime, 
-    last_score, finishtime, cost, score, status
+    authid, user_id, authtime, real_name, certificate_no, transaction_id, openid, zmxy_score, 
+    last_authtime, last_score, finishtime, cost, score, status
   </sql>
 </mapper>

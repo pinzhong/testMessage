@@ -37,6 +37,12 @@ public class CreditZmxyScore {
     private String certificateNo;
 
     /**
+     * 业务凭证号
+     */
+    @Column(name = "transaction_id")
+    private String transactionId;
+
+    /**
      * 芝麻openid
      */
     private String openid;
@@ -167,6 +173,24 @@ public class CreditZmxyScore {
      */
     public void setCertificateNo(String certificateNo) {
         this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * 获取业务凭证号
+     *
+     * @return transaction_id - 业务凭证号
+     */
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    /**
+     * 设置业务凭证号
+     *
+     * @param transactionId 业务凭证号
+     */
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId == null ? null : transactionId.trim();
     }
 
     /**
