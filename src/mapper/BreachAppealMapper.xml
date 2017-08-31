@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.BreachAppealMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.BreachAppeal">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="appeal_id" jdbcType="BIGINT" property="appealId" />
+    <result column="notice_id" jdbcType="BIGINT" property="noticeId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="reson" jdbcType="VARCHAR" property="reson" />
+    <result column="holdcardphoto" jdbcType="VARCHAR" property="holdcardphoto" />
+    <result column="cardphoto" jdbcType="VARCHAR" property="cardphoto" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
+    <result column="audit_by" jdbcType="VARCHAR" property="auditBy" />
+    <result column="audit_result" jdbcType="INTEGER" property="auditResult" />
+    <result column="audit_remark" jdbcType="VARCHAR" property="auditRemark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    appeal_id, notice_id, user_id, certificate_no, real_name, phone, reson, holdcardphoto, 
+    cardphoto, status, audit_time, audit_by, audit_result, audit_remark, create_time, 
+    update_time
+  </sql>
+</mapper>

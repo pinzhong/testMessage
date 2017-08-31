@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.BreachNoticeMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.BreachNotice">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="notice_id" jdbcType="BIGINT" property="noticeId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="ttitle" jdbcType="VARCHAR" property="ttitle" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
+    <result column="audit_by" jdbcType="VARCHAR" property="auditBy" />
+    <result column="revoke_status" jdbcType="INTEGER" property="revokeStatus" />
+    <result column="revoke_by" jdbcType="VARCHAR" property="revokeBy" />
+    <result column="revoke_time" jdbcType="TIMESTAMP" property="revokeTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    notice_id, user_id, certificate_no, real_name, gender, phone, ttitle, content, province, 
+    city, area, type, status, audit_time, audit_by, revoke_status, revoke_by, revoke_time, 
+    create_time, update_time
+  </sql>
+</mapper>
