@@ -7,7 +7,7 @@
     -->
     <id column="rec_id" jdbcType="INTEGER" property="recId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
-    <result column="credit_type" jdbcType="VARCHAR" property="creditType" />
+    <result column="credit_type" jdbcType="INTEGER" property="creditType" />
     <result column="provider" jdbcType="VARCHAR" property="provider" />
     <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
     <result column="status" jdbcType="TINYINT" property="status" />

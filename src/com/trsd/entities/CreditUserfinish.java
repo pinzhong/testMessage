@@ -22,7 +22,7 @@ public class CreditUserfinish {
      * 认证类型
      */
     @Column(name = "credit_type")
-    private String creditType;
+    private Integer creditType;
 
     /**
      * 数据提供商
@@ -80,7 +80,7 @@ public class CreditUserfinish {
      *
      * @return credit_type - 认证类型
      */
-    public String getCreditType() {
+    public Integer getCreditType() {
         return creditType;
     }
 
@@ -89,8 +89,8 @@ public class CreditUserfinish {
      *
      * @param creditType 认证类型
      */
-    public void setCreditType(String creditType) {
-        this.creditType = creditType == null ? null : creditType.trim();
+    public void setCreditType(Integer creditType) {
+        this.creditType = creditType;
     }
 
     /**
