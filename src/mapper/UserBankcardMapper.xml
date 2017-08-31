@@ -7,12 +7,14 @@
     -->
     <id column="user_bankcard_id" jdbcType="BIGINT" property="userBankcardId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
+    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+    <result column="branch_name" jdbcType="VARCHAR" property="branchName" />
     <result column="province" jdbcType="VARCHAR" property="province" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="area" jdbcType="VARCHAR" property="area" />
-    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
-    <result column="branch_name" jdbcType="VARCHAR" property="branchName" />
-    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
     <result column="change_num" jdbcType="INTEGER" property="changeNum" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -21,7 +23,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    user_bankcard_id, user_id, province, city, area, bank_name, branch_name, card_no, 
-    change_num, create_time, update_time
+    user_bankcard_id, user_id, real_name, certificate_no, card_no, bank_name, branch_name, 
+    province, city, area, change_num, create_time, update_time
   </sql>
 </mapper>

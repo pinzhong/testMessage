@@ -10,6 +10,7 @@ public class CreditUserfinish {
      */
     @Id
     @Column(name = "rec_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer recId;
 
     /**

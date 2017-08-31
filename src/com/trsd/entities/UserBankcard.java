@@ -20,19 +20,22 @@ public class UserBankcard {
     private Long userId;
 
     /**
-     * 开户省份
+     * 身份证姓名
      */
-    private String province;
+    @Column(name = "real_name")
+    private String realName;
 
     /**
-     * 开户城市
+     * 身份证号码
      */
-    private String city;
+    @Column(name = "certificate_no")
+    private String certificateNo;
 
     /**
-     * 开户地区
+     * 银行卡号
      */
-    private String area;
+    @Column(name = "card_no")
+    private String cardNo;
 
     /**
      * 银行名称
@@ -47,10 +50,19 @@ public class UserBankcard {
     private String branchName;
 
     /**
-     * 银行卡号
+     * 开户省份
      */
-    @Column(name = "card_no")
-    private String cardNo;
+    private String province;
+
+    /**
+     * 开户城市
+     */
+    private String city;
+
+    /**
+     * 开户地区
+     */
+    private String area;
 
     /**
      * 更改次数
@@ -107,6 +119,96 @@ public class UserBankcard {
     }
 
     /**
+     * 获取身份证姓名
+     *
+     * @return real_name - 身份证姓名
+     */
+    public String getRealName() {
+        return realName;
+    }
+
+    /**
+     * 设置身份证姓名
+     *
+     * @param realName 身份证姓名
+     */
+    public void setRealName(String realName) {
+        this.realName = realName == null ? null : realName.trim();
+    }
+
+    /**
+     * 获取身份证号码
+     *
+     * @return certificate_no - 身份证号码
+     */
+    public String getCertificateNo() {
+        return certificateNo;
+    }
+
+    /**
+     * 设置身份证号码
+     *
+     * @param certificateNo 身份证号码
+     */
+    public void setCertificateNo(String certificateNo) {
+        this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * 获取银行卡号
+     *
+     * @return card_no - 银行卡号
+     */
+    public String getCardNo() {
+        return cardNo;
+    }
+
+    /**
+     * 设置银行卡号
+     *
+     * @param cardNo 银行卡号
+     */
+    public void setCardNo(String cardNo) {
+        this.cardNo = cardNo == null ? null : cardNo.trim();
+    }
+
+    /**
+     * 获取银行名称
+     *
+     * @return bank_name - 银行名称
+     */
+    public String getBankName() {
+        return bankName;
+    }
+
+    /**
+     * 设置银行名称
+     *
+     * @param bankName 银行名称
+     */
+    public void setBankName(String bankName) {
+        this.bankName = bankName == null ? null : bankName.trim();
+    }
+
+    /**
+     * 获取支行名称
+     *
+     * @return branch_name - 支行名称
+     */
+    public String getBranchName() {
+        return branchName;
+    }
+
+    /**
+     * 设置支行名称
+     *
+     * @param branchName 支行名称
+     */
+    public void setBranchName(String branchName) {
+        this.branchName = branchName == null ? null : branchName.trim();
+    }
+
+    /**
      * 获取开户省份
      *
      * @return province - 开户省份
@@ -158,60 +260,6 @@ public class UserBankcard {
      */
     public void setArea(String area) {
         this.area = area == null ? null : area.trim();
-    }
-
-    /**
-     * 获取银行名称
-     *
-     * @return bank_name - 银行名称
-     */
-    public String getBankName() {
-        return bankName;
-    }
-
-    /**
-     * 设置银行名称
-     *
-     * @param bankName 银行名称
-     */
-    public void setBankName(String bankName) {
-        this.bankName = bankName == null ? null : bankName.trim();
-    }
-
-    /**
-     * 获取支行名称
-     *
-     * @return branch_name - 支行名称
-     */
-    public String getBranchName() {
-        return branchName;
-    }
-
-    /**
-     * 设置支行名称
-     *
-     * @param branchName 支行名称
-     */
-    public void setBranchName(String branchName) {
-        this.branchName = branchName == null ? null : branchName.trim();
-    }
-
-    /**
-     * 获取银行卡号
-     *
-     * @return card_no - 银行卡号
-     */
-    public String getCardNo() {
-        return cardNo;
-    }
-
-    /**
-     * 设置银行卡号
-     *
-     * @param cardNo 银行卡号
-     */
-    public void setCardNo(String cardNo) {
-        this.cardNo = cardNo == null ? null : cardNo.trim();
     }
 
     /**

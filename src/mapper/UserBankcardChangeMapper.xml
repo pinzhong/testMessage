@@ -7,18 +7,22 @@
     -->
     <id column="change_id" jdbcType="BIGINT" property="changeId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="original_real_name" jdbcType="VARCHAR" property="originalRealName" />
+    <result column="original_certificate_no" jdbcType="VARCHAR" property="originalCertificateNo" />
+    <result column="original_card_no" jdbcType="VARCHAR" property="originalCardNo" />
+    <result column="originalbank_name" jdbcType="VARCHAR" property="originalbankName" />
     <result column="original_province" jdbcType="VARCHAR" property="originalProvince" />
     <result column="original_city" jdbcType="VARCHAR" property="originalCity" />
     <result column="original_area" jdbcType="VARCHAR" property="originalArea" />
-    <result column="originalbank_name" jdbcType="VARCHAR" property="originalbankName" />
     <result column="original_branch_name" jdbcType="VARCHAR" property="originalBranchName" />
-    <result column="original_card_no" jdbcType="VARCHAR" property="originalCardNo" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
+    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
     <result column="province" jdbcType="VARCHAR" property="province" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="area" jdbcType="VARCHAR" property="area" />
-    <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
     <result column="branch_name" jdbcType="VARCHAR" property="branchName" />
-    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
     <result column="change_time" jdbcType="TIMESTAMP" property="changeTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
@@ -26,8 +30,9 @@
     <!--
       WARNING - @mbg.generated
     -->
-    change_id, user_id, original_province, original_city, original_area, originalbank_name, 
-    original_branch_name, original_card_no, province, city, area, bank_name, branch_name, 
-    card_no, change_time, update_time
+    change_id, user_id, original_real_name, original_certificate_no, original_card_no, 
+    originalbank_name, original_province, original_city, original_area, original_branch_name, 
+    real_name, certificate_no, card_no, bank_name, province, city, area, branch_name, 
+    change_time, update_time
   </sql>
 </mapper>
