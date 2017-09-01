@@ -19,9 +19,10 @@ public class BusinessConsts {
 	 * 还款状态
 	 */
 	public static final int PAYBACK_STATUS_REPAYMENT = 0 ;//待还款
-	public static final int PAYBACK_STATUS_PREPAYMENT = 1 ;//提前还款
+	public static final int PAYBACK_STATUS_PREPAYMENT = 1 ;//提前还款(短贷及 分期)
 	public static final int PAYBACK_STATUS_NORMAL = 2 ;//正常还款
 	public static final int PAYBACK_STATUS_BREAK = 3 ;//逾期还款
+	public static final int PAYBACK_STATUS_ADVANCE = 4 ;//超过当期提前
 	
 	/**
 	 * 还款类型
