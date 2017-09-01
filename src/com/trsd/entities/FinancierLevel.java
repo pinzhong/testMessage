@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import javax.persistence.*;
 
 @Table(name = "t_financier_level")
-public class financierLevel {
+public class FinancierLevel {
     /**
      * 等级
      */
