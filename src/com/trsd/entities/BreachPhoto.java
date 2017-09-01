@@ -10,6 +10,7 @@ public class BreachPhoto {
      */
     @Id
     @Column(name = "photo_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long photoId;
 
     /**
