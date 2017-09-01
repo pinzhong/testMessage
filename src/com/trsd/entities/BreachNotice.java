@@ -10,7 +10,6 @@ public class BreachNotice {
      */
     @Id
     @Column(name = "notice_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long noticeId;
 
     /**

@@ -48,16 +48,6 @@ public class BreachAppeal {
     private String reson;
 
     /**
-     * 手持身份证照片
-     */
-    private String holdcardphoto;
-
-    /**
-     * 身份证照片
-     */
-    private String cardphoto;
-
-    /**
      * 状态（0：待处理；1：已处理）
      */
     private Integer status;
@@ -222,42 +212,6 @@ public class BreachAppeal {
      */
     public void setReson(String reson) {
         this.reson = reson == null ? null : reson.trim();
-    }
-
-    /**
-     * 获取手持身份证照片
-     *
-     * @return holdcardphoto - 手持身份证照片
-     */
-    public String getHoldcardphoto() {
-        return holdcardphoto;
-    }
-
-    /**
-     * 设置手持身份证照片
-     *
-     * @param holdcardphoto 手持身份证照片
-     */
-    public void setHoldcardphoto(String holdcardphoto) {
-        this.holdcardphoto = holdcardphoto == null ? null : holdcardphoto.trim();
-    }
-
-    /**
-     * 获取身份证照片
-     *
-     * @return cardphoto - 身份证照片
-     */
-    public String getCardphoto() {
-        return cardphoto;
-    }
-
-    /**
-     * 设置身份证照片
-     *
-     * @param cardphoto 身份证照片
-     */
-    public void setCardphoto(String cardphoto) {
-        this.cardphoto = cardphoto == null ? null : cardphoto.trim();
     }
 
     /**
