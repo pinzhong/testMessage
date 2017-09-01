@@ -10,6 +10,7 @@ public class BreachNotice {
      */
     @Id
     @Column(name = "notice_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long noticeId;
 
     /**
@@ -69,6 +70,9 @@ public class BreachNotice {
      * 类型
      */
     private Integer type;
+
+    @Column(name = "show_photo")
+    private String showPhoto;
 
     /**
      * 状态（0：待审核；1：发布中；-1：审核失败）
@@ -331,6 +335,20 @@ public class BreachNotice {
      */
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    /**
+     * @return show_photo
+     */
+    public String getShowPhoto() {
+        return showPhoto;
+    }
+
+    /**
+     * @param showPhoto
+     */
+    public void setShowPhoto(String showPhoto) {
+        this.showPhoto = showPhoto == null ? null : showPhoto.trim();
     }
 
     /**

@@ -17,6 +17,7 @@
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="area" jdbcType="VARCHAR" property="area" />
     <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="show_photo" jdbcType="VARCHAR" property="showPhoto" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
     <result column="audit_by" jdbcType="VARCHAR" property="auditBy" />
@@ -31,7 +32,7 @@
       WARNING - @mbg.generated
     -->
     notice_id, user_id, certificate_no, real_name, gender, phone, ttitle, content, province, 
-    city, area, type, status, audit_time, audit_by, revoke_status, revoke_by, revoke_time, 
-    create_time, update_time
+    city, area, type, show_photo, status, audit_time, audit_by, revoke_status, revoke_by, 
+    revoke_time, create_time, update_time
   </sql>
 </mapper>
