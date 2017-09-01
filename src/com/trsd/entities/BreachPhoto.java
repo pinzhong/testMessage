@@ -72,7 +72,25 @@ public class BreachPhoto {
     @Column(name = "audit_by")
     private String auditBy;
 
-    /**
+    public BreachPhoto(Long refId, Long userId, Integer breachType, Integer photoType, Date uploadTime,
+			Integer storeType, String filename, Integer showStatus) {
+		super();
+		this.refId = refId;
+		this.userId = userId;
+		this.breachType = breachType;
+		this.photoType = photoType;
+		this.uploadTime = uploadTime;
+		this.storeType = storeType;
+		this.filename = filename;
+		this.showStatus = showStatus;
+	}
+
+	public BreachPhoto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * 获取编号
      *
      * @return photo_id - 编号
