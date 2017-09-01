@@ -8,9 +8,11 @@ package com.trsd.consts;
  */
 public enum CodeType {
 	LOGIN(1), // 登录验证码
-	REGISTER(2),// 注册验证码
-	PAYPWD(3),//修改支付密码
-	PHONE(4);//修改注册手机号
+	REGISTER(2), // 注册验证码
+	PAYPWD(3), // 修改支付密码验证码
+	PHONE(4), // 修改注册手机号验证码
+	SHORTLOANCODE(5), // 短贷投资支付验证码
+	LONGLOANCODE(6);// 长贷投资支付验证码
 
 	private int value = 0;
 
@@ -20,16 +22,20 @@ public enum CodeType {
 
 	public static CodeType valueOf(int value) { // 手写的从int到enum的转换函数
 		switch (value) {
-			case 1:
-				return LOGIN;
-			case 2:
-				return REGISTER;
-			case 3:
-				return PAYPWD;
-			case 4:
-				return PHONE;
-			default:
-				return null;
+		case 1:
+			return LOGIN;
+		case 2:
+			return REGISTER;
+		case 3:
+			return PAYPWD;
+		case 4:
+			return PHONE;
+		case 5:
+			return SHORTLOANCODE;
+		case 6:
+			return LONGLOANCODE;
+		default:
+			return null;
 		}
 	}
 

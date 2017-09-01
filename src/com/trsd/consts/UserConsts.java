@@ -25,6 +25,8 @@ public class UserConsts {
 	public static final String REDIS_DYNAMIC_PAY_PWD_KEY = "dyn:code:pay:pwd" ; //修改支付密码所用手机动态验证码
 	public static final String REDIS_DYNAMIC_REGISTER_KEY = "dyn:code:register" ; //动态注册验证码
 	public static final String REDIS_DYNAMIC_PHONE_CHANGE_KEY = "dyn:code:phone:change" ; //动态注册验证码
+	public static final String REDIS_DYNAMIC_SHORT_LOAN_CODE_KEY = "dyn:code:short:loan" ; //长贷投资验证码
+	public static final String REDIS_DYNAMIC_LONG_LOAN_CODE_KEY = "dyn:code:long:loan" ; //短贷投资验证码
 	public static final String REDIS_LOAN_USE_KEY = "loan:use:list";//借款用途列表
 	
 	/**
