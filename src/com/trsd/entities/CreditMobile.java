@@ -10,7 +10,8 @@ public class CreditMobile {
      * 编号
      */
     @Id
-    private String authid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long authid;
 
     /**
      * 用户编号
@@ -29,7 +30,7 @@ public class CreditMobile {
     private Date createtime;
 
     /**
-     * 京东登录名
+     * 是否通过
      */
     private Byte ispass;
 
@@ -65,6 +66,18 @@ public class CreditMobile {
     private String location;
 
     /**
+     * 运营商姓名
+     */
+    @Column(name = "real_name")
+    private String realName;
+
+    /**
+     * 身份证号
+     */
+    @Column(name = "certificate_no")
+    private String certificateNo;
+
+    /**
      * 地址
      */
     private String address;
@@ -76,9 +89,9 @@ public class CreditMobile {
     private String vipLevel;
 
     /**
-     * 通道
+     * 服务商
      */
-    private String channel;
+    private String provider;
 
     /**
      * 通道token
@@ -110,7 +123,7 @@ public class CreditMobile {
      *
      * @return authid - 编号
      */
-    public String getAuthid() {
+    public Long getAuthid() {
         return authid;
     }
 
@@ -119,8 +132,8 @@ public class CreditMobile {
      *
      * @param authid 编号
      */
-    public void setAuthid(String authid) {
-        this.authid = authid == null ? null : authid.trim();
+    public void setAuthid(Long authid) {
+        this.authid = authid;
     }
 
     /**
@@ -178,18 +191,18 @@ public class CreditMobile {
     }
 
     /**
-     * 获取京东登录名
+     * 获取是否通过
      *
-     * @return ispass - 京东登录名
+     * @return ispass - 是否通过
      */
     public Byte getIspass() {
         return ispass;
     }
 
     /**
-     * 设置京东登录名
+     * 设置是否通过
      *
-     * @param ispass 京东登录名
+     * @param ispass 是否通过
      */
     public void setIspass(Byte ispass) {
         this.ispass = ispass;
@@ -304,6 +317,42 @@ public class CreditMobile {
     }
 
     /**
+     * 获取运营商姓名
+     *
+     * @return real_name - 运营商姓名
+     */
+    public String getRealName() {
+        return realName;
+    }
+
+    /**
+     * 设置运营商姓名
+     *
+     * @param realName 运营商姓名
+     */
+    public void setRealName(String realName) {
+        this.realName = realName == null ? null : realName.trim();
+    }
+
+    /**
+     * 获取身份证号
+     *
+     * @return certificate_no - 身份证号
+     */
+    public String getCertificateNo() {
+        return certificateNo;
+    }
+
+    /**
+     * 设置身份证号
+     *
+     * @param certificateNo 身份证号
+     */
+    public void setCertificateNo(String certificateNo) {
+        this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
      * 获取地址
      *
      * @return address - 地址
@@ -340,21 +389,21 @@ public class CreditMobile {
     }
 
     /**
-     * 获取通道
+     * 获取服务商
      *
-     * @return channel - 通道
+     * @return provider - 服务商
      */
-    public String getChannel() {
-        return channel;
+    public String getProvider() {
+        return provider;
     }
 
     /**
-     * 设置通道
+     * 设置服务商
      *
-     * @param channel 通道
+     * @param provider 服务商
      */
-    public void setChannel(String channel) {
-        this.channel = channel == null ? null : channel.trim();
+    public void setProvider(String provider) {
+        this.provider = provider == null ? null : provider.trim();
     }
 
     /**

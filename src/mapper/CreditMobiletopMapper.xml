@@ -5,8 +5,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="recordid" jdbcType="VARCHAR" property="recordid" />
-    <result column="authid" jdbcType="VARCHAR" property="authid" />
+    <id column="recordid" jdbcType="BIGINT" property="recordid" />
+    <result column="authid" jdbcType="BIGINT" property="authid" />
     <result column="userId" jdbcType="BIGINT" property="userid" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />

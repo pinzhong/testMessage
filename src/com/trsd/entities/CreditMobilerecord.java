@@ -9,12 +9,13 @@ public class CreditMobilerecord {
      * 编号
      */
     @Id
-    private String recordid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long recordid;
 
     /**
      * 认证编号
      */
-    private String authid;
+    private Long authid;
 
     /**
      * 用户编号
@@ -67,7 +68,7 @@ public class CreditMobilerecord {
      *
      * @return recordid - 编号
      */
-    public String getRecordid() {
+    public Long getRecordid() {
         return recordid;
     }
 
@@ -76,8 +77,8 @@ public class CreditMobilerecord {
      *
      * @param recordid 编号
      */
-    public void setRecordid(String recordid) {
-        this.recordid = recordid == null ? null : recordid.trim();
+    public void setRecordid(Long recordid) {
+        this.recordid = recordid;
     }
 
     /**
@@ -85,7 +86,7 @@ public class CreditMobilerecord {
      *
      * @return authid - 认证编号
      */
-    public String getAuthid() {
+    public Long getAuthid() {
         return authid;
     }
 
@@ -94,8 +95,8 @@ public class CreditMobilerecord {
      *
      * @param authid 认证编号
      */
-    public void setAuthid(String authid) {
-        this.authid = authid == null ? null : authid.trim();
+    public void setAuthid(Long authid) {
+        this.authid = authid;
     }
 
     /**
