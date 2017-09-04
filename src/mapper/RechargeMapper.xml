@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.RechargeMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.Recharge">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="recharge_id" jdbcType="BIGINT" property="rechargeId" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="event_key" jdbcType="VARCHAR" property="eventKey" />
+    <result column="pay_type" jdbcType="INTEGER" property="payType" />
+    <result column="business_type" jdbcType="INTEGER" property="businessType" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="bind_time" jdbcType="TIMESTAMP" property="bindTime" />
+    <result column="sucess_time" jdbcType="TIMESTAMP" property="sucessTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    recharge_id, order_no, event_key, pay_type, business_type, user_id, status, version, 
+    remark, amount, create_time, bind_time, sucess_time, update_time
+  </sql>
+</mapper>
