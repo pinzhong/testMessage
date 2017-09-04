@@ -8,6 +8,7 @@ public class FinancierLevel {
     /**
      * 等级
      */
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer level;
 

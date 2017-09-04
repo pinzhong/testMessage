@@ -11,6 +11,7 @@ public class LoanShort {
      */
     @Id
     @Column(name = "loan_short_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long loanShortId;
 
     /**
@@ -125,6 +126,15 @@ public class LoanShort {
      */
     @Column(name = "payback_penalty")
     private BigDecimal paybackPenalty;
+
+    @Column(name = "payback_time")
+    private Date paybackTime;
+
+    /**
+     * 满标状态
+     */
+    @Column(name = "loan_status")
+    private Integer loanStatus;
 
     /**
      * 获取主键id
@@ -498,5 +508,37 @@ public class LoanShort {
      */
     public void setPaybackPenalty(BigDecimal paybackPenalty) {
         this.paybackPenalty = paybackPenalty;
+    }
+
+    /**
+     * @return payback_time
+     */
+    public Date getPaybackTime() {
+        return paybackTime;
+    }
+
+    /**
+     * @param paybackTime
+     */
+    public void setPaybackTime(Date paybackTime) {
+        this.paybackTime = paybackTime;
+    }
+
+    /**
+     * 获取满标状态
+     *
+     * @return loan_status - 满标状态
+     */
+    public Integer getLoanStatus() {
+        return loanStatus;
+    }
+
+    /**
+     * 设置满标状态
+     *
+     * @param loanStatus 满标状态
+     */
+    public void setLoanStatus(Integer loanStatus) {
+        this.loanStatus = loanStatus;
     }
 }

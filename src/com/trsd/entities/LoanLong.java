@@ -11,6 +11,7 @@ public class LoanLong {
      */
     @Id
     @Column(name = "loan_long_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long loanLongId;
 
     /**
