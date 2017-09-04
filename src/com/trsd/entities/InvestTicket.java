@@ -11,8 +11,13 @@ public class InvestTicket {
      */
     @Id
     @Column(name = "invest_ticket_id")
-    @GeneratedValue(generator = "JDBC")
     private Long investTicketId;
+
+    /**
+     * 业务编号
+     */
+    @Column(name = "invest_ticket_key")
+    private String investTicketKey;
 
     /**
      * 使用金额
@@ -76,6 +81,24 @@ public class InvestTicket {
      */
     public void setInvestTicketId(Long investTicketId) {
         this.investTicketId = investTicketId;
+    }
+
+    /**
+     * 获取业务编号
+     *
+     * @return invest_ticket_key - 业务编号
+     */
+    public String getInvestTicketKey() {
+        return investTicketKey;
+    }
+
+    /**
+     * 设置业务编号
+     *
+     * @param investTicketKey 业务编号
+     */
+    public void setInvestTicketKey(String investTicketKey) {
+        this.investTicketKey = investTicketKey == null ? null : investTicketKey.trim();
     }
 
     /**

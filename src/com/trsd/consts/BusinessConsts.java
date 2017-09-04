@@ -30,12 +30,6 @@ public class BusinessConsts {
 	public static final int PAYBACK_TYPE_PRINCIPAL = 1 ; //还本金
 	public static final int PAYBACK_TYPE_INTEREST = 2 ; //还利息
 	public static final int PAYBACK_TYPE_PENALTY = 3 ; //还违约金
-	/**
-	 * 投资券状态
-	 */
-	public static final int INVEST_TICKET_NOT_USED = 0 ;//未使用
-	public static final int INVEST_TICKET_USED = 1 ;//已使用
-	public static final int INVEST_TICKET_INVALID = -1 ;//已失效
 		
 	/**
 	 * 邀请等级

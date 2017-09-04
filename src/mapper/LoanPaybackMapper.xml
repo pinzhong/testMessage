@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="loan_payback_id" jdbcType="BIGINT" property="loanPaybackId" />
+    <result column="loan_payback_key" jdbcType="VARCHAR" property="loanPaybackKey" />
     <result column="loan_long_id" jdbcType="BIGINT" property="loanLongId" />
     <result column="repayment_principal" jdbcType="DECIMAL" property="repaymentPrincipal" />
     <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
@@ -25,8 +26,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    loan_payback_id, loan_long_id, repayment_principal, repayment_interest, repayment_penalty, 
-    repayment_time, payback_principal, payback_interest, payback_penalty, payback_time, 
-    status, current_period, create_time, update_time, version
+    loan_payback_id, loan_payback_key, loan_long_id, repayment_principal, repayment_interest, 
+    repayment_penalty, repayment_time, payback_principal, payback_interest, payback_penalty, 
+    payback_time, status, current_period, create_time, update_time, version
   </sql>
 </mapper>

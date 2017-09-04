@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="lend_scheme_id" jdbcType="BIGINT" property="lendSchemeId" />
+    <result column="lend_scheme_key" jdbcType="VARCHAR" property="lendSchemeKey" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="status" jdbcType="INTEGER" property="status" />
@@ -21,7 +22,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    lend_scheme_id, user_id, type, status, scheme_order, create_time, necessary_count, 
-    lend_type, day_limit_account, single_limit_account, today_lend_money
+    lend_scheme_id, lend_scheme_key, user_id, type, status, scheme_order, create_time, 
+    necessary_count, lend_type, day_limit_account, single_limit_account, today_lend_money
   </sql>
 </mapper>

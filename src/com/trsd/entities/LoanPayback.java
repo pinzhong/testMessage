@@ -14,6 +14,12 @@ public class LoanPayback {
     private Long loanPaybackId;
 
     /**
+     * 业务编号
+     */
+    @Column(name = "loan_payback_key")
+    private String loanPaybackKey;
+
+    /**
      * 长贷编号
      */
     @Column(name = "loan_long_id")
@@ -102,6 +108,24 @@ public class LoanPayback {
      */
     public void setLoanPaybackId(Long loanPaybackId) {
         this.loanPaybackId = loanPaybackId;
+    }
+
+    /**
+     * 获取业务编号
+     *
+     * @return loan_payback_key - 业务编号
+     */
+    public String getLoanPaybackKey() {
+        return loanPaybackKey;
+    }
+
+    /**
+     * 设置业务编号
+     *
+     * @param loanPaybackKey 业务编号
+     */
+    public void setLoanPaybackKey(String loanPaybackKey) {
+        this.loanPaybackKey = loanPaybackKey == null ? null : loanPaybackKey.trim();
     }
 
     /**

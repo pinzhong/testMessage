@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.UUID;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -855,5 +856,13 @@ public class CommonUtil {
 		}
 		res += "\"" + "}";
 		return JSONObject.parseObject(res);
+	}
+	
+	/**
+	 * 获取uuid
+	 * @return
+	 */
+	public static String getUUID(){
+		return UUID.randomUUID().toString();
 	}
 }

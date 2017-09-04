@@ -15,6 +15,12 @@ public class LendScheme {
     private Long lendSchemeId;
 
     /**
+     * 业务编号
+     */
+    @Column(name = "lend_scheme_key")
+    private String lendSchemeKey;
+
+    /**
      * 用户编号
      */
     @Column(name = "user_id")
@@ -85,6 +91,24 @@ public class LendScheme {
      */
     public void setLendSchemeId(Long lendSchemeId) {
         this.lendSchemeId = lendSchemeId;
+    }
+
+    /**
+     * 获取业务编号
+     *
+     * @return lend_scheme_key - 业务编号
+     */
+    public String getLendSchemeKey() {
+        return lendSchemeKey;
+    }
+
+    /**
+     * 设置业务编号
+     *
+     * @param lendSchemeKey 业务编号
+     */
+    public void setLendSchemeKey(String lendSchemeKey) {
+        this.lendSchemeKey = lendSchemeKey == null ? null : lendSchemeKey.trim();
     }
 
     /**

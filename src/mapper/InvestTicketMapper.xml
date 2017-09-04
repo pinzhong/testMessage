@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="invest_ticket_id" jdbcType="BIGINT" property="investTicketId" />
+    <result column="invest_ticket_key" jdbcType="VARCHAR" property="investTicketKey" />
     <result column="invest_amount" jdbcType="DECIMAL" property="investAmount" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="invest_time" jdbcType="TIMESTAMP" property="investTime" />
@@ -20,7 +21,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    invest_ticket_id, invest_amount, status, invest_time, lend_id, invest_type, limit_time, 
-    user_id, create_time, version
+    invest_ticket_id, invest_ticket_key, invest_amount, status, invest_time, lend_id, 
+    invest_type, limit_time, user_id, create_time, version
   </sql>
 </mapper>

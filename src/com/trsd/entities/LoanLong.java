@@ -11,8 +11,13 @@ public class LoanLong {
      */
     @Id
     @Column(name = "loan_long_id")
-    @GeneratedValue(generator = "JDBC")
     private Long loanLongId;
+
+    /**
+     * 业务编号
+     */
+    @Column(name = "loan_long_key")
+    private String loanLongKey;
 
     /**
      * 主键ID
@@ -130,6 +135,24 @@ public class LoanLong {
      */
     public void setLoanLongId(Long loanLongId) {
         this.loanLongId = loanLongId;
+    }
+
+    /**
+     * 获取业务编号
+     *
+     * @return loan_long_key - 业务编号
+     */
+    public String getLoanLongKey() {
+        return loanLongKey;
+    }
+
+    /**
+     * 设置业务编号
+     *
+     * @param loanLongKey 业务编号
+     */
+    public void setLoanLongKey(String loanLongKey) {
+        this.loanLongKey = loanLongKey == null ? null : loanLongKey.trim();
     }
 
     /**
