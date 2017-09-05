@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.ViewLoanPaybackMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.ViewLoanPayback">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="loan_payback_id" jdbcType="VARCHAR" property="loanPaybackId" />
+    <result column="loan_id" jdbcType="BIGINT" property="loanId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="repayment_interest" jdbcType="DECIMAL" property="repaymentInterest" />
+    <result column="repayment_penalty" jdbcType="DECIMAL" property="repaymentPenalty" />
+    <result column="repayment_principal" jdbcType="DECIMAL" property="repaymentPrincipal" />
+    <result column="repayback_time" jdbcType="TIMESTAMP" property="repaybackTime" />
+    <result column="payback_interest" jdbcType="DECIMAL" property="paybackInterest" />
+    <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
+    <result column="payback_principal" jdbcType="DECIMAL" property="paybackPrincipal" />
+    <result column="payback_time" jdbcType="TIMESTAMP" property="paybackTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>
