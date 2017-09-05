@@ -11,9 +11,9 @@
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
     <result column="callnumber" jdbcType="VARCHAR" property="callnumber" />
-    <result column="calltime" jdbcType="TINYINT" property="calltime" />
+    <result column="callcount" jdbcType="INTEGER" property="callcount" />
     <result column="location" jdbcType="VARCHAR" property="location" />
-    <result column="callmin" jdbcType="TINYINT" property="callmin" />
+    <result column="callmin" jdbcType="INTEGER" property="callmin" />
     <result column="firstcalltime" jdbcType="TIMESTAMP" property="firstcalltime" />
     <result column="lastcalltime" jdbcType="TIMESTAMP" property="lastcalltime" />
   </resultMap>
@@ -21,7 +21,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    recordid, authid, userId, phone, createtime, callnumber, calltime, location, callmin, 
+    recordid, authid, userId, phone, createtime, callnumber, callcount, location, callmin, 
     firstcalltime, lastcalltime
   </sql>
 </mapper>

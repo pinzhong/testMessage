@@ -41,7 +41,7 @@ public class CreditMobiletop {
     /**
      * 通话次数
      */
-    private Byte calltime;
+    private Integer callcount;
 
     /**
      * 归属地
@@ -51,7 +51,7 @@ public class CreditMobiletop {
     /**
      * 通话时长（分钟）
      */
-    private Byte callmin;
+    private Integer callmin;
 
     /**
      * 最早联系时间
@@ -174,19 +174,19 @@ public class CreditMobiletop {
     /**
      * 获取通话次数
      *
-     * @return calltime - 通话次数
+     * @return callcount - 通话次数
      */
-    public Byte getCalltime() {
-        return calltime;
+    public Integer getCallcount() {
+        return callcount;
     }
 
     /**
      * 设置通话次数
      *
-     * @param calltime 通话次数
+     * @param callcount 通话次数
      */
-    public void setCalltime(Byte calltime) {
-        this.calltime = calltime;
+    public void setCallcount(Integer callcount) {
+        this.callcount = callcount;
     }
 
     /**
@@ -212,7 +212,7 @@ public class CreditMobiletop {
      *
      * @return callmin - 通话时长（分钟）
      */
-    public Byte getCallmin() {
+    public Integer getCallmin() {
         return callmin;
     }
 
@@ -221,7 +221,7 @@ public class CreditMobiletop {
      *
      * @param callmin 通话时长（分钟）
      */
-    public void setCallmin(Byte callmin) {
+    public void setCallmin(Integer callmin) {
         this.callmin = callmin;
     }
 
