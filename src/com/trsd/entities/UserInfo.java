@@ -1,21 +1,17 @@
 package com.trsd.entities;
 
-import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class UserInfo implements Serializable{
+public class UserInfo {
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * 主键ID
      */
     @Id
     @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     /**
@@ -39,6 +35,11 @@ public class UserInfo implements Serializable{
      */
     @Column(name = "certificate_no")
     private String certificateNo;
+
+    /**
+     * 生日
+     */
+    private Date brithday;
 
     /**
      * 登录密码
@@ -72,7 +73,10 @@ public class UserInfo implements Serializable{
      * 当前额度
      */
     @Column(name = "credit_score")
-    private Integer creditScore;
+    private BigDecimal creditScore;
+
+    @Column(name = "zmxy_score")
+    private Long zmxyScore;
 
     /**
      * 借款用户等级
@@ -165,12 +169,6 @@ public class UserInfo implements Serializable{
     private Long version;
 
     /**
-     * 当前可用额度
-     */
-    @Column(name = "available_score")
-    private Integer availableScore;
-
-    /**
      * 关注数
      */
     @Column(name = "follow_count")
@@ -198,6 +196,24 @@ public class UserInfo implements Serializable{
      */
     @Column(name = "inviter_code")
     private String inviterCode;
+
+    /**
+     * 是否关注微信号 0 未关注 1 已关注
+     */
+    @Column(name = "is_follow")
+    private Integer isFollow;
+
+    /**
+     * 借款资格（0：无；1：有）
+     */
+    @Column(name = "borrow_flag")
+    private Integer borrowFlag;
+
+    /**
+     * 投资资格（0：无；1：有）
+     */
+    @Column(name = "invest_flag")
+    private Integer investFlag;
 
     /**
      * 获取主键ID
@@ -287,6 +303,24 @@ public class UserInfo implements Serializable{
      */
     public void setCertificateNo(String certificateNo) {
         this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * 获取生日
+     *
+     * @return brithday - 生日
+     */
+    public Date getBrithday() {
+        return brithday;
+    }
+
+    /**
+     * 设置生日
+     *
+     * @param brithday 生日
+     */
+    public void setBrithday(Date brithday) {
+        this.brithday = brithday;
     }
 
     /**
@@ -384,7 +418,7 @@ public class UserInfo implements Serializable{
      *
      * @return credit_score - 当前额度
      */
-    public Integer getCreditScore() {
+    public BigDecimal getCreditScore() {
         return creditScore;
     }
 
@@ -393,8 +427,22 @@ public class UserInfo implements Serializable{
      *
      * @param creditScore 当前额度
      */
-    public void setCreditScore(Integer creditScore) {
+    public void setCreditScore(BigDecimal creditScore) {
         this.creditScore = creditScore;
+    }
+
+    /**
+     * @return zmxy_score
+     */
+    public Long getZmxyScore() {
+        return zmxyScore;
+    }
+
+    /**
+     * @param zmxyScore
+     */
+    public void setZmxyScore(Long zmxyScore) {
+        this.zmxyScore = zmxyScore;
     }
 
     /**
@@ -716,24 +764,6 @@ public class UserInfo implements Serializable{
     }
 
     /**
-     * 获取当前可用额度
-     *
-     * @return available_score - 当前可用额度
-     */
-    public Integer getAvailableScore() {
-        return availableScore;
-    }
-
-    /**
-     * 设置当前可用额度
-     *
-     * @param availableScore 当前可用额度
-     */
-    public void setAvailableScore(Integer availableScore) {
-        this.availableScore = availableScore;
-    }
-
-    /**
      * 获取关注数
      *
      * @return follow_count - 关注数
@@ -821,5 +851,59 @@ public class UserInfo implements Serializable{
      */
     public void setInviterCode(String inviterCode) {
         this.inviterCode = inviterCode == null ? null : inviterCode.trim();
+    }
+
+    /**
+     * 获取是否关注微信号 0 未关注 1 已关注
+     *
+     * @return is_follow - 是否关注微信号 0 未关注 1 已关注
+     */
+    public Integer getIsFollow() {
+        return isFollow;
+    }
+
+    /**
+     * 设置是否关注微信号 0 未关注 1 已关注
+     *
+     * @param isFollow 是否关注微信号 0 未关注 1 已关注
+     */
+    public void setIsFollow(Integer isFollow) {
+        this.isFollow = isFollow;
+    }
+
+    /**
+     * 获取借款资格（0：无；1：有）
+     *
+     * @return borrow_flag - 借款资格（0：无；1：有）
+     */
+    public Integer getBorrowFlag() {
+        return borrowFlag;
+    }
+
+    /**
+     * 设置借款资格（0：无；1：有）
+     *
+     * @param borrowFlag 借款资格（0：无；1：有）
+     */
+    public void setBorrowFlag(Integer borrowFlag) {
+        this.borrowFlag = borrowFlag;
+    }
+
+    /**
+     * 获取投资资格（0：无；1：有）
+     *
+     * @return invest_flag - 投资资格（0：无；1：有）
+     */
+    public Integer getInvestFlag() {
+        return investFlag;
+    }
+
+    /**
+     * 设置投资资格（0：无；1：有）
+     *
+     * @param investFlag 投资资格（0：无；1：有）
+     */
+    public void setInvestFlag(Integer investFlag) {
+        this.investFlag = investFlag;
     }
 }
