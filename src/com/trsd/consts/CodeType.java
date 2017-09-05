@@ -11,8 +11,8 @@ public enum CodeType {
 	REGISTER(2), // 注册验证码
 	PAYPWD(3), // 修改支付密码验证码
 	PHONE(4), // 修改注册手机号验证码
-	SHORTLOANCODE(5), // 短贷投资支付验证码
-	LONGLOANCODE(6);// 长贷投资支付验证码
+	SHORTLOANCODE(5), // 短贷申请验证码
+	LONGLOANCODE(6);// 长贷申请验证码
 
 	private int value = 0;
 
