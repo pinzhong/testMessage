@@ -10,6 +10,7 @@ public class UserFlag {
      */
     @Id
     @Column(name = "user_flag_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userFlagId;
 
     /**
