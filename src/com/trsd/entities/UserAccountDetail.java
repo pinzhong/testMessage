@@ -45,6 +45,12 @@ public class UserAccountDetail {
     private BigDecimal surplusAccount;
 
     /**
+     * 变动流水号
+     */
+    @Column(name = "event_key")
+    private String eventKey;
+
+    /**
      * 获取编号
      *
      * @return user_account_detail_id - 编号
@@ -164,5 +170,23 @@ public class UserAccountDetail {
      */
     public void setSurplusAccount(BigDecimal surplusAccount) {
         this.surplusAccount = surplusAccount;
+    }
+
+    /**
+     * 获取变动流水号
+     *
+     * @return event_key - 变动流水号
+     */
+    public String getEventKey() {
+        return eventKey;
+    }
+
+    /**
+     * 设置变动流水号
+     *
+     * @param eventKey 变动流水号
+     */
+    public void setEventKey(String eventKey) {
+        this.eventKey = eventKey == null ? null : eventKey.trim();
     }
 }

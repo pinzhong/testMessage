@@ -12,11 +12,13 @@
     <result column="event_id" jdbcType="BIGINT" property="eventId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="surplus_account" jdbcType="DECIMAL" property="surplusAccount" />
+    <result column="event_key" jdbcType="VARCHAR" property="eventKey" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    user_account_detail_id, user_id, account, type, event_id, create_time, surplus_account
+    user_account_detail_id, user_id, account, type, event_id, create_time, surplus_account, 
+    event_key
   </sql>
 </mapper>
