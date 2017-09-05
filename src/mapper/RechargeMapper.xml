@@ -15,9 +15,10 @@
     <result column="version" jdbcType="INTEGER" property="version" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="pay_time" jdbcType="TIMESTAMP" property="payTime" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="bind_time" jdbcType="TIMESTAMP" property="bindTime" />
-    <result column="sucess_time" jdbcType="TIMESTAMP" property="sucessTime" />
+    <result column="success_time" jdbcType="TIMESTAMP" property="successTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
@@ -25,6 +26,6 @@
       WARNING - @mbg.generated
     -->
     recharge_id, order_no, event_key, pay_type, business_type, user_id, status, version, 
-    remark, amount, create_time, bind_time, sucess_time, update_time
+    remark, amount, pay_time, create_time, bind_time, success_time, update_time
   </sql>
 </mapper>

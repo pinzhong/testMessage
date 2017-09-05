@@ -10,7 +10,6 @@
     <result column="userId" jdbcType="BIGINT" property="userid" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
-    <result column="ispass" jdbcType="TINYINT" property="ispass" />
     <result column="calltime" jdbcType="TIMESTAMP" property="calltime" />
     <result column="callsecond" jdbcType="INTEGER" property="callsecond" />
     <result column="address" jdbcType="VARCHAR" property="address" />
@@ -21,7 +20,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    recordid, authid, userId, phone, createtime, ispass, calltime, callsecond, address, 
-    calltype, callnumber
+    recordid, authid, userId, phone, createtime, calltime, callsecond, address, calltype, 
+    callnumber
   </sql>
 </mapper>

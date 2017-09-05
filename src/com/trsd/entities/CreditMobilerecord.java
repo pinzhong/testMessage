@@ -34,11 +34,6 @@ public class CreditMobilerecord {
     private Date createtime;
 
     /**
-     * 京东登录名
-     */
-    private Byte ispass;
-
-    /**
      * 通话时间
      */
     private Date calltime;
@@ -151,24 +146,6 @@ public class CreditMobilerecord {
      */
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;
-    }
-
-    /**
-     * 获取京东登录名
-     *
-     * @return ispass - 京东登录名
-     */
-    public Byte getIspass() {
-        return ispass;
-    }
-
-    /**
-     * 设置京东登录名
-     *
-     * @param ispass 京东登录名
-     */
-    public void setIspass(Byte ispass) {
-        this.ispass = ispass;
     }
 
     /**

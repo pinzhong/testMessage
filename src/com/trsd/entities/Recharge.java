@@ -34,14 +34,17 @@ public class Recharge {
 
     private BigDecimal amount;
 
+    @Column(name = "pay_time")
+    private Date payTime;
+
     @Column(name = "create_time")
     private Date createTime;
 
     @Column(name = "bind_time")
     private Date bindTime;
 
-    @Column(name = "sucess_time")
-    private Date sucessTime;
+    @Column(name = "success_time")
+    private Date successTime;
 
     @Column(name = "update_time")
     private Date updateTime;
@@ -187,6 +190,20 @@ public class Recharge {
     }
 
     /**
+     * @return pay_time
+     */
+    public Date getPayTime() {
+        return payTime;
+    }
+
+    /**
+     * @param payTime
+     */
+    public void setPayTime(Date payTime) {
+        this.payTime = payTime;
+    }
+
+    /**
      * @return create_time
      */
     public Date getCreateTime() {
@@ -215,17 +232,17 @@ public class Recharge {
     }
 
     /**
-     * @return sucess_time
+     * @return success_time
      */
-    public Date getSucessTime() {
-        return sucessTime;
+    public Date getSuccessTime() {
+        return successTime;
     }
 
     /**
-     * @param sucessTime
+     * @param successTime
      */
-    public void setSucessTime(Date sucessTime) {
-        this.sucessTime = sucessTime;
+    public void setSuccessTime(Date successTime) {
+        this.successTime = successTime;
     }
 
     /**
