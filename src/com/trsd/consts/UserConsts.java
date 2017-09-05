@@ -28,6 +28,8 @@ public class UserConsts {
 	public static final String REDIS_DYNAMIC_SHORT_LOAN_CODE_KEY = "dyn:code:short:loan" ; //长贷投资验证码
 	public static final String REDIS_DYNAMIC_LONG_LOAN_CODE_KEY = "dyn:code:long:loan" ; //短贷投资验证码
 	public static final String REDIS_LOAN_USE_KEY = "loan:use:list";//借款用途列表
+	public static final String REDIS_LOAN_HOME_LIST = "loan:home:list";//借款列表，首页使用，存放ID
+	public static final String REDIS_LOAN_HOME_INFO = "loan:home:info";//借款列表，首页使用，存放信息
 	
 	/**
 	 * 用户类型
