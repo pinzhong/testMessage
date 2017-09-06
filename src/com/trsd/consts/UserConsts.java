@@ -51,4 +51,13 @@ public class UserConsts {
 	public static final int USER_CREDIT_VALUE_TYPE_CONTACTS = 3;//联系人加分
 	public static final int USER_CREDIT_VALUE_TYPE_NEGTIME = 4;//运营商网龄加分
 	
+	/**
+	 * 用户短信类型
+	 */
+	public static final int USER_SMS_TYPE_REGISTER = 1;//注册
+	public static final int USER_SMS_TYPE_LOAN = 1;//借款
+	public static final int USER_SMS_TYPE_WITHRAW = 1;//提现
+	public static final int USER_SMS_TYPE_CHANGE_TRADE_PASSWORD = 1;//修改交易密码
+	public static final int USER_SMS_TYPE_CHANGE_LOGIN_PASSWORD = 1;//修改登录密码
+	public static final int USER_SMS_TYPE_CHANGE_MOBILE = 1;//修改手机号
 }

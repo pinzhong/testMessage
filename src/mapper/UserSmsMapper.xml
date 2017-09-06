@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserSmsMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserSms">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_sms_id" jdbcType="BIGINT" property="userSmsId" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="code" jdbcType="INTEGER" property="code" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_sms_id, phone, type, status, content, code, create_time
+  </sql>
+</mapper>
