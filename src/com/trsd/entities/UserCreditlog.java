@@ -1,5 +1,6 @@
 package com.trsd.entities;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
@@ -22,7 +23,7 @@ public class UserCreditlog {
      * 变动分数
      */
     @Column(name = "credit_value")
-    private Integer creditValue;
+    private BigDecimal creditValue;
 
     /**
      * 变动类型
@@ -79,7 +80,7 @@ public class UserCreditlog {
      *
      * @return credit_value - 变动分数
      */
-    public Integer getCreditValue() {
+    public BigDecimal getCreditValue() {
         return creditValue;
     }
 
@@ -88,7 +89,7 @@ public class UserCreditlog {
      *
      * @param creditValue 变动分数
      */
-    public void setCreditValue(Integer creditValue) {
+    public void setCreditValue(BigDecimal creditValue) {
         this.creditValue = creditValue;
     }
 
