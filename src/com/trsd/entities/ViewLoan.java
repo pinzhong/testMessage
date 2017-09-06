@@ -9,6 +9,9 @@ public class ViewLoan {
     @Column(name = "loan_id")
     private Long loanId;
 
+    @Column(name = "loan_key")
+    private String loanKey;
+
     @Column(name = "user_id")
     private Long userId;
 
@@ -22,6 +25,9 @@ public class ViewLoan {
     private BigDecimal loanMoney;
 
     private Integer status;
+
+    @Column(name = "loan_status")
+    private Integer loanStatus;
 
     @Column(name = "limit_time")
     private Date limitTime;
@@ -52,6 +58,20 @@ public class ViewLoan {
      */
     public void setLoanId(Long loanId) {
         this.loanId = loanId;
+    }
+
+    /**
+     * @return loan_key
+     */
+    public String getLoanKey() {
+        return loanKey;
+    }
+
+    /**
+     * @param loanKey
+     */
+    public void setLoanKey(String loanKey) {
+        this.loanKey = loanKey == null ? null : loanKey.trim();
     }
 
     /**
@@ -122,6 +142,20 @@ public class ViewLoan {
      */
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * @return loan_status
+     */
+    public Integer getLoanStatus() {
+        return loanStatus;
+    }
+
+    /**
+     * @param loanStatus
+     */
+    public void setLoanStatus(Integer loanStatus) {
+        this.loanStatus = loanStatus;
     }
 
     /**
