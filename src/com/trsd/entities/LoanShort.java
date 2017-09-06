@@ -58,8 +58,8 @@ public class LoanShort {
     /**
      * 还款时间
      */
-    @Column(name = "repayback_time")
-    private Date repaybackTime;
+    @Column(name = "repayment_time")
+    private Date repaymentTime;
 
     /**
      * 新建时间
@@ -283,19 +283,19 @@ public class LoanShort {
     /**
      * 获取还款时间
      *
-     * @return repayback_time - 还款时间
+     * @return repayment_time - 还款时间
      */
-    public Date getRepaybackTime() {
-        return repaybackTime;
+    public Date getRepaymentTime() {
+        return repaymentTime;
     }
 
     /**
      * 设置还款时间
      *
-     * @param repaybackTime 还款时间
+     * @param repaymentTime 还款时间
      */
-    public void setRepaybackTime(Date repaybackTime) {
-        this.repaybackTime = repaybackTime;
+    public void setRepaymentTime(Date repaymentTime) {
+        this.repaymentTime = repaymentTime;
     }
 
     /**

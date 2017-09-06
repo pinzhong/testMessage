@@ -121,6 +121,12 @@ public class LoanLong {
     private BigDecimal paybackPenalty;
 
     /**
+     * 满标状态
+     */
+    @Column(name = "loan_status")
+    private Integer loanStatus;
+
+    /**
      * 获取主键id
      *
      * @return loan_long_id - 主键id
@@ -474,5 +480,23 @@ public class LoanLong {
      */
     public void setPaybackPenalty(BigDecimal paybackPenalty) {
         this.paybackPenalty = paybackPenalty;
+    }
+
+    /**
+     * 获取满标状态
+     *
+     * @return loan_status - 满标状态
+     */
+    public Integer getLoanStatus() {
+        return loanStatus;
+    }
+
+    /**
+     * 设置满标状态
+     *
+     * @param loanStatus 满标状态
+     */
+    public void setLoanStatus(Integer loanStatus) {
+        this.loanStatus = loanStatus;
     }
 }

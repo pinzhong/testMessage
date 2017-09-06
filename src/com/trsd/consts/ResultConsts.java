@@ -3,7 +3,7 @@ package com.trsd.consts;
 public class ResultConsts {
 	
 	public static final int RESAULT_SUCCESS = 1 ; //成功
-	public static final int RESAULT_FAIL = 0;
+	public static final int RESAULT_FAIL = 0; // 失败
 	
 	public static final String MSG_SUCCESS = "操作成功";
 	public static final String MSG_FAIL = "操作失败";
