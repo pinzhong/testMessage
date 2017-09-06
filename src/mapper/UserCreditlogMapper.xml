@@ -7,7 +7,7 @@
     -->
     <id column="user_credit_id" jdbcType="BIGINT" property="userCreditId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
-    <result column="credit_value" jdbcType="INTEGER" property="creditValue" />
+    <result column="credit_value" jdbcType="DECIMAL" property="creditValue" />
     <result column="credit_type" jdbcType="INTEGER" property="creditType" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="event_id" jdbcType="BIGINT" property="eventId" />
