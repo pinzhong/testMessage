@@ -6,11 +6,13 @@
       WARNING - @mbg.generated
     -->
     <result column="loan_id" jdbcType="BIGINT" property="loanId" />
+    <result column="loan_key" jdbcType="VARCHAR" property="loanKey" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="apply_money" jdbcType="DECIMAL" property="applyMoney" />
     <result column="borrowed_money" jdbcType="DECIMAL" property="borrowedMoney" />
     <result column="loan_money" jdbcType="DECIMAL" property="loanMoney" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="loan_status" jdbcType="INTEGER" property="loanStatus" />
     <result column="limit_time" jdbcType="TIMESTAMP" property="limitTime" />
     <result column="periods" jdbcType="INTEGER" property="periods" />
     <result column="memo" jdbcType="VARCHAR" property="memo" />
