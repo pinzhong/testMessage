@@ -11,11 +11,14 @@
     <result column="loan_rate" jdbcType="DECIMAL" property="loanRate" />
     <result column="auto_short_proportion" jdbcType="DECIMAL" property="autoShortProportion" />
     <result column="auto_long_proportion" jdbcType="DECIMAL" property="autoLongProportion" />
+    <result column="level_score" jdbcType="DECIMAL" property="levelScore" />
+    <result column="limit_score" jdbcType="DECIMAL" property="limitScore" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    level, short_rate, long_rate, loan_rate, auto_short_proportion, auto_long_proportion
+    level, short_rate, long_rate, loan_rate, auto_short_proportion, auto_long_proportion, 
+    level_score, limit_score
   </sql>
 </mapper>

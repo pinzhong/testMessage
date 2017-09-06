@@ -10,12 +10,14 @@
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="CHAR" property="certificateNo" />
+    <result column="brithday" jdbcType="TIMESTAMP" property="brithday" />
     <result column="login_password" jdbcType="VARCHAR" property="loginPassword" />
     <result column="trade_password" jdbcType="VARCHAR" property="tradePassword" />
     <result column="qq" jdbcType="VARCHAR" property="qq" />
     <result column="weixin" jdbcType="VARCHAR" property="weixin" />
     <result column="fans_count" jdbcType="INTEGER" property="fansCount" />
-    <result column="credit_score" jdbcType="INTEGER" property="creditScore" />
+    <result column="credit_score" jdbcType="DECIMAL" property="creditScore" />
+    <result column="zmxy_score" jdbcType="DECIMAL" property="zmxyScore" />
     <result column="user_level" jdbcType="INTEGER" property="userLevel" />
     <result column="financier_level" jdbcType="INTEGER" property="financierLevel" />
     <result column="status" jdbcType="INTEGER" property="status" />
@@ -35,22 +37,24 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
-    <result column="available_score" jdbcType="INTEGER" property="availableScore" />
     <result column="follow_count" jdbcType="INTEGER" property="followCount" />
     <result column="invite_one_count" jdbcType="INTEGER" property="inviteOneCount" />
     <result column="invite_two_count" jdbcType="INTEGER" property="inviteTwoCount" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="inviter_code" jdbcType="VARCHAR" property="inviterCode" />
+    <result column="is_follow" jdbcType="INTEGER" property="isFollow" />
+    <result column="borrow_flag" jdbcType="INTEGER" property="borrowFlag" />
+    <result column="invest_flag" jdbcType="INTEGER" property="investFlag" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    user_id, phone, nickname, real_name, certificate_no, login_password, trade_password, 
-    qq, weixin, fans_count, credit_score, user_level, financier_level, status, headpic, 
-    invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, encryptstr1, 
-    encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
-    create_time, update_time, version, available_score, follow_count, invite_one_count, 
-    invite_two_count, type, inviter_code
+    user_id, phone, nickname, real_name, certificate_no, brithday, login_password, trade_password, 
+    qq, weixin, fans_count, credit_score, zmxy_score, user_level, financier_level, status, 
+    headpic, invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, 
+    encryptstr1, encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
+    create_time, update_time, version, follow_count, invite_one_count, invite_two_count, 
+    type, inviter_code, is_follow, borrow_flag, invest_flag
   </sql>
 </mapper>
