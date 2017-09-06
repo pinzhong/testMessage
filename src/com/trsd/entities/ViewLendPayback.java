@@ -25,7 +25,7 @@ public class ViewLendPayback {
     private BigDecimal repaymentPrincipal;
 
     @Column(name = "repayment_time")
-    private Date repaymentTime;
+    private String repaymentTime;
 
     @Column(name = "payback_interest")
     private BigDecimal paybackInterest;
@@ -134,15 +134,15 @@ public class ViewLendPayback {
     /**
      * @return repayment_time
      */
-    public Date getRepaymentTime() {
+    public String getRepaymentTime() {
         return repaymentTime;
     }
 
     /**
      * @param repaymentTime
      */
-    public void setRepaymentTime(Date repaymentTime) {
-        this.repaymentTime = repaymentTime;
+    public void setRepaymentTime(String repaymentTime) {
+        this.repaymentTime = repaymentTime == null ? null : repaymentTime.trim();
     }
 
     /**

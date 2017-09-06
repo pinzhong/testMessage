@@ -25,7 +25,7 @@ public class ViewLoanPayback {
     private BigDecimal repaymentPrincipal;
 
     @Column(name = "repayback_time")
-    private Date repaybackTime;
+    private String repaybackTime;
 
     @Column(name = "payback_interest")
     private BigDecimal paybackInterest;
@@ -46,6 +46,8 @@ public class ViewLoanPayback {
 
     @Column(name = "update_time")
     private Date updateTime;
+
+    private String type;
 
     /**
      * @return loan_payback_id
@@ -134,15 +136,15 @@ public class ViewLoanPayback {
     /**
      * @return repayback_time
      */
-    public Date getRepaybackTime() {
+    public String getRepaybackTime() {
         return repaybackTime;
     }
 
     /**
      * @param repaybackTime
      */
-    public void setRepaybackTime(Date repaybackTime) {
-        this.repaybackTime = repaybackTime;
+    public void setRepaybackTime(String repaybackTime) {
+        this.repaybackTime = repaybackTime == null ? null : repaybackTime.trim();
     }
 
     /**
@@ -241,5 +243,19 @@ public class ViewLoanPayback {
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
     }
 }
