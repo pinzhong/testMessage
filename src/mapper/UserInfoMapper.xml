@@ -43,8 +43,9 @@
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="inviter_code" jdbcType="VARCHAR" property="inviterCode" />
     <result column="is_follow" jdbcType="INTEGER" property="isFollow" />
-    <result column="borrow_flag" jdbcType="INTEGER" property="borrowFlag" />
-    <result column="invest_flag" jdbcType="INTEGER" property="investFlag" />
+    <result column="borrow_flag" jdbcType="CHAR" property="borrowFlag" />
+    <result column="invest_flag" jdbcType="CHAR" property="investFlag" />
+    <result column="user_key" jdbcType="VARCHAR" property="userKey" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -55,6 +56,6 @@
     headpic, invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, 
     encryptstr1, encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
     create_time, update_time, version, follow_count, invite_one_count, invite_two_count, 
-    type, inviter_code, is_follow, borrow_flag, invest_flag
+    type, inviter_code, is_follow, borrow_flag, invest_flag, user_key
   </sql>
 </mapper>

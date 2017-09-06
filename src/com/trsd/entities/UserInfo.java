@@ -207,13 +207,16 @@ public class UserInfo {
      * 借款资格（0：无；1：有）
      */
     @Column(name = "borrow_flag")
-    private Integer borrowFlag;
+    private String borrowFlag;
 
     /**
      * 投资资格（0：无；1：有）
      */
     @Column(name = "invest_flag")
-    private Integer investFlag;
+    private String investFlag;
+
+    @Column(name = "user_key")
+    private String userKey;
 
     /**
      * 获取主键ID
@@ -876,7 +879,7 @@ public class UserInfo {
      *
      * @return borrow_flag - 借款资格（0：无；1：有）
      */
-    public Integer getBorrowFlag() {
+    public String getBorrowFlag() {
         return borrowFlag;
     }
 
@@ -885,8 +888,8 @@ public class UserInfo {
      *
      * @param borrowFlag 借款资格（0：无；1：有）
      */
-    public void setBorrowFlag(Integer borrowFlag) {
-        this.borrowFlag = borrowFlag;
+    public void setBorrowFlag(String borrowFlag) {
+        this.borrowFlag = borrowFlag == null ? null : borrowFlag.trim();
     }
 
     /**
@@ -894,7 +897,7 @@ public class UserInfo {
      *
      * @return invest_flag - 投资资格（0：无；1：有）
      */
-    public Integer getInvestFlag() {
+    public String getInvestFlag() {
         return investFlag;
     }
 
@@ -903,7 +906,21 @@ public class UserInfo {
      *
      * @param investFlag 投资资格（0：无；1：有）
      */
-    public void setInvestFlag(Integer investFlag) {
-        this.investFlag = investFlag;
+    public void setInvestFlag(String investFlag) {
+        this.investFlag = investFlag == null ? null : investFlag.trim();
+    }
+
+    /**
+     * @return user_key
+     */
+    public String getUserKey() {
+        return userKey;
+    }
+
+    /**
+     * @param userKey
+     */
+    public void setUserKey(String userKey) {
+        this.userKey = userKey == null ? null : userKey.trim();
     }
 }
