@@ -11,8 +11,7 @@ public enum CodeType {
 	REGISTER(2), // 注册验证码
 	PAYPWD(3), // 修改支付密码验证码
 	PHONE(4), // 修改注册手机号验证码
-	SHORTLOANCODE(5), // 短贷申请验证码
-	LONGLOANCODE(6);// 长贷申请验证码
+	LOANCODE(5); // 借款
 
 	private int value = 0;
 
@@ -31,9 +30,7 @@ public enum CodeType {
 		case 4:
 			return PHONE;
 		case 5:
-			return SHORTLOANCODE;
-		case 6:
-			return LONGLOANCODE;
+			return LOANCODE;
 		default:
 			return null;
 		}

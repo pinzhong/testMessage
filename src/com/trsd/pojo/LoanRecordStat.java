@@ -54,6 +54,11 @@ public class LoanRecordStat implements Serializable {
 	private Date limitTime;
 
 	/**
+	 * 应还款时间
+	 */
+	private Date repaybackTime;
+
+	/**
 	 * 期数
 	 */
 	private Integer periods;
@@ -81,6 +86,11 @@ public class LoanRecordStat implements Serializable {
 	 * 借款用途
 	 */
 	private String memo;
+
+	/**
+	 * 借款天数
+	 */
+	private int loanDays;
 
 	/**
 	 * 待还本金
@@ -111,6 +121,15 @@ public class LoanRecordStat implements Serializable {
 	 * 已还违约金
 	 */
 	private BigDecimal paybackPenalty;
+
+	/**
+	 * 还款时间
+	 */
+	private Date paybackTime;
+	/**
+	 * 贷款类型 0为短贷，1为长贷
+	 */
+	private int loantype;
 
 	public Long getLoanId() {
 		return loanId;
@@ -278,6 +297,38 @@ public class LoanRecordStat implements Serializable {
 
 	public void setPaybackPenalty(BigDecimal paybackPenalty) {
 		this.paybackPenalty = paybackPenalty;
+	}
+
+	public Date getRepaybackTime() {
+		return repaybackTime;
+	}
+
+	public void setRepaybackTime(Date repaybackTime) {
+		this.repaybackTime = repaybackTime;
+	}
+
+	public int getLoanDays() {
+		return loanDays;
+	}
+
+	public void setLoanDays(int loanDays) {
+		this.loanDays = loanDays;
+	}
+
+	public Date getPaybackTime() {
+		return paybackTime;
+	}
+
+	public void setPaybackTime(Date paybackTime) {
+		this.paybackTime = paybackTime;
+	}
+
+	public int getLoantype() {
+		return loantype;
+	}
+
+	public void setLoantype(int loantype) {
+		this.loantype = loantype;
 	}
 
 }
