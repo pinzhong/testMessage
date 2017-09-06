@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditZmxyFaceMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditZmxyFace">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="rec_id" jdbcType="BIGINT" property="recId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="authid" jdbcType="BIGINT" property="authid" />
+    <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="transaction_id" jdbcType="VARCHAR" property="transactionId" />
+    <result column="biz_no" jdbcType="INTEGER" property="bizNo" />
+    <result column="ispass" jdbcType="BIT" property="ispass" />
+    <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    rec_id, user_id, authid, authtime, real_name, certificate_no, transaction_id, biz_no, 
+    ispass, finishtime, cost, score, status
+  </sql>
+</mapper>
