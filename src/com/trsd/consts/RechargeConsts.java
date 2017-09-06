@@ -14,4 +14,9 @@ public class RechargeConsts {
 	public static final String REDIS_RECHAREGE_DAY_COUNTS_KEY="recharge:day:counts:key";//每日次数存储
 	public static final String REDIS_RECHARGE_MINUTE_COUNTS_KEY="recharge:minute:counts:key";//每分钟次数存储
 	
+	public static final int RECHARGE_PAY_TYPE_ALIPAY=1;//支付宝充值
+	public static final int RECHARGE_PAY_TYPE_QQ=2;//qq充值
+	public static final int RECHARGE_PAY_TYPE_WECHART=3;//微信充值
+	
+	
 }

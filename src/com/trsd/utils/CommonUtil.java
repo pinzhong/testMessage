@@ -837,6 +837,26 @@ public class CommonUtil {
 		}
 		return iAge;
 	}
+	
+	/**
+	 * 根据身份证号获取性别，1为女，2为男
+	 * @param idCard
+	 * @return
+	 */
+	public static int getSexByIdCard(String idCard){
+		int iSex = 0;
+		try{
+			String sex = idCard.substring(16, 17);
+			if(Integer.parseInt(sex)%2==0){
+				iSex = 1;
+			}else{
+				iSex = 2;
+			}
+		}catch (Exception e) {
+
+		}
+		return iSex;
+	}
 
 	/**
 	 * 解析请求url参数为JSONObject

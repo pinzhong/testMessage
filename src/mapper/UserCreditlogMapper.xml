@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserCreditlogMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserCreditlog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_credit_id" jdbcType="BIGINT" property="userCreditId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="credit_value" jdbcType="INTEGER" property="creditValue" />
+    <result column="credit_type" jdbcType="INTEGER" property="creditType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="event_id" jdbcType="BIGINT" property="eventId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_credit_id, user_id, credit_value, credit_type, create_time, event_id, type
+  </sql>
+</mapper>

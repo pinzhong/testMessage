@@ -9,6 +9,7 @@ public class UserLevel {
      * 等级
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer level;
 
     /**
@@ -40,6 +41,12 @@ public class UserLevel {
      */
     @Column(name = "auto_long_proportion")
     private BigDecimal autoLongProportion;
+
+    @Column(name = "level_score")
+    private BigDecimal levelScore;
+
+    @Column(name = "limit_score")
+    private BigDecimal limitScore;
 
     /**
      * 获取等级
@@ -147,5 +154,33 @@ public class UserLevel {
      */
     public void setAutoLongProportion(BigDecimal autoLongProportion) {
         this.autoLongProportion = autoLongProportion;
+    }
+
+    /**
+     * @return level_score
+     */
+    public BigDecimal getLevelScore() {
+        return levelScore;
+    }
+
+    /**
+     * @param levelScore
+     */
+    public void setLevelScore(BigDecimal levelScore) {
+        this.levelScore = levelScore;
+    }
+
+    /**
+     * @return limit_score
+     */
+    public BigDecimal getLimitScore() {
+        return limitScore;
+    }
+
+    /**
+     * @param limitScore
+     */
+    public void setLimitScore(BigDecimal limitScore) {
+        this.limitScore = limitScore;
     }
 }

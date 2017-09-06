@@ -37,4 +37,18 @@ public class UserConsts {
 	public static final int USER_TYPE_PERSONAL = 1 ; //个人用户
 	public static final int USER_TYPE_MASTER = 2 ; //企业用户
 	
+	/**
+	 * 信用分数增减基本类型
+	 */
+	public static final int USER_CREDIT_TYPE_USER = 1;//自助提额
+	public static final int USER_CREDIT_TYPE_XYD = 2;//平台授予
+	
+	/**
+	 * 用户信用分数类型
+	 */
+	public static final int USER_CREDIT_VALUE_TYPE_SEX = 1;// 性别加分
+	public static final int USER_CREDIT_VALUE_TYPE_AGE = 2;//年龄加分
+	public static final int USER_CREDIT_VALUE_TYPE_CONTACTS = 3;//联系人加分
+	public static final int USER_CREDIT_VALUE_TYPE_NEGTIME = 4;//运营商网龄加分
+	
 }
