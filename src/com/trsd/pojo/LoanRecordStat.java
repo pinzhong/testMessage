@@ -130,6 +130,10 @@ public class LoanRecordStat implements Serializable {
 	 * 贷款类型 0为短贷，1为长贷
 	 */
 	private int loantype;
+	/**
+	 * 做过的认证
+	 */
+	private String credit;
 
 	public Long getLoanId() {
 		return loanId;
@@ -329,6 +333,14 @@ public class LoanRecordStat implements Serializable {
 
 	public void setLoantype(int loantype) {
 		this.loantype = loantype;
+	}
+
+	public String getCredit() {
+		return credit;
+	}
+
+	public void setCredit(String credit) {
+		this.credit = credit;
 	}
 
 }
