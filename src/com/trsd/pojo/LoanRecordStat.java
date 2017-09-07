@@ -56,7 +56,7 @@ public class LoanRecordStat implements Serializable {
 	/**
 	 * 应还款时间
 	 */
-	private Date repaybackTime;
+	private Date repaymentTime;
 
 	/**
 	 * 期数
@@ -303,12 +303,12 @@ public class LoanRecordStat implements Serializable {
 		this.paybackPenalty = paybackPenalty;
 	}
 
-	public Date getRepaybackTime() {
-		return repaybackTime;
+	public Date getRepaymentTime() {
+		return repaymentTime;
 	}
 
-	public void setRepaybackTime(Date repaybackTime) {
-		this.repaybackTime = repaybackTime;
+	public void setRepaymentTime(Date repaymentTime) {
+		this.repaymentTime = repaymentTime;
 	}
 
 	public int getLoanDays() {
