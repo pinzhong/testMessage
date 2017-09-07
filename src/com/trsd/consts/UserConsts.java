@@ -62,4 +62,5 @@ public class UserConsts {
 	public static final int USER_SMS_TYPE_CHANGE_TRADE_PASSWORD = 3;// 修改交易密码
 	public static final int USER_SMS_TYPE_CHANGE_LOGIN_PASSWORD = 4;// 修改登录密码
 	public static final int USER_SMS_TYPE_CHANGE_MOBILE = 5;// 修改手机号
+	
 }
