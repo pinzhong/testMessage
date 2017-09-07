@@ -52,7 +52,7 @@ public class CreditZmxyFace {
      * 业务编号
      */
     @Column(name = "biz_no")
-    private String bizNo;
+    private Integer bizNo;
 
     /**
      * 是否通过
@@ -210,7 +210,7 @@ public class CreditZmxyFace {
      *
      * @return biz_no - 业务编号
      */
-    public String getBizNo() {
+    public Integer getBizNo() {
         return bizNo;
     }
 
@@ -219,7 +219,7 @@ public class CreditZmxyFace {
      *
      * @param bizNo 业务编号
      */
-    public void setBizNo(String bizNo) {
+    public void setBizNo(Integer bizNo) {
         this.bizNo = bizNo;
     }
 

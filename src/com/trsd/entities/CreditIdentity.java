@@ -13,6 +13,12 @@ public class CreditIdentity {
     private Long authid;
 
     /**
+     * 主键ID
+     */
+    @Column(name = "user_id")
+    private Long userId;
+
+    /**
      * 认证时间
      */
     private Date authtime;
@@ -87,6 +93,24 @@ public class CreditIdentity {
      */
     public void setAuthid(Long authid) {
         this.authid = authid;
+    }
+
+    /**
+     * 获取主键ID
+     *
+     * @return user_id - 主键ID
+     */
+    public Long getUserId() {
+        return userId;
+    }
+
+    /**
+     * 设置主键ID
+     *
+     * @param userId 主键ID
+     */
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**

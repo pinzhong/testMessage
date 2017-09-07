@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="authid" jdbcType="BIGINT" property="authid" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
@@ -22,7 +23,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    authid, authtime, real_name, certificate_no, idcard_front, idcard_back, ispass, provider, 
-    finishtime, cost, score, status
+    authid, user_id, authtime, real_name, certificate_no, idcard_front, idcard_back, 
+    ispass, provider, finishtime, cost, score, status
   </sql>
 </mapper>
