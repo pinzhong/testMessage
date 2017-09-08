@@ -67,7 +67,7 @@ public class BreachNotice {
     private String area;
 
     /**
-     * 类型
+     * 类型（1：个人发布；2：企业发布）
      */
     private Integer type;
 
@@ -78,6 +78,12 @@ public class BreachNotice {
      * 状态（0：待审核；1：发布中；-1：审核失败）
      */
     private Integer status;
+
+    private String encryptstr1;
+
+    private String encryptstr2;
+
+    private String encryptstr3;
 
     /**
      * 审核时间
@@ -320,18 +326,18 @@ public class BreachNotice {
     }
 
     /**
-     * 获取类型
+     * 获取类型（1：个人发布；2：企业发布）
      *
-     * @return type - 类型
+     * @return type - 类型（1：个人发布；2：企业发布）
      */
     public Integer getType() {
         return type;
     }
 
     /**
-     * 设置类型
+     * 设置类型（1：个人发布；2：企业发布）
      *
-     * @param type 类型
+     * @param type 类型（1：个人发布；2：企业发布）
      */
     public void setType(Integer type) {
         this.type = type;
@@ -367,6 +373,48 @@ public class BreachNotice {
      */
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * @return encryptstr1
+     */
+    public String getEncryptstr1() {
+        return encryptstr1;
+    }
+
+    /**
+     * @param encryptstr1
+     */
+    public void setEncryptstr1(String encryptstr1) {
+        this.encryptstr1 = encryptstr1 == null ? null : encryptstr1.trim();
+    }
+
+    /**
+     * @return encryptstr2
+     */
+    public String getEncryptstr2() {
+        return encryptstr2;
+    }
+
+    /**
+     * @param encryptstr2
+     */
+    public void setEncryptstr2(String encryptstr2) {
+        this.encryptstr2 = encryptstr2 == null ? null : encryptstr2.trim();
+    }
+
+    /**
+     * @return encryptstr3
+     */
+    public String getEncryptstr3() {
+        return encryptstr3;
+    }
+
+    /**
+     * @param encryptstr3
+     */
+    public void setEncryptstr3(String encryptstr3) {
+        this.encryptstr3 = encryptstr3 == null ? null : encryptstr3.trim();
     }
 
     /**
