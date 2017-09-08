@@ -204,7 +204,7 @@ public class UserInfo {
     private Integer isFollow;
 
     /**
-     * 借款资格（0：无；1：有）
+     * 借款资格
      */
     @Column(name = "borrow_flag")
     private String borrowFlag;
@@ -217,6 +217,12 @@ public class UserInfo {
 
     @Column(name = "user_key")
     private String userKey;
+
+    /**
+     * 必须完成认证情况
+     */
+    @Column(name = "auth_status")
+    private Integer authStatus;
 
     /**
      * 获取主键ID
@@ -875,18 +881,18 @@ public class UserInfo {
     }
 
     /**
-     * 获取借款资格（0：无；1：有）
+     * 获取借款资格
      *
-     * @return borrow_flag - 借款资格（0：无；1：有）
+     * @return borrow_flag - 借款资格
      */
     public String getBorrowFlag() {
         return borrowFlag;
     }
 
     /**
-     * 设置借款资格（0：无；1：有）
+     * 设置借款资格
      *
-     * @param borrowFlag 借款资格（0：无；1：有）
+     * @param borrowFlag 借款资格
      */
     public void setBorrowFlag(String borrowFlag) {
         this.borrowFlag = borrowFlag == null ? null : borrowFlag.trim();
@@ -922,5 +928,23 @@ public class UserInfo {
      */
     public void setUserKey(String userKey) {
         this.userKey = userKey == null ? null : userKey.trim();
+    }
+
+    /**
+     * 获取必须完成认证情况
+     *
+     * @return auth_status - 必须完成认证情况
+     */
+    public Integer getAuthStatus() {
+        return authStatus;
+    }
+
+    /**
+     * 设置必须完成认证情况
+     *
+     * @param authStatus 必须完成认证情况
+     */
+    public void setAuthStatus(Integer authStatus) {
+        this.authStatus = authStatus;
     }
 }

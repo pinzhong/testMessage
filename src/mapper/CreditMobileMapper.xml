@@ -11,7 +11,7 @@
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
     <result column="ispass" jdbcType="TINYINT" property="ispass" />
     <result column="blance" jdbcType="DECIMAL" property="blance" />
-    <result column="vip_score" jdbcType="CHAR" property="vipScore" />
+    <result column="vip_score" jdbcType="VARCHAR" property="vipScore" />
     <result column="isp" jdbcType="VARCHAR" property="isp" />
     <result column="jointime" jdbcType="TIMESTAMP" property="jointime" />
     <result column="netage" jdbcType="VARCHAR" property="netage" />
@@ -26,6 +26,8 @@
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
     <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -33,6 +35,6 @@
     -->
     authid, userId, phone, createtime, ispass, blance, vip_score, isp, jointime, netage, 
     location, real_name, certificate_no, address, vip_level, provider, token, finishtime, 
-    cost, score, status
+    cost, score, status, charge_status, score_status
   </sql>
 </mapper>
