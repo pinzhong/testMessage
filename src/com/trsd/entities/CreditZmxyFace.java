@@ -1,6 +1,5 @@
 package com.trsd.entities;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
@@ -21,7 +20,7 @@ public class CreditZmxyFace {
     private Long userId;
 
     /**
-     * 编号
+     * 认证项目编号
      */
     private Long authid;
 
@@ -65,16 +64,6 @@ public class CreditZmxyFace {
     private Date finishtime;
 
     /**
-     * 费用
-     */
-    private BigDecimal cost;
-
-    /**
-     * 积分
-     */
-    private BigDecimal score;
-
-    /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
     private Byte status;
@@ -116,18 +105,18 @@ public class CreditZmxyFace {
     }
 
     /**
-     * 获取编号
+     * 获取认证项目编号
      *
-     * @return authid - 编号
+     * @return authid - 认证项目编号
      */
     public Long getAuthid() {
         return authid;
     }
 
     /**
-     * 设置编号
+     * 设置认证项目编号
      *
-     * @param authid 编号
+     * @param authid 认证项目编号
      */
     public void setAuthid(Long authid) {
         this.authid = authid;
@@ -220,7 +209,7 @@ public class CreditZmxyFace {
      * @param bizNo 业务编号
      */
     public void setBizNo(String bizNo) {
-        this.bizNo = bizNo;
+        this.bizNo = bizNo == null ? null : bizNo.trim();
     }
 
     /**
@@ -257,42 +246,6 @@ public class CreditZmxyFace {
      */
     public void setFinishtime(Date finishtime) {
         this.finishtime = finishtime;
-    }
-
-    /**
-     * 获取费用
-     *
-     * @return cost - 费用
-     */
-    public BigDecimal getCost() {
-        return cost;
-    }
-
-    /**
-     * 设置费用
-     *
-     * @param cost 费用
-     */
-    public void setCost(BigDecimal cost) {
-        this.cost = cost;
-    }
-
-    /**
-     * 获取积分
-     *
-     * @return score - 积分
-     */
-    public BigDecimal getScore() {
-        return score;
-    }
-
-    /**
-     * 设置积分
-     *
-     * @param score 积分
-     */
-    public void setScore(BigDecimal score) {
-        this.score = score;
     }
 
     /**

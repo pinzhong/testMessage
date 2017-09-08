@@ -10,20 +10,28 @@
     <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="brithday" jdbcType="TIMESTAMP" property="brithday" />
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="issued_by" jdbcType="VARCHAR" property="issuedBy" />
     <result column="idcard_front" jdbcType="VARCHAR" property="idcardFront" />
-    <result column="idcard_back" jdbcType="VARCHAR" property="idcardBack" />
+    <result column="idcard_hand" jdbcType="VARCHAR" property="idcardHand" />
     <result column="ispass" jdbcType="BIT" property="ispass" />
     <result column="provider" jdbcType="VARCHAR" property="provider" />
     <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
-    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    authid, user_id, authtime, real_name, certificate_no, idcard_front, idcard_back, 
-    ispass, provider, finishtime, cost, score, status
+    authid, user_id, authtime, real_name, certificate_no, gender, brithday, nation, address, 
+    issued_by, idcard_front, idcard_hand, ispass, provider, finishtime, cost, score, 
+    status, charge_status, score_status
   </sql>
 </mapper>

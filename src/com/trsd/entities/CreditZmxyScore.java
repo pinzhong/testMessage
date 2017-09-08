@@ -86,6 +86,18 @@ public class CreditZmxyScore {
     private Byte status;
 
     /**
+     * 扣费状态（0：未扣费；1：已扣费）
+     */
+    @Column(name = "charge_status")
+    private Integer chargeStatus;
+
+    /**
+     * 积分状态（0：未加积分；1：已加积分）
+     */
+    @Column(name = "score_status")
+    private Integer scoreStatus;
+
+    /**
      * 获取编号
      *
      * @return authid - 编号
@@ -335,5 +347,41 @@ public class CreditZmxyScore {
      */
     public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    /**
+     * 获取扣费状态（0：未扣费；1：已扣费）
+     *
+     * @return charge_status - 扣费状态（0：未扣费；1：已扣费）
+     */
+    public Integer getChargeStatus() {
+        return chargeStatus;
+    }
+
+    /**
+     * 设置扣费状态（0：未扣费；1：已扣费）
+     *
+     * @param chargeStatus 扣费状态（0：未扣费；1：已扣费）
+     */
+    public void setChargeStatus(Integer chargeStatus) {
+        this.chargeStatus = chargeStatus;
+    }
+
+    /**
+     * 获取积分状态（0：未加积分；1：已加积分）
+     *
+     * @return score_status - 积分状态（0：未加积分；1：已加积分）
+     */
+    public Integer getScoreStatus() {
+        return scoreStatus;
+    }
+
+    /**
+     * 设置积分状态（0：未加积分；1：已加积分）
+     *
+     * @param scoreStatus 积分状态（0：未加积分；1：已加积分）
+     */
+    public void setScoreStatus(Integer scoreStatus) {
+        this.scoreStatus = scoreStatus;
     }
 }

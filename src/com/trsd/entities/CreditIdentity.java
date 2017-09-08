@@ -36,16 +36,42 @@ public class CreditIdentity {
     private String certificateNo;
 
     /**
-     * 身份证正面
+     * 性别
+     */
+    private String gender;
+
+    /**
+     * 生日
+     */
+    private Date brithday;
+
+    /**
+     * 民族
+     */
+    private String nation;
+
+    /**
+     * 住址
+     */
+    private String address;
+
+    /**
+     * 发证机关
+     */
+    @Column(name = "issued_by")
+    private String issuedBy;
+
+    /**
+     * 身份证正面照片
      */
     @Column(name = "idcard_front")
     private String idcardFront;
 
     /**
-     * 身份证背面
+     * 手持身份证照片
      */
-    @Column(name = "idcard_back")
-    private String idcardBack;
+    @Column(name = "idcard_hand")
+    private String idcardHand;
 
     /**
      * 是否通过
@@ -75,7 +101,19 @@ public class CreditIdentity {
     /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
-    private Byte status;
+    private Integer status;
+
+    /**
+     * 扣费状态（0：未扣费；1：已扣费）
+     */
+    @Column(name = "charge_status")
+    private Integer chargeStatus;
+
+    /**
+     * 积分状态（0：未加积分；1：已加积分）
+     */
+    @Column(name = "score_status")
+    private Integer scoreStatus;
 
     /**
      * 获取编号
@@ -168,39 +206,129 @@ public class CreditIdentity {
     }
 
     /**
-     * 获取身份证正面
+     * 获取性别
      *
-     * @return idcard_front - 身份证正面
+     * @return gender - 性别
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * 设置性别
+     *
+     * @param gender 性别
+     */
+    public void setGender(String gender) {
+        this.gender = gender == null ? null : gender.trim();
+    }
+
+    /**
+     * 获取生日
+     *
+     * @return brithday - 生日
+     */
+    public Date getBrithday() {
+        return brithday;
+    }
+
+    /**
+     * 设置生日
+     *
+     * @param brithday 生日
+     */
+    public void setBrithday(Date brithday) {
+        this.brithday = brithday;
+    }
+
+    /**
+     * 获取民族
+     *
+     * @return nation - 民族
+     */
+    public String getNation() {
+        return nation;
+    }
+
+    /**
+     * 设置民族
+     *
+     * @param nation 民族
+     */
+    public void setNation(String nation) {
+        this.nation = nation == null ? null : nation.trim();
+    }
+
+    /**
+     * 获取住址
+     *
+     * @return address - 住址
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * 设置住址
+     *
+     * @param address 住址
+     */
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    /**
+     * 获取发证机关
+     *
+     * @return issued_by - 发证机关
+     */
+    public String getIssuedBy() {
+        return issuedBy;
+    }
+
+    /**
+     * 设置发证机关
+     *
+     * @param issuedBy 发证机关
+     */
+    public void setIssuedBy(String issuedBy) {
+        this.issuedBy = issuedBy == null ? null : issuedBy.trim();
+    }
+
+    /**
+     * 获取身份证正面照片
+     *
+     * @return idcard_front - 身份证正面照片
      */
     public String getIdcardFront() {
         return idcardFront;
     }
 
     /**
-     * 设置身份证正面
+     * 设置身份证正面照片
      *
-     * @param idcardFront 身份证正面
+     * @param idcardFront 身份证正面照片
      */
     public void setIdcardFront(String idcardFront) {
         this.idcardFront = idcardFront == null ? null : idcardFront.trim();
     }
 
     /**
-     * 获取身份证背面
+     * 获取手持身份证照片
      *
-     * @return idcard_back - 身份证背面
+     * @return idcard_hand - 手持身份证照片
      */
-    public String getIdcardBack() {
-        return idcardBack;
+    public String getIdcardHand() {
+        return idcardHand;
     }
 
     /**
-     * 设置身份证背面
+     * 设置手持身份证照片
      *
-     * @param idcardBack 身份证背面
+     * @param idcardHand 手持身份证照片
      */
-    public void setIdcardBack(String idcardBack) {
-        this.idcardBack = idcardBack == null ? null : idcardBack.trim();
+    public void setIdcardHand(String idcardHand) {
+        this.idcardHand = idcardHand == null ? null : idcardHand.trim();
     }
 
     /**
@@ -298,7 +426,7 @@ public class CreditIdentity {
      *
      * @return status - 状态（-1：失败；0：进行中；1：成功）
      */
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
@@ -307,7 +435,43 @@ public class CreditIdentity {
      *
      * @param status 状态（-1：失败；0：进行中；1：成功）
      */
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * 获取扣费状态（0：未扣费；1：已扣费）
+     *
+     * @return charge_status - 扣费状态（0：未扣费；1：已扣费）
+     */
+    public Integer getChargeStatus() {
+        return chargeStatus;
+    }
+
+    /**
+     * 设置扣费状态（0：未扣费；1：已扣费）
+     *
+     * @param chargeStatus 扣费状态（0：未扣费；1：已扣费）
+     */
+    public void setChargeStatus(Integer chargeStatus) {
+        this.chargeStatus = chargeStatus;
+    }
+
+    /**
+     * 获取积分状态（0：未加积分；1：已加积分）
+     *
+     * @return score_status - 积分状态（0：未加积分；1：已加积分）
+     */
+    public Integer getScoreStatus() {
+        return scoreStatus;
+    }
+
+    /**
+     * 设置积分状态（0：未加积分；1：已加积分）
+     *
+     * @param scoreStatus 积分状态（0：未加积分；1：已加积分）
+     */
+    public void setScoreStatus(Integer scoreStatus) {
+        this.scoreStatus = scoreStatus;
     }
 }
