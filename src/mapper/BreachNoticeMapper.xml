@@ -19,6 +19,9 @@
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="show_photo" jdbcType="VARCHAR" property="showPhoto" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="encryptstr1" jdbcType="VARCHAR" property="encryptstr1" />
+    <result column="encryptstr2" jdbcType="VARCHAR" property="encryptstr2" />
+    <result column="encryptstr3" jdbcType="VARCHAR" property="encryptstr3" />
     <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
     <result column="audit_by" jdbcType="VARCHAR" property="auditBy" />
     <result column="revoke_status" jdbcType="INTEGER" property="revokeStatus" />
@@ -32,7 +35,7 @@
       WARNING - @mbg.generated
     -->
     notice_id, user_id, certificate_no, real_name, gender, phone, ttitle, content, province, 
-    city, area, type, show_photo, status, audit_time, audit_by, revoke_status, revoke_by, 
-    revoke_time, create_time, update_time
+    city, area, type, show_photo, status, encryptstr1, encryptstr2, encryptstr3, audit_time, 
+    audit_by, revoke_status, revoke_by, revoke_time, create_time, update_time
   </sql>
 </mapper>
