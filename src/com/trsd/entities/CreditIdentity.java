@@ -36,6 +36,32 @@ public class CreditIdentity {
     private String certificateNo;
 
     /**
+     * 性别
+     */
+    private String gender;
+
+    /**
+     * 生日
+     */
+    private Date brithday;
+
+    /**
+     * 民族
+     */
+    private String nation;
+
+    /**
+     * 住址
+     */
+    private String address;
+
+    /**
+     * 发证机关
+     */
+    @Column(name = "issued_by")
+    private String issuedBy;
+
+    /**
      * 身份证正面
      */
     @Column(name = "idcard_front")
@@ -165,6 +191,96 @@ public class CreditIdentity {
      */
     public void setCertificateNo(String certificateNo) {
         this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * 获取性别
+     *
+     * @return gender - 性别
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * 设置性别
+     *
+     * @param gender 性别
+     */
+    public void setGender(String gender) {
+        this.gender = gender == null ? null : gender.trim();
+    }
+
+    /**
+     * 获取生日
+     *
+     * @return brithday - 生日
+     */
+    public Date getBrithday() {
+        return brithday;
+    }
+
+    /**
+     * 设置生日
+     *
+     * @param brithday 生日
+     */
+    public void setBrithday(Date brithday) {
+        this.brithday = brithday;
+    }
+
+    /**
+     * 获取民族
+     *
+     * @return nation - 民族
+     */
+    public String getNation() {
+        return nation;
+    }
+
+    /**
+     * 设置民族
+     *
+     * @param nation 民族
+     */
+    public void setNation(String nation) {
+        this.nation = nation == null ? null : nation.trim();
+    }
+
+    /**
+     * 获取住址
+     *
+     * @return address - 住址
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * 设置住址
+     *
+     * @param address 住址
+     */
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    /**
+     * 获取发证机关
+     *
+     * @return issued_by - 发证机关
+     */
+    public String getIssuedBy() {
+        return issuedBy;
+    }
+
+    /**
+     * 设置发证机关
+     *
+     * @param issuedBy 发证机关
+     */
+    public void setIssuedBy(String issuedBy) {
+        this.issuedBy = issuedBy == null ? null : issuedBy.trim();
     }
 
     /**

@@ -10,6 +10,11 @@
     <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="brithday" jdbcType="TIMESTAMP" property="brithday" />
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="issued_by" jdbcType="VARCHAR" property="issuedBy" />
     <result column="idcard_front" jdbcType="VARCHAR" property="idcardFront" />
     <result column="idcard_back" jdbcType="VARCHAR" property="idcardBack" />
     <result column="ispass" jdbcType="BIT" property="ispass" />
@@ -23,7 +28,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    authid, user_id, authtime, real_name, certificate_no, idcard_front, idcard_back, 
-    ispass, provider, finishtime, cost, score, status
+    authid, user_id, authtime, real_name, certificate_no, gender, brithday, nation, address, 
+    issued_by, idcard_front, idcard_back, ispass, provider, finishtime, cost, score, 
+    status
   </sql>
 </mapper>
