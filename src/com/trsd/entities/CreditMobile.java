@@ -32,7 +32,7 @@ public class CreditMobile {
     /**
      * 是否通过
      */
-    private Byte ispass;
+    private Boolean ispass;
 
     /**
      * 当前余额
@@ -102,6 +102,11 @@ public class CreditMobile {
      * 结束时间
      */
     private Date finishtime;
+
+    /**
+     * 扣费编号
+     */
+    private Long freezeid;
 
     /**
      * 费用
@@ -207,7 +212,7 @@ public class CreditMobile {
      *
      * @return ispass - 是否通过
      */
-    public Byte getIspass() {
+    public Boolean getIspass() {
         return ispass;
     }
 
@@ -216,7 +221,7 @@ public class CreditMobile {
      *
      * @param ispass 是否通过
      */
-    public void setIspass(Byte ispass) {
+    public void setIspass(Boolean ispass) {
         this.ispass = ispass;
     }
 
@@ -452,6 +457,24 @@ public class CreditMobile {
      */
     public void setFinishtime(Date finishtime) {
         this.finishtime = finishtime;
+    }
+
+    /**
+     * 获取扣费编号
+     *
+     * @return freezeid - 扣费编号
+     */
+    public Long getFreezeid() {
+        return freezeid;
+    }
+
+    /**
+     * 设置扣费编号
+     *
+     * @param freezeid 扣费编号
+     */
+    public void setFreezeid(Long freezeid) {
+        this.freezeid = freezeid;
     }
 
     /**

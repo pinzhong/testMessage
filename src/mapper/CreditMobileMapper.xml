@@ -9,7 +9,7 @@
     <result column="userId" jdbcType="BIGINT" property="userid" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
-    <result column="ispass" jdbcType="TINYINT" property="ispass" />
+    <result column="ispass" jdbcType="BIT" property="ispass" />
     <result column="blance" jdbcType="DECIMAL" property="blance" />
     <result column="vip_score" jdbcType="VARCHAR" property="vipScore" />
     <result column="isp" jdbcType="VARCHAR" property="isp" />
@@ -23,6 +23,7 @@
     <result column="provider" jdbcType="VARCHAR" property="provider" />
     <result column="token" jdbcType="VARCHAR" property="token" />
     <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
+    <result column="freezeid" jdbcType="BIGINT" property="freezeid" />
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
     <result column="status" jdbcType="TINYINT" property="status" />
@@ -35,6 +36,6 @@
     -->
     authid, userId, phone, createtime, ispass, blance, vip_score, isp, jointime, netage, 
     location, real_name, certificate_no, address, vip_level, provider, token, finishtime, 
-    cost, score, status, charge_status, score_status
+    freezeid, cost, score, status, charge_status, score_status
   </sql>
 </mapper>
