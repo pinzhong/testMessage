@@ -36,23 +36,23 @@ public class CreditConsts {
 	/**
 	 * 实名认证步骤1（实名绑卡）
 	 */
-	public static final int CREDIT_AUTH_STEP1 = -1;
+	public static final int CREDIT_AUTHSTEP_BANKCARD = -1;
 	/**
 	 * 实名认证步骤2（设置交易密码）
 	 */
-	public static final int CREDIT_AUTH_STEP2 = -2;
+	public static final int CREDIT_AUTHSTEP_TRADEPASSWORD = -2;
 	/**
 	 * 实名认证步骤3（提交身份证照片）
 	 */
-	public static final int CREDIT_AUTH_STEP3 = -3;
+	public static final int CREDIT_AUTHSTEP_IDCARD = -3;
 	/**
 	 * 实名认证步骤4（人脸识别）
 	 */
-	public static final int CREDIT_AUTH_STEP4 = -4;
+	public static final int CREDIT_AUTHSTEP_FACE = -4;
 	/**
 	 * 实名认证步骤5（运营商认证）
 	 */
-	public static final int CREDIT_AUTH_STEP5 = -5;
+	public static final int CREDIT_AUTHSTEP_ISP = -5;
 	
 	//高级认证服务商
 	/**

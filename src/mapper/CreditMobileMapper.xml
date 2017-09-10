@@ -26,7 +26,7 @@
     <result column="freezeid" jdbcType="BIGINT" property="freezeid" />
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
-    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="status" jdbcType="INTEGER" property="status" />
     <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
     <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
   </resultMap>
