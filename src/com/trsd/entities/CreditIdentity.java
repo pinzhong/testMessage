@@ -115,6 +115,10 @@ public class CreditIdentity {
     @Column(name = "score_status")
     private Integer scoreStatus;
 
+    private String encryptstr1;
+
+    private String encryptstr2;
+
     /**
      * 获取编号
      *
@@ -473,5 +477,33 @@ public class CreditIdentity {
      */
     public void setScoreStatus(Integer scoreStatus) {
         this.scoreStatus = scoreStatus;
+    }
+
+    /**
+     * @return encryptstr1
+     */
+    public String getEncryptstr1() {
+        return encryptstr1;
+    }
+
+    /**
+     * @param encryptstr1
+     */
+    public void setEncryptstr1(String encryptstr1) {
+        this.encryptstr1 = encryptstr1 == null ? null : encryptstr1.trim();
+    }
+
+    /**
+     * @return encryptstr2
+     */
+    public String getEncryptstr2() {
+        return encryptstr2;
+    }
+
+    /**
+     * @param encryptstr2
+     */
+    public void setEncryptstr2(String encryptstr2) {
+        this.encryptstr2 = encryptstr2 == null ? null : encryptstr2.trim();
     }
 }

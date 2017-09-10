@@ -25,6 +25,8 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
     <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
+    <result column="encryptstr1" jdbcType="VARCHAR" property="encryptstr1" />
+    <result column="encryptstr2" jdbcType="VARCHAR" property="encryptstr2" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -32,6 +34,6 @@
     -->
     authid, user_id, authtime, real_name, certificate_no, gender, brithday, nation, address, 
     issued_by, idcard_front, idcard_hand, ispass, provider, finishtime, cost, score, 
-    status, charge_status, score_status
+    status, charge_status, score_status, encryptstr1, encryptstr2
   </sql>
 </mapper>
