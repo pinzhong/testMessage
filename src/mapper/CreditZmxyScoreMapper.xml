@@ -19,12 +19,14 @@
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
     <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     authid, user_id, authtime, real_name, certificate_no, transaction_id, openid, zmxy_score, 
-    last_authtime, last_score, finishtime, cost, score, status
+    last_authtime, last_score, finishtime, cost, score, status, charge_status, score_status
   </sql>
 </mapper>

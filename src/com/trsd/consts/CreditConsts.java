@@ -38,7 +38,11 @@ public class CreditConsts {
 	/**
 	 * 高级认证服务商（立木）
 	 */
-	public static final String CREDIT_PROVIDER_LIMU = "limu"; 		
+	public static final String CREDIT_PROVIDER_LIMU = "limu"; 
+	/**
+	 * 高级认证服务商（芝麻）
+	 */
+	public static final String CREDIT_PROVIDER_ZHIMA = "zhima"; 	
 	
 	
 }

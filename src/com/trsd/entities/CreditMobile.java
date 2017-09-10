@@ -32,7 +32,7 @@ public class CreditMobile {
     /**
      * 是否通过
      */
-    private Byte ispass;
+    private Boolean ispass;
 
     /**
      * 当前余额
@@ -104,6 +104,11 @@ public class CreditMobile {
     private Date finishtime;
 
     /**
+     * 扣费编号
+     */
+    private Long freezeid;
+
+    /**
      * 费用
      */
     private BigDecimal cost;
@@ -117,6 +122,18 @@ public class CreditMobile {
      * 状态（-1：失败；0：进行中；1：成功）
      */
     private Byte status;
+
+    /**
+     * 扣费状态（0：未扣费；1：已扣费）
+     */
+    @Column(name = "charge_status")
+    private Integer chargeStatus;
+
+    /**
+     * 积分状态（0：未加积分；1：已加积分）
+     */
+    @Column(name = "score_status")
+    private Integer scoreStatus;
 
     /**
      * 获取编号
@@ -195,7 +212,7 @@ public class CreditMobile {
      *
      * @return ispass - 是否通过
      */
-    public Byte getIspass() {
+    public Boolean getIspass() {
         return ispass;
     }
 
@@ -204,7 +221,7 @@ public class CreditMobile {
      *
      * @param ispass 是否通过
      */
-    public void setIspass(Byte ispass) {
+    public void setIspass(Boolean ispass) {
         this.ispass = ispass;
     }
 
@@ -443,6 +460,24 @@ public class CreditMobile {
     }
 
     /**
+     * 获取扣费编号
+     *
+     * @return freezeid - 扣费编号
+     */
+    public Long getFreezeid() {
+        return freezeid;
+    }
+
+    /**
+     * 设置扣费编号
+     *
+     * @param freezeid 扣费编号
+     */
+    public void setFreezeid(Long freezeid) {
+        this.freezeid = freezeid;
+    }
+
+    /**
      * 获取费用
      *
      * @return cost - 费用
@@ -494,5 +529,41 @@ public class CreditMobile {
      */
     public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    /**
+     * 获取扣费状态（0：未扣费；1：已扣费）
+     *
+     * @return charge_status - 扣费状态（0：未扣费；1：已扣费）
+     */
+    public Integer getChargeStatus() {
+        return chargeStatus;
+    }
+
+    /**
+     * 设置扣费状态（0：未扣费；1：已扣费）
+     *
+     * @param chargeStatus 扣费状态（0：未扣费；1：已扣费）
+     */
+    public void setChargeStatus(Integer chargeStatus) {
+        this.chargeStatus = chargeStatus;
+    }
+
+    /**
+     * 获取积分状态（0：未加积分；1：已加积分）
+     *
+     * @return score_status - 积分状态（0：未加积分；1：已加积分）
+     */
+    public Integer getScoreStatus() {
+        return scoreStatus;
+    }
+
+    /**
+     * 设置积分状态（0：未加积分；1：已加积分）
+     *
+     * @param scoreStatus 积分状态（0：未加积分；1：已加积分）
+     */
+    public void setScoreStatus(Integer scoreStatus) {
+        this.scoreStatus = scoreStatus;
     }
 }

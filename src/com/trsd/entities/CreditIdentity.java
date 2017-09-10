@@ -62,16 +62,16 @@ public class CreditIdentity {
     private String issuedBy;
 
     /**
-     * 身份证正面
+     * 身份证正面照片
      */
     @Column(name = "idcard_front")
     private String idcardFront;
 
     /**
-     * 身份证背面
+     * 手持身份证照片
      */
-    @Column(name = "idcard_back")
-    private String idcardBack;
+    @Column(name = "idcard_hand")
+    private String idcardHand;
 
     /**
      * 是否通过
@@ -101,7 +101,19 @@ public class CreditIdentity {
     /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
-    private Byte status;
+    private Integer status;
+
+    /**
+     * 扣费状态（0：未扣费；1：已扣费）
+     */
+    @Column(name = "charge_status")
+    private Integer chargeStatus;
+
+    /**
+     * 积分状态（0：未加积分；1：已加积分）
+     */
+    @Column(name = "score_status")
+    private Integer scoreStatus;
 
     /**
      * 获取编号
@@ -284,39 +296,39 @@ public class CreditIdentity {
     }
 
     /**
-     * 获取身份证正面
+     * 获取身份证正面照片
      *
-     * @return idcard_front - 身份证正面
+     * @return idcard_front - 身份证正面照片
      */
     public String getIdcardFront() {
         return idcardFront;
     }
 
     /**
-     * 设置身份证正面
+     * 设置身份证正面照片
      *
-     * @param idcardFront 身份证正面
+     * @param idcardFront 身份证正面照片
      */
     public void setIdcardFront(String idcardFront) {
         this.idcardFront = idcardFront == null ? null : idcardFront.trim();
     }
 
     /**
-     * 获取身份证背面
+     * 获取手持身份证照片
      *
-     * @return idcard_back - 身份证背面
+     * @return idcard_hand - 手持身份证照片
      */
-    public String getIdcardBack() {
-        return idcardBack;
+    public String getIdcardHand() {
+        return idcardHand;
     }
 
     /**
-     * 设置身份证背面
+     * 设置手持身份证照片
      *
-     * @param idcardBack 身份证背面
+     * @param idcardHand 手持身份证照片
      */
-    public void setIdcardBack(String idcardBack) {
-        this.idcardBack = idcardBack == null ? null : idcardBack.trim();
+    public void setIdcardHand(String idcardHand) {
+        this.idcardHand = idcardHand == null ? null : idcardHand.trim();
     }
 
     /**
@@ -414,7 +426,7 @@ public class CreditIdentity {
      *
      * @return status - 状态（-1：失败；0：进行中；1：成功）
      */
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
@@ -423,7 +435,43 @@ public class CreditIdentity {
      *
      * @param status 状态（-1：失败；0：进行中；1：成功）
      */
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * 获取扣费状态（0：未扣费；1：已扣费）
+     *
+     * @return charge_status - 扣费状态（0：未扣费；1：已扣费）
+     */
+    public Integer getChargeStatus() {
+        return chargeStatus;
+    }
+
+    /**
+     * 设置扣费状态（0：未扣费；1：已扣费）
+     *
+     * @param chargeStatus 扣费状态（0：未扣费；1：已扣费）
+     */
+    public void setChargeStatus(Integer chargeStatus) {
+        this.chargeStatus = chargeStatus;
+    }
+
+    /**
+     * 获取积分状态（0：未加积分；1：已加积分）
+     *
+     * @return score_status - 积分状态（0：未加积分；1：已加积分）
+     */
+    public Integer getScoreStatus() {
+        return scoreStatus;
+    }
+
+    /**
+     * 设置积分状态（0：未加积分；1：已加积分）
+     *
+     * @param scoreStatus 积分状态（0：未加积分；1：已加积分）
+     */
+    public void setScoreStatus(Integer scoreStatus) {
+        this.scoreStatus = scoreStatus;
     }
 }
