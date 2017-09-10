@@ -53,6 +53,10 @@ public class CreditConsts {
 	 * 实名认证步骤5（运营商认证）
 	 */
 	public static final int CREDIT_AUTHSTEP_ISP = -5;
+	/**
+	 * 实名认证完成
+	 */
+	public static final int CREDIT_AUTHSTEP_FINISH = 1;
 	
 	//高级认证服务商
 	/**
