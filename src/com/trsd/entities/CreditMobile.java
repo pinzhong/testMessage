@@ -121,7 +121,7 @@ public class CreditMobile {
     /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
-    private int status;
+    private Integer status;
 
     /**
      * 扣费状态（0：未扣费；1：已扣费）
@@ -518,7 +518,7 @@ public class CreditMobile {
      *
      * @return status - 状态（-1：失败；0：进行中；1：成功）
      */
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
@@ -527,7 +527,7 @@ public class CreditMobile {
      *
      * @param status 状态（-1：失败；0：进行中；1：成功）
      */
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
