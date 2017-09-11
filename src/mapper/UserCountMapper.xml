@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserCountMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserCount">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="short_all_loan_count" jdbcType="INTEGER" property="shortAllLoanCount" />
+    <result column="long_all_loan_count" jdbcType="INTEGER" property="longAllLoanCount" />
+    <result column="short_payback_count" jdbcType="INTEGER" property="shortPaybackCount" />
+    <result column="long_payback_count" jdbcType="INTEGER" property="longPaybackCount" />
+    <result column="short_advance_count" jdbcType="INTEGER" property="shortAdvanceCount" />
+    <result column="long_advance_count" jdbcType="INTEGER" property="longAdvanceCount" />
+    <result column="short_break_count" jdbcType="INTEGER" property="shortBreakCount" />
+    <result column="long_break_count" jdbcType="INTEGER" property="longBreakCount" />
+    <result column="short_break_days" jdbcType="INTEGER" property="shortBreakDays" />
+    <result column="long_break_days" jdbcType="INTEGER" property="longBreakDays" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_id, short_all_loan_count, long_all_loan_count, short_payback_count, long_payback_count, 
+    short_advance_count, long_advance_count, short_break_count, long_break_count, short_break_days, 
+    long_break_days
+  </sql>
+</mapper>
