@@ -129,7 +129,7 @@ public class LoanRecordStat implements Serializable {
 	/**
 	 * 贷款类型 0为短贷，1为长贷
 	 */
-	private int loantype;
+	private String loantype;
 	/**
 	 * 做过的认证
 	 */
@@ -327,11 +327,11 @@ public class LoanRecordStat implements Serializable {
 		this.paybackTime = paybackTime;
 	}
 
-	public int getLoantype() {
+	public String getLoantype() {
 		return loantype;
 	}
 
-	public void setLoantype(int loantype) {
+	public void setLoantype(String loantype) {
 		this.loantype = loantype;
 	}
 
