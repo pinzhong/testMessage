@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LoanShortDetailMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LoanShortDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="loan_short_detail_id" jdbcType="BIGINT" property="loanShortDetailId" />
+    <result column="loan_short_id" jdbcType="BIGINT" property="loanShortId" />
+    <result column="payback_money" jdbcType="DECIMAL" property="paybackMoney" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    loan_short_detail_id, loan_short_id, payback_money, status, type, createtime
+  </sql>
+</mapper>
