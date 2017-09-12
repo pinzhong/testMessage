@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.WeixinReplyMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.WeixinReply">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="weixin_reply_id" jdbcType="INTEGER" property="weixinReplyId" />
+    <result column="keyword" jdbcType="VARCHAR" property="keyword" />
+    <result column="match_type" jdbcType="SMALLINT" property="matchType" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    weixin_reply_id, keyword, match_type, content, create_time, update_time
+  </sql>
+</mapper>
