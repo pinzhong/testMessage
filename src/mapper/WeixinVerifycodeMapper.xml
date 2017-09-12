@@ -8,7 +8,7 @@
     <id column="weixin_verifycode_id" jdbcType="INTEGER" property="weixinVerifycodeId" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="verify_code" jdbcType="VARCHAR" property="verifyCode" />
-    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="status" jdbcType="INTEGER" property="status" />
     <result column="open_id" jdbcType="VARCHAR" property="openId" />
     <result column="union_id" jdbcType="VARCHAR" property="unionId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -19,7 +19,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    weixin_verifycode_id, user_id, verify_code, state, open_id, union_id, create_time, 
+    weixin_verifycode_id, user_id, verify_code, status, open_id, union_id, create_time, 
     update_time, success_time
   </sql>
 </mapper>

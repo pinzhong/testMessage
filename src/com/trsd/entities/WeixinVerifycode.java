@@ -16,7 +16,7 @@ public class WeixinVerifycode {
     @Column(name = "verify_code")
     private String verifyCode;
 
-    private Integer state;
+    private Integer status;
 
     @Column(name = "open_id")
     private String openId;
@@ -76,17 +76,17 @@ public class WeixinVerifycode {
     }
 
     /**
-     * @return state
+     * @return status
      */
-    public Integer getState() {
-        return state;
+    public Integer getStatus() {
+        return status;
     }
 
     /**
-     * @param state
+     * @param status
      */
-    public void setState(Integer state) {
-        this.state = state;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     /**
