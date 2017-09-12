@@ -1,18 +1,12 @@
 package com.trsd.entities;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "t_user")
-public class UserInfo implements Serializable{
+public class UserInfo {
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	/**
      * 主键ID
      */
     @Id
@@ -41,6 +35,11 @@ public class UserInfo implements Serializable{
      */
     @Column(name = "certificate_no")
     private String certificateNo;
+
+    /**
+     * 性别
+     */
+    private String gender;
 
     /**
      * 生日
@@ -318,6 +317,20 @@ public class UserInfo implements Serializable{
      */
     public void setCertificateNo(String certificateNo) {
         this.certificateNo = certificateNo == null ? null : certificateNo.trim();
+    }
+
+    /**
+     * @return gender
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * @param gender
+     */
+    public void setGender(String gender) {
+        this.gender = gender == null ? null : gender.trim();
     }
 
     /**

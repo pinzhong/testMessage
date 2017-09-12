@@ -10,6 +10,7 @@
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="CHAR" property="certificateNo" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
     <result column="brithday" jdbcType="TIMESTAMP" property="brithday" />
     <result column="login_password" jdbcType="VARCHAR" property="loginPassword" />
     <result column="trade_password" jdbcType="VARCHAR" property="tradePassword" />
@@ -52,11 +53,12 @@
     <!--
       WARNING - @mbg.generated
     -->
-    user_id, phone, nickname, real_name, certificate_no, brithday, login_password, trade_password, 
-    qq, weixin, fans_count, credit_score, zmxy_score, user_level, financier_level, status, 
-    headpic, invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, encryptstr, 
-    encryptstr1, encryptstr2, last_login_time, last_login_ip, last_login_location, last_login_udid, 
-    create_time, update_time, version, follow_count, invite_one_count, invite_two_count, 
-    type, inviter_code, is_follow, borrow_flag, invest_flag, user_key, auth_status
+    user_id, phone, nickname, real_name, certificate_no, gender, brithday, login_password, 
+    trade_password, qq, weixin, fans_count, credit_score, zmxy_score, user_level, financier_level, 
+    status, headpic, invite_code, inviter_id, qq_open_id, weixin_unionid, weixin_info, 
+    encryptstr, encryptstr1, encryptstr2, last_login_time, last_login_ip, last_login_location, 
+    last_login_udid, create_time, update_time, version, follow_count, invite_one_count, 
+    invite_two_count, type, inviter_code, is_follow, borrow_flag, invest_flag, user_key, 
+    auth_status
   </sql>
 </mapper>
