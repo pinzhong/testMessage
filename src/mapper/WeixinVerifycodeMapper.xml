@@ -6,7 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="weixin_verifycode_id" jdbcType="INTEGER" property="weixinVerifycodeId" />
-    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="verify_code" jdbcType="VARCHAR" property="verifyCode" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="open_id" jdbcType="VARCHAR" property="openId" />

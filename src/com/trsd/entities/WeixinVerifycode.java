@@ -11,7 +11,7 @@ public class WeixinVerifycode {
     private Integer weixinVerifycodeId;
 
     @Column(name = "user_id")
-    private String userId;
+    private Long userId;
 
     @Column(name = "verify_code")
     private String verifyCode;
@@ -50,15 +50,15 @@ public class WeixinVerifycode {
     /**
      * @return user_id
      */
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
     /**
      * @param userId
      */
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
