@@ -209,15 +209,15 @@ public class CommonUtil {
 	public static String getSqlLike(int type, String str) {
 		if (str != null && !str.equals("")) {
 			switch (type) {
-			case 1:
-				str = "%" + str + "%";
-				break;
-			case 2:
-				str = "%" + str;
-				break;
-			case 3:
-				str = str + "%";
-				break;
+				case 1:
+					str = "%" + str + "%";
+					break;
+				case 2:
+					str = "%" + str;
+					break;
+				case 3:
+					str = str + "%";
+					break;
 			}
 		}
 		return str;
@@ -275,20 +275,20 @@ public class CommonUtil {
 		Long result = 0L;
 		long diff = c1.getTimeInMillis() - c2.getTimeInMillis();
 		switch (type) {
-		case 1:
-			result = diff / (24 * 60 * 60 * 1000);
-			break;
-		case 2:
-			result = diff / (60 * 60 * 1000);
-			break;
-		case 3:
-			result = diff / (60 * 1000);
-			break;
-		case 4:
-			result = diff / 1000;
-			break;
-		default:
-			break;
+			case 1:
+				result = diff / (24 * 60 * 60 * 1000);
+				break;
+			case 2:
+				result = diff / (60 * 60 * 1000);
+				break;
+			case 3:
+				result = diff / (60 * 1000);
+				break;
+			case 4:
+				result = diff / 1000;
+				break;
+			default:
+				break;
 		}
 		return result;
 	}
@@ -816,7 +816,27 @@ public class CommonUtil {
 	 * @return
 	 */
 	public static int getRandom() {
-		return random.nextInt(8999) + 1000;
+		return getRandom(0);
+	}
+
+	/**
+	 * 生成1000－9999的4位随机数来进行登录
+	 * 
+	 * @return
+	 */
+	public static int getRandom(int length) {
+		int code = 0;
+		switch (length) {
+			case 0:
+				code = random.nextInt(8999) + 1000;
+				break;
+			case 6:
+				code = random.nextInt(899999) + 100000;
+				break;
+			default:
+				break;
+		}
+		return code;
 	}
 
 	/**
@@ -837,22 +857,23 @@ public class CommonUtil {
 		}
 		return iAge;
 	}
-	
+
 	/**
 	 * 根据身份证号获取性别，1为女，2为男
+	 * 
 	 * @param idCard
 	 * @return
 	 */
-	public static int getSexByIdCard(String idCard){
+	public static int getSexByIdCard(String idCard) {
 		int iSex = 0;
-		try{
+		try {
 			String sex = idCard.substring(16, 17);
-			if(Integer.parseInt(sex)%2==0){
+			if (Integer.parseInt(sex) % 2 == 0) {
 				iSex = 1;
-			}else{
+			} else {
 				iSex = 2;
 			}
-		}catch (Exception e) {
+		} catch (Exception e) {
 
 		}
 		return iSex;
@@ -860,6 +881,7 @@ public class CommonUtil {
 
 	/**
 	 * 解析请求url参数为JSONObject
+	 * 
 	 * @param qstr
 	 * @return
 	 */
@@ -877,12 +899,13 @@ public class CommonUtil {
 		res += "\"" + "}";
 		return JSONObject.parseObject(res);
 	}
-	
+
 	/**
 	 * 获取uuid
+	 * 
 	 * @return
 	 */
-	public static String getUUID(){
+	public static String getUUID() {
 		return UUID.randomUUID().toString();
 	}
 }
