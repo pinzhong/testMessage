@@ -30,6 +30,7 @@ public class BusinessConsts {
 	public static final int PAYBACK_TYPE_PRINCIPAL = 1 ; //还本金
 	public static final int PAYBACK_TYPE_INTEREST = 2 ; //还利息
 	public static final int PAYBACK_TYPE_PENALTY = 3 ; //还违约金
+	public static final int PAYBACK_TYPE_PENALTY_ADVANCE = 4 ; //还提前还款违约金
 		
 	/**
 	 * 邀请等级
