@@ -28,6 +28,9 @@ public class ResultConsts {
 	public static final String MSG_BUSINESS_LOAN_FAIL = "抱歉，您的借款申请提交失败，请您稍后重试";
 	public static final String MSG_BUSINESS_LEND_FAIL = "抱歉，您的投资提交失败，请稍后再试";
 	public static final String MSG_BUSINESS_SAME_USER = "抱歉，您不能给自己的借款进行投资，请重新选择借款再试!";
+	public static final String MSG_BUSINESS_INVEST_FAIL = "抱歉，您选择的投资券有误，请重新选择";
+	public static final String MSG_BUSINESS_PAYBACK_LOANSTATUS_FAIL = "抱歉，您的借款暂未结束，请结束借款后再进行还款";
+	public static final String MSG_BUSINESS_PAYBACK_STATUS_FAIL = "抱歉，您已进行过还款，请重新还款";
 	
 	public static final String MSG_ACCOUNT_ALREADY_FREE = "当前已有同类型冻结数据，请解冻后再试";
 	public static final String MSG_ACCOUNT_ALREADY_THAW = "此数据已被解冻";
