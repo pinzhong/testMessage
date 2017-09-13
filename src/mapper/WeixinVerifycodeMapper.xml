@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.WeixinVerifycodeMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.WeixinVerifycode">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="weixin_verifycode_id" jdbcType="INTEGER" property="weixinVerifycodeId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="verify_code" jdbcType="VARCHAR" property="verifyCode" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="union_id" jdbcType="VARCHAR" property="unionId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="success_time" jdbcType="TIMESTAMP" property="successTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    weixin_verifycode_id, user_id, verify_code, status, open_id, union_id, create_time, 
+    update_time, success_time
+  </sql>
+</mapper>
