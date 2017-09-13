@@ -57,10 +57,10 @@ public class UserConsts {
 	/**
 	 * 用户短信类型
 	 */
-	public static final int USER_SMS_TYPE_REGISTER = 1;// 注册
-	public static final int USER_SMS_TYPE_LOAN = 2;// 借款
-	public static final int USER_SMS_TYPE_CHANGE_TRADE_PASSWORD = 3;// 修改交易密码
-	public static final int USER_SMS_TYPE_CHANGE_LOGIN_PASSWORD = 4;// 修改登录密码
-	public static final int USER_SMS_TYPE_CHANGE_MOBILE = 5;// 修改手机号
+	public static final int USER_SMS_TYPE_REGISTER = 1;// 注册发送验证码
+	public static final int USER_SMS_TYPE_LOAN = 2;// 借款发送验证码
+	public static final int USER_SMS_TYPE_CHANGE_TRADE_PASSWORD = 3;// 修改交易密码发送验证码
+	public static final int USER_SMS_TYPE_CHANGE_LOGIN_PASSWORD = 4;// 修改登录密码发送验证码
+	public static final int USER_SMS_TYPE_CHANGE_MOBILE = 5;// 修改手机号发送验证码
 	
 }

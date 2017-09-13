@@ -42,9 +42,9 @@ public class BusinessConsts {
 	/**
 	 * 邀请收益类型
 	 */
-	public static final int INVITE_TYPE_LEND_ONE = 1 ; //一级借款收益
-	public static final int INVITE_TYPE_LEND_TWO = 2 ; //二级借款收益
-	public static final int INVITE_TYPE_PAYBACK_ONE = 3 ; //一级还款收益
-	public static final int INVITE_TYPE_PAYBACK_TWO = 4 ; //二级还款收益
+	public static final int INVITE_TYPE_LEND_ONE = 1 ; //一级投资人上家收益
+	public static final int INVITE_TYPE_LEND_TWO = 2 ; //二级投资人上家收益
+	public static final int INVITE_TYPE_LOAN_ONE = 3 ; //一级借款人上家收益
+	public static final int INVITE_TYPE_LOAN_TWO = 4 ; //二级借款人上家收益
 	
 }

@@ -18,12 +18,12 @@ public class UserAccountConsts {
 	/**
 	 * 收益账户变动类型
 	 */
-	public static final int USER_ACCOUNT_TYPE_INVEST_ONE = 301 ; //收取一级投资收益
-	public static final int USER_ACCOUNT_TYPE_INVEST_TWO = 302 ; //收取二级投资收益
-	public static final int USER_ACCOUNT_TYPE_INVEST_XYD = 303 ; //支付投资收益
-	public static final int USER_ACCOUNT_TYPE_PAYBACK_ONE = 304 ; //收取一级还款收益
-	public static final int USER_ACCOUNT_TYPE_PAYBACK_TWO = 305 ; //收取二级还款收益
-	public static final int USER_ACCOUNT_TYPE_PAYBACK_XYD = 306 ; //支付还款收益
+	public static final int USER_ACCOUNT_TYPE_INVEST_LOAN_ONE = 301 ; //收取借款人上家一级投资收益
+	public static final int USER_ACCOUNT_TYPE_INVEST_LOAN_TWO = 302 ; //收取借款人上家二级投资收益
+	public static final int USER_ACCOUNT_TYPE_INVEST_LOAN_XYD = 303 ; //支付借款服务费
+	public static final int USER_ACCOUNT_TYPE_INVEST_LEND_ONE = 304 ; //收取投资人上家一级还款收益
+	public static final int USER_ACCOUNT_TYPE_INVEST_LEND_TWO = 305 ; //收取投资人上家二级还款收益
+	public static final int USER_ACCOUNT_TYPE_INVEST_LEND_XYD = 306 ; //支付还款收益
 	
 	/**
 	 * 还款账户变动类型
