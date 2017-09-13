@@ -6,12 +6,12 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="business_recharge_id" jdbcType="BIGINT" property="businessRechargeId" />
     <result column="event_key" jdbcType="VARCHAR" property="eventKey" />
-    <result column="pay_type" jdbcType="INTEGER" property="payType" />
-    <result column="business_type" jdbcType="INTEGER" property="businessType" />
+    <result column="pay_provider" jdbcType="INTEGER" property="payProvider" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
     <result column="version" jdbcType="INTEGER" property="version" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
@@ -24,7 +24,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    id, order_no, event_key, pay_type, business_type, user_id, status, version, remark, 
-    amount, create_time, success_time, update_time, pay_time
+    id, business_recharge_id, event_key, pay_provider, user_id, status, order_no, version, 
+    remark, amount, create_time, success_time, update_time, pay_time
   </sql>
 </mapper>

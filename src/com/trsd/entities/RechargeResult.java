@@ -10,38 +10,71 @@ public class RechargeResult {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "order_no")
-    private String orderNo;
+    /**
+     * 业务充值id 来自于t_recharge_youyunbao和t_recharge_easypay的主键
+     */
+    @Column(name = "business_recharge_id")
+    private Long businessRechargeId;
 
+    /**
+     * 账务系统流水
+     */
     @Column(name = "event_key")
     private String eventKey;
 
-    @Column(name = "pay_type")
-    private Integer payType;
+    /**
+     * 支付提供商 1易生支付 2优云宝-支付宝 
+     */
+    @Column(name = "pay_provider")
+    private Integer payProvider;
 
-    @Column(name = "business_type")
-    private Integer businessType;
-
+    /**
+     * 用户id
+     */
     @Column(name = "user_id")
     private Long userId;
 
+    /**
+     * 状态 0 初始 1 成功  一般都处于成功状态
+     */
     private Integer status;
 
+    /**
+     * 第三方支付流水
+     */
+    @Column(name = "order_no")
+    private String orderNo;
+
+    /**
+     * 版本 并发控制
+     */
     private Integer version;
 
     private String remark;
 
+    /**
+     * 充值金额
+     */
     private BigDecimal amount;
 
+    /**
+     * 创建时间
+     */
     @Column(name = "create_time")
     private Date createTime;
 
+    /**
+     * 成功时间
+     */
     @Column(name = "success_time")
     private Date successTime;
 
     @Column(name = "update_time")
     private Date updateTime;
 
+    /**
+     * 支付时间
+     */
     @Column(name = "pay_time")
     private Date payTime;
 
@@ -60,98 +93,126 @@ public class RechargeResult {
     }
 
     /**
-     * @return order_no
+     * 获取业务充值id 来自于t_recharge_youyunbao和t_recharge_easypay的主键
+     *
+     * @return business_recharge_id - 业务充值id 来自于t_recharge_youyunbao和t_recharge_easypay的主键
      */
-    public String getOrderNo() {
-        return orderNo;
+    public Long getBusinessRechargeId() {
+        return businessRechargeId;
     }
 
     /**
-     * @param orderNo
+     * 设置业务充值id 来自于t_recharge_youyunbao和t_recharge_easypay的主键
+     *
+     * @param businessRechargeId 业务充值id 来自于t_recharge_youyunbao和t_recharge_easypay的主键
      */
-    public void setOrderNo(String orderNo) {
-        this.orderNo = orderNo == null ? null : orderNo.trim();
+    public void setBusinessRechargeId(Long businessRechargeId) {
+        this.businessRechargeId = businessRechargeId;
     }
 
     /**
-     * @return event_key
+     * 获取账务系统流水
+     *
+     * @return event_key - 账务系统流水
      */
     public String getEventKey() {
         return eventKey;
     }
 
     /**
-     * @param eventKey
+     * 设置账务系统流水
+     *
+     * @param eventKey 账务系统流水
      */
     public void setEventKey(String eventKey) {
         this.eventKey = eventKey == null ? null : eventKey.trim();
     }
 
     /**
-     * @return pay_type
+     * 获取支付提供商 1易生支付 2优云宝-支付宝 
+     *
+     * @return pay_provider - 支付提供商 1易生支付 2优云宝-支付宝 
      */
-    public Integer getPayType() {
-        return payType;
+    public Integer getPayProvider() {
+        return payProvider;
     }
 
     /**
-     * @param payType
+     * 设置支付提供商 1易生支付 2优云宝-支付宝 
+     *
+     * @param payProvider 支付提供商 1易生支付 2优云宝-支付宝 
      */
-    public void setPayType(Integer payType) {
-        this.payType = payType;
+    public void setPayProvider(Integer payProvider) {
+        this.payProvider = payProvider;
     }
 
     /**
-     * @return business_type
-     */
-    public Integer getBusinessType() {
-        return businessType;
-    }
-
-    /**
-     * @param businessType
-     */
-    public void setBusinessType(Integer businessType) {
-        this.businessType = businessType;
-    }
-
-    /**
-     * @return user_id
+     * 获取用户id
+     *
+     * @return user_id - 用户id
      */
     public Long getUserId() {
         return userId;
     }
 
     /**
-     * @param userId
+     * 设置用户id
+     *
+     * @param userId 用户id
      */
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
     /**
-     * @return status
+     * 获取状态 0 初始 1 成功  一般都处于成功状态
+     *
+     * @return status - 状态 0 初始 1 成功  一般都处于成功状态
      */
     public Integer getStatus() {
         return status;
     }
 
     /**
-     * @param status
+     * 设置状态 0 初始 1 成功  一般都处于成功状态
+     *
+     * @param status 状态 0 初始 1 成功  一般都处于成功状态
      */
     public void setStatus(Integer status) {
         this.status = status;
     }
 
     /**
-     * @return version
+     * 获取第三方支付流水
+     *
+     * @return order_no - 第三方支付流水
+     */
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    /**
+     * 设置第三方支付流水
+     *
+     * @param orderNo 第三方支付流水
+     */
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo == null ? null : orderNo.trim();
+    }
+
+    /**
+     * 获取版本 并发控制
+     *
+     * @return version - 版本 并发控制
      */
     public Integer getVersion() {
         return version;
     }
 
     /**
-     * @param version
+     * 设置版本 并发控制
+     *
+     * @param version 版本 并发控制
      */
     public void setVersion(Integer version) {
         this.version = version;
@@ -172,42 +233,54 @@ public class RechargeResult {
     }
 
     /**
-     * @return amount
+     * 获取充值金额
+     *
+     * @return amount - 充值金额
      */
     public BigDecimal getAmount() {
         return amount;
     }
 
     /**
-     * @param amount
+     * 设置充值金额
+     *
+     * @param amount 充值金额
      */
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
     /**
-     * @return create_time
+     * 获取创建时间
+     *
+     * @return create_time - 创建时间
      */
     public Date getCreateTime() {
         return createTime;
     }
 
     /**
-     * @param createTime
+     * 设置创建时间
+     *
+     * @param createTime 创建时间
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
     /**
-     * @return success_time
+     * 获取成功时间
+     *
+     * @return success_time - 成功时间
      */
     public Date getSuccessTime() {
         return successTime;
     }
 
     /**
-     * @param successTime
+     * 设置成功时间
+     *
+     * @param successTime 成功时间
      */
     public void setSuccessTime(Date successTime) {
         this.successTime = successTime;
@@ -228,14 +301,18 @@ public class RechargeResult {
     }
 
     /**
-     * @return pay_time
+     * 获取支付时间
+     *
+     * @return pay_time - 支付时间
      */
     public Date getPayTime() {
         return payTime;
     }
 
     /**
-     * @param payTime
+     * 设置支付时间
+     *
+     * @param payTime 支付时间
      */
     public void setPayTime(Date payTime) {
         this.payTime = payTime;
