@@ -65,6 +65,15 @@ public class InvestTicket {
 
     private Long version;
 
+    @Column(name = "event_key")
+    private String eventKey;
+
+    /**
+     * 实际使用金额
+     */
+    @Column(name = "actual_amount")
+    private BigDecimal actualAmount;
+
     /**
      * 获取编号
      *
@@ -253,5 +262,37 @@ public class InvestTicket {
      */
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    /**
+     * @return event_key
+     */
+    public String getEventKey() {
+        return eventKey;
+    }
+
+    /**
+     * @param eventKey
+     */
+    public void setEventKey(String eventKey) {
+        this.eventKey = eventKey == null ? null : eventKey.trim();
+    }
+
+    /**
+     * 获取实际使用金额
+     *
+     * @return actual_amount - 实际使用金额
+     */
+    public BigDecimal getActualAmount() {
+        return actualAmount;
+    }
+
+    /**
+     * 设置实际使用金额
+     *
+     * @param actualAmount 实际使用金额
+     */
+    public void setActualAmount(BigDecimal actualAmount) {
+        this.actualAmount = actualAmount;
     }
 }

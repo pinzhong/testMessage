@@ -39,6 +39,11 @@ public class MessageTemplate {
      */
     private Integer status;
 
+    private String title;
+
+    @Column(name = "push_msg")
+    private String pushMsg;
+
     /**
      * 获取主键编号
      *
@@ -145,5 +150,33 @@ public class MessageTemplate {
      */
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * @return title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @param title
+     */
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
+    }
+
+    /**
+     * @return push_msg
+     */
+    public String getPushMsg() {
+        return pushMsg;
+    }
+
+    /**
+     * @param pushMsg
+     */
+    public void setPushMsg(String pushMsg) {
+        this.pushMsg = pushMsg == null ? null : pushMsg.trim();
     }
 }

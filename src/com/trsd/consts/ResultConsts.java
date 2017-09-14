@@ -17,6 +17,7 @@ public class ResultConsts {
 	public static final String MSG_AVALIABLE_SCORE_NOT_ENOUGH = "您的可用身价不足，不能进行当前操作";
 	public static final String MSG_LOAN_SUCCESS = "恭喜您，您的借款申请已提交成功";
 	public static final String MSG_LOAN_FAIL = "抱歉，您的借款申请提交失败，请您稍后重试";
+	public static final String MSG_SMS_FAIL = "抱歉，您的短信码次数今日已满，请明日再试";
 	
 	public static final String MSG_BUSINESS_UNQUALIFIED_LOAN = "您暂无借款资格";
 	public static final String MSG_BUSINESS_UNQUALIFIED_LEND = "您暂无投资资格";

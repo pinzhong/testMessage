@@ -16,12 +16,14 @@
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="event_key" jdbcType="VARCHAR" property="eventKey" />
+    <result column="actual_amount" jdbcType="DECIMAL" property="actualAmount" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     invest_ticket_id, invest_ticket_key, invest_amount, status, invest_time, lend_id, 
-    invest_type, limit_time, user_id, create_time, version
+    invest_type, limit_time, user_id, create_time, version, event_key, actual_amount
   </sql>
 </mapper>

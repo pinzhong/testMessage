@@ -55,12 +55,24 @@ public class UserConsts {
 	public static final int USER_CREDIT_VALUE_TYPE_NEGTIME = 4;// 运营商网龄加分
 
 	/**
-	 * 用户短信类型
+	 * 用户验证码短信类型
 	 */
 	public static final int USER_SMS_TYPE_REGISTER = 1;// 注册发送验证码
 	public static final int USER_SMS_TYPE_LOAN = 2;// 借款发送验证码
 	public static final int USER_SMS_TYPE_CHANGE_TRADE_PASSWORD = 3;// 修改交易密码发送验证码
 	public static final int USER_SMS_TYPE_CHANGE_LOGIN_PASSWORD = 4;// 修改登录密码发送验证码
 	public static final int USER_SMS_TYPE_CHANGE_MOBILE = 5;// 修改手机号发送验证码
+	
+	/**
+	 * 用户提醒短信类型
+	 */
+	public static final int USER_SMS_TYPE_REMIND = 1;// 当天还款的提醒短信
+	
+	/**
+	 * 用户推送消息类型
+	 */
+	public static final int USER_PUSH_TYPE_REMIND_THREE = 1;// 还款三天前提醒
+	public static final int USER_PUSH_TYPE_REMIND_TODAY = 2;// 还款当天提醒
+	public static final int USER_PUSH_TYPE_REMIND_BREAK = 3;// 还款逾期第一天提醒
 	
 }
