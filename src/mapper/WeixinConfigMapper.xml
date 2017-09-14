@@ -6,8 +6,8 @@
       WARNING - @mbg.generated
     -->
     <id column="weixin_config_id" jdbcType="INTEGER" property="weixinConfigId" />
-    <result column="key" jdbcType="VARCHAR" property="key" />
-    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="config_key" jdbcType="VARCHAR" property="configKey" />
+    <result column="config_value" jdbcType="VARCHAR" property="configValue" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="description" jdbcType="VARCHAR" property="description" />
@@ -16,6 +16,6 @@
     <!--
       WARNING - @mbg.generated
     -->
-    weixin_config_id, key, value, create_time, update_time, description
+    weixin_config_id, config_key, config_value, create_time, update_time, description
   </sql>
 </mapper>

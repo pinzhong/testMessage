@@ -13,12 +13,14 @@ public class WeixinConfig {
     /**
      * 配置项
      */
-    private String key;
+    @Column(name = "config_key")
+    private String configKey;
 
     /**
      * 配置值
      */
-    private String value;
+    @Column(name = "config_value")
+    private String configValue;
 
     /**
      * 创建时间
@@ -51,37 +53,37 @@ public class WeixinConfig {
     /**
      * 获取配置项
      *
-     * @return key - 配置项
+     * @return config_key - 配置项
      */
-    public String getKey() {
-        return key;
+    public String getConfigKey() {
+        return configKey;
     }
 
     /**
      * 设置配置项
      *
-     * @param key 配置项
+     * @param configKey 配置项
      */
-    public void setKey(String key) {
-        this.key = key == null ? null : key.trim();
+    public void setConfigKey(String configKey) {
+        this.configKey = configKey == null ? null : configKey.trim();
     }
 
     /**
      * 获取配置值
      *
-     * @return value - 配置值
+     * @return config_value - 配置值
      */
-    public String getValue() {
-        return value;
+    public String getConfigValue() {
+        return configValue;
     }
 
     /**
      * 设置配置值
      *
-     * @param value 配置值
+     * @param configValue 配置值
      */
-    public void setValue(String value) {
-        this.value = value == null ? null : value.trim();
+    public void setConfigValue(String configValue) {
+        this.configValue = configValue == null ? null : configValue.trim();
     }
 
     /**
