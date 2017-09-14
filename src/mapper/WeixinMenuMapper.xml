@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.WeixinMenuMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.WeixinMenu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="weixin_menu_id" jdbcType="INTEGER" property="weixinMenuId" />
+    <result column="type" jdbcType="SMALLINT" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="media_id" jdbcType="VARCHAR" property="mediaId" />
+    <result column="parent_menu_id" jdbcType="INTEGER" property="parentMenuId" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    weixin_menu_id, type, name, key, url, media_id, parent_menu_id, createTime, updateTime
+  </sql>
+</mapper>
