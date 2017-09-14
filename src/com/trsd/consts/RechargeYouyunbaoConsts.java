@@ -1,6 +1,6 @@
 package com.trsd.consts;
 
-public class RechargeConsts {
+public class RechargeYouyunbaoConsts {
 	public static final int RECHARGE_INITIAL=0;//订单初始创建状态
 	public static final int RECHARGE_BIND=1;//已绑定用户
 	public static final int RECHARGE_SUCCESS=2;//成功充值到账务系统
