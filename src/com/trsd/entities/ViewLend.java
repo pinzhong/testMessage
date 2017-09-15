@@ -1,12 +1,16 @@
 package com.trsd.entities;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "v_lend")
 public class ViewLend {
     @Column(name = "lend_id")
     private Long lendId;
+
+    @Column(name = "lend_key")
+    private String lendKey;
 
     @Column(name = "loan_id")
     private Long loanId;
@@ -38,11 +42,17 @@ public class ViewLend {
     @Column(name = "lend_user_type")
     private Integer lendUserType;
 
-    private Integer status;
+    private Long status;
 
     private Long periods;
 
     private String type;
+
+    @Column(name = "payback_time")
+    private Date paybackTime;
+
+    @Column(name = "breakDays")
+    private Long breakdays;
 
     /**
      * @return lend_id
@@ -56,6 +66,20 @@ public class ViewLend {
      */
     public void setLendId(Long lendId) {
         this.lendId = lendId;
+    }
+
+    /**
+     * @return lend_key
+     */
+    public String getLendKey() {
+        return lendKey;
+    }
+
+    /**
+     * @param lendKey
+     */
+    public void setLendKey(String lendKey) {
+        this.lendKey = lendKey == null ? null : lendKey.trim();
     }
 
     /**
@@ -201,14 +225,14 @@ public class ViewLend {
     /**
      * @return status
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return status;
     }
 
     /**
      * @param status
      */
-    public void setStatus(Integer status) {
+    public void setStatus(Long status) {
         this.status = status;
     }
 
@@ -238,5 +262,33 @@ public class ViewLend {
      */
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    /**
+     * @return payback_time
+     */
+    public Date getPaybackTime() {
+        return paybackTime;
+    }
+
+    /**
+     * @param paybackTime
+     */
+    public void setPaybackTime(Date paybackTime) {
+        this.paybackTime = paybackTime;
+    }
+
+    /**
+     * @return breakDays
+     */
+    public Long getBreakdays() {
+        return breakdays;
+    }
+
+    /**
+     * @param breakdays
+     */
+    public void setBreakdays(Long breakdays) {
+        this.breakdays = breakdays;
     }
 }
