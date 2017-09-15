@@ -11,8 +11,10 @@ public class LendShort {
      */
     @Id
     @Column(name = "lend_short_id")
-    @GeneratedValue(generator = "JDBC")
     private Long lendShortId;
+
+    @Column(name = "lend_short_key")
+    private String lendShortKey;
 
     /**
      * 短贷借款编号
@@ -127,6 +129,20 @@ public class LendShort {
      */
     public void setLendShortId(Long lendShortId) {
         this.lendShortId = lendShortId;
+    }
+
+    /**
+     * @return lend_short_key
+     */
+    public String getLendShortKey() {
+        return lendShortKey;
+    }
+
+    /**
+     * @param lendShortKey
+     */
+    public void setLendShortKey(String lendShortKey) {
+        this.lendShortKey = lendShortKey == null ? null : lendShortKey.trim();
     }
 
     /**

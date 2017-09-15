@@ -11,8 +11,11 @@ public class LendLong {
      */
     @Id
     @Column(name = "lend_long_id")
-    @GeneratedValue(generator = "JDBC")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lendLongId;
+
+    @Column(name = "lend_long_key")
+    private String lendLongKey;
 
     /**
      * 长贷借款编号
@@ -120,6 +123,20 @@ public class LendLong {
      */
     public void setLendLongId(Long lendLongId) {
         this.lendLongId = lendLongId;
+    }
+
+    /**
+     * @return lend_long_key
+     */
+    public String getLendLongKey() {
+        return lendLongKey;
+    }
+
+    /**
+     * @param lendLongKey
+     */
+    public void setLendLongKey(String lendLongKey) {
+        this.lendLongKey = lendLongKey == null ? null : lendLongKey.trim();
     }
 
     /**

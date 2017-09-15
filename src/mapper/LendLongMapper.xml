@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="lend_long_id" jdbcType="BIGINT" property="lendLongId" />
+    <result column="lend_long_key" jdbcType="VARCHAR" property="lendLongKey" />
     <result column="loan_long_id" jdbcType="BIGINT" property="loanLongId" />
     <result column="lend_long_scheme_id" jdbcType="BIGINT" property="lendLongSchemeId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
@@ -23,12 +24,62 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
   </resultMap>
+  <sql id="Example_Where_Clause">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    lend_long_id, loan_long_id, lend_long_scheme_id, user_id, lend_money, repayment_principal, 
-    repayment_interest, repayment_penalty, payback_principal, payback_interest, payback_penalty, 
-    lend_user_type, status, periods, create_time, update_time, version
+    lend_long_id, lend_long_key, loan_long_id, lend_long_scheme_id, user_id, lend_money, 
+    repayment_principal, repayment_interest, repayment_penalty, payback_principal, payback_interest, 
+    payback_penalty, lend_user_type, status, periods, create_time, update_time, version
   </sql>
+  <select id="selectByExample" parameterType="com.trsd.entities.LendLongExample" resultMap="BaseResultMap">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_lend_long
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
 </mapper>

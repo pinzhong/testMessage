@@ -6,6 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="lend_short_id" jdbcType="BIGINT" property="lendShortId" />
+    <result column="lend_short_key" jdbcType="VARCHAR" property="lendShortKey" />
     <result column="loan_short_id" jdbcType="BIGINT" property="loanShortId" />
     <result column="lend_short_scheme_id" jdbcType="BIGINT" property="lendShortSchemeId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
@@ -28,9 +29,9 @@
     <!--
       WARNING - @mbg.generated
     -->
-    lend_short_id, loan_short_id, lend_short_scheme_id, user_id, lend_money, repayment_principal, 
-    repayment_interest, repayment_penalty, repayment_time, payback_principal, payback_interest, 
-    payback_penalty, payback_time, lend_user_type, status, create_time, update_time, 
-    version
+    lend_short_id, lend_short_key, loan_short_id, lend_short_scheme_id, user_id, lend_money, 
+    repayment_principal, repayment_interest, repayment_penalty, repayment_time, payback_principal, 
+    payback_interest, payback_penalty, payback_time, lend_user_type, status, create_time, 
+    update_time, version
   </sql>
 </mapper>
