@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.LendCountMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.LendCount">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="lend_count_id" jdbcType="BIGINT" property="lendCountId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="all_manual" jdbcType="DECIMAL" property="allManual" />
+    <result column="all_auto" jdbcType="DECIMAL" property="allAuto" />
+    <result column="repayment_manual" jdbcType="DECIMAL" property="repaymentManual" />
+    <result column="repayment_auto" jdbcType="DECIMAL" property="repaymentAuto" />
+    <result column="break_manual" jdbcType="DECIMAL" property="breakManual" />
+    <result column="break_auto" jdbcType="DECIMAL" property="breakAuto" />
+    <result column="black_manual" jdbcType="DECIMAL" property="blackManual" />
+    <result column="black_auto" jdbcType="DECIMAL" property="blackAuto" />
+    <result column="profit_manual" jdbcType="DECIMAL" property="profitManual" />
+    <result column="profit_auto" jdbcType="DECIMAL" property="profitAuto" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    lend_count_id, user_id, all_manual, all_auto, repayment_manual, repayment_auto, break_manual, 
+    break_auto, black_manual, black_auto, profit_manual, profit_auto, create_time
+  </sql>
+</mapper>

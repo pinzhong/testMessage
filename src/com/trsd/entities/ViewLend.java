@@ -12,6 +12,9 @@ public class ViewLend {
     @Column(name = "lend_key")
     private String lendKey;
 
+    @Column(name = "scheme_id")
+    private Long schemeId;
+
     @Column(name = "loan_id")
     private Long loanId;
 
@@ -80,6 +83,20 @@ public class ViewLend {
      */
     public void setLendKey(String lendKey) {
         this.lendKey = lendKey == null ? null : lendKey.trim();
+    }
+
+    /**
+     * @return scheme_id
+     */
+    public Long getSchemeId() {
+        return schemeId;
+    }
+
+    /**
+     * @param schemeId
+     */
+    public void setSchemeId(Long schemeId) {
+        this.schemeId = schemeId;
     }
 
     /**
