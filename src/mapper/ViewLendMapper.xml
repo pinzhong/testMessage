@@ -7,6 +7,7 @@
     -->
     <result column="lend_id" jdbcType="BIGINT" property="lendId" />
     <result column="lend_key" jdbcType="VARCHAR" property="lendKey" />
+    <result column="scheme_id" jdbcType="BIGINT" property="schemeId" />
     <result column="loan_id" jdbcType="BIGINT" property="loanId" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="lend_money" jdbcType="DECIMAL" property="lendMoney" />
