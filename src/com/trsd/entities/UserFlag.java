@@ -10,7 +10,6 @@ public class UserFlag {
      */
     @Id
     @Column(name = "user_flag_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userFlagId;
 
     /**
@@ -41,6 +40,12 @@ public class UserFlag {
      */
     @Column(name = "flag_reason")
     private String flagReason;
+
+    @Column(name = "cancel_time")
+    private Date cancelTime;
+
+    @Column(name = "cancel_reason")
+    private String cancelReason;
 
     /**
      * 获取编号
@@ -148,5 +153,33 @@ public class UserFlag {
      */
     public void setFlagReason(String flagReason) {
         this.flagReason = flagReason == null ? null : flagReason.trim();
+    }
+
+    /**
+     * @return cancel_time
+     */
+    public Date getCancelTime() {
+        return cancelTime;
+    }
+
+    /**
+     * @param cancelTime
+     */
+    public void setCancelTime(Date cancelTime) {
+        this.cancelTime = cancelTime;
+    }
+
+    /**
+     * @return cancel_reason
+     */
+    public String getCancelReason() {
+        return cancelReason;
+    }
+
+    /**
+     * @param cancelReason
+     */
+    public void setCancelReason(String cancelReason) {
+        this.cancelReason = cancelReason == null ? null : cancelReason.trim();
     }
 }

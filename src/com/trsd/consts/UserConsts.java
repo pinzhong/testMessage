@@ -16,6 +16,9 @@ public class UserConsts {
 	public static final int USER_FLAG_FORBID_LEND = -3;// 禁止投资
 	public static final int USER_FLAG_FORBID_WITHDRAW = -4;// 禁止提现
 	public static final int USER_FLAG_FORBID_LOGIN = -5;// 禁止登陆
+	
+	public static final int USER_FLAG_STATUS_AVAILABLE = 1;//已被标记
+	public static final int USER_FLAG_STATUS_CANCEL = -1;//取消标记
 
 	/**
 	 * redis存储数据分类

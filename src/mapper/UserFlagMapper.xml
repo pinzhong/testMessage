@@ -11,11 +11,14 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="flag_reason" jdbcType="VARCHAR" property="flagReason" />
+    <result column="cancel_time" jdbcType="TIMESTAMP" property="cancelTime" />
+    <result column="cancel_reason" jdbcType="VARCHAR" property="cancelReason" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    user_flag_id, user_id, flag_type, create_time, status, flag_reason
+    user_flag_id, user_id, flag_type, create_time, status, flag_reason, cancel_time, 
+    cancel_reason
   </sql>
 </mapper>

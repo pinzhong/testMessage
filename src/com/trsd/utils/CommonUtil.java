@@ -908,4 +908,30 @@ public class CommonUtil {
 	public static String getUUID() {
 		return UUID.randomUUID().toString();
 	}
+	
+
+	/**
+     * 获取两个时间相差的月数
+     * @param date1 <Date>
+     * @param date2 <Date>
+     * @return int
+     * @throws ParseException
+     */
+    public static int getMonthSpace(Date date1, Date date2)
+            throws ParseException {
+
+        int result = 0;
+
+        Calendar c1 = Calendar.getInstance();
+        Calendar c2 = Calendar.getInstance();
+
+        c1.setTime(date1);
+        c2.setTime(date2);
+
+        result = c2.get(Calendar.MONTH) - c1.get(Calendar.MONTH);
+
+        return result == 0 ? 1 : Math.abs(result);
+
+    }
+
 }
