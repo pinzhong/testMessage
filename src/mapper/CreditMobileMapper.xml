@@ -29,6 +29,11 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
     <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
+    <result column="match_num" jdbcType="INTEGER" property="matchNum" />
+    <result column="manual_status" jdbcType="INTEGER" property="manualStatus" />
+    <result column="manual_result" jdbcType="INTEGER" property="manualResult" />
+    <result column="manual_time" jdbcType="TIMESTAMP" property="manualTime" />
+    <result column="manual_by" jdbcType="VARCHAR" property="manualBy" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -36,6 +41,7 @@
     -->
     authid, userId, phone, createtime, ispass, blance, vip_score, isp, jointime, netage, 
     location, real_name, certificate_no, address, vip_level, provider, token, finishtime, 
-    freezeid, cost, score, status, charge_status, score_status
+    freezeid, cost, score, status, charge_status, score_status, match_num, manual_status, 
+    manual_result, manual_time, manual_by
   </sql>
 </mapper>

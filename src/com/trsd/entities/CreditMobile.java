@@ -136,6 +136,36 @@ public class CreditMobile {
     private Integer scoreStatus;
 
     /**
+     * 与通讯录匹配数量
+     */
+    @Column(name = "match_num")
+    private Integer matchNum;
+
+    /**
+     * 人工审核状态（0：不需要；1：需要）
+     */
+    @Column(name = "manual_status")
+    private Integer manualStatus;
+
+    /**
+     * 人工审核结果（0：不通过；1：通过）
+     */
+    @Column(name = "manual_result")
+    private Integer manualResult;
+
+    /**
+     * 人工审核时间
+     */
+    @Column(name = "manual_time")
+    private Date manualTime;
+
+    /**
+     * 人工审核人员
+     */
+    @Column(name = "manual_by")
+    private String manualBy;
+
+    /**
      * 获取编号
      *
      * @return authid - 编号
@@ -565,5 +595,95 @@ public class CreditMobile {
      */
     public void setScoreStatus(Integer scoreStatus) {
         this.scoreStatus = scoreStatus;
+    }
+
+    /**
+     * 获取与通讯录匹配数量
+     *
+     * @return match_num - 与通讯录匹配数量
+     */
+    public Integer getMatchNum() {
+        return matchNum;
+    }
+
+    /**
+     * 设置与通讯录匹配数量
+     *
+     * @param matchNum 与通讯录匹配数量
+     */
+    public void setMatchNum(Integer matchNum) {
+        this.matchNum = matchNum;
+    }
+
+    /**
+     * 获取人工审核状态（0：不需要；1：需要）
+     *
+     * @return manual_status - 人工审核状态（0：不需要；1：需要）
+     */
+    public Integer getManualStatus() {
+        return manualStatus;
+    }
+
+    /**
+     * 设置人工审核状态（0：不需要；1：需要）
+     *
+     * @param manualStatus 人工审核状态（0：不需要；1：需要）
+     */
+    public void setManualStatus(Integer manualStatus) {
+        this.manualStatus = manualStatus;
+    }
+
+    /**
+     * 获取人工审核结果（0：不通过；1：通过）
+     *
+     * @return manual_result - 人工审核结果（0：不通过；1：通过）
+     */
+    public Integer getManualResult() {
+        return manualResult;
+    }
+
+    /**
+     * 设置人工审核结果（0：不通过；1：通过）
+     *
+     * @param manualResult 人工审核结果（0：不通过；1：通过）
+     */
+    public void setManualResult(Integer manualResult) {
+        this.manualResult = manualResult;
+    }
+
+    /**
+     * 获取人工审核时间
+     *
+     * @return manual_time - 人工审核时间
+     */
+    public Date getManualTime() {
+        return manualTime;
+    }
+
+    /**
+     * 设置人工审核时间
+     *
+     * @param manualTime 人工审核时间
+     */
+    public void setManualTime(Date manualTime) {
+        this.manualTime = manualTime;
+    }
+
+    /**
+     * 获取人工审核人员
+     *
+     * @return manual_by - 人工审核人员
+     */
+    public String getManualBy() {
+        return manualBy;
+    }
+
+    /**
+     * 设置人工审核人员
+     *
+     * @param manualBy 人工审核人员
+     */
+    public void setManualBy(String manualBy) {
+        this.manualBy = manualBy == null ? null : manualBy.trim();
     }
 }
