@@ -25,6 +25,17 @@ public class ReapalResponse {
      * 摘要
      */
     private String summary;
+    
+    /**
+     * 加密后的字符串信息
+     */
+    @Column(name = "encypt_info")
+    private String encyptInfo;
+    
+    /**
+     * 解密后的字符串信息
+     */
+    private String info;     
 
     /**
      * 创建时间
@@ -100,7 +111,23 @@ public class ReapalResponse {
         this.summary = summary == null ? null : summary.trim();
     }
 
-    /**
+    public String getEncyptInfo() {
+		return encyptInfo;
+	}
+
+	public void setEncyptInfo(String encyptInfo) {
+		this.encyptInfo = encyptInfo;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	/**
      * 获取创建时间
      *
      * @return create_time - 创建时间
