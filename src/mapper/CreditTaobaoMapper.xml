@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditTaobaoMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditTaobao">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="authid" jdbcType="BIGINT" property="authid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="ispass" jdbcType="TINYINT" property="ispass" />
+    <result column="identity_status" jdbcType="VARCHAR" property="identityStatus" />
+    <result column="vip_level" jdbcType="VARCHAR" property="vipLevel" />
+    <result column="credit_score" jdbcType="DECIMAL" property="creditScore" />
+    <result column="acc_bal" jdbcType="DECIMAL" property="accBal" />
+    <result column="yuebao_bal" jdbcType="DECIMAL" property="yuebaoBal" />
+    <result column="yuebao_income" jdbcType="DECIMAL" property="yuebaoIncome" />
+    <result column="huabei_limit" jdbcType="DECIMAL" property="huabeiLimit" />
+    <result column="huabei_aviable" jdbcType="DECIMAL" property="huabeiAviable" />
+    <result column="order_amount" jdbcType="INTEGER" property="orderAmount" />
+    <result column="order_totalprice" jdbcType="DECIMAL" property="orderTotalprice" />
+    <result column="last_receiveaddress" jdbcType="VARCHAR" property="lastReceiveaddress" />
+    <result column="provider" jdbcType="VARCHAR" property="provider" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="freezeid" jdbcType="BIGINT" property="freezeid" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
+    <result column="match_num" jdbcType="INTEGER" property="matchNum" />
+    <result column="manual_status" jdbcType="INTEGER" property="manualStatus" />
+    <result column="manual_result" jdbcType="INTEGER" property="manualResult" />
+    <result column="manual_time" jdbcType="TIMESTAMP" property="manualTime" />
+    <result column="manual_by" jdbcType="VARCHAR" property="manualBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    authid, userId, phone, createtime, real_name, ispass, identity_status, vip_level, 
+    credit_score, acc_bal, yuebao_bal, yuebao_income, huabei_limit, huabei_aviable, order_amount, 
+    order_totalprice, last_receiveaddress, provider, token, finishtime, cost, freezeid, 
+    score, status, charge_status, score_status, match_num, manual_status, manual_result, 
+    manual_time, manual_by
+  </sql>
+</mapper>
