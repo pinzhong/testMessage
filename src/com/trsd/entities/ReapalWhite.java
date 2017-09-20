@@ -9,89 +9,34 @@ public class ReapalWhite {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    /**
-     * 姓名
-     */
-    private String name;
+    @Column(name = "white_no")
+    private String whiteNo;
 
-    /**
-     * 订单
-     */
-    @Column(name = "order_no")
-    private String orderNo;
+    @Column(name = "bankcard_id")
+    private String bankcardId;
 
-    /**
-     * 卡号
-     */
-    @Column(name = "card_no")
-    private String cardNo;
-
-    /**
-     * 银行预留手机号
-     */
-    private String phone;
-
-    /**
-     * 证件类型
-     */
-    @Column(name = "cert_type")
-    private String certType;
-
-    /**
-     * 证件号码
-     */
-    @Column(name = "cert_no")
-    private String certNo;
-
-    /**
-     * 协议号
-     */
     @Column(name = "contract_user_code")
     private String contractUserCode;
 
-    /**
-     * 协议开始时间
-     */
     @Column(name = "contract_start")
     private Date contractStart;
 
-    /**
-     * 协议结束时间
-     */
     @Column(name = "contract_end")
     private Date contractEnd;
 
-    /**
-     * 备注
-     */
     private String remark;
 
-    /**
-     * 创建时间
-     */
     @Column(name = "create_time")
     private Date createTime;
 
-    /**
-     * 更新时间
-     */
     @Column(name = "update_time")
     private Date updateTime;
 
-    /**
-     * 状态
-     */
     private Short status;
 
-    /**
-     * 结果
-     */
     @Column(name = "result_code")
     private String resultCode;
 
-    /**
-     * 消息
-     */
     @Column(name = "result_msg")
     private String resultMsg;
 
@@ -110,270 +55,154 @@ public class ReapalWhite {
     }
 
     /**
-     * 获取姓名
-     *
-     * @return name - 姓名
+     * @return white_no
      */
-    public String getName() {
-        return name;
+    public String getWhiteNo() {
+        return whiteNo;
     }
 
     /**
-     * 设置姓名
-     *
-     * @param name 姓名
+     * @param whiteNo
      */
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setWhiteNo(String whiteNo) {
+        this.whiteNo = whiteNo == null ? null : whiteNo.trim();
     }
 
     /**
-     * 获取订单
-     *
-     * @return order_no - 订单
+     * @return bankcard_id
      */
-    public String getOrderNo() {
-        return orderNo;
+    public String getBankcardId() {
+        return bankcardId;
     }
 
     /**
-     * 设置订单
-     *
-     * @param orderNo 订单
+     * @param bankcardId
      */
-    public void setOrderNo(String orderNo) {
-        this.orderNo = orderNo == null ? null : orderNo.trim();
+    public void setBankcardId(String bankcardId) {
+        this.bankcardId = bankcardId == null ? null : bankcardId.trim();
     }
 
     /**
-     * 获取卡号
-     *
-     * @return card_no - 卡号
-     */
-    public String getCardNo() {
-        return cardNo;
-    }
-
-    /**
-     * 设置卡号
-     *
-     * @param cardNo 卡号
-     */
-    public void setCardNo(String cardNo) {
-        this.cardNo = cardNo == null ? null : cardNo.trim();
-    }
-
-    /**
-     * 获取银行预留手机号
-     *
-     * @return phone - 银行预留手机号
-     */
-    public String getPhone() {
-        return phone;
-    }
-
-    /**
-     * 设置银行预留手机号
-     *
-     * @param phone 银行预留手机号
-     */
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
-    }
-
-    /**
-     * 获取证件类型
-     *
-     * @return cert_type - 证件类型
-     */
-    public String getCertType() {
-        return certType;
-    }
-
-    /**
-     * 设置证件类型
-     *
-     * @param certType 证件类型
-     */
-    public void setCertType(String certType) {
-        this.certType = certType == null ? null : certType.trim();
-    }
-
-    /**
-     * 获取证件号码
-     *
-     * @return cert_no - 证件号码
-     */
-    public String getCertNo() {
-        return certNo;
-    }
-
-    /**
-     * 设置证件号码
-     *
-     * @param certNo 证件号码
-     */
-    public void setCertNo(String certNo) {
-        this.certNo = certNo == null ? null : certNo.trim();
-    }
-
-    /**
-     * 获取协议号
-     *
-     * @return contract_user_code - 协议号
+     * @return contract_user_code
      */
     public String getContractUserCode() {
         return contractUserCode;
     }
 
     /**
-     * 设置协议号
-     *
-     * @param contractUserCode 协议号
+     * @param contractUserCode
      */
     public void setContractUserCode(String contractUserCode) {
         this.contractUserCode = contractUserCode == null ? null : contractUserCode.trim();
     }
 
     /**
-     * 获取协议开始时间
-     *
-     * @return contract_start - 协议开始时间
+     * @return contract_start
      */
     public Date getContractStart() {
         return contractStart;
     }
 
     /**
-     * 设置协议开始时间
-     *
-     * @param contractStart 协议开始时间
+     * @param contractStart
      */
     public void setContractStart(Date contractStart) {
         this.contractStart = contractStart;
     }
 
     /**
-     * 获取协议结束时间
-     *
-     * @return contract_end - 协议结束时间
+     * @return contract_end
      */
     public Date getContractEnd() {
         return contractEnd;
     }
 
     /**
-     * 设置协议结束时间
-     *
-     * @param contractEnd 协议结束时间
+     * @param contractEnd
      */
     public void setContractEnd(Date contractEnd) {
         this.contractEnd = contractEnd;
     }
 
     /**
-     * 获取备注
-     *
-     * @return remark - 备注
+     * @return remark
      */
     public String getRemark() {
         return remark;
     }
 
     /**
-     * 设置备注
-     *
-     * @param remark 备注
+     * @param remark
      */
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }
 
     /**
-     * 获取创建时间
-     *
-     * @return create_time - 创建时间
+     * @return create_time
      */
     public Date getCreateTime() {
         return createTime;
     }
 
     /**
-     * 设置创建时间
-     *
-     * @param createTime 创建时间
+     * @param createTime
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
     /**
-     * 获取更新时间
-     *
-     * @return update_time - 更新时间
+     * @return update_time
      */
     public Date getUpdateTime() {
         return updateTime;
     }
 
     /**
-     * 设置更新时间
-     *
-     * @param updateTime 更新时间
+     * @param updateTime
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
     /**
-     * 获取状态
-     *
-     * @return status - 状态
+     * @return status
      */
     public Short getStatus() {
         return status;
     }
 
     /**
-     * 设置状态
-     *
-     * @param status 状态
+     * @param status
      */
     public void setStatus(Short status) {
         this.status = status;
     }
 
     /**
-     * 获取结果
-     *
-     * @return result_code - 结果
+     * @return result_code
      */
     public String getResultCode() {
         return resultCode;
     }
 
     /**
-     * 设置结果
-     *
-     * @param resultCode 结果
+     * @param resultCode
      */
     public void setResultCode(String resultCode) {
         this.resultCode = resultCode == null ? null : resultCode.trim();
     }
 
     /**
-     * 获取消息
-     *
-     * @return result_msg - 消息
+     * @return result_msg
      */
     public String getResultMsg() {
         return resultMsg;
     }
 
     /**
-     * 设置消息
-     *
-     * @param resultMsg 消息
+     * @param resultMsg
      */
     public void setResultMsg(String resultMsg) {
         this.resultMsg = resultMsg == null ? null : resultMsg.trim();

@@ -6,19 +6,11 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
-    <result column="bank" jdbcType="VARCHAR" property="bank" />
-    <result column="branch" jdbcType="VARCHAR" property="branch" />
-    <result column="sub_branch" jdbcType="VARCHAR" property="subBranch" />
-    <result column="account_type" jdbcType="VARCHAR" property="accountType" />
-    <result column="amount" jdbcType="DECIMAL" property="amount" />
-    <result column="currency" jdbcType="VARCHAR" property="currency" />
-    <result column="province" jdbcType="VARCHAR" property="province" />
-    <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="phone" jdbcType="VARCHAR" property="phone" />
-    <result column="cert_type" jdbcType="VARCHAR" property="certType" />
-    <result column="cert_no" jdbcType="VARCHAR" property="certNo" />
+    <result column="withdraw_no" jdbcType="VARCHAR" property="withdrawNo" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="contract_user_code" jdbcType="VARCHAR" property="contractUserCode" />
+    <result column="bankcard_id" jdbcType="VARCHAR" property="bankcardId" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="success_time" jdbcType="TIMESTAMP" property="successTime" />
@@ -26,13 +18,14 @@
     <result column="status" jdbcType="SMALLINT" property="status" />
     <result column="result_code" jdbcType="VARCHAR" property="resultCode" />
     <result column="result_msg" jdbcType="VARCHAR" property="resultMsg" />
+    <result column="notify_result_code" jdbcType="VARCHAR" property="notifyResultCode" />
+    <result column="notify_result_msg" jdbcType="VARCHAR" property="notifyResultMsg" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    id, order_no, bank, branch, sub_branch, account_type, amount, currency, province, 
-    city, phone, cert_type, cert_no, contract_user_code, remark, create_time, success_time, 
-    update_time, status, result_code, result_msg
+    id, withdraw_no, user_id, contract_user_code, bankcard_id, amount, remark, create_time, 
+    success_time, update_time, status, result_code, result_msg, notify_result_code, notify_result_msg
   </sql>
 </mapper>
