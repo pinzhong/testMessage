@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.ReapalWhiteMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.ReapalWhite">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="cert_type" jdbcType="VARCHAR" property="certType" />
+    <result column="cert_no" jdbcType="VARCHAR" property="certNo" />
+    <result column="contract_user_code" jdbcType="VARCHAR" property="contractUserCode" />
+    <result column="contract_start" jdbcType="DATE" property="contractStart" />
+    <result column="contract_end" jdbcType="DATE" property="contractEnd" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="result_code" jdbcType="VARCHAR" property="resultCode" />
+    <result column="result_msg" jdbcType="VARCHAR" property="resultMsg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, name, order_no, card_no, phone, cert_type, cert_no, contract_user_code, contract_start, 
+    contract_end, remark, create_time, update_time, status, result_code, result_msg
+  </sql>
+</mapper>
