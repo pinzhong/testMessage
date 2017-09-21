@@ -79,6 +79,20 @@ public class CommonUtil {
 	}
 
 	/**
+	 * 银行卡替换，保留后四位
+	 * 如果银行卡号为空 或者 null ,返回null ；否则，返回替换后的字符串；
+	 * @param bankCard  银行卡号
+	 * @return
+	 */
+	public static String mastBankCard(String bankCard) {
+		if (bankCard.isEmpty() || bankCard == null) {
+			return null;
+		} else {
+			return bankCard.replaceAll("(?<=\\d{0})\\d(?=\\d{4})", "");
+		}
+	}
+
+	/**
 	 * 将存放在sourceFilePath目录下的源文件,打包成fileName名称的ZIP文件,并存放到zipFilePath。
 	 * 
 	 * @param sourceFilePath
@@ -209,15 +223,15 @@ public class CommonUtil {
 	public static String getSqlLike(int type, String str) {
 		if (str != null && !str.equals("")) {
 			switch (type) {
-				case 1:
-					str = "%" + str + "%";
-					break;
-				case 2:
-					str = "%" + str;
-					break;
-				case 3:
-					str = str + "%";
-					break;
+			case 1:
+				str = "%" + str + "%";
+				break;
+			case 2:
+				str = "%" + str;
+				break;
+			case 3:
+				str = str + "%";
+				break;
 			}
 		}
 		return str;
@@ -275,20 +289,20 @@ public class CommonUtil {
 		Long result = 0L;
 		long diff = c1.getTimeInMillis() - c2.getTimeInMillis();
 		switch (type) {
-			case 1:
-				result = diff / (24 * 60 * 60 * 1000);
-				break;
-			case 2:
-				result = diff / (60 * 60 * 1000);
-				break;
-			case 3:
-				result = diff / (60 * 1000);
-				break;
-			case 4:
-				result = diff / 1000;
-				break;
-			default:
-				break;
+		case 1:
+			result = diff / (24 * 60 * 60 * 1000);
+			break;
+		case 2:
+			result = diff / (60 * 60 * 1000);
+			break;
+		case 3:
+			result = diff / (60 * 1000);
+			break;
+		case 4:
+			result = diff / 1000;
+			break;
+		default:
+			break;
 		}
 		return result;
 	}
@@ -827,14 +841,14 @@ public class CommonUtil {
 	public static int getRandom(int length) {
 		int code = 0;
 		switch (length) {
-			case 0:
-				code = random.nextInt(8999) + 1000;
-				break;
-			case 6:
-				code = random.nextInt(899999) + 100000;
-				break;
-			default:
-				break;
+		case 0:
+			code = random.nextInt(8999) + 1000;
+			break;
+		case 6:
+			code = random.nextInt(899999) + 100000;
+			break;
+		default:
+			break;
 		}
 		return code;
 	}
@@ -908,30 +922,31 @@ public class CommonUtil {
 	public static String getUUID() {
 		return UUID.randomUUID().toString();
 	}
-	
 
 	/**
-     * 获取两个时间相差的月数
-     * @param date1 <Date>
-     * @param date2 <Date>
-     * @return int
-     * @throws ParseException
-     */
-    public static int getMonthSpace(Date date1, Date date2)
-            throws ParseException {
+	 * 获取两个时间相差的月数
+	 * 
+	 * @param date1
+	 *            <Date>
+	 * @param date2
+	 *            <Date>
+	 * @return int
+	 * @throws ParseException
+	 */
+	public static int getMonthSpace(Date date1, Date date2) throws ParseException {
 
-        int result = 0;
+		int result = 0;
 
-        Calendar c1 = Calendar.getInstance();
-        Calendar c2 = Calendar.getInstance();
+		Calendar c1 = Calendar.getInstance();
+		Calendar c2 = Calendar.getInstance();
 
-        c1.setTime(date1);
-        c2.setTime(date2);
+		c1.setTime(date1);
+		c2.setTime(date2);
 
-        result = c2.get(Calendar.MONTH) - c1.get(Calendar.MONTH);
+		result = c2.get(Calendar.MONTH) - c1.get(Calendar.MONTH);
 
-        return result == 0 ? 1 : Math.abs(result);
+		return result == 0 ? 1 : Math.abs(result);
 
-    }
+	}
 
 }

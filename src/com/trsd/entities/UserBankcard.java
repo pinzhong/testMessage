@@ -44,6 +44,12 @@ public class UserBankcard {
     private String bankName;
 
     /**
+     * 银行卡类型
+     */
+    @Column(name = "card_type")
+    private String cardType;
+
+    /**
      * 支行名称
      */
     @Column(name = "branch_name")
@@ -69,6 +75,12 @@ public class UserBankcard {
      */
     @Column(name = "change_num")
     private Integer changeNum;
+
+    /**
+     * 签约状态
+     */
+    @Column(name = "sign_status")
+    private Integer signStatus;
 
     /**
      * 创建时间
@@ -191,6 +203,24 @@ public class UserBankcard {
     }
 
     /**
+     * 获取银行卡类型
+     *
+     * @return card_type - 银行卡类型
+     */
+    public String getCardType() {
+        return cardType;
+    }
+
+    /**
+     * 设置银行卡类型
+     *
+     * @param cardType 银行卡类型
+     */
+    public void setCardType(String cardType) {
+        this.cardType = cardType == null ? null : cardType.trim();
+    }
+
+    /**
      * 获取支行名称
      *
      * @return branch_name - 支行名称
@@ -278,6 +308,24 @@ public class UserBankcard {
      */
     public void setChangeNum(Integer changeNum) {
         this.changeNum = changeNum;
+    }
+
+    /**
+     * 获取签约状态
+     *
+     * @return sign_status - 签约状态
+     */
+    public Integer getSignStatus() {
+        return signStatus;
+    }
+
+    /**
+     * 设置签约状态
+     *
+     * @param signStatus 签约状态
+     */
+    public void setSignStatus(Integer signStatus) {
+        this.signStatus = signStatus;
     }
 
     /**

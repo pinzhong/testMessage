@@ -31,6 +31,10 @@ public class CreditConsts {
 	 * 高级认证项目（京东）
 	 */	
 	public static final int CREDIT_TYPE_JINDONG = 6;
+	/**
+	 * 高级认证项目（芝麻信用分）
+	 */	
+	public static final int CREDIT_TYPE_ZHIMASCORE = 7;
 	
 	//实名认证步骤
 	/**
