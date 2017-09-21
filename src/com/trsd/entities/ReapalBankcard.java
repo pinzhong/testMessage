@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class ReapalBankcard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(name = "bankcard_id")
     private String bankcardId;
@@ -16,7 +16,7 @@ public class ReapalBankcard {
     private String bindId;
 
     @Column(name = "user_id")
-    private Integer userId;
+    private Long userId;
 
     @Column(name = "recharge_no")
     private String rechargeNo;
@@ -119,14 +119,14 @@ public class ReapalBankcard {
     /**
      * @return user_id
      */
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
     /**
      * @param userId
      */
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
