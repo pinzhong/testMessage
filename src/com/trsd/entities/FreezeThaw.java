@@ -66,6 +66,9 @@ public class FreezeThaw {
      */
     private Integer flag;
 
+    @Column(name = "event_key")
+    private String eventKey;
+
     /**
      * 获取冻结解冻编号
      *
@@ -258,5 +261,19 @@ public class FreezeThaw {
      */
     public void setFlag(Integer flag) {
         this.flag = flag;
+    }
+
+    /**
+     * @return event_key
+     */
+    public String getEventKey() {
+        return eventKey;
+    }
+
+    /**
+     * @param eventKey
+     */
+    public void setEventKey(String eventKey) {
+        this.eventKey = eventKey == null ? null : eventKey.trim();
     }
 }

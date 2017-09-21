@@ -16,12 +16,13 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
     <result column="flag" jdbcType="INTEGER" property="flag" />
+    <result column="event_key" jdbcType="VARCHAR" property="eventKey" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     freeze_thaw_id, user_id, account, type, status, freeze_time, thaw_time, create_time, 
-    update_time, version, flag
+    update_time, version, flag, event_key
   </sql>
 </mapper>

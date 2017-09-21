@@ -23,8 +23,8 @@ public class InvestTicketConsts {
 	/**
 	 * 投资券状态
 	 */
-	public static final int INVEST_TICKET_STATUS_NOT_USED = 0;// 未使用
-	public static final int INVEST_TICKET_STATUS_USED = 1;// 已使用
+	public static final int INVEST_TICKET_STATUS_NOT_USED = 1;// 未使用
+	public static final int INVEST_TICKET_STATUS_USED = 2;// 已使用
 	public static final int INVEST_TICKET_STATUS_INVALID = -1;// 已失效
 
 }
