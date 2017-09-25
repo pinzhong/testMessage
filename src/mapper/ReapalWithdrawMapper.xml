@@ -5,10 +5,10 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="withdraw_no" jdbcType="VARCHAR" property="withdrawNo" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="contract_user_code" jdbcType="VARCHAR" property="contractUserCode" />
+    <result column="batch_id" jdbcType="VARCHAR" property="batchId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="bankcard_id" jdbcType="VARCHAR" property="bankcardId" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
@@ -20,12 +20,14 @@
     <result column="result_msg" jdbcType="VARCHAR" property="resultMsg" />
     <result column="notify_result_code" jdbcType="VARCHAR" property="notifyResultCode" />
     <result column="notify_result_msg" jdbcType="VARCHAR" property="notifyResultMsg" />
+    <result column="version" jdbcType="INTEGER" property="version" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    id, withdraw_no, user_id, contract_user_code, bankcard_id, amount, remark, create_time, 
-    success_time, update_time, status, result_code, result_msg, notify_result_code, notify_result_msg
+    id, withdraw_no, batch_id, user_id, bankcard_id, amount, remark, create_time, success_time, 
+    update_time, status, result_code, result_msg, notify_result_code, notify_result_msg, 
+    version
   </sql>
 </mapper>

@@ -43,4 +43,9 @@ public class ReapalConsts {
 	 */
 	public static final Short WITHDRAW_STATUS_FAIL = 4;
 
+	/**
+	 * 异常订单
+	 */
+	public static final int WITHDRAW_STATUS_EXCEPTION = -1;
+
 }
