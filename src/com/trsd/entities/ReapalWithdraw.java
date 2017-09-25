@@ -8,13 +8,13 @@ import javax.persistence.*;
 public class ReapalWithdraw {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(name = "withdraw_no")
     private String withdrawNo;
 
     @Column(name = "user_id")
-    private Integer userId;
+    private Long userId;
 
     @Column(name = "contract_user_code")
     private String contractUserCode;
@@ -52,14 +52,14 @@ public class ReapalWithdraw {
     /**
      * @return id
      */
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -80,14 +80,14 @@ public class ReapalWithdraw {
     /**
      * @return user_id
      */
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
     /**
      * @param userId
      */
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
