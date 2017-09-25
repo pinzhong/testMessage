@@ -47,4 +47,8 @@ public class BusinessConsts {
 	public static final int INVITE_TYPE_LOAN_ONE = 3 ; //一级借款人上家收益
 	public static final int INVITE_TYPE_LOAN_TWO = 4 ; //二级借款人上家收益
 	
+	/** 违约公示发布类型 个人发布 */
+	public static final int NOTICE_TYPE_PERSON = 1;
+	/** 违约公示发布类型 企业发布 */
+	public static final int NITOCE_TYPE_COMPANY = 2;
 }
