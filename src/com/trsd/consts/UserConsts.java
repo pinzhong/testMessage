@@ -19,7 +19,7 @@ public class UserConsts {
 	
 	public static final int USER_FLAG_STATUS_AVAILABLE = 1;//已被标记
 	public static final int USER_FLAG_STATUS_CANCEL = -1;//取消标记
-
+	
 	/**
 	 * redis存储数据分类
 	 */
@@ -79,5 +79,7 @@ public class UserConsts {
 	public static final int USER_PUSH_TYPE_REMIND_THREE = 1;// 还款三天前提醒
 	public static final int USER_PUSH_TYPE_REMIND_TODAY = 2;// 还款当天提醒
 	public static final int USER_PUSH_TYPE_REMIND_BREAK = 3;// 还款逾期第一天提醒
+	
+	public static final int USER_PUSH_TYPE_REMIND_LEND = 4;//借到钱时的提醒
 	
 }
