@@ -38,7 +38,7 @@ public class CreditTaobao {
     /**
      * 是否通过
      */
-    private Byte ispass;
+    private Boolean ispass;
 
     /**
      * 认证状态
@@ -278,7 +278,7 @@ public class CreditTaobao {
      *
      * @return ispass - 是否通过
      */
-    public Byte getIspass() {
+    public Boolean getIspass() {
         return ispass;
     }
 
@@ -287,7 +287,7 @@ public class CreditTaobao {
      *
      * @param ispass 是否通过
      */
-    public void setIspass(Byte ispass) {
+    public void setIspass(Boolean ispass) {
         this.ispass = ispass;
     }
 

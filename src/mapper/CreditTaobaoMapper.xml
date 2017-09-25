@@ -10,7 +10,7 @@
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
-    <result column="ispass" jdbcType="TINYINT" property="ispass" />
+    <result column="ispass" jdbcType="BIT" property="ispass" />
     <result column="identity_status" jdbcType="VARCHAR" property="identityStatus" />
     <result column="vip_level" jdbcType="VARCHAR" property="vipLevel" />
     <result column="credit_score" jdbcType="DECIMAL" property="creditScore" />
