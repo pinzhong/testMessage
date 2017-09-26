@@ -10,6 +10,7 @@ public class AppConstant {
      */
     @Id
     @Column(name = "constant_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long constantId;
 
     /**
