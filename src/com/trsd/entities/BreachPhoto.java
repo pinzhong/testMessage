@@ -32,7 +32,7 @@ public class BreachPhoto {
     private Integer breachType;
 
     /**
-     * 图片类型(1:内容；2：手持身份证；3：身份证正面)
+     * 图片类型(1:内容；2：身份证正面；3：申诉证据照)
      */
     @Column(name = "photo_type")
     private Integer photoType;

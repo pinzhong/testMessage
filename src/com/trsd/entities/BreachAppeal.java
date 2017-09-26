@@ -46,6 +46,12 @@ public class BreachAppeal {
      * 申诉原因
      */
     private String reson;
+    
+    /**
+     * 封面图片
+     */
+    @Column(name="show_photo")
+    private String showPhoto;
 
     /**
      * 状态（0：待处理；1：已处理）
@@ -215,6 +221,22 @@ public class BreachAppeal {
     }
 
     /**
+     * 获取封面图片
+     * @return
+     */
+    public String getShowPhoto() {
+		return showPhoto;
+	}
+
+    /**
+     * 设置封面图片
+     * @param showPhoto
+     */
+	public void setShowPhoto(String showPhoto) {
+		this.showPhoto = showPhoto;
+	}
+
+	/**
      * 获取状态（0：待处理；1：已处理）
      *
      * @return status - 状态（0：待处理；1：已处理）
