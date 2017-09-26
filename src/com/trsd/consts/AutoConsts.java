@@ -28,6 +28,7 @@ public class AutoConsts {
 	public static final int AUTO_LOAN_CONFIG_TYPE_PERIOD	= 212; // 分期数
 	public static final int AUTO_LOAN_CONFIG_TYPE_AGE	= 213; // 年龄
 	public static final int AUTO_LOAN_CONFIG_TYPE_BREAK_DAYS = 214; // 最长逾期天数
+	public static final int AUTO_LOAN_CONFIG_TYPE_CONTACT_NO = 215; // 有效联系人
 	
 	/**
 	 * 投资计划类型
