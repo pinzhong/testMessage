@@ -18,6 +18,9 @@ public class AppConstant {
      */
     private String type;
 
+    @Column(name = "detail_type")
+    private String detailType;
+
     /**
      * 常量值
      */
@@ -65,6 +68,20 @@ public class AppConstant {
      */
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    /**
+     * @return detail_type
+     */
+    public String getDetailType() {
+        return detailType;
+    }
+
+    /**
+     * @param detailType
+     */
+    public void setDetailType(String detailType) {
+        this.detailType = detailType == null ? null : detailType.trim();
     }
 
     /**
