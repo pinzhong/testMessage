@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.PushLoginMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.PushLogin">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="push_login_id" jdbcType="BIGINT" property="pushLoginId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="push_cid" jdbcType="VARCHAR" property="pushCid" />
+    <result column="push_token" jdbcType="VARCHAR" property="pushToken" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    push_login_id, user_id, push_cid, push_token, create_time
+  </sql>
+</mapper>

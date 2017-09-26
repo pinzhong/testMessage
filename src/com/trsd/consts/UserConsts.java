@@ -61,6 +61,10 @@ public class UserConsts {
 	public static final int USER_CREDIT_VALUE_TYPE_AGE = 2;// 年龄加分
 	public static final int USER_CREDIT_VALUE_TYPE_CONTACTS = 3;// 联系人加分
 	public static final int USER_CREDIT_VALUE_TYPE_NEGTIME = 4;// 运营商网龄加分
+	
+	public static final int USER_CREDIT_VALUE_TYPE_ZHIMA = 101;
+	public static final int USER_CREDIT_VALUE_TYPE_TAOBAO = 102;
+	public static final int USER_CREDIT_VALUE_TYPE_JINGDONG = 103;
 
 	/**
 	 * 用户验证码短信类型
