@@ -7,6 +7,7 @@
     -->
     <id column="constant_id" jdbcType="BIGINT" property="constantId" />
     <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="detail_type" jdbcType="VARCHAR" property="detailType" />
     <result column="value" jdbcType="INTEGER" property="value" />
     <result column="memo" jdbcType="VARCHAR" property="memo" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -15,6 +16,6 @@
     <!--
       WARNING - @mbg.generated
     -->
-    constant_id, type, value, memo, create_time
+    constant_id, type, detail_type, value, memo, create_time
   </sql>
 </mapper>

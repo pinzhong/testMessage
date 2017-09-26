@@ -10,12 +10,16 @@ public class AppConstant {
      */
     @Id
     @Column(name = "constant_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long constantId;
 
     /**
      * 类型
      */
     private String type;
+
+    @Column(name = "detail_type")
+    private String detailType;
 
     /**
      * 常量值
@@ -64,6 +68,20 @@ public class AppConstant {
      */
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    /**
+     * @return detail_type
+     */
+    public String getDetailType() {
+        return detailType;
+    }
+
+    /**
+     * @param detailType
+     */
+    public void setDetailType(String detailType) {
+        this.detailType = detailType == null ? null : detailType.trim();
     }
 
     /**
