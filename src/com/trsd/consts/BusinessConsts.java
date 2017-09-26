@@ -51,4 +51,15 @@ public class BusinessConsts {
 	public static final int NOTICE_TYPE_PERSON = 1;
 	/** 违约公示发布类型 企业发布 */
 	public static final int NITOCE_TYPE_COMPANY = 2;
+	
+	/** 常量表常量类型 借款用途 */
+	public static final String CONSTANT_TYPE_LOAN_USER = "loanUse";
+	/** 常量表常量类型 账务类型 */
+	public static final String CONSTANT_TYPE_ACCOUNT_TYPE = "accountType";
+	/** 常量表常量类型 自动投资配置参数 */
+	public static final String CONSTANT_TYPE_AUTO_LEND_TYPE = "autoLendType";
+	/** 常量表常量类型 电商 */
+	public static final String CONSTANT_TYPE_DIAN_SHANG_TYPE = "dianShangType";
+	/** 常量表常量类型 投资风险 */
+	public static final String CONSTANT_TYPE_LEND_RISK_TYPE = "lendRiskType";
 }

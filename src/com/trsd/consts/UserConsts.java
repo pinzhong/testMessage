@@ -33,11 +33,14 @@ public class UserConsts {
 	public static final String REDIS_DYNAMIC_REGISTER_KEY = "dyn:code:register"; // 动态注册验证码
 	public static final String REDIS_DYNAMIC_PHONE_CHANGE_KEY = "dyn:code:phone:change"; // 动态注册验证码
 	public static final String REDIS_DYNAMIC_LOAN_CODE_KEY = "dyn:code:loan"; // 借款
-	public static final String REDIS_LOAN_USE_KEY = "loan:use:list";// 借款用途列表
 	public static final String REDIS_LOAN_HOME_LIST = "loan:h:a";// 所有借款列表，首页使用，存放ID
 	public static final String REDIS_LOAN_SHORT_HOME_LIST = "loan:h:s";// 短贷借款列表，首页使用，存放ID
 	public static final String REDIS_LOAN_LONG_HOME_LIST = "loan:h:l";// 长贷借款列表，首页使用，存放ID
 	public static final String REDIS_LOAN_HOME_INFO = "loan:h:i";// 借款列表，首页使用，存放信息
+	public static final String REDIS_CONSTS_USE_KEY = "consts:loanUse";// 借款用途列表
+	public static final String REDIS_CONSTS_AUTO_LEND_TYPE = "consts:autoLend"; // 自动投资配置参数 
+	public static final String REDIS_CONSTS_DIAN_SHANG_TYPE = "consts:dianShang"; // 电商
+	public static final String REDIS_CONSTS_LEND_RISK_TYPE = "consts:lendRisk"; // 投资风险
 
 	/**
 	 * 用户类型
