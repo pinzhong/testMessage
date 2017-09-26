@@ -230,6 +230,18 @@ public class UserInfo {
     private Integer authStatus;
 
     /**
+     * 推送cid
+     */
+    @Column(name = "push_cid")
+    private String pushCid;
+
+    /**
+     * 推送token
+     */
+    @Column(name = "push_token")
+    private String pushToken;
+
+    /**
      * 获取主键ID
      *
      * @return user_id - 主键ID
@@ -320,14 +332,18 @@ public class UserInfo {
     }
 
     /**
-     * @return gender
+     * 获取性别
+     *
+     * @return gender - 性别
      */
     public String getGender() {
         return gender;
     }
 
     /**
-     * @param gender
+     * 设置性别
+     *
+     * @param gender 性别
      */
     public void setGender(String gender) {
         this.gender = gender == null ? null : gender.trim();
@@ -965,5 +981,41 @@ public class UserInfo {
      */
     public void setAuthStatus(Integer authStatus) {
         this.authStatus = authStatus;
+    }
+
+    /**
+     * 获取推送cid
+     *
+     * @return push_cid - 推送cid
+     */
+    public String getPushCid() {
+        return pushCid;
+    }
+
+    /**
+     * 设置推送cid
+     *
+     * @param pushCid 推送cid
+     */
+    public void setPushCid(String pushCid) {
+        this.pushCid = pushCid == null ? null : pushCid.trim();
+    }
+
+    /**
+     * 获取推送token
+     *
+     * @return push_token - 推送token
+     */
+    public String getPushToken() {
+        return pushToken;
+    }
+
+    /**
+     * 设置推送token
+     *
+     * @param pushToken 推送token
+     */
+    public void setPushToken(String pushToken) {
+        this.pushToken = pushToken == null ? null : pushToken.trim();
     }
 }
