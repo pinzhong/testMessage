@@ -11,6 +11,7 @@
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
     <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
     <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+    <result column="abbreviation" jdbcType="VARCHAR" property="abbreviation" />
     <result column="card_type" jdbcType="VARCHAR" property="cardType" />
     <result column="branch_name" jdbcType="VARCHAR" property="branchName" />
     <result column="province" jdbcType="VARCHAR" property="province" />
@@ -25,7 +26,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    user_bankcard_id, user_id, real_name, certificate_no, card_no, bank_name, card_type, 
-    branch_name, province, city, area, change_num, sign_status, create_time, update_time
+    user_bankcard_id, user_id, real_name, certificate_no, card_no, bank_name, abbreviation, 
+    card_type, branch_name, province, city, area, change_num, sign_status, create_time, 
+    update_time
   </sql>
 </mapper>

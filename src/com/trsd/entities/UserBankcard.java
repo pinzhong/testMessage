@@ -44,6 +44,11 @@ public class UserBankcard {
     private String bankName;
 
     /**
+     * 银行缩写
+     */
+    private String abbreviation;
+
+    /**
      * 银行卡类型
      */
     @Column(name = "card_type")
@@ -200,6 +205,24 @@ public class UserBankcard {
      */
     public void setBankName(String bankName) {
         this.bankName = bankName == null ? null : bankName.trim();
+    }
+
+    /**
+     * 获取银行缩写
+     *
+     * @return abbreviation - 银行缩写
+     */
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    /**
+     * 设置银行缩写
+     *
+     * @param abbreviation 银行缩写
+     */
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation == null ? null : abbreviation.trim();
     }
 
     /**
