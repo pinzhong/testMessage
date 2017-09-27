@@ -75,6 +75,9 @@ public class CreditConsts {
 	 * 高级认证服务商（芝麻）
 	 */
 	public static final String CREDIT_PROVIDER_ZHIMA = "zhima"; 	
-	
+	/**
+	 * 高级认证服务商（同盾）
+	 */
+	public static final String CREDIT_PROVIDER_TONGDUN = "tongdun";	
 	
 }
