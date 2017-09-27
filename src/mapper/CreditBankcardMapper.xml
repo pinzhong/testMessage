@@ -13,18 +13,22 @@
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
     <result column="bankname" jdbcType="VARCHAR" property="bankname" />
+    <result column="abbreviation" jdbcType="VARCHAR" property="abbreviation" />
     <result column="cardtype" jdbcType="VARCHAR" property="cardtype" />
     <result column="provider" jdbcType="VARCHAR" property="provider" />
     <result column="finishtime" jdbcType="TIMESTAMP" property="finishtime" />
     <result column="cost" jdbcType="DECIMAL" property="cost" />
     <result column="score" jdbcType="DECIMAL" property="score" />
     <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     authid, userId, createtime, ispass, bankcard, real_name, certificate_no, bankname, 
-    cardtype, provider, finishtime, cost, score, status
+    abbreviation, cardtype, provider, finishtime, cost, score, status, charge_status, 
+    score_status
   </sql>
 </mapper>
