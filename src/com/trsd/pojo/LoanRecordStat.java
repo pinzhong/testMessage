@@ -134,6 +134,14 @@ public class LoanRecordStat implements Serializable {
 	 * 做过的认证
 	 */
 	private String credit;
+	/**
+	 * 用户等级
+	 */
+	private int userLevel;
+	/**
+	 * 被赞数
+	 */
+	private int fansCount;
 
 	public Long getLoanId() {
 		return loanId;
@@ -341,6 +349,22 @@ public class LoanRecordStat implements Serializable {
 
 	public void setCredit(String credit) {
 		this.credit = credit;
+	}
+
+	public int getUserLevel() {
+		return userLevel;
+	}
+
+	public void setUserLevel(int userLevel) {
+		this.userLevel = userLevel;
+	}
+
+	public int getFansCount() {
+		return fansCount;
+	}
+
+	public void setFansCount(int fansCount) {
+		this.fansCount = fansCount;
 	}
 
 }
