@@ -40,8 +40,14 @@ public class UserBankcardChange {
     /**
      * 原银行名称
      */
-    @Column(name = "originalbank_name")
-    private String originalbankName;
+    @Column(name = "original_bank_name")
+    private String originalBankName;
+
+    /**
+     * 原银行缩写
+     */
+    @Column(name = "original_abbreviation")
+    private String originalAbbreviation;
 
     /**
      * 原开户省份
@@ -90,6 +96,11 @@ public class UserBankcardChange {
      */
     @Column(name = "bank_name")
     private String bankName;
+
+    /**
+     * 银行缩写
+     */
+    private String abbreviation;
 
     /**
      * 开户省份
@@ -217,19 +228,37 @@ public class UserBankcardChange {
     /**
      * 获取原银行名称
      *
-     * @return originalbank_name - 原银行名称
+     * @return original_bank_name - 原银行名称
      */
-    public String getOriginalbankName() {
-        return originalbankName;
+    public String getOriginalBankName() {
+        return originalBankName;
     }
 
     /**
      * 设置原银行名称
      *
-     * @param originalbankName 原银行名称
+     * @param originalBankName 原银行名称
      */
-    public void setOriginalbankName(String originalbankName) {
-        this.originalbankName = originalbankName == null ? null : originalbankName.trim();
+    public void setOriginalBankName(String originalBankName) {
+        this.originalBankName = originalBankName == null ? null : originalBankName.trim();
+    }
+
+    /**
+     * 获取原银行缩写
+     *
+     * @return original_abbreviation - 原银行缩写
+     */
+    public String getOriginalAbbreviation() {
+        return originalAbbreviation;
+    }
+
+    /**
+     * 设置原银行缩写
+     *
+     * @param originalAbbreviation 原银行缩写
+     */
+    public void setOriginalAbbreviation(String originalAbbreviation) {
+        this.originalAbbreviation = originalAbbreviation == null ? null : originalAbbreviation.trim();
     }
 
     /**
@@ -374,6 +403,24 @@ public class UserBankcardChange {
      */
     public void setBankName(String bankName) {
         this.bankName = bankName == null ? null : bankName.trim();
+    }
+
+    /**
+     * 获取银行缩写
+     *
+     * @return abbreviation - 银行缩写
+     */
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    /**
+     * 设置银行缩写
+     *
+     * @param abbreviation 银行缩写
+     */
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation == null ? null : abbreviation.trim();
     }
 
     /**

@@ -27,7 +27,7 @@ public class CreditBankcard {
     /**
      * 是否通过
      */
-    private int ispass;
+    private Byte ispass;
 
     /**
      * 银行卡号
@@ -50,6 +50,11 @@ public class CreditBankcard {
      * 银行名称
      */
     private String bankname;
+
+    /**
+     * 银行缩写
+     */
+    private String abbreviation;
 
     /**
      * 银行卡类别
@@ -79,7 +84,19 @@ public class CreditBankcard {
     /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
-    private int status;
+    private Byte status;
+
+    /**
+     * 扣费状态（0：未扣费；1：已扣费）
+     */
+    @Column(name = "charge_status")
+    private Integer chargeStatus;
+
+    /**
+     * 积分状态（0：未加积分；1：已加积分）
+     */
+    @Column(name = "score_status")
+    private Integer scoreStatus;
 
     /**
      * 获取编号
@@ -140,7 +157,7 @@ public class CreditBankcard {
      *
      * @return ispass - 是否通过
      */
-    public int getIspass() {
+    public Byte getIspass() {
         return ispass;
     }
 
@@ -149,7 +166,7 @@ public class CreditBankcard {
      *
      * @param ispass 是否通过
      */
-    public void setIspass(int ispass) {
+    public void setIspass(Byte ispass) {
         this.ispass = ispass;
     }
 
@@ -223,6 +240,24 @@ public class CreditBankcard {
      */
     public void setBankname(String bankname) {
         this.bankname = bankname == null ? null : bankname.trim();
+    }
+
+    /**
+     * 获取银行缩写
+     *
+     * @return abbreviation - 银行缩写
+     */
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    /**
+     * 设置银行缩写
+     *
+     * @param abbreviation 银行缩写
+     */
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation == null ? null : abbreviation.trim();
     }
 
     /**
@@ -320,7 +355,7 @@ public class CreditBankcard {
      *
      * @return status - 状态（-1：失败；0：进行中；1：成功）
      */
-    public int getStatus() {
+    public Byte getStatus() {
         return status;
     }
 
@@ -329,7 +364,43 @@ public class CreditBankcard {
      *
      * @param status 状态（-1：失败；0：进行中；1：成功）
      */
-    public void setStatus(int status) {
+    public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    /**
+     * 获取扣费状态（0：未扣费；1：已扣费）
+     *
+     * @return charge_status - 扣费状态（0：未扣费；1：已扣费）
+     */
+    public Integer getChargeStatus() {
+        return chargeStatus;
+    }
+
+    /**
+     * 设置扣费状态（0：未扣费；1：已扣费）
+     *
+     * @param chargeStatus 扣费状态（0：未扣费；1：已扣费）
+     */
+    public void setChargeStatus(Integer chargeStatus) {
+        this.chargeStatus = chargeStatus;
+    }
+
+    /**
+     * 获取积分状态（0：未加积分；1：已加积分）
+     *
+     * @return score_status - 积分状态（0：未加积分；1：已加积分）
+     */
+    public Integer getScoreStatus() {
+        return scoreStatus;
+    }
+
+    /**
+     * 设置积分状态（0：未加积分；1：已加积分）
+     *
+     * @param scoreStatus 积分状态（0：未加积分；1：已加积分）
+     */
+    public void setScoreStatus(Integer scoreStatus) {
+        this.scoreStatus = scoreStatus;
     }
 }

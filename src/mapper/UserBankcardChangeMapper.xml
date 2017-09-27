@@ -10,7 +10,8 @@
     <result column="original_real_name" jdbcType="VARCHAR" property="originalRealName" />
     <result column="original_certificate_no" jdbcType="VARCHAR" property="originalCertificateNo" />
     <result column="original_card_no" jdbcType="VARCHAR" property="originalCardNo" />
-    <result column="originalbank_name" jdbcType="VARCHAR" property="originalbankName" />
+    <result column="original_bank_name" jdbcType="VARCHAR" property="originalBankName" />
+    <result column="original_abbreviation" jdbcType="VARCHAR" property="originalAbbreviation" />
     <result column="original_province" jdbcType="VARCHAR" property="originalProvince" />
     <result column="original_city" jdbcType="VARCHAR" property="originalCity" />
     <result column="original_area" jdbcType="VARCHAR" property="originalArea" />
@@ -19,6 +20,7 @@
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
     <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
     <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+    <result column="abbreviation" jdbcType="VARCHAR" property="abbreviation" />
     <result column="province" jdbcType="VARCHAR" property="province" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="area" jdbcType="VARCHAR" property="area" />
@@ -31,8 +33,8 @@
       WARNING - @mbg.generated
     -->
     change_id, user_id, original_real_name, original_certificate_no, original_card_no, 
-    originalbank_name, original_province, original_city, original_area, original_branch_name, 
-    real_name, certificate_no, card_no, bank_name, province, city, area, branch_name, 
-    change_time, update_time
+    original_bank_name, original_abbreviation, original_province, original_city, original_area, 
+    original_branch_name, real_name, certificate_no, card_no, bank_name, abbreviation, 
+    province, city, area, branch_name, change_time, update_time
   </sql>
 </mapper>
