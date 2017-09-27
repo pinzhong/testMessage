@@ -12,6 +12,7 @@
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="reson" jdbcType="VARCHAR" property="reson" />
+    <result column="show_photo" jdbcType="VARCHAR" property="showPhoto" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
     <result column="audit_by" jdbcType="VARCHAR" property="auditBy" />
@@ -24,7 +25,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    appeal_id, notice_id, user_id, certificate_no, real_name, phone, reson, status, audit_time, 
+    appeal_id, notice_id, user_id, certificate_no, real_name, phone, reson, show_photo, status, audit_time, 
     audit_by, audit_result, audit_remark, create_time, update_time
   </sql>
 </mapper>
