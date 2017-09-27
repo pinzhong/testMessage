@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.UserFanMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.UserFan">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_fan_id" jdbcType="BIGINT" property="userFanId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="fan_id" jdbcType="BIGINT" property="fanId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="event_id" jdbcType="BIGINT" property="eventId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_fan_id, user_id, fan_id, create_time, event_id, type, status
+  </sql>
+</mapper>
