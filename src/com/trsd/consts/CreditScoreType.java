@@ -5,7 +5,12 @@ public enum CreditScoreType {
 	TAOBAO(102), // 增加淘宝分
 	JINGDONG(103), // 增加京东分数
 	PAYBACKSHORT(104), // 短还还款加分
-	PAYBACKLONG(105); // 长贷还款加分
+	PAYBACKLONG(105), // 长贷还款加分
+	ZHENGXIN(106),//央行征信
+	SEX(107),//性别加分
+	AGE(108),//年龄加分
+	CONTACTS(109),//匹配联系人加分
+	NEGTIME(110);//运营商时长加分
 
 	private int value = 0;
 
@@ -15,16 +20,26 @@ public enum CreditScoreType {
 
 	public static CreditScoreType valueOf(int value) { 
 		switch (value) {
-		case 1:
+		case 101:
 			return ZHIMA;
-		case 2:
+		case 102:
 			return TAOBAO;
-		case 3:
+		case 103:
 			return JINGDONG;
-		case 4:
+		case 104:
 			return PAYBACKSHORT;
-		case 5:
+		case 105:
 			return PAYBACKLONG;
+		case 106:
+			return ZHENGXIN;
+		case 107:
+			return SEX;
+		case 108:
+			return AGE;
+		case 109:
+			return CONTACTS;
+		case 110:
+			return NEGTIME;
 		default:
 			return null;
 		}

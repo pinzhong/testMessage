@@ -55,20 +55,6 @@ public class UserConsts {
 	public static final int USER_CREDIT_TYPE_XYD = 2;// 平台授予
 
 	/**
-	 * 用户信用分数类型
-	 */
-	public static final int USER_CREDIT_VALUE_TYPE_SEX = 1;// 性别加分
-	public static final int USER_CREDIT_VALUE_TYPE_AGE = 2;// 年龄加分
-	public static final int USER_CREDIT_VALUE_TYPE_CONTACTS = 3;// 联系人加分
-	public static final int USER_CREDIT_VALUE_TYPE_NEGTIME = 4;// 运营商网龄加分
-	
-	public static final int USER_CREDIT_VALUE_TYPE_ZHIMA = 101; //芝麻信用加分
-	public static final int USER_CREDIT_VALUE_TYPE_TAOBAO = 102; //淘宝数据加分
-	public static final int USER_CREDIT_VALUE_TYPE_JINGDONG = 103; //京东数据加分
-	public static final int USER_CREDIT_VALUE_TYPE_PAYBACK_SHORT = 104;//短贷还款加分
-	public static final int USER_CREDIT_VALUE_TYPE_PAYBACK_LONG = 105;//长贷还款加分
-
-	/**
 	 * 用户验证码短信类型
 	 */
 	public static final int USER_SMS_TYPE_REGISTER = 1;// 注册发送验证码
