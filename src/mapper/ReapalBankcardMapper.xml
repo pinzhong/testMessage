@@ -14,6 +14,7 @@
     <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
     <result column="card_type" jdbcType="SMALLINT" property="cardType" />
     <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="fromPort" jdbcType="VARCHAR" property="fromport" />
     <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
     <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
     <result column="bank_code" jdbcType="VARCHAR" property="bankCode" />
@@ -26,18 +27,21 @@
     <result column="validthru" jdbcType="VARCHAR" property="validthru" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="realname_bind_status" jdbcType="SMALLINT" property="realnameBindStatus" />
     <result column="bind_status" jdbcType="SMALLINT" property="bindStatus" />
     <result column="cardpwd_status" jdbcType="SMALLINT" property="cardpwdStatus" />
     <result column="white_status" jdbcType="SMALLINT" property="whiteStatus" />
     <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="need_carpwd" jdbcType="SMALLINT" property="needCarpwd" />
+    <result column="type" jdbcType="SMALLINT" property="type" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
     id, bankcard_id, bind_id, user_id, recharge_no, account_type, card_no, card_type, 
-    real_name, certificate_no, bank_name, bank_code, branch, sub_branch, province, city, 
-    phone, cvv2, validthru, create_time, update_time, bind_status, cardpwd_status, white_status, 
-    status
+    real_name, fromPort, certificate_no, bank_name, bank_code, branch, sub_branch, province, 
+    city, phone, cvv2, validthru, create_time, update_time, realname_bind_status, bind_status, 
+    cardpwd_status, white_status, status, need_carpwd, type
   </sql>
 </mapper>

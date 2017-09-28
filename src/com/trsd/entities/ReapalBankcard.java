@@ -21,6 +21,9 @@ public class ReapalBankcard {
     @Column(name = "recharge_no")
     private String rechargeNo;
 
+    @Column(name = "account_type")
+    private String accountType;
+
     @Column(name = "card_no")
     private String cardNo;
 
@@ -29,6 +32,9 @@ public class ReapalBankcard {
 
     @Column(name = "real_name")
     private String realName;
+
+    @Column(name = "fromPort")
+    private String fromport;
 
     @Column(name = "certificate_no")
     private String certificateNo;
@@ -60,19 +66,36 @@ public class ReapalBankcard {
     @Column(name = "update_time")
     private Date updateTime;
 
+    /**
+     * 实名绑卡
+     */
+    @Column(name = "realname_bind_status")
+    private Short realnameBindStatus;
+
+    /**
+     * 签约
+     */
     @Column(name = "bind_status")
     private Short bindStatus;
 
+    /**
+     * 卡密鉴权
+     */
     @Column(name = "cardpwd_status")
     private Short cardpwdStatus;
 
+    /**
+     * 白名单
+     */
     @Column(name = "white_status")
     private Short whiteStatus;
 
     private Short status;
 
-    @Column(name = "account_type")
-    private String accountType;
+    @Column(name = "need_carpwd")
+    private Short needCarpwd;
+
+    private Short type;
 
     /**
      * @return id
@@ -145,6 +168,20 @@ public class ReapalBankcard {
     }
 
     /**
+     * @return account_type
+     */
+    public String getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * @param accountType
+     */
+    public void setAccountType(String accountType) {
+        this.accountType = accountType == null ? null : accountType.trim();
+    }
+
+    /**
      * @return card_no
      */
     public String getCardNo() {
@@ -184,6 +221,20 @@ public class ReapalBankcard {
      */
     public void setRealName(String realName) {
         this.realName = realName == null ? null : realName.trim();
+    }
+
+    /**
+     * @return fromPort
+     */
+    public String getFromport() {
+        return fromport;
+    }
+
+    /**
+     * @param fromport
+     */
+    public void setFromport(String fromport) {
+        this.fromport = fromport == null ? null : fromport.trim();
     }
 
     /**
@@ -355,42 +406,72 @@ public class ReapalBankcard {
     }
 
     /**
-     * @return bind_status
+     * 获取实名绑卡
+     *
+     * @return realname_bind_status - 实名绑卡
+     */
+    public Short getRealnameBindStatus() {
+        return realnameBindStatus;
+    }
+
+    /**
+     * 设置实名绑卡
+     *
+     * @param realnameBindStatus 实名绑卡
+     */
+    public void setRealnameBindStatus(Short realnameBindStatus) {
+        this.realnameBindStatus = realnameBindStatus;
+    }
+
+    /**
+     * 获取签约
+     *
+     * @return bind_status - 签约
      */
     public Short getBindStatus() {
         return bindStatus;
     }
 
     /**
-     * @param bindStatus
+     * 设置签约
+     *
+     * @param bindStatus 签约
      */
     public void setBindStatus(Short bindStatus) {
         this.bindStatus = bindStatus;
     }
 
     /**
-     * @return cardpwd_status
+     * 获取卡密鉴权
+     *
+     * @return cardpwd_status - 卡密鉴权
      */
     public Short getCardpwdStatus() {
         return cardpwdStatus;
     }
 
     /**
-     * @param cardpwdStatus
+     * 设置卡密鉴权
+     *
+     * @param cardpwdStatus 卡密鉴权
      */
     public void setCardpwdStatus(Short cardpwdStatus) {
         this.cardpwdStatus = cardpwdStatus;
     }
 
     /**
-     * @return white_status
+     * 获取白名单
+     *
+     * @return white_status - 白名单
      */
     public Short getWhiteStatus() {
         return whiteStatus;
     }
 
     /**
-     * @param whiteStatus
+     * 设置白名单
+     *
+     * @param whiteStatus 白名单
      */
     public void setWhiteStatus(Short whiteStatus) {
         this.whiteStatus = whiteStatus;
@@ -411,16 +492,30 @@ public class ReapalBankcard {
     }
 
     /**
-     * @return account_type
+     * @return need_carpwd
      */
-    public String getAccountType() {
-        return accountType;
+    public Short getNeedCarpwd() {
+        return needCarpwd;
     }
 
     /**
-     * @param accountType
+     * @param needCarpwd
      */
-    public void setAccountType(String accountType) {
-        this.accountType = accountType == null ? null : accountType.trim();
+    public void setNeedCarpwd(Short needCarpwd) {
+        this.needCarpwd = needCarpwd;
+    }
+
+    /**
+     * @return type
+     */
+    public Short getType() {
+        return type;
+    }
+
+    /**
+     * @param type
+     */
+    public void setType(Short type) {
+        this.type = type;
     }
 }
