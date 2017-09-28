@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.trsd.mapper.CreditBodyguardMapper">
+  <resultMap id="BaseResultMap" type="com.trsd.entities.CreditBodyguard">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="authid" jdbcType="BIGINT" property="authid" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="authtime" jdbcType="TIMESTAMP" property="authtime" />
+    <result column="transaction_id" jdbcType="VARCHAR" property="transactionId" />
+    <result column="risk_score" jdbcType="DECIMAL" property="riskScore" />
+    <result column="risk_items" jdbcType="INTEGER" property="riskItems" />
+    <result column="decision" jdbcType="VARCHAR" property="decision" />
+    <result column="last_authtime" jdbcType="TIMESTAMP" property="lastAuthtime" />
+    <result column="last_score" jdbcType="DECIMAL" property="lastScore" />
+    <result column="last_decision" jdbcType="VARCHAR" property="lastDecision" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="charge_status" jdbcType="INTEGER" property="chargeStatus" />
+    <result column="score_status" jdbcType="INTEGER" property="scoreStatus" />
+    <result column="manual_status" jdbcType="INTEGER" property="manualStatus" />
+    <result column="manual_result" jdbcType="INTEGER" property="manualResult" />
+    <result column="manual_time" jdbcType="TIMESTAMP" property="manualTime" />
+    <result column="manual_by" jdbcType="VARCHAR" property="manualBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    authid, user_id, authtime, transaction_id, risk_score, risk_items, decision, last_authtime, 
+    last_score, last_decision, cost, score, status, charge_status, score_status, manual_status, 
+    manual_result, manual_time, manual_by
+  </sql>
+</mapper>
