@@ -23,8 +23,8 @@ public class UserConsts {
 	/**
 	 * redis存储数据分类
 	 */
-	public static final String REDIS_USER_KEY = "token:user:key"; // 用户登录信息，key为token，值为信息
-	public static final String REDIS_USER_TOKEN = "token:user:phone"; // 用户登录令牌，key
+	public static final String REDIS_USER_KEY = "token:u:k"; // 用户登录信息，key为token，值为信息
+	public static final String REDIS_USER_TOKEN = "token:u:p"; // 用户登录令牌，key
 																		// 为
 																		// 登录名，值为
 																		// token
