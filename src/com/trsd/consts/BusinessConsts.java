@@ -6,6 +6,8 @@ package com.trsd.consts;
  *
  */
 public class BusinessConsts {
+	public static final int LOAN_TYPE_SHORT = 1 ;//短贷
+	public static final int LOAN_TYPE_LONG = 2 ;//长贷
 	
 	/**
 	 * 借款申请状态
