@@ -67,28 +67,10 @@ public class ReapalBankcard {
     private Date updateTime;
 
     /**
-     * 实名绑卡
-     */
-    @Column(name = "realname_bind_status")
-    private Short realnameBindStatus;
-
-    /**
-     * 签约
-     */
-    @Column(name = "bind_status")
-    private Short bindStatus;
-
-    /**
      * 卡密鉴权
      */
     @Column(name = "cardpwd_status")
     private Short cardpwdStatus;
-
-    /**
-     * 白名单
-     */
-    @Column(name = "white_status")
-    private Short whiteStatus;
 
     private Short status;
 
@@ -406,42 +388,6 @@ public class ReapalBankcard {
     }
 
     /**
-     * 获取实名绑卡
-     *
-     * @return realname_bind_status - 实名绑卡
-     */
-    public Short getRealnameBindStatus() {
-        return realnameBindStatus;
-    }
-
-    /**
-     * 设置实名绑卡
-     *
-     * @param realnameBindStatus 实名绑卡
-     */
-    public void setRealnameBindStatus(Short realnameBindStatus) {
-        this.realnameBindStatus = realnameBindStatus;
-    }
-
-    /**
-     * 获取签约
-     *
-     * @return bind_status - 签约
-     */
-    public Short getBindStatus() {
-        return bindStatus;
-    }
-
-    /**
-     * 设置签约
-     *
-     * @param bindStatus 签约
-     */
-    public void setBindStatus(Short bindStatus) {
-        this.bindStatus = bindStatus;
-    }
-
-    /**
      * 获取卡密鉴权
      *
      * @return cardpwd_status - 卡密鉴权
@@ -457,24 +403,6 @@ public class ReapalBankcard {
      */
     public void setCardpwdStatus(Short cardpwdStatus) {
         this.cardpwdStatus = cardpwdStatus;
-    }
-
-    /**
-     * 获取白名单
-     *
-     * @return white_status - 白名单
-     */
-    public Short getWhiteStatus() {
-        return whiteStatus;
-    }
-
-    /**
-     * 设置白名单
-     *
-     * @param whiteStatus 白名单
-     */
-    public void setWhiteStatus(Short whiteStatus) {
-        this.whiteStatus = whiteStatus;
     }
 
     /**
