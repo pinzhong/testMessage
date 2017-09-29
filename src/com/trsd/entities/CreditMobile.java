@@ -58,7 +58,7 @@ public class CreditMobile {
     /**
      * 网龄
      */
-    private String netage;
+    private Integer netage;
 
     /**
      * 号码归属地
@@ -332,7 +332,7 @@ public class CreditMobile {
      *
      * @return netage - 网龄
      */
-    public String getNetage() {
+    public Integer getNetage() {
         return netage;
     }
 
@@ -341,8 +341,8 @@ public class CreditMobile {
      *
      * @param netage 网龄
      */
-    public void setNetage(String netage) {
-        this.netage = netage == null ? null : netage.trim();
+    public void setNetage(Integer netage) {
+        this.netage = netage;
     }
 
     /**

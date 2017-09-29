@@ -35,6 +35,10 @@ public class CreditConsts {
 	 * 高级认证项目（芝麻信用分）
 	 */	
 	public static final int CREDIT_TYPE_ZHIMASCORE = 7;
+	/**
+	 * 高级认证项目（同盾贷前认证）
+	 */	
+	public static final int CREDIT_TYPE_BODYGUARD = 8;
 	
 	//实名认证步骤
 	/**
