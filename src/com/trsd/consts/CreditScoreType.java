@@ -10,7 +10,8 @@ public enum CreditScoreType {
 	SEX(107),//性别加分
 	AGE(108),//年龄加分
 	CONTACTS(109),//匹配联系人加分
-	NEGTIME(110);//运营商时长加分
+	NEGTIME(110),//运营商时长加分
+	INVITE(111);//绑定邀请码实名加分
 
 	private int value = 0;
 
@@ -40,6 +41,8 @@ public enum CreditScoreType {
 			return CONTACTS;
 		case 110:
 			return NEGTIME;
+		case 111:
+			return INVITE;
 		default:
 			return null;
 		}
