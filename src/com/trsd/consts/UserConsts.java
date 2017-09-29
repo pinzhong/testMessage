@@ -51,8 +51,9 @@ public class UserConsts {
 	/**
 	 * 信用分数增减基本类型
 	 */
-	public static final int USER_CREDIT_TYPE_USER = 1;// 自助提额
-	public static final int USER_CREDIT_TYPE_XYD = 2;// 平台授予
+	public static final int USER_CREDIT_TYPE_BASE = 1; //基础额度
+	public static final int USER_CREDIT_TYPE_USER = 2;// 自助提额
+	public static final int USER_CREDIT_TYPE_XYD = 3;// 平台授予
 
 	/**
 	 * 用户验证码短信类型
