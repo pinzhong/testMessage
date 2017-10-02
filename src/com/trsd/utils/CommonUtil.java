@@ -27,6 +27,7 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.apache.commons.io.filefilter.RegexFileFilter;
 import org.apache.commons.lang3.StringUtils;
 
 import com.alibaba.fastjson.JSONObject;
@@ -79,9 +80,10 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 银行卡替换，保留后四位
-	 * 如果银行卡号为空 或者 null ,返回null ；否则，返回替换后的字符串；
-	 * @param bankCard  银行卡号
+	 * 银行卡替换，保留后四位 如果银行卡号为空 或者 null ,返回null ；否则，返回替换后的字符串；
+	 * 
+	 * @param bankCard
+	 *            银行卡号
 	 * @return
 	 */
 	public static String mastBankCard(String bankCard) {
@@ -947,6 +949,22 @@ public class CommonUtil {
 
 		return result == 0 ? 1 : Math.abs(result);
 
+	}
+
+	/**
+	 * 验证金额是否有效
+	 * @param objMoney
+	 * @return
+	 */
+	public static boolean checkMoney(Object objMoney)
+	{
+		if(objMoney==null)
+		{
+			return false;
+		}
+		String strRegex="/^\\d*(\\.\\d{1,2}){0,1}?$/";
+		boolean matchResult= Pattern.matches(strRegex, objMoney.toString())
+		return 	matchResult;
 	}
 
 }

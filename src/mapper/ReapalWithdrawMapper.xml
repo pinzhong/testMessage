@@ -11,6 +11,8 @@
     <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="bankcard_id" jdbcType="VARCHAR" property="bankcardId" />
     <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="real_amount" jdbcType="DECIMAL" property="realAmount" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="success_time" jdbcType="TIMESTAMP" property="successTime" />
@@ -26,8 +28,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    id, withdraw_no, batch_id, user_id, bankcard_id, amount, remark, create_time, success_time, 
-    update_time, status, result_code, result_msg, notify_result_code, notify_result_msg, 
-    version
+    id, withdraw_no, batch_id, user_id, bankcard_id, amount, real_amount, fee, remark, 
+    create_time, success_time, update_time, status, result_code, result_msg, notify_result_code, 
+    notify_result_msg, version
   </sql>
 </mapper>
