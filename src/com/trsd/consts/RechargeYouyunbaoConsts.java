@@ -11,8 +11,8 @@ public class RechargeYouyunbaoConsts {
 	public static final int BUSINESS_TYPE_NORMAL=0;//业务类型普通
 	public static final int BUSINESS_TYPE_FIX=1;//修复型订单
 	
-	public static final String REDIS_RECHAREGE_DAY_COUNTS_KEY="recharge:day:counts:key";//每日次数存储
-	public static final String REDIS_RECHARGE_MINUTE_COUNTS_KEY="recharge:minute:counts:key";//每分钟次数存储
+	public static final String REDIS_RECHAREGE_DAY_COUNTS_KEY="recharge:day:counts:key";//充值每日次数存储
+	public static final String REDIS_RECHARGE_MINUTE_COUNTS_KEY="recharge:minute:counts:key";//充值每分钟次数存储
 	
 	public static final int RECHARGE_PAY_TYPE_ALIPAY=1;//支付宝充值
 	public static final int RECHARGE_PAY_TYPE_QQ=2;//qq充值

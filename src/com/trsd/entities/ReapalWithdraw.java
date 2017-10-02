@@ -39,6 +39,17 @@ public class ReapalWithdraw {
      */
     private BigDecimal amount;
 
+    /**
+     * 实际到账金额
+     */
+    @Column(name = "real_amount")
+    private BigDecimal realAmount;
+
+    /**
+     * 手续费
+     */
+    private BigDecimal fee;
+
     private String remark;
 
     /**
@@ -195,6 +206,42 @@ public class ReapalWithdraw {
      */
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
+    }
+
+    /**
+     * 获取实际到账金额
+     *
+     * @return real_amount - 实际到账金额
+     */
+    public BigDecimal getRealAmount() {
+        return realAmount;
+    }
+
+    /**
+     * 设置实际到账金额
+     *
+     * @param realAmount 实际到账金额
+     */
+    public void setRealAmount(BigDecimal realAmount) {
+        this.realAmount = realAmount;
+    }
+
+    /**
+     * 获取手续费
+     *
+     * @return fee - 手续费
+     */
+    public BigDecimal getFee() {
+        return fee;
+    }
+
+    /**
+     * 设置手续费
+     *
+     * @param fee 手续费
+     */
+    public void setFee(BigDecimal fee) {
+        this.fee = fee;
     }
 
     /**

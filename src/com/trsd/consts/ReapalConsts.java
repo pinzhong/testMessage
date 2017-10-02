@@ -29,4 +29,10 @@ public class ReapalConsts {
 	public static final Short RECHARGE_SUCCESS = 1;// 充值成功
 	public static final Short RECHARGE_FAIL = 2;// 充值失败
 	public static final Short RECHARGE_EXCEPTION = -1;// 充值异常
+	
+	public static final String REDIS_RECHAREGE_DAY_COUNTS_KEY="reapal:recharge:day:counts:key";//每日次数存储
+	public static final String REDIS_RECHARGE_MINUTE_COUNTS_KEY="reapal:recharge:minute:counts:key";//每分钟次数存储
+	
+	public static final String REDIS_WITHDRAW_DAY_COUNTS_KEY="reapal:widthdraw:day:counts:key";//每日次数存储
+	public static final String REDIS_WITHDRAW_MINUTE_COUNTS_KEY="reapal:withdraw:minute:counts:key";//每分钟次数存储
 }
