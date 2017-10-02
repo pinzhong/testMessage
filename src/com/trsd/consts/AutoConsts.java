@@ -37,12 +37,6 @@ public class AutoConsts {
 	public static final int AUTO_LEND_SCHEME_TYPE_MASTER = 2;//企业投资计划
 	
 	/**
-	 * 投资计划投资类型
-	 */
-	public static final int AUTO_LEND_SCHEME_LEND_TYPE_SHORT = 1;//短贷投资计划
-	public static final int AUTO_LEND_SCHEME_LEND_TYPE_LONG = 2 ;//长贷投资计划
-	
-	/**
 	 * 投资计划状态
 	 */
 	public static final int AUTO_LEND_SCHEME_STATUS_START = 1;//使用中	

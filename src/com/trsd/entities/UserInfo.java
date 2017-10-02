@@ -241,6 +241,9 @@ public class UserInfo {
     @Column(name = "push_token")
     private String pushToken;
 
+    @Column(name = "auto_lend_money")
+    private BigDecimal autoLendMoney;
+
     /**
      * 获取主键ID
      *
@@ -1017,5 +1020,19 @@ public class UserInfo {
      */
     public void setPushToken(String pushToken) {
         this.pushToken = pushToken == null ? null : pushToken.trim();
+    }
+
+    /**
+     * @return auto_lend_money
+     */
+    public BigDecimal getAutoLendMoney() {
+        return autoLendMoney;
+    }
+
+    /**
+     * @param autoLendMoney
+     */
+    public void setAutoLendMoney(BigDecimal autoLendMoney) {
+        this.autoLendMoney = autoLendMoney;
     }
 }
