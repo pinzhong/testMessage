@@ -241,9 +241,14 @@ public class UserInfo {
     @Column(name = "push_token")
     private String pushToken;
 
+    /**
+     * 短贷累计自动投
+     */
     @Column(name = "auto_short_money")
     private BigDecimal autoShortMoney;
-
+    /**
+     * 长贷累计自动投
+     */
     @Column(name = "auto_long_money")
     private BigDecimal autoLongMoney;
 
