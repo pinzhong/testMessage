@@ -963,7 +963,7 @@ public class CommonUtil {
 			return false;
 		}
 		String strRegex="/^\\d*(\\.\\d{1,2}){0,1}?$/";
-		boolean matchResult= Pattern.matches(strRegex, objMoney.toString())
+		boolean matchResult= Pattern.matches(strRegex, objMoney.toString());
 		return 	matchResult;
 	}
 
