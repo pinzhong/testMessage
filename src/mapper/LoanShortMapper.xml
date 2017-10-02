@@ -28,6 +28,7 @@
     <result column="payback_penalty" jdbcType="DECIMAL" property="paybackPenalty" />
     <result column="payback_time" jdbcType="TIMESTAMP" property="paybackTime" />
     <result column="loan_status" jdbcType="INTEGER" property="loanStatus" />
+    <result column="break_days" jdbcType="INTEGER" property="breakDays" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -36,6 +37,6 @@
     loan_short_id, loan_short_key, user_id, apply_money, borrowed_money, loan_money, 
     status, limit_time, repayment_time, create_time, update_time, version, memo, rate, 
     loan_days, repayment_principal, repayment_interest, repayment_penalty, payback_principal, 
-    payback_interest, payback_penalty, payback_time, loan_status
+    payback_interest, payback_penalty, payback_time, loan_status, break_days
   </sql>
 </mapper>

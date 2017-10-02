@@ -45,7 +45,7 @@ public class LoanShort {
     private BigDecimal loanMoney;
 
     /**
-     * 状态(0：待还；1：已还；3：逾期；）
+     * 还款状态(0：待还；1：已还；3：逾期；）
      */
     private Integer status;
 
@@ -131,10 +131,16 @@ public class LoanShort {
     private Date paybackTime;
 
     /**
-     * 满标状态
+     * 满标状态,1为正在申请，2为申请完成，-1为已失效
      */
     @Column(name = "loan_status")
     private Integer loanStatus;
+
+    /**
+     * 逾期天数
+     */
+    @Column(name = "break_days")
+    private Integer breakDays;
 
     /**
      * 获取主键id
@@ -245,18 +251,18 @@ public class LoanShort {
     }
 
     /**
-     * 获取状态(0：待还；1：已还；3：逾期；）
+     * 获取还款状态(0：待还；1：已还；3：逾期；）
      *
-     * @return status - 状态(0：待还；1：已还；3：逾期；）
+     * @return status - 还款状态(0：待还；1：已还；3：逾期；）
      */
     public Integer getStatus() {
         return status;
     }
 
     /**
-     * 设置状态(0：待还；1：已还；3：逾期；）
+     * 设置还款状态(0：待还；1：已还；3：逾期；）
      *
-     * @param status 状态(0：待还；1：已还；3：逾期；）
+     * @param status 还款状态(0：待还；1：已还；3：逾期；）
      */
     public void setStatus(Integer status) {
         this.status = status;
@@ -525,20 +531,38 @@ public class LoanShort {
     }
 
     /**
-     * 获取满标状态
+     * 获取满标状态,1为正在申请，2为申请完成，-1为已失效
      *
-     * @return loan_status - 满标状态
+     * @return loan_status - 满标状态,1为正在申请，2为申请完成，-1为已失效
      */
     public Integer getLoanStatus() {
         return loanStatus;
     }
 
     /**
-     * 设置满标状态
+     * 设置满标状态,1为正在申请，2为申请完成，-1为已失效
      *
-     * @param loanStatus 满标状态
+     * @param loanStatus 满标状态,1为正在申请，2为申请完成，-1为已失效
      */
     public void setLoanStatus(Integer loanStatus) {
         this.loanStatus = loanStatus;
+    }
+
+    /**
+     * 获取逾期天数
+     *
+     * @return break_days - 逾期天数
+     */
+    public Integer getBreakDays() {
+        return breakDays;
+    }
+
+    /**
+     * 设置逾期天数
+     *
+     * @param breakDays 逾期天数
+     */
+    public void setBreakDays(Integer breakDays) {
+        this.breakDays = breakDays;
     }
 }

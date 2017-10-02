@@ -89,13 +89,7 @@ public class LendShort {
     private Date paybackTime;
 
     /**
-     * 类型(金主放款，企业放款)
-     */
-    @Column(name = "lend_user_type")
-    private Integer lendUserType;
-
-    /**
-     * 状态(未还款，逾期未还款，正常还款，提前还款，逾期还款)
+     * 状态(0未还款，1为已还款)
      */
     private Integer status;
 
@@ -112,6 +106,15 @@ public class LendShort {
     private Date updateTime;
 
     private Long version;
+
+    /**
+     * 逾期天数
+     */
+    @Column(name = "break_days")
+    private Integer breakDays;
+
+    @Column(name = "lend_user_type")
+    private Integer lendUserType;
 
     /**
      * 获取编号
@@ -362,36 +365,18 @@ public class LendShort {
     }
 
     /**
-     * 获取类型(金主放款，企业放款)
+     * 获取状态(0未还款，1为已还款)
      *
-     * @return lend_user_type - 类型(金主放款，企业放款)
-     */
-    public Integer getLendUserType() {
-        return lendUserType;
-    }
-
-    /**
-     * 设置类型(金主放款，企业放款)
-     *
-     * @param lendUserType 类型(金主放款，企业放款)
-     */
-    public void setLendUserType(Integer lendUserType) {
-        this.lendUserType = lendUserType;
-    }
-
-    /**
-     * 获取状态(未还款，逾期未还款，正常还款，提前还款，逾期还款)
-     *
-     * @return status - 状态(未还款，逾期未还款，正常还款，提前还款，逾期还款)
+     * @return status - 状态(0未还款，1为已还款)
      */
     public Integer getStatus() {
         return status;
     }
 
     /**
-     * 设置状态(未还款，逾期未还款，正常还款，提前还款，逾期还款)
+     * 设置状态(0未还款，1为已还款)
      *
-     * @param status 状态(未还款，逾期未还款，正常还款，提前还款，逾期还款)
+     * @param status 状态(0未还款，1为已还款)
      */
     public void setStatus(Integer status) {
         this.status = status;
@@ -445,5 +430,37 @@ public class LendShort {
      */
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    /**
+     * 获取逾期天数
+     *
+     * @return break_days - 逾期天数
+     */
+    public Integer getBreakDays() {
+        return breakDays;
+    }
+
+    /**
+     * 设置逾期天数
+     *
+     * @param breakDays 逾期天数
+     */
+    public void setBreakDays(Integer breakDays) {
+        this.breakDays = breakDays;
+    }
+
+    /**
+     * @return lend_user_type
+     */
+    public Integer getLendUserType() {
+        return lendUserType;
+    }
+
+    /**
+     * @param lendUserType
+     */
+    public void setLendUserType(Integer lendUserType) {
+        this.lendUserType = lendUserType;
     }
 }

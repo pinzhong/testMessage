@@ -11,7 +11,6 @@ public class LendPayback {
      */
     @Id
     @Column(name = "payback_long_id")
-    @GeneratedValue(generator = "JDBC")
     private Long paybackLongId;
 
     /**
@@ -86,6 +85,12 @@ public class LendPayback {
     private Date updateTime;
 
     private Long version;
+
+    /**
+     * 逾期天数
+     */
+    @Column(name = "break_days")
+    private Integer breakDays;
 
     /**
      * 获取编号
@@ -343,5 +348,23 @@ public class LendPayback {
      */
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    /**
+     * 获取逾期天数
+     *
+     * @return break_days - 逾期天数
+     */
+    public Integer getBreakDays() {
+        return breakDays;
+    }
+
+    /**
+     * 设置逾期天数
+     *
+     * @param breakDays 逾期天数
+     */
+    public void setBreakDays(Integer breakDays) {
+        this.breakDays = breakDays;
     }
 }

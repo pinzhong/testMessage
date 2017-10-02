@@ -21,6 +21,7 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="break_days" jdbcType="INTEGER" property="breakDays" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -28,6 +29,6 @@
     -->
     loan_payback_id, loan_payback_key, loan_long_id, repayment_principal, repayment_interest, 
     repayment_penalty, repayment_time, payback_principal, payback_interest, payback_penalty, 
-    payback_time, status, current_period, create_time, update_time, version
+    payback_time, status, current_period, create_time, update_time, version, break_days
   </sql>
 </mapper>
