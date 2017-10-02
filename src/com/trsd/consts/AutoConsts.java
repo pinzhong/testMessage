@@ -22,13 +22,13 @@ public class AutoConsts {
 	public static final int AUTO_LOAN_CONFIG_TYPE_ZHIMA_SCORE = 206 ; //芝麻分
 	public static final int AUTO_LOAN_CONFIG_TYPE_MNO_MONTH = 207 ;//运营时长
 	public static final int AUTO_LOAN_CONFIG_TYPE_JINGDONG	= 208 ; //京东认证
-	public static final int AUTO_LOAN_CONFIG_TYPE_ZHIFUBAO	= 209 ; //支付宝
+	public static final int AUTO_LOAN_CONFIG_TYPE_TAOBAO	= 209 ; //支付宝
 	public static final int AUTO_LOAN_CONFIG_TYPE_CREDIT	= 210 ; //征信
 	public static final int AUTO_LOAN_CONFIG_TYPE_INVEST_COUNT	= 211 ; //邀请码绑定人数
 	public static final int AUTO_LOAN_CONFIG_TYPE_PERIOD	= 212; // 分期数
 	public static final int AUTO_LOAN_CONFIG_TYPE_AGE	= 213; // 年龄
 	public static final int AUTO_LOAN_CONFIG_TYPE_BREAK_DAYS = 214; // 最长逾期天数
-	public static final int AUTO_LOAN_CONFIG_TYPE_CONTACT_NO = 215; // 有效联系人
+	public static final int AUTO_LOAN_CONFIG_TYPE_MATCH_NUM = 215; // 有效联系人
 	
 	/**
 	 * 投资计划类型
