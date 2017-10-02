@@ -241,8 +241,11 @@ public class UserInfo {
     @Column(name = "push_token")
     private String pushToken;
 
-    @Column(name = "auto_lend_money")
-    private BigDecimal autoLendMoney;
+    @Column(name = "auto_short_money")
+    private BigDecimal autoShortMoney;
+
+    @Column(name = "auto_long_money")
+    private BigDecimal autoLongMoney;
 
     /**
      * 获取主键ID
@@ -1023,16 +1026,30 @@ public class UserInfo {
     }
 
     /**
-     * @return auto_lend_money
+     * @return auto_short_money
      */
-    public BigDecimal getAutoLendMoney() {
-        return autoLendMoney;
+    public BigDecimal getAutoShortMoney() {
+        return autoShortMoney;
     }
 
     /**
-     * @param autoLendMoney
+     * @param autoShortMoney
      */
-    public void setAutoLendMoney(BigDecimal autoLendMoney) {
-        this.autoLendMoney = autoLendMoney;
+    public void setAutoShortMoney(BigDecimal autoShortMoney) {
+        this.autoShortMoney = autoShortMoney;
+    }
+
+    /**
+     * @return auto_long_money
+     */
+    public BigDecimal getAutoLongMoney() {
+        return autoLongMoney;
+    }
+
+    /**
+     * @param autoLongMoney
+     */
+    public void setAutoLongMoney(BigDecimal autoLongMoney) {
+        this.autoLongMoney = autoLongMoney;
     }
 }

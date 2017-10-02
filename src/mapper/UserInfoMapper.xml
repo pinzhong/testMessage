@@ -50,7 +50,8 @@
     <result column="auth_status" jdbcType="INTEGER" property="authStatus" />
     <result column="push_cid" jdbcType="VARCHAR" property="pushCid" />
     <result column="push_token" jdbcType="VARCHAR" property="pushToken" />
-    <result column="auto_lend_money" jdbcType="DECIMAL" property="autoLendMoney" />
+    <result column="auto_short_money" jdbcType="DECIMAL" property="autoShortMoney" />
+    <result column="auto_long_money" jdbcType="DECIMAL" property="autoLongMoney" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
@@ -62,6 +63,6 @@
     encryptstr, encryptstr1, encryptstr2, last_login_time, last_login_ip, last_login_location, 
     last_login_udid, create_time, update_time, version, follow_count, invite_one_count, 
     invite_two_count, type, inviter_code, is_follow, borrow_flag, invest_flag, user_key, 
-    auth_status, push_cid, push_token, auto_lend_money
+    auth_status, push_cid, push_token, auto_short_money, auto_long_money
   </sql>
 </mapper>
