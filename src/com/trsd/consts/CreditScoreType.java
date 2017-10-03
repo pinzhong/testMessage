@@ -16,7 +16,7 @@ public enum CreditScoreType {
 	INVITELIMIT(112,"被绑定邀请码",2),//邀请下家，下家实名时加分；注：不提供接口调用
 	XYD(113,"每月平台授额",3),//平台授额
 	PAYBACKSHORT_ADVANCE(114,"短贷提前还款",2),//短贷提前还款
-	PAYBACKLONG_ADVANCE(114,"长贷提前还款",2);//长贷提前还款
+	PAYBACKLONG_ADVANCE(115,"长贷提前还款",2);//长贷提前还款
 	
 
 	private int value = 0;
@@ -62,6 +62,10 @@ public enum CreditScoreType {
 			return INVITELIMIT;
 		case 113:
 			return XYD;
+		case 114:
+			return PAYBACKSHORT_ADVANCE;
+		case 115:
+			return PAYBACKLONG_ADVANCE;
 		default:
 			return null;
 		}
