@@ -45,12 +45,9 @@ public class BreachAppeal {
     /**
      * 申诉原因
      */
-    private String reson;
-    
-    /**
-     * 封面图片
-     */
-    @Column(name="show_photo")
+    private String reason;
+
+    @Column(name = "show_photo")
     private String showPhoto;
 
     /**
@@ -205,38 +202,36 @@ public class BreachAppeal {
     /**
      * 获取申诉原因
      *
-     * @return reson - 申诉原因
+     * @return reason - 申诉原因
      */
-    public String getReson() {
-        return reson;
+    public String getReason() {
+        return reason;
     }
 
     /**
      * 设置申诉原因
      *
-     * @param reson 申诉原因
+     * @param reason 申诉原因
      */
-    public void setReson(String reson) {
-        this.reson = reson == null ? null : reson.trim();
+    public void setReason(String reason) {
+        this.reason = reason == null ? null : reason.trim();
     }
 
     /**
-     * 获取封面图片
-     * @return
+     * @return show_photo
      */
     public String getShowPhoto() {
-		return showPhoto;
-	}
+        return showPhoto;
+    }
 
     /**
-     * 设置封面图片
      * @param showPhoto
      */
-	public void setShowPhoto(String showPhoto) {
-		this.showPhoto = showPhoto;
-	}
+    public void setShowPhoto(String showPhoto) {
+        this.showPhoto = showPhoto == null ? null : showPhoto.trim();
+    }
 
-	/**
+    /**
      * 获取状态（0：待处理；1：已处理）
      *
      * @return status - 状态（0：待处理；1：已处理）

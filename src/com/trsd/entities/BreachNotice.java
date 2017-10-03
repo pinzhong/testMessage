@@ -44,7 +44,7 @@ public class BreachNotice {
     /**
      * 标题
      */
-    private String ttitle;
+    private String title;
 
     /**
      * 内容
@@ -98,6 +98,12 @@ public class BreachNotice {
     private String auditBy;
 
     /**
+     * 审核备注
+     */
+    @Column(name = "audit_remark")
+    private String auditRemark;
+
+    /**
      * 撤销状态（0：未撤销；1：已撤销）
      */
     @Column(name = "revoke_status")
@@ -114,6 +120,12 @@ public class BreachNotice {
      */
     @Column(name = "revoke_time")
     private Date revokeTime;
+
+    /**
+     * 撤销备注
+     */
+    @Column(name = "revoke_remark")
+    private String revokeRemark;
 
     /**
      * 创建时间
@@ -238,19 +250,19 @@ public class BreachNotice {
     /**
      * 获取标题
      *
-     * @return ttitle - 标题
+     * @return title - 标题
      */
-    public String getTtitle() {
-        return ttitle;
+    public String getTitle() {
+        return title;
     }
 
     /**
      * 设置标题
      *
-     * @param ttitle 标题
+     * @param title 标题
      */
-    public void setTtitle(String ttitle) {
-        this.ttitle = ttitle == null ? null : ttitle.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     /**
@@ -454,6 +466,24 @@ public class BreachNotice {
     }
 
     /**
+     * 获取审核备注
+     *
+     * @return audit_remark - 审核备注
+     */
+    public String getAuditRemark() {
+        return auditRemark;
+    }
+
+    /**
+     * 设置审核备注
+     *
+     * @param auditRemark 审核备注
+     */
+    public void setAuditRemark(String auditRemark) {
+        this.auditRemark = auditRemark == null ? null : auditRemark.trim();
+    }
+
+    /**
      * 获取撤销状态（0：未撤销；1：已撤销）
      *
      * @return revoke_status - 撤销状态（0：未撤销；1：已撤销）
@@ -505,6 +535,24 @@ public class BreachNotice {
      */
     public void setRevokeTime(Date revokeTime) {
         this.revokeTime = revokeTime;
+    }
+
+    /**
+     * 获取撤销备注
+     *
+     * @return revoke_remark - 撤销备注
+     */
+    public String getRevokeRemark() {
+        return revokeRemark;
+    }
+
+    /**
+     * 设置撤销备注
+     *
+     * @param revokeRemark 撤销备注
+     */
+    public void setRevokeRemark(String revokeRemark) {
+        this.revokeRemark = revokeRemark == null ? null : revokeRemark.trim();
     }
 
     /**
