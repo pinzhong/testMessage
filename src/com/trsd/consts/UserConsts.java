@@ -47,6 +47,10 @@ public class UserConsts {
 	 */
 	public static final int USER_TYPE_PERSONAL = 1; // 个人用户
 	public static final int USER_TYPE_MASTER = 2; // 企业用户
+	
+	public static final int MESSAGE_READED = 1; // 消息已读
+	public static final int MESSAGE_UNREAD = 0;//消息未读
+	
 
 	/**
 	 * 信用分数增减基本类型

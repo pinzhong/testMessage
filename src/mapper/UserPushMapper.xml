@@ -11,11 +11,13 @@
     <result column="push_content" jdbcType="VARCHAR" property="pushContent" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
     -->
-    user_push_id, user_id, push_title, push_content, create_time, type
+    user_push_id, user_id, push_title, push_content, create_time, type, status, content
   </sql>
 </mapper>

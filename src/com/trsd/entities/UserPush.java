@@ -40,6 +40,13 @@ public class UserPush {
     private Integer type;
 
     /**
+     * 已读状态，0为未读，1为已读
+     */
+    private Integer status;
+
+    private String content;
+
+    /**
      * 获取主键id
      *
      * @return user_push_id - 主键id
@@ -141,5 +148,37 @@ public class UserPush {
      */
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    /**
+     * 获取已读状态，0为未读，1为已读
+     *
+     * @return status - 已读状态，0为未读，1为已读
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * 设置已读状态，0为未读，1为已读
+     *
+     * @param status 已读状态，0为未读，1为已读
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return content;
+    }
+
+    /**
+     * @param content
+     */
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 }
