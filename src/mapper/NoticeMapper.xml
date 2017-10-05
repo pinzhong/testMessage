@@ -6,7 +6,7 @@
       WARNING - @mbg.generated
     -->
     <id column="notice_id" jdbcType="BIGINT" property="noticeId" />
-    <result column="ttitle" jdbcType="VARCHAR" property="ttitle" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="content" jdbcType="VARCHAR" property="content" />
     <result column="type" jdbcType="INTEGER" property="type" />
     <result column="status" jdbcType="INTEGER" property="status" />
@@ -19,6 +19,6 @@
     <!--
       WARNING - @mbg.generated
     -->
-    notice_id, ttitle, content, type, status, create_time, create_by, update_time, update_by
+    notice_id, title, content, type, status, create_time, create_by, update_time, update_by
   </sql>
 </mapper>

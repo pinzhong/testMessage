@@ -16,7 +16,7 @@ public class Notice {
     /**
      * 标题
      */
-    private String ttitle;
+    private String title;
 
     /**
      * 内容
@@ -80,8 +80,8 @@ public class Notice {
      *
      * @return ttitle - 标题
      */
-    public String getTtitle() {
-        return ttitle;
+    public String getTitle() {
+        return title;
     }
 
     /**
@@ -89,8 +89,8 @@ public class Notice {
      *
      * @param ttitle 标题
      */
-    public void setTtitle(String ttitle) {
-        this.ttitle = ttitle == null ? null : ttitle.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     /**
