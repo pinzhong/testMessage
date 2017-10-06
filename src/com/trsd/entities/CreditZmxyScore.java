@@ -22,7 +22,7 @@ public class CreditZmxyScore {
     /**
      * 认证时间
      */
-    private Date authtime;
+    private Date createtime;
 
     /**
      * 姓名
@@ -48,6 +48,11 @@ public class CreditZmxyScore {
     private String openid;
 
     /**
+     * 服务商
+     */
+    private String provider;
+
+    /**
      * 芝麻分
      */
     @Column(name = "zmxy_score")
@@ -71,6 +76,11 @@ public class CreditZmxyScore {
     private Date finishtime;
 
     /**
+     * 扣费编号
+     */
+    private Long freezeid;
+
+    /**
      * 费用
      */
     private BigDecimal cost;
@@ -83,7 +93,7 @@ public class CreditZmxyScore {
     /**
      * 状态（-1：失败；0：进行中；1：成功）
      */
-    private Byte status;
+    private Integer status;
 
     /**
      * 扣费状态（0：未扣费；1：已扣费）
@@ -136,19 +146,19 @@ public class CreditZmxyScore {
     /**
      * 获取认证时间
      *
-     * @return authtime - 认证时间
+     * @return createtime - 认证时间
      */
-    public Date getAuthtime() {
-        return authtime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
     /**
      * 设置认证时间
      *
-     * @param authtime 认证时间
+     * @param createtime 认证时间
      */
-    public void setAuthtime(Date authtime) {
-        this.authtime = authtime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     /**
@@ -224,6 +234,24 @@ public class CreditZmxyScore {
     }
 
     /**
+     * 获取服务商
+     *
+     * @return provider - 服务商
+     */
+    public String getProvider() {
+        return provider;
+    }
+
+    /**
+     * 设置服务商
+     *
+     * @param provider 服务商
+     */
+    public void setProvider(String provider) {
+        this.provider = provider == null ? null : provider.trim();
+    }
+
+    /**
      * 获取芝麻分
      *
      * @return zmxy_score - 芝麻分
@@ -296,6 +324,24 @@ public class CreditZmxyScore {
     }
 
     /**
+     * 获取扣费编号
+     *
+     * @return freezeid - 扣费编号
+     */
+    public Long getFreezeid() {
+        return freezeid;
+    }
+
+    /**
+     * 设置扣费编号
+     *
+     * @param freezeid 扣费编号
+     */
+    public void setFreezeid(Long freezeid) {
+        this.freezeid = freezeid;
+    }
+
+    /**
      * 获取费用
      *
      * @return cost - 费用
@@ -336,7 +382,7 @@ public class CreditZmxyScore {
      *
      * @return status - 状态（-1：失败；0：进行中；1：成功）
      */
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
@@ -345,7 +391,7 @@ public class CreditZmxyScore {
      *
      * @param status 状态（-1：失败；0：进行中；1：成功）
      */
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
